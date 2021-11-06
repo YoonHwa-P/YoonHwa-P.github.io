@@ -3,7 +3,183 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-03T23:21:20.000Z" title="2021. 11. 4. 오전 8:21:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.666Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item">1분안에 읽기 (약 199 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/nodjs/">Deploy gitHub blog by hexo</a></h1><div class="content"><p>##github blog를 Hexo를 이용하여 deploy 해 보자.<br>    이전에 만들었던 포스팅이 컴퓨터가 바뀌면서 사라졌더군</p>
+        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-04T03:21:20.000Z" title="2021. 11. 4. 오후 12:21:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.664Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/DecisionTree/">DecisionTree</a></span><span class="level-item">7분안에 읽기 (약 1054 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/machineLearning_basic/">machine Learning_basic</a></h1><div class="content"><h1 id="machine-learning"><a href="#machine-learning" class="headerlink" title="machine learning"></a>machine learning</h1><h2 id="Decision-tree-learing"><a href="#Decision-tree-learing" class="headerlink" title="Decision tree learing"></a>Decision tree learing</h2><br>
+<hr>
+
+<ul>
+<li>Decision tree 란</li>
+</ul>
+<p>관측값과 목표값을 연결 시켜주는 예측 모델</p>
+<p>통계학과 데이터 마이닝, 기계학습에서 예측모델링으로 사용하는 방법</p>
+<p>데이터 기능에서 유추된 결정규칙을 학습하여 대상 변수값을 예측 하는 모델을 만들기 위해 사용</p>
+<p>####종류</p>
+<ul>
+<li><p>분류 트리 </p>
+<ul>
+<li>변수가 유한한 수의 값을 가지는 것, <strong>클래스 출력</strong></li>
+<li>Leaf node는 클래스 라벨을 나타내고 가지는 클래스 라벨과 관련있는 특징들의 논리 곱을 나타낸다. </li>
+</ul>
+</li>
+<li><p>회귀트리 </p>
+<ul>
+<li>목표변수가 연속하는 값(일반적으로 실수 )을 가지는 트리</li>
+<li><strong>특정 의미를 가지는 실수값</strong>을 출력</li>
+</ul>
+<p> 의사결정 분석에서 결정트리는 시각적으로 명시적인 방법으로 과정을 보여준다.     </p>
+</li>
+</ul>
+<h4 id="결정트리의-학습"><a href="#결정트리의-학습" class="headerlink" title="결정트리의 학습"></a>결정트리의 학습</h4><ul>
+<li><p>결정 트리의 학습 : 자료 집합을 적절한 분할기준 또는 분할 테스트에 따라 부분집합들로 나누는 과정 </p>
+<ul>
+<li>하향식 결정 트리 귀납법 (TDIDT_top-down induction of decision trees) <ul>
+<li>순환분할 방식으로 나눠진 자료의 부분집합에 재귀적으로 반복됨.</li>
+<li>분할로 인해 더이상 새로운 예측값이 추가 되지 않거나 부분집합의 노드가 목표변수와 같은 값을 지닐대 까지 계속됨.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>데이터 마이닝에서 결정트리 </p>
+<ul>
+<li>수학 적으로 표현됨 </li>
+</ul>
+</li>
+</ul>
+<p>예를 들어 아래와 같은 데이터 마이닝에서의 결정 트리가 있다고 가정 해 보자. </p>
+<pre><code>( f&#123;x&#125;,Y ) = (x_1, x_2, x_3, ..., x_k, Y)
+
+종속 변수 Y는 분류를 통해 학습하고자 하는 목표 변수이며, 
+벡터 x는 &#123;  x_&#123;1&#125;, x_&#123;2&#125;, x_&#123;3&#125; &#125; x_1, x_2, x_3 등의 
+입력 변수로 구성된다.
+</code></pre>
+<h2 id="장점"><a href="#장점" class="headerlink" title="장점"></a>장점</h2><pre><code>1. 이해하기 쉬우며 시각화 가능
+2. data 준비가 거의 필요하지 않음
+3. 수치형, 범주형 data를 모두 처리 가능
+4. multi-output problems를 다룰 수 있다. 
+5. a white box model을 사용 할 수 있다. (bool 가능)
+6. 통계 검정을 사용하여 모형을 검증하기 때문에 모델의 신뢰성을 설명할 수 있다.
+7. 생성된 데이터가 실제 모형에 의해 가정이 다소 위반되더라도 잘 수행된다.
+</code></pre>
+<h2 id="단점"><a href="#단점" class="headerlink" title="단점"></a>단점</h2><ol>
+<li>data 일반화가 잘 되지 못하면 복잡한 트리가 만들어짐 (과적합)<pre><code> - 가지치기, 리프노드에 필요한 샘플 최소화, 트리 최대깊이 설정 으로 해결 가능
+</code></pre>
+</li>
+<li>variation이 작은 경우 의사결정트리가 불안정 할 수 있다. <ul>
+<li>앙상블(ensemble) 내에서 의사결정 트리 사용으로 해결 가능.</li>
+<li>실용적인 의사 결정 트리 학습 알고리즘은 각 노드에서 국소적으로 최적의 의사결정이 이루어지는 그리디 알고리즘과 같은 경험적 알고리즘을 기반으로 한다. 이러한 알고리즘은 전역 최적 의사 결정 트리를 반환한다고 보장할 수 없다. </li>
+<li>이는 특징과 샘플이 교체와 함께 무작위로 샘플링되는 앙상블 학습기에서 여러 트리를 훈련시킴으로써 완화될 수 있다.</li>
+</ul>
+</li>
+<li>의사 결정 트리의 예측은 근사치이기 때문에 좋은 추정은 아닐 수 있다.</li>
+<li>의사결정 트리의 최적화의 문제는 NP-complete로 잘 알려진 문제이다.<br>잘 모르겠다.</li>
+</ol>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/NP-%EC%99%84%EC%A0%84">NP-complete</a></li>
+</ul>
+<ol start="5">
+<li>XOR, parity or multiplexer problems와 같이 배우기 쉽지 않은 컨셉들 때문에 표현하기 쉽지않다. </li>
+<li>학습자가 편향된 트리르르 만들 수 있으므로, 데이터 세트의 균형을 맞춰줘야 한다. </li>
+</ol>
+<br>
+<hr>
+<br>
+
+<h4 id="이어지는-posting"><a href="#이어지는-posting" class="headerlink" title="이어지는 posting"></a>이어지는 posting</h4><ul>
+<li><a href="https://yoonhwa-p.github.io/2021/11/04/DecisionTreeClassifier/">classification</a></li>
+<li><a href="">Regression</a></li>
+</ul>
+<hr>
+<p>Ref.</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/%EA%B2%B0%EC%A0%95_%ED%8A%B8%EB%A6%AC_%ED%95%99%EC%8A%B5%EB%B2%95">결정트리학습법/wiki</a></li>
+<li><a target="_blank" rel="noopener" href="https://injo.tistory.com/15">결정트리 국문</a></li>
+<li><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/tree.html">Decusuib Trees</a></li>
+<li><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/tree.html#tree-classification">1.10.1</a> </li>
+<li><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/tree.html#tree-regression">1.10.2</a></li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-03T23:51:20.000Z" title="2021. 11. 4. 오전 8:51:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.659Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/init/">init</a></span><span class="level-item">몇 초안에 읽기 (약 35 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/categories/">Making Category</a></h1><div class="content"><pre><code>---
+title: &quot;Making Category&quot;
+excerpt :&quot;Credit card&quot;
+classes: wide
+categories:
+-init
+tags:
+-python
+-title
+-coding
+last_modified_at: 2021-11-03
+---
+</code></pre>
+<p>color 바꾸고 싶은에 안되네 </p>
+<p><a target="_blank" rel="noopener" href="https://www.color-hex.com/color/f4dcdc">https://www.color-hex.com/color/f4dcdc</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-03T23:30:20.000Z" title="2021. 11. 4. 오전 8:30:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.649Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/BDS/">BDS</a></span><span class="level-item">13분안에 읽기 (약 2019 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/BDS/">become a BDS</a></h1><div class="content"><p>##Big data 를 이용 할 수 있는 BioData Scientist가 되고 싶다. </p>
+<br>
+<hr>
+
+
+<p>생물학은 점점 디지털화되고 있으며 이제 양적인 과학 분야의 빛을 발하고 있다. </p>
+<p>핵심 추진 요인은 생물학적 연구에서 처리량이 높은 기술 플랫폼의 확산이 증가하는 것으로,<br>체계적인 연구를 위해 수천 개의 조직과 유기체에 걸친<br>유전자, 단백질 및 기타 생물학적 부분에 대한 수백만 개의 데이터 포인트가<br>수집, 세척, 저장 및 통합될 수 있도록 한다.</p>
+<p>이처럼 데이터가 풍부한 환경에서 생물학적(그리고 임상 샘플에 배치된 경우 생물의학)<br>연구의 미래는 <strong> <em><strong>데이터의 전략적 극대화</strong></em> </strong>에 있다고 해도 과언이 아니다.</p>
+<p>오늘날의 기술 환경에서 데이터 과학 및 인공지능(AI)은<br>이미 비즈니스 및 금융과 같은 영역에서 혁신 동력으로 작용하고 있다.<br>여기서 데이터 과학자는 막후에서 작업하는 대신 데이터를 실질적인<br>통찰력으로 변환하는 역할을 담당하고 있다. </p>
+<p>예를 들어, 인공지능 기반 알고리즘 거래와 금융 기술(FinTech)의 주식 추천 시스템,<br>엔지니어링의 자동화 엔진 설계, 시스템 유지보수 및 로봇공학 등이 있다.<br>최근의 데이터 폭발과 이에 따른 비즈니스, 금융 및 컴퓨팅과 같은<br>다른 분야의 데이터 과학의 발전을 감안할 때, 우리는 특히 생물학과 관련된 영역별<br>문제를 다루는 새로운 변형인 빠르고 방대한 양의 데이터 생성과 함께 데이터 과학이<br>등장할 것으로 예상한다. 이를 <strong>“바이오 데이터 과학”</strong> 이라고 한다.</p>
+<p>###BDS(BioData Science)에는 세 가지 핵심 분야가 있다. </p>
+<ul>
+<li>생물학 영역: Biology </li>
+<li>수학 및 통계 : mathematics (statistics)</li>
+<li>컴퓨터 공학 : computer science</li>
+</ul>
+<br>
+
+<p><img src="../imeges/BDS_componets.png" alt="BDS_componets.png"></p>
+<br>
+
+
+<p><strong>생물학 영역</strong>은 질병의 원인이나 유추된 바이오 마커의 진단 효용 이해와 같은 생물학적 기원에 대한 질문과 관련이 있다. </p>
+<p><strong>컴퓨터 과학 코어</strong>는 특히 분석할 데이터가 큰 경우 문제 해결을 위한 적절한<br>알고리즘 고안, 반복 처리 (예: 데이터의 큰 부분 집합에서<br>동일한 알고리즘 여러 번 실행) 및 데이터 저장 문제 해결과 관련이 있다.</p>
+<p><strong>수학 및 통계 핵심 영역</strong>은 데이터 요약, 정규화 및 모델링을 포함한 문제와 관련이 있다.<br>기술 및 탐색적 통계 데이터 분석이 BDS에만 국한된 것은 아니지만<br>(생물 통계의 필수 구성 요소이기도 하며, 더 낮은 정도로 생물 정보학이기도 함),<br>BDS는 빅데이터에 AI/ML을 적용하는 것에 기초한 신흥 기술을 이용한 예측에 초점을 맞추고 있다.</p>
+<hr>
+
+<p>###바이오 데이터 과학은 다른 과학 분야와 다르지 않은 탐구 과학이다.<br>BDS는 단순히 기술(technology), 기계 학습(machine learning) 인공지능(AI)이 아니다. </p>
+<p>인공지능이 여러분을 위해 그렇게 해주기를 바라는 대신, 사람의 <strong>강한 논리적 사고</strong>에 기초해야 한다.<br>BDS가 궁극적으로 연구의 과학이라는 이런 점에서, 전형적인 과학적 조사와 다르지 않다. </p>
+<p>우리는 유전자 발현 변화가 정신 상태와 의미있게 상관되는지에 대한 질문에 답하도록 돕기 위해<br>다음의 7가지 단계를 사용할 수 있다. </p>
+<br>
+
+<p>가장 큰 차이점은 BDS는 낮은 처리량 또는 저전력 물리적 실험에 대한 강조를 줄이면서<br><strong>의미 있는 데이터 조작 및 분석에 강력한 능력</strong>을 필요로 한다는 것이다.</p>
+<pre><code>데이터 과학은 다른 과학적 추구와 같은 과정으로 진행 된다.
+
+- 조사할 질문을 먼저 선택
+- 테스트 가능한 관련 가설을 확인함으로써 이 질문의 범위를 넓힘
+- 가설에 답하기 위한 데이터를 얻기 위한 적절한 실험을 설계하고 현장 적용할 
+- 결과를 결정하고 그 타당성, 즉 데이터가 연구 질문에 답하는 데 적합한지 여부를 평가
+- 마지막으로, 모델을 배치하고 연구 결과가 반복 가능한지 확인
+</code></pre>
+<br>
+<hr>
+<br>
+
+<p>###데이터 분석은 복잡한 다단계 프로세스이다.<br>**BDS(BioData Science)**는 도전적인 분야이지만, 생물정보학이나 전산생물학과 비슷하게 어렵다.</p>
+<p>생물학적 시스템을 측정하기 위한 기술적 플랫폼은 매우 정교하지만, 생물학적 시스템은 매우 복잡하다.<br>게다가 생물학적 실체를 측정하기 위해 개발된 기술적 도구는 생물학적 시스템의<br>구성요소가 변화하고 시간이 지남에 따라 자연스럽게 변화하는 동안 기술적 불확실성에 영향을 받는다.<br>바이오 빅 데이터는 이러한 문제에 대한 자연스러운 솔루션이 아니며 새로운 문제를 야기한다. </p>
+<br>
+
+<p><img src="../imeges/BDS_Investigation.png" alt="BDS_Investigation.png"></p>
+<br>
+
+<p>BDS 데이터는 매우 많은 수의 관측에서 보존된 패턴을 식별하는 과정과 같은 데이터 과학<br>노력을 촉진할 수 있지만, 적절한 분석 파이프라인이 개발될 경우에만 그렇게 할 수 있다.<br>이 작업은 하찮지 않다. 이러한 분석 파이프라인은 데이터 수집에서 시작하여<br>더 높은 수준의 생물학적 해석과 통찰력을 향한 계산 및 통계 평가를 통해 계속 이어지는<br>다양한 접근 방식의 엔드 투 엔드 통합으로 상상할 수 있다.</p>
+<br>
+
+
+<ul>
+<li>omics 데이터의 바이오 마커 분석을 위한 단순화된 파이프라인과 관련 주요 고려 사항은 다음과 같을 수 있다.</li>
+</ul>
+<p><img src="../imeges/BDS_omics.png" alt="BDS_omics.png"></p>
+<br>
+
+
+<p>분석 파이프라인은 매우 유연해야 하며 연구 질문의 필요에 따라 변화해야 한다.<br>완벽한 지식이 부족하기 때문에 최적화와 재현성을 어느 정도 달성하기 위해 몇 단계를 왔다 갔다<br>반복하고 다듬는 것도 일반적이다.</p>
+<p>예를 들어, 정규화 단계에서 두 개의 서로 다른 정규화 절차를<br>사용하여 매우 다르고 겹치지 않는 차등 유전자 세트를 발견했다고 가정 해 보자.<br>정규화 절차는 데이터에 대해 잘못된 가정을 하거나 잘못 구현되었을 수 있다.<br>표시된 주요 고려사항은 엄청나게 많다. 고려사항의 예와 함께 단계를 보여주는 목적은<br>각 단계마다 완벽한 시스템이나 파이프라인이 없지만, 각 의사결정 지점마다 이후 단계에 대한<br>결과를 갖는 많은 고려사항이 있음을 입증하는 것이다.</p>
+<p>우리는 또한 특정 정규화 접근법이 다운스트림 통계 절차와 잘 작동하는지와 같은<br>호환성 문제나 특정 절차가 배치 효과 보정 알고리즘 및 일부 다중 시험 보정 방법과 관련된<br>과다 탈락 및 과다 첨가로 이어질 수 있는지 여부와 같은 문제를 걱정해야 한다.</p>
+<p>일반적으로 좋은 결과를 보장하는 노선도나 표준 운영 절차는 없다는 점에서<br>BDS는 예술에 가까운 과학인 것이다. </p>
+<p>Ref.<br><a target="_blank" rel="noopener" href="https://gohwils.github.io/biodatascience/biodatascience.html">https://gohwils.github.io/biodatascience/biodatascience.html</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-03T23:21:20.000Z" title="2021. 11. 4. 오전 8:21:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.666Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item">1분안에 읽기 (약 199 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/nodjs/">Deploy gitHub blog by hexo</a></h1><div class="content"><p>##github blog를 Hexo를 이용하여 deploy 해 보자.<br>    이전에 만들었던 포스팅이 컴퓨터가 바뀌면서 사라졌더군</p>
 <p>Ref.</p>
 <p><a target="_blank" rel="noopener" href="https://dschloe.github.io/settings/hexo_blog/">https://dschloe.github.io/settings/hexo_blog/</a></p>
 <p>###Hexo를 이용하여 블로그를 만들어 보자 </p>
@@ -172,33 +348,33 @@ Name: Open, dtype: float64
 
 <p>객체지향을 위해 import를 해 준다. </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fig = Figure()</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.random.seed(<span class="number">6</span>)</span><br><span class="line">x = np.random.randn(<span class="number">20000</span>)</span><br><span class="line"></span><br><span class="line">ax = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">ax.hist(x, <span class="number">100</span>)</span><br><span class="line">ax.set_title(<span class="string">&#x27;Artist Layer Histogram&#x27;</span>)</span><br><span class="line"><span class="comment"># fig.savefig(&#x27;Matplotlib_histogram.png&#x27;)</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-02T06:11:02.000Z" title="2021. 11. 2. 오후 3:11:02">2021-11-02</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.653Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item">3분안에 읽기 (약 415 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/02/Pandas/">Study Pandas</a></h1><div class="content"><h1 id="Pandas-데이터-프레임"><a href="#Pandas-데이터-프레임" class="headerlink" title="Pandas 데이터 프레임"></a>Pandas 데이터 프레임</h1><p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<p>=======</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>53622efd31df4f58e5efef044a98e4a6c33d8ad1</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<br>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-02T06:11:02.000Z" title="2021. 11. 2. 오후 3:11:02">2021-11-02</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-06T13:56:20.233Z" title="2021. 11. 6. 오후 10:56:20">2021-11-06</time>&nbsp;업데이트 됨</span><span class="level-item">4분안에 읽기 (약 581 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/02/Pandas/">Study Pandas</a></h1><div class="content"><h1 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h1><br>
 <hr>
 
-<h2 id="판다스란"><a href="#판다스란" class="headerlink" title="판다스란"></a>판다스란</h2><p><a href="https://colab.research.google.com/github/YoonHwa-P/MyBlog/blob/main/Pandas.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<p>  ‘판다스(pandas)는 파이썬 언어로 작성된 데이터를 분석 및 조작하기 위한<br>  소프트웨어 라이브러리이다. 판다스는 수치형 테이블과 시계열 데이터를<br>  조작하고 운영하기 위한 데이터를 제공하는데, 3조항 BSD 라이선스 조건<br>  하에서 무료로 사용 가능하다. </p>
-<p>판다스의 이름은 계량 경제학에서 사용되는<br>  용어인 ‘PANel DAta’의 앞 글자를 따서 지어졌다. 당연히 실제 동물인<br>  판다와는 아무런 관련이 없지만, 이름이 이름이니만큼 각종 개발 관련<br>  사이트에서 판다 이미지를 활용하여 판다스를 소개하곤 한다. 판다스는 R에서<br>  사용되던 data.frame 구조를 본뜬 DataFrame이라는 구조를 사용하기 때문에,<br>  R의 data.frame에서 사용하던 기능 상당수를 무리없이 사용할 수 있도록<br>  만들었다. 더욱이 파이썬이라는 접근성이 좋은 언어 기반으로 동작하기 때문에<br>  데이터 분석을 파이썬으로 입문하는 사람들이 필수적으로 사용하는<br>  라이브러리가 되었다.’</p>
-<p>  <a target="_blank" rel="noopener" href="https://namu.wiki/w/Pandas">판다스/위키</a></p>
-<hr>
-<p>판다스를 이용 할 수 있는 많은 튜토리얼 들이 있지만,<br>아래 링크는 매우 유용 한것이라고 강사님이 말씀 해 주셨다. </p>
-<p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">판다스/doc</a></p>
+<h2 id="판다스란"><a href="#판다스란" class="headerlink" title="판다스란"></a>판다스란</h2><p>pandas는 데이터를 시각화 하기 좋은 python base의 한 라이브러리이다.</p>
+<p>python을 이용한 data분석과 같은 작업에서 필수적으로 쓰이고 있다.</p>
+<p>아나콘다와 같은 IDE를 이용하여 작업 할 수도 있지만, 기본적으로 Import하여 편하게 사용 할 수 있다.</p>
+<br>
+
+<p>판다스의 이름은 계량 경제학에서 사용되는 용어인 **’PANel DAta’**의 앞 글자를 따서 지어졌다.<br>판다스는 R에서 사용되던 data.frame 구조를 본뜬 DataFrame이라는 구조를 사용하기 때문에,<br>  R의 data.frame에서 사용하던 기능 상당수를 무리없이 사용할 수 있도록 만들었다.<br>더욱이 파이썬이라는 접근성이 좋은 언어 기반으로 동작하기 때문에 데이터 분석을 파이썬으로 입문하는<br>사람들이 필수적으로 사용하는 라이브러리가 되었다.’</p>
+<br>
+
+<h2 id="판다스-Import-하기"><a href="#판다스-Import-하기" class="headerlink" title="판다스 Import 하기"></a>판다스 Import 하기</h2><p>쥬피터 노트로 설치가 가능 하다고 하지만, 구글코랩이나 케글 노트에서는 Import하여 쉽게 사용한다. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">pd.__version__</span><br></pre></td></tr></table></figure>
+
+
+<p>pandas는 오픈소스로 누구나 무료로 이용 할 수 있고,<br>Numpy, matplotlib등 다른 라이브러리들과 함께 쓰인다.</p>
+<p>일반적으로 pandas는 pd로 import되기 때문에 pd.[function] 으로 써있으면<br>pandas 라이브러리를 이용한다고 생각 하면 된다.</p>
+<p>Livraly의 경우 version 오류가 많이 있으므로,<br>Import 해 주는 라이브러리는 version을 꼭 확인하여 오류에 대비 하도록 한다. </p>
+<p>Pandas에는 3가지 자료 구조가 있는데<br><a href="https://yoonhwa-p.github.io/2021/11/06/Pandas_Series/">series</a> 와<br><a href="https://yoonhwa-p.github.io/2021/11/06/Pandas_DataFrame">dataFrame</a>,<br><a href="https://yoonhwa-p.github.io/2021/11/06/Pandas_panel">panel</a> 이 그것이다.</p>
+<p>pandas에대해 더 알아보고 싶다면, 링크를 타고 가보자.</p>
+<p>ref.</p>
+<p>  <a target="_blank" rel="noopener" href="https://wikidocs.net/32829">판다스/위키</a>  <br></p>
+<hr align="center" style="border: solid; 5px; #920E88; width: 80%;">
+
+<p>판다스를 이용에는 유용한 Tutorial들이 있다.<br>아래 있으니 시간이 날 때마다 보면서 Update하자. </p>
+<p>영문판이 있지만 지금은 일단 한글 번역한것을 보자<br>화이팅 !</p>
+<p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">판다스/doc</a><br><a target="_blank" rel="noopener" href="https://great-woman-hoseung.tistory.com/4">10 minutes to Pandas/한글</a></p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-02T05:21:20.000Z" title="2021. 11. 2. 오후 2:21:20">2021-11-02</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.661Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item">1분안에 읽기 (약 147 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/02/gitHub_multi/">to use gitHub in Multi place</a></h1><div class="content"><p>깃허브 노트북과 데스크탑 두군데서<br>깃허브를 동시에 사용하고 싶은 분들은<br>아래 코드 확인해서 해보세요.</p>
 <p>이 때, 깃헙 blog 저장소 삭제할 필요가 없어요~</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ hexo init myblog <span class="comment"># 여기는 각자 소스 레포 확인</span></span><br><span class="line">$ <span class="built_in">cd</span> myblog</span><br><span class="line">$ git init </span><br><span class="line">$ git remote add origin https://github.com/rain0430/myblog.git <span class="comment"># 각자 소스 레포 주소</span></span><br><span class="line">$ git pull --set-upstream origin main <span class="comment"># 에러 발생</span></span><br><span class="line">$ git clean -d -f</span><br><span class="line">$ git pull --set-upstream origin main <span class="comment"># 에러 발생 안함 / 소스 확인</span></span><br><span class="line">$ npm install </span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo server </span><br></pre></td></tr></table></figure>
@@ -5684,513 +5860,7 @@ g
 </li>
 <li></li>
 </ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-01T03:22:02.000Z" title="2021. 11. 1. 오후 12:22:02">2021-11-01</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.652Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item">8분안에 읽기 (약 1219 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/01/Numpy/">Study Numpy</a></h1><div class="content"><h1 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h1><p><a href="https://colab.research.google.com/github/YoonHwa-P/MyBlog/blob/main/Numpy.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<h2 id="Numpy-정의"><a href="#Numpy-정의" class="headerlink" title="Numpy 정의"></a><strong>Numpy 정의</strong></h2><p>NumPy는 행렬이나 일반적으로 대규모 다차원 배열을 쉽게 처리 할 수 있도록 지원하는 파이썬의 라이브러리<br>Numpy는 데이터 구조 외에도 수치 계산을 위해 효율적으로 구현된 기능을 제시 한다. </p>
-<p>Ref. <a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/NumPy">Wiki</a></p>
-<hr>
-<h2 id="라이브러리에서-numpy-불러오기"><a href="#라이브러리에서-numpy-불러오기" class="headerlink" title="라이브러리에서 numpy 불러오기"></a>라이브러리에서 numpy 불러오기</h2><p>우리는 numpy를 import 하여 numpy에 내장되어 있는 함수를 가져와 쓸 수 있다. 일반적으로 np에 저장하여 많이 사용 하는 듯 하다. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="built_in">print</span>(np.__version__)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;Numpy의 version을 확인 해 볼 수 있다. &quot;</span>)</span><br><span class="line"></span><br><span class="line">temp = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(temp))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;Numpy의 type은 nd array인 것을 볼 수 있다.  &quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>1.19.5
-Numpy의 version을 확인 해 볼 수 있다. 
-&lt;class &#39;numpy.ndarray&#39;&gt;
-</code></pre>
-<p>Numpy의 Type을 보면 nd array 인 것을 볼 수 있는데 </p>
-<p>ND : N dimension  을 의미한다.<br>즉 한국어로 번역 해 보면 N차 행렬 정도로 볼 수 있다. </p>
-<h2 id="Numpy-에서-배열을-생성-해-보자"><a href="#Numpy-에서-배열을-생성-해-보자" class="headerlink" title="Numpy 에서 배열을 생성 해 보자."></a>Numpy 에서 배열을 생성 해 보자.</h2><h3 id="1차원-배열-생성"><a href="#1차원-배열-생성" class="headerlink" title="1차원 배열 생성"></a>1차원 배열 생성</h3><p>1차원의 배열을 생성해서 array와 List의 다른 점을 알아보자.</p>
-<p>차이점은 shpae를 찍어 보면 알 수 있다.<br>내장 함수 : (fuction or method or attribute)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data1 = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">data2 = [<span class="number">10</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>]</span><br><span class="line"></span><br><span class="line">My_array = np.array(data1)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;data1은 List이다. &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(data1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(data1))</span><br><span class="line"><span class="comment">#print(data1.shape)  </span></span><br><span class="line"><span class="comment">#List의 경우 shape 함수가 내장 되어 있지 않아 shape를 알 수 없다. </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;My_array은 numpy형식의 tuple인 것을 알 수 있다.  &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(My_array)</span><br><span class="line"><span class="built_in">print</span>(My_array.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(My_array))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;.dtype() 는 data의 type을 확인 할 수 있는 function 이다.&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(My_array.dtype)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre><code>data1은 List이다. 
-[0, 1, 2, 3, 4]
-&lt;class &#39;list&#39;&gt;
-My_array은 numpy형식의 tuple인 것을 알 수 있다.  
-[0 1 2 3 4]
-(5,)
-&lt;class &#39;numpy.ndarray&#39;&gt;
-.dtype() 는 data의 type을 확인 할 수 있는 function 이다.
-int64
-</code></pre>
-<p> <a target="_blank" rel="noopener" href="https://colab.research.google.com/github/YoonHwa-P/MyBlog/blob/main/21_11_01_Python_List.ipynb">List</a> 형식의 경우 shape 함수가 내장 되어 있지 않은 반면,<br>numpy 형식의 np.array 의 경우  <a target="_blank" rel="noopener" href="https://colab.research.google.com/github/YoonHwa-P/MyBlog/blob/main/21_11_01_Python_tuple.ipynb">tuple</a> shape 함수가 내장 되어 에러가 나지 않과 (5, )의 형태로 result가 나오는 것 을 볼 수 있다. </p>
-<p>.dtype() 는 data의 type을 확인 할 수 있는 function 이다.<br>이때 나타나는 int 64는 64byte의 타입 이라는 것을 알려 준다. </p>
-<p><a target="_blank" rel="noopener" href="https://rfriend.tistory.com/285">https://rfriend.tistory.com/285</a></p>
-<h3 id="2차원-배열-생성"><a href="#2차원-배열-생성" class="headerlink" title="2차원 배열 생성"></a>2차원 배열 생성</h3><p>4 X 3 배열을 만들어 보자.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my_array4 = np.array([[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>,<span class="number">12</span>],[<span class="number">14</span>,<span class="number">16</span>,<span class="number">18</span>],[<span class="number">20</span>,<span class="number">22</span>,<span class="number">24</span>]])</span><br><span class="line"><span class="built_in">print</span>(my_array4)</span><br><span class="line"></span><br><span class="line">my_array4.shape</span><br></pre></td></tr></table></figure>
-
-<pre><code>[[ 2  4  6]
- [ 8 10 12]
- [14 16 18]
- [20 22 24]]
-
-
-
-
-
-(4, 3)
-</code></pre>
-<h3 id="3차원-배열-생성"><a href="#3차원-배열-생성" class="headerlink" title="3차원 배열 생성"></a>3차원 배열 생성</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">my_array5 = np.array([[[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]], [[<span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>]]])</span><br><span class="line"><span class="built_in">print</span>(my_array5)</span><br><span class="line">my_array5.shape</span><br></pre></td></tr></table></figure>
-
-<pre><code>[[[1 2]
-  [3 4]]
-
- [[5 6]
-  [7 8]]]
-
-
-
-
-
-(2, 2, 2)
-</code></pre>
-<h2 id="Numpy-기본-함수들"><a href="#Numpy-기본-함수들" class="headerlink" title="Numpy 기본 함수들"></a>Numpy 기본 함수들</h2><ul>
-<li> arange</li>
-<li> zeroes, ones</li>
-<li>reshape</li>
-<li>sort</li>
-<li>argsort</li>
-</ul>
-<h3 id="arange"><a href="#arange" class="headerlink" title="arange"></a>arange</h3><p>np.arange(5)를 넣으면 array안에 5개의 숫자가 순서대로 나오는 배열이 자동으로 만들어진다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Array = np.arange(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(Array)</span><br></pre></td></tr></table></figure>
-
-<pre><code>[0 1 2 3 4]
-</code></pre>
-<p>np.arange(a, b, c) : a의 숫자부터 b 숫자까지 C씩 띄워서 배열생성 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aArray = np.arange(<span class="number">1</span>, <span class="number">9</span>, <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(aArray)</span><br></pre></td></tr></table></figure>
-
-<pre><code>[1 3 5 7]
-</code></pre>
-<h3 id="zeroes-ones"><a href="#zeroes-ones" class="headerlink" title="zeroes, ones"></a>zeroes, ones</h3><p>zeroes와 ones 함수를 살펴 보자<br>각 함수들은 0과 1을 채워 넣어 배열을 생성하는 함수 들 이다. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Zeros_Array&quot;</span>)</span><br><span class="line">zeros_array = np.zeros((<span class="number">2</span>,<span class="number">3</span>))</span><br><span class="line"><span class="built_in">print</span>(zeros_array)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Data Type is:&quot;</span>, zeros_array.dtype)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Data Shape is:&quot;</span>, zeros_array.shape)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Ones_Array&quot;</span>)</span><br><span class="line">ones_array = np.ones((<span class="number">3</span>,<span class="number">4</span>), dtype=<span class="string">&#x27;int32&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(ones_array)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Data Type is:&quot;</span>, ones_array.dtype)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Data Shape is:&quot;</span>, ones_array.shape)</span><br></pre></td></tr></table></figure>
-
-<pre><code>Zeros_Array
-[[0. 0. 0.]
- [0. 0. 0.]]
-Data Type is: float64
-Data Shape is: (2, 3)
-Ones_Array
-[[1 1 1 1]
- [1 1 1 1]
- [1 1 1 1]]
-Data Type is: int32
-Data Shape is: (3, 4)
-</code></pre>
-<p>8행에 보면 Array를 행성 하면서 dtype을 <strong>int32</strong>로 지정 해 준 것을 볼 수 있다. </p>
-<p>Zeros_Array의 경우 채워진 0들이 모두 float type의 실수 이기 때문에 0. 이라고 나타는 것을 볼 수 있지만, Ones_Array의 경우 1 만 나타난 Int 형태의 type인 것을 볼 수 있다. </p>
-<h3 id="reshape"><a href="#reshape" class="headerlink" title="reshape"></a>reshape</h3><p>reshape는 행렬의 모양을 바꿔주는 함수이다.<br>행렬의 모양을 바꿀 때에는 약간의 제약이 있는데<br>예를 들어 설명 해 보자면,</p>
-<p> 3X4 = 12, 6X2 =12로 형태 변환을 할 수 있지만,<br>3X5 = 15이기 때문에 변환이 불가능 하다.<br>이것이 이해가 가지 않는다면 중학교로 돌아 가야 할 지도 모른다. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(ones_array)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Data Shape is:&quot;</span>, ones_array.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Ones_array의 형태를 reshpe로 바꿔보자 \n&quot;</span>)</span><br><span class="line">after_reshape = ones_array.reshape(<span class="number">6</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(after_reshape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Data Shape is:&quot;</span>, after_reshape.shape)</span><br></pre></td></tr></table></figure>
-
-<pre><code>[[1 1 1 1]
- [1 1 1 1]
- [1 1 1 1]]
-Data Shape is: (3, 4)
-Ones_array의 형태를 reshpe로 바꿔보자
-[[1 1]
- [1 1]
- [1 1]
- [1 1]
- [1 1]
- [1 1]]
-Data Shape is: (6, 2)
-</code></pre>
-<p>2차원 배열은 3차원으로도 reshape 할 수 있다.</p>
-<p>제약 조건은 3 X 4 = 12 였기 때문에 2 X 3 X 2 = 12가 되기 때문에 reshape 가 가능 하다. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">after_reshape = ones_array.reshape(<span class="number">2</span>,<span class="number">3</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(after_reshape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Data Shape is:&quot;</span>, after_reshape.shape, <span class="string">&quot;\n&quot;</span>)</span><br><span class="line"></span><br><span class="line">after_reshape2= ones_array.reshape(-<span class="number">1</span>,<span class="number">6</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;reshape(-1,6)? \n&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(after_reshape2)</span><br><span class="line"></span><br><span class="line">after_reshape3= ones_array.reshape(<span class="number">3</span>,-<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;reshape(3, -1)? \n&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(after_reshape3)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Data Shape is:&quot;</span>, after_reshape3.shape)</span><br></pre></td></tr></table></figure>
-
-<pre><code>[[[1 1]
-  [1 1]
-  [1 1]]
-
- [[1 1]
-  [1 1]
-  [1 1]]]
-Data Shape is: (2, 3, 2) 
-
-reshape(-1,6)? 
-
-[[1 1 1 1 1 1]
- [1 1 1 1 1 1]]
-reshape(3, -1)? 
-
-[[1 1 1 1]
- [1 1 1 1]
- [1 1 1 1]]
-Data Shape is: (3, 4)
-</code></pre>
-<p>만일 2차 행렬 reshape에서 한개의 변수만 정해 졌다면, 나머지 는 -1을 써주면 자동으로 알맞은 변수를 정해 줍니다. </p>
-<p>3차 행렬 역시 남은 1개만 -1을 써서 reshape 함수로 행렬을 변환 할 수 있습니다. </p>
-<hr>
-<p>21.11.02(이 아래 부분은 다음에 UPdate하기로 한다. )</p>
-<h3 id="short"><a href="#short" class="headerlink" title="short"></a>short</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="argsort"><a href="#argsort" class="headerlink" title="argsort"></a>argsort</h3><h2 id="Numpy-인덱싱과-슬라이딩"><a href="#Numpy-인덱싱과-슬라이딩" class="headerlink" title="Numpy 인덱싱과 슬라이딩"></a>Numpy 인덱싱과 슬라이딩</h2><h2 id="Numpy-정렬"><a href="#Numpy-정렬" class="headerlink" title="Numpy 정렬"></a>Numpy 정렬</h2></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-29T03:21:20.000Z" title="2021. 10. 29. 오후 12:21:20">2021-10-29</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.651Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item">4분안에 읽기 (약 586 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/10/29/Make_gitHub/">Make a gitHub</a></h1><div class="content"><br>
-
-
- <h2>학원에서 배운 코드들을 올려봅시다.</h2>
-
-   <br>
-
-<p><img src="https://github-readme-stats.vercel.app/api?username=YoonHwa-P&show_icons=true&theme=radical" alt="YH&#39;s GitHub stats"><br><br></p>
-<ul>
-<li>깃허브 디자인 더 하고 싶은데 안되넹 흐흐 <br>
-<hr></li>
-</ul>
-<br>
-<body style="bg-color:pink;">
-
-<ul>
-<li><h3>오늘 한 내용 정리</h3> 
-+ slack join (green_702) <br>
-+ anaconda install  <br>
-  + system Path (환경변수 설정_자동) <br>
-+ pycham install <br>
-+ gitHub blog 만들기 (회원가입 & repository 생성) <br>
-+ gitHub에 repository 만들고, file UPloading 하기_01 <br>
-  1. gitHub에서  repository 만들기 클릭 <br>
-  2. 이름 red로 설정후 하단에 add a README.file 체크 <br>
-  3. 바탕화면에서 우측클릭후 git bash here 선택 <br>
-  4. 링크로 연결 : git clone https://github.com/각자계정/red.git <br>
- <br> 
-+ gitHub에 repository 만들고, file UPloading 하기_02 <br>
-     1. file 만들기(Blue)  <br>
-     2. GitHub에 repository 만들기(Blue); 이름이 같지 않으면 안됨 <br>
-     3. 원하는 file 넣기 (folder 가능) <br>
-+ git 명령어 <br>
-  + terminal Tap에 Git Bash를 활성화하여 명령어 입력 <br></li>
-</ul>
- <h2>$ git init</h2>
-   >$ git init_ git을 initiation 해 준다. (초기화) <br>
-     ![img.png](..\imeges\Make_gitHub\img.png)  <br>
-    맨 처음에만 해 주면 된다. <br>
-
-<h2>$ git add .</h2>
-   > $ git add : 지금 Update한 data를 서버에 올려준다. <br>
-     ![img_1.png](..\imeges\Make_gitHub\img_1.png) <br>
-    $ git add . : 경로에 있는 모든 file Upload
-    <br>
-    $ git add [filename.Ex] : [file 이름과 확장자] 
-    특정 file 을 저장
-   <br>
-
-<h2>$ git commit - m "Comment(History log)"</h2>
-   > $ git commit - m "Comment(History log)" <br><br>
-    ![img_2.png](..\imeges\Make_gitHub\img_2.png) <br><br>
-    commit하여 확정 해 준다. 5개의 sql files가 올라간 것을 볼 수 있다.
-    <br><br>
-   ![img_3.png](..\imeges\Make_gitHub\img_3.png)
-   <br>
-    확정 해 주고 마지막으로 push 해 주면 다음과같은 
-    History Log를 github main에서 볼 수 있다.
-   <br>
-
-<h2>$ git status</h2>
-
-<blockquote>
-<p>$git status <br><br>깃허브 commit 하기 전에 올릴 파일이 있는지 등의 상태를 알아 볼 수 있다. <br><br>commit 이후에는 사라지나부다 사진이 없다. <br><br><br> <img src="..%5Cimeges%5CMake_gitHub%5Cimg_5.png" alt="img_5.png"> <br><br>올리기 전에 급하게 한컷 찍어 보앗쥐 <br><br>커밋해야하는 상태를 보여준다.<br>   <br></p>
-</blockquote>
-<h2>$ git push</h2>
-> $ git push
- 최종 브라우저에 저장. 
- ![img_4.png](..\imeges\Make_gitHub\img_4.png) <br>
- $ git push 후 main -> main 이 나오면 성공 ! 
-> 
-
-
-</body>
-
-   <br>
-<hr>
-
-<p>Ref.</p>
-<p>*파이참, 아나콘다 DownLoad <br><br><strong><em>ㅁ</em></strong>  <a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual#Downloads">https://www.anaconda.com/products/individual#Downloads</a> <br><br><strong><em>ㅁ</em></strong>  <a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/download/">https://www.jetbrains.com/pycharm/download/</a> <br><br><strong><em>ㅁ</em></strong>  <a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></p>
-<p>Ref..<br><a target="_blank" rel="noopener" href="https://80000coding.oopy.io/865f4b2a-5198-49e8-a173-0f893a4fed45">https://80000coding.oopy.io/865f4b2a-5198-49e8-a173-0f893a4fed45</a><br>    <br> ㄴ&gt; 깃허브 꾸미기</p>
-<p><em>++<em>앞으로 참고 하고 싶은 <strong>github</strong></em>++</em><br><br><br><br><br><strong><em>ㅁ</em></strong> <a target="_blank" rel="noopener" href="https://github.com/dschloe/R_edu">https://github.com/dschloe/R_edu</a> <br><br><strong><em>ㅁ</em></strong> <a target="_blank" rel="noopener" href="https://github.com/JunghoGIT">https://github.com/JunghoGIT</a> <br><br><strong><em>ㅁ</em></strong> <a target="_blank" rel="noopener" href="https://github.com/kimgoden/JAVA01">https://github.com/kimgoden/JAVA01</a> <br><br><strong><em>ㅁ</em></strong> <a target="_blank" rel="noopener" href="https://github.com/WDWDWWDff/Red">https://github.com/WDWDWWDff/Red</a> <br><br><strong><em>ㅁ</em></strong> <a target="_blank" rel="noopener" href="https://github.com/OliverKang">https://github.com/OliverKang</a> <br><br><strong><em>ㅁ</em></strong> <a target="_blank" rel="noopener" href="https://github.com/hanbeen1992">https://github.com/hanbeen1992</a> <br><br><strong><em>ㅁ</em></strong> <a target="_blank" rel="noopener" href="https://github.com/kjw1390">https://github.com/kjw1390</a> <br></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-10-28T03:21:20.000Z" title="2021. 10. 28. 오후 12:21:20">2021-10-28</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.648Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item">9분안에 읽기 (약 1398 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/10/28/1028/">Test page</a></h1><div class="content"><p>Hello world</p>
-<h2 id="neo4j-를-이용하여-graph-만들수-있다"><a href="#neo4j-를-이용하여-graph-만들수-있다" class="headerlink" title="neo4j 를 이용하여 graph 만들수 있다."></a>neo4j 를 이용하여 graph 만들수 있다.</h2><p><a target="_blank" rel="noopener" href="https://neo4j.com/graphgists/drug-repurposing-by-hetnet-relationship-prediction-a-new-hope/">neo4j</a></p>
-<h2 id="git-blog-Hexo로-multi-push"><a href="#git-blog-Hexo로-multi-push" class="headerlink" title="git blog: Hexo로 multi, push"></a>git blog: Hexo로 multi, push</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;ssiasoda@gmil.com&quot;</span></span><br><span class="line">git config --global user.name <span class="string">&quot;YoonHwa-P&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git push origin HEAD:main</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>내가 push 할때 쓰려고 저장</p>
-<p><a target="_blank" rel="noopener" href="https://www.kaggle.com/competitions">Kaggle/competitions</a><br>kaggle competition에 참가 할 수 있다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!pip install kaggle</span><br></pre></td></tr></table></figure>
-
-<pre><code>Requirement already satisfied: kaggle in /usr/local/lib/python3.7/dist-packages (1.5.12)
-Requirement already satisfied: python-dateutil in /usr/local/lib/python3.7/dist-packages (from kaggle) (2.8.2)
-Requirement already satisfied: urllib3 in /usr/local/lib/python3.7/dist-packages (from kaggle) (1.24.3)
-Requirement already satisfied: six&gt;=1.10 in /usr/local/lib/python3.7/dist-packages (from kaggle) (1.15.0)
-Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from kaggle) (2.23.0)
-Requirement already satisfied: python-slugify in /usr/local/lib/python3.7/dist-packages (from kaggle) (5.0.2)
-Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from kaggle) (2021.5.30)
-Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from kaggle) (4.62.3)
-Requirement already satisfied: text-unidecode&gt;=1.3 in /usr/local/lib/python3.7/dist-packages (from python-slugify-&gt;kaggle) (1.3)
-Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;kaggle) (3.0.4)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;kaggle) (2.10)
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> google.colab <span class="keyword">import</span> files</span><br><span class="line"></span><br><span class="line">uploaded = files.upload()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> fn <span class="keyword">in</span> uploaded.keys():</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;User uploaded file &quot;&#123;name&#125;&quot; with length &#123;length&#125; bytes&#x27;</span>.<span class="built_in">format</span>(</span><br><span class="line">      name=fn, length=<span class="built_in">len</span>(uploaded[fn])))</span><br><span class="line">  </span><br><span class="line"><span class="comment"># Then move kaggle.json into the folder where the API expects to find it.</span></span><br><span class="line">!mkdir -p ~/.kaggle/ &amp;&amp; mv kaggle.json ~/.kaggle/ &amp;&amp; chmod <span class="number">600</span> ~/.kaggle/kaggle.json</span><br></pre></td></tr></table></figure>
-
-
-
-<p><input type="file" id="files-1a6d23ea-789c-4cd5-a901-b64b2415b8e2" name="files[]" multiple disabled
-   style="border:none" /><br><output id="result-1a6d23ea-789c-4cd5-a901-b64b2415b8e2"><br> Upload widget is only available when the cell has been executed in the<br> current browser session. Please rerun this cell to enable.<br> </output><br> <script src="/nbextensions/google.colab/files.js"></script> </p>
-<pre><code>---------------------------------------------------------------------------
-
-KeyboardInterrupt                         Traceback (most recent call last)
-
-&lt;ipython-input-57-5e2b5f92ba05&gt; in &lt;module&gt;()
-      1 from google.colab import files
-      2 
-----&gt; 3 uploaded = files.upload()
-      4 
-      5 for fn in uploaded.keys():
-
-
-/usr/local/lib/python3.7/dist-packages/google/colab/files.py in upload()
-     62   result = _output.eval_js(
-     63       &#39;google.colab._files._uploadFiles(&quot;&#123;input_id&#125;&quot;, &quot;&#123;output_id&#125;&quot;)&#39;.format(
----&gt; 64           input_id=input_id, output_id=output_id))
-     65   files = _collections.defaultdict(_six.binary_type)
-     66   # Mapping from original filename to filename as saved locally.
-
-
-/usr/local/lib/python3.7/dist-packages/google/colab/output/_js.py in eval_js(script, ignore_result, timeout_sec)
-     38   if ignore_result:
-     39     return
----&gt; 40   return _message.read_reply_from_input(request_id, timeout_sec)
-     41 
-     42 
-
-
-/usr/local/lib/python3.7/dist-packages/google/colab/_message.py in read_reply_from_input(message_id, timeout_sec)
-     99     reply = _read_next_input_message()
-    100     if reply == _NOT_READY or not isinstance(reply, dict):
---&gt; 101       time.sleep(0.025)
-    102       continue
-    103     if (reply.get(&#39;type&#39;) == &#39;colab_reply&#39; and
-
-
-KeyboardInterrupt: 
-</code></pre>
-<h2 id="데이터-다운로드-및-불러오기"><a href="#데이터-다운로드-및-불러오기" class="headerlink" title="데이터 다운로드 및 불러오기"></a>데이터 다운로드 및 불러오기</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!kaggle competitions <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
-
-<pre><code>Warning: Looks like you&#39;re using an outdated API Version, please consider updating (server 1.5.12 / client 1.5.4)
-ref                                            deadline             category            reward  teamCount  userHasEntered  
----------------------------------------------  -------------------  ---------------  ---------  ---------  --------------  
-contradictory-my-dear-watson                   2030-07-01 23:59:00  Getting Started     Prizes         63           False  
-gan-getting-started                            2030-07-01 23:59:00  Getting Started     Prizes         81           False  
-store-sales-time-series-forecasting            2030-06-30 23:59:00  Getting Started  Knowledge        487           False  
-tpu-getting-started                            2030-06-03 23:59:00  Getting Started  Knowledge        157           False  
-digit-recognizer                               2030-01-01 00:00:00  Getting Started  Knowledge       1459           False  
-titanic                                        2030-01-01 00:00:00  Getting Started  Knowledge      14879           False  
-house-prices-advanced-regression-techniques    2030-01-01 00:00:00  Getting Started  Knowledge       4418            True  
-connectx                                       2030-01-01 00:00:00  Getting Started  Knowledge        263           False  
-nlp-getting-started                            2030-01-01 00:00:00  Getting Started  Knowledge       1321           False  
-competitive-data-science-predict-future-sales  2022-12-31 23:59:00  Playground           Kudos      12891           False  
-g-research-crypto-forecasting                  2022-02-01 23:59:00  Featured          $125,000        148           False  
-petfinder-pawpularity-score                    2022-01-13 23:59:00  Research           $25,000       1631           False  
-optiver-realized-volatility-prediction         2022-01-10 23:59:00  Featured          $100,000       3852           False  
-nfl-big-data-bowl-2022                         2022-01-06 23:59:00  Analytics         $100,000          0           False  
-sartorius-cell-instance-segmentation           2021-12-30 23:59:00  Featured           $75,000        495           False  
-wikipedia-image-caption                        2021-12-09 11:59:00  Playground            Swag         71           False  
-lux-ai-2021                                    2021-12-06 23:59:00  Featured           $10,000        928           False  
-tabular-playground-series-nov-2021             2021-11-30 23:59:00  Playground            Swag        352           False  
-kaggle-survey-2021                             2021-11-28 23:59:00  Analytics          $30,000          0           False  
-chaii-hindi-and-tamil-question-answering       2021-11-15 23:59:00  Research           $10,000        807           False  
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!kaggle competitions download -c house-prices-advanced-regression-techniques</span><br></pre></td></tr></table></figure>
-
-<pre><code>User cancelled operation
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd </span><br><span class="line">train = pd.read_csv(<span class="string">&#x27;train.csv&#x27;</span>)</span><br><span class="line">test = pd.read_csv(<span class="string">&#x27;test.csv&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Data Loading is done!&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>Data Loading is done!
-</code></pre>
-<h2 id="데이터-둘러보기"><a href="#데이터-둘러보기" class="headerlink" title="데이터 둘러보기"></a>데이터 둘러보기</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The shape of Train Data is:&quot;</span>, train.shape)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The shape of Test Data is:&quot;</span>, test.shape)</span><br></pre></td></tr></table></figure>
-
-<pre><code>The shape of Train Data is: (1460, 81)
-The shape of Test Data is: (1459, 80)
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(train.info())</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 1460 entries, 0 to 1459
-Data columns (total 81 columns):
- #   Column         Non-Null Count  Dtype  
----  ------         --------------  -----  
- 0   Id             1460 non-null   int64  
- 1   MSSubClass     1460 non-null   int64  
- 2   MSZoning       1460 non-null   object 
- 3   LotFrontage    1201 non-null   float64
- 4   LotArea        1460 non-null   int64  
- 5   Street         1460 non-null   object 
- 6   Alley          91 non-null     object 
- 7   LotShape       1460 non-null   object 
- 8   LandContour    1460 non-null   object 
- 9   Utilities      1460 non-null   object 
- 10  LotConfig      1460 non-null   object 
- 11  LandSlope      1460 non-null   object 
- 12  Neighborhood   1460 non-null   object 
- 13  Condition1     1460 non-null   object 
- 14  Condition2     1460 non-null   object 
- 15  BldgType       1460 non-null   object 
- 16  HouseStyle     1460 non-null   object 
- 17  OverallQual    1460 non-null   int64  
- 18  OverallCond    1460 non-null   int64  
- 19  YearBuilt      1460 non-null   int64  
- 20  YearRemodAdd   1460 non-null   int64  
- 21  RoofStyle      1460 non-null   object 
- 22  RoofMatl       1460 non-null   object 
- 23  Exterior1st    1460 non-null   object 
- 24  Exterior2nd    1460 non-null   object 
- 25  MasVnrType     1452 non-null   object 
- 26  MasVnrArea     1452 non-null   float64
- 27  ExterQual      1460 non-null   object 
- 28  ExterCond      1460 non-null   object 
- 29  Foundation     1460 non-null   object 
- 30  BsmtQual       1423 non-null   object 
- 31  BsmtCond       1423 non-null   object 
- 32  BsmtExposure   1422 non-null   object 
- 33  BsmtFinType1   1423 non-null   object 
- 34  BsmtFinSF1     1460 non-null   int64  
- 35  BsmtFinType2   1422 non-null   object 
- 36  BsmtFinSF2     1460 non-null   int64  
- 37  BsmtUnfSF      1460 non-null   int64  
- 38  TotalBsmtSF    1460 non-null   int64  
- 39  Heating        1460 non-null   object 
- 40  HeatingQC      1460 non-null   object 
- 41  CentralAir     1460 non-null   object 
- 42  Electrical     1459 non-null   object 
- 43  1stFlrSF       1460 non-null   int64  
- 44  2ndFlrSF       1460 non-null   int64  
- 45  LowQualFinSF   1460 non-null   int64  
- 46  GrLivArea      1460 non-null   int64  
- 47  BsmtFullBath   1460 non-null   int64  
- 48  BsmtHalfBath   1460 non-null   int64  
- 49  FullBath       1460 non-null   int64  
- 50  HalfBath       1460 non-null   int64  
- 51  BedroomAbvGr   1460 non-null   int64  
- 52  KitchenAbvGr   1460 non-null   int64  
- 53  KitchenQual    1460 non-null   object 
- 54  TotRmsAbvGrd   1460 non-null   int64  
- 55  Functional     1460 non-null   object 
- 56  Fireplaces     1460 non-null   int64  
- 57  FireplaceQu    770 non-null    object 
- 58  GarageType     1379 non-null   object 
- 59  GarageYrBlt    1379 non-null   float64
- 60  GarageFinish   1379 non-null   object 
- 61  GarageCars     1460 non-null   int64  
- 62  GarageArea     1460 non-null   int64  
- 63  GarageQual     1379 non-null   object 
- 64  GarageCond     1379 non-null   object 
- 65  PavedDrive     1460 non-null   object 
- 66  WoodDeckSF     1460 non-null   int64  
- 67  OpenPorchSF    1460 non-null   int64  
- 68  EnclosedPorch  1460 non-null   int64  
- 69  3SsnPorch      1460 non-null   int64  
- 70  ScreenPorch    1460 non-null   int64  
- 71  PoolArea       1460 non-null   int64  
- 72  PoolQC         7 non-null      object 
- 73  Fence          281 non-null    object 
- 74  MiscFeature    54 non-null     object 
- 75  MiscVal        1460 non-null   int64  
- 76  MoSold         1460 non-null   int64  
- 77  YrSold         1460 non-null   int64  
- 78  SaleType       1460 non-null   object 
- 79  SaleCondition  1460 non-null   object 
- 80  SalePrice      1460 non-null   int64  
-dtypes: float64(3), int64(35), object(43)
-memory usage: 924.0+ KB
-None
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(test.info())</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 1459 entries, 0 to 1458
-Data columns (total 80 columns):
- #   Column         Non-Null Count  Dtype  
----  ------         --------------  -----  
- 0   Id             1459 non-null   int64  
- 1   MSSubClass     1459 non-null   int64  
- 2   MSZoning       1455 non-null   object 
- 3   LotFrontage    1232 non-null   float64
- 4   LotArea        1459 non-null   int64  
- 5   Street         1459 non-null   object 
- 6   Alley          107 non-null    object 
- 7   LotShape       1459 non-null   object 
- 8   LandContour    1459 non-null   object 
- 9   Utilities      1457 non-null   object 
- 10  LotConfig      1459 non-null   object 
- 11  LandSlope      1459 non-null   object 
- 12  Neighborhood   1459 non-null   object 
- 13  Condition1     1459 non-null   object 
- 14  Condition2     1459 non-null   object 
- 15  BldgType       1459 non-null   object 
- 16  HouseStyle     1459 non-null   object 
- 17  OverallQual    1459 non-null   int64  
- 18  OverallCond    1459 non-null   int64  
- 19  YearBuilt      1459 non-null   int64  
- 20  YearRemodAdd   1459 non-null   int64  
- 21  RoofStyle      1459 non-null   object 
- 22  RoofMatl       1459 non-null   object 
- 23  Exterior1st    1458 non-null   object 
- 24  Exterior2nd    1458 non-null   object 
- 25  MasVnrType     1443 non-null   object 
- 26  MasVnrArea     1444 non-null   float64
- 27  ExterQual      1459 non-null   object 
- 28  ExterCond      1459 non-null   object 
- 29  Foundation     1459 non-null   object 
- 30  BsmtQual       1415 non-null   object 
- 31  BsmtCond       1414 non-null   object 
- 32  BsmtExposure   1415 non-null   object 
- 33  BsmtFinType1   1417 non-null   object 
- 34  BsmtFinSF1     1458 non-null   float64
- 35  BsmtFinType2   1417 non-null   object 
- 36  BsmtFinSF2     1458 non-null   float64
- 37  BsmtUnfSF      1458 non-null   float64
- 38  TotalBsmtSF    1458 non-null   float64
- 39  Heating        1459 non-null   object 
- 40  HeatingQC      1459 non-null   object 
- 41  CentralAir     1459 non-null   object 
- 42  Electrical     1459 non-null   object 
- 43  1stFlrSF       1459 non-null   int64  
- 44  2ndFlrSF       1459 non-null   int64  
- 45  LowQualFinSF   1459 non-null   int64  
- 46  GrLivArea      1459 non-null   int64  
- 47  BsmtFullBath   1457 non-null   float64
- 48  BsmtHalfBath   1457 non-null   float64
- 49  FullBath       1459 non-null   int64  
- 50  HalfBath       1459 non-null   int64  
- 51  BedroomAbvGr   1459 non-null   int64  
- 52  KitchenAbvGr   1459 non-null   int64  
- 53  KitchenQual    1458 non-null   object 
- 54  TotRmsAbvGrd   1459 non-null   int64  
- 55  Functional     1457 non-null   object 
- 56  Fireplaces     1459 non-null   int64  
- 57  FireplaceQu    729 non-null    object 
- 58  GarageType     1383 non-null   object 
- 59  GarageYrBlt    1381 non-null   float64
- 60  GarageFinish   1381 non-null   object 
- 61  GarageCars     1458 non-null   float64
- 62  GarageArea     1458 non-null   float64
- 63  GarageQual     1381 non-null   object 
- 64  GarageCond     1381 non-null   object 
- 65  PavedDrive     1459 non-null   object 
- 66  WoodDeckSF     1459 non-null   int64  
- 67  OpenPorchSF    1459 non-null   int64  
- 68  EnclosedPorch  1459 non-null   int64  
- 69  3SsnPorch      1459 non-null   int64  
- 70  ScreenPorch    1459 non-null   int64  
- 71  PoolArea       1459 non-null   int64  
- 72  PoolQC         3 non-null      object 
- 73  Fence          290 non-null    object 
- 74  MiscFeature    51 non-null     object 
- 75  MiscVal        1459 non-null   int64  
- 76  MoSold         1459 non-null   int64  
- 77  YrSold         1459 non-null   int64  
- 78  SaleType       1458 non-null   object 
- 79  SaleCondition  1459 non-null   object 
-dtypes: float64(11), int64(26), object(43)
-memory usage: 912.0+ KB
-None
-</code></pre>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/">이전</a></div><div class="pagination-next"><a href="/page/3/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link is-current" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../img/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">23</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">32</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://yoonhwa-p.github.io"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="../img/instaGram.jpg"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-05T08:06:31.581Z">2021-11-05</time></p><p class="title"><a href="/2021/11/05/Index/">Index</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-05T05:52:29.000Z">2021-11-05</time></p><p class="title"><a href="/2021/11/05/Typical_KDS_2021/">Kaggle 필사 (2021)</a></p><p class="categories"><a href="/categories/kaggle/">kaggle</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-05T05:52:29.000Z">2021-11-05</time></p><p class="title"><a href="/2021/11/05/Using_Kaggle_Note/">Kaggle Note 사용하기</a></p><p class="categories"><a href="/categories/kaggle/">kaggle</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-05T04:21:20.000Z">2021-11-05</time></p><p class="title"><a href="/2021/11/05/Python_tuple/">python_Tuple</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-05T00:11:28.000Z">2021-11-05</time></p><p class="title"><a href="/2021/11/05/Python_List/">python_List</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">18</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/">이전</a></div><div class="pagination-next"><a href="/page/3/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link is-current" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../img/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">26</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">35</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://yoonhwa-p.github.io"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="../img/instaGram.jpg"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-06T06:21:01.000Z">2021-11-06</time></p><p class="title"><a href="/2021/11/06/series(pandas)/">Pandas_Series</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-06T01:11:01.000Z">2021-11-06</time></p><p class="title"><a href="/2021/11/06/panel(pandas)/">Pandas_panel</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-06T00:11:02.000Z">2021-11-06</time></p><p class="title"><a href="/2021/11/06/dataFrame(pandas)/">Pandas_DataFrame</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-05T08:06:31.581Z">2021-11-05</time></p><p class="title"><a href="/2021/11/05/Index/">Index</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-05T05:52:29.000Z">2021-11-05</time></p><p class="title"><a href="/2021/11/05/Typical_KDS_2021/">Kaggle 필사 (2021)</a></p><p class="categories"><a href="/categories/kaggle/">kaggle</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
