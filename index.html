@@ -3,7 +3,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-08T03:21:20.000Z" title="2021. 11. 8. 오후 12:21:20">2021-11-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-08T03:28:39.496Z" title="2021. 11. 8. 오후 12:28:39">2021-11-08</time>&nbsp;업데이트 됨</span><span class="level-item">9분안에 읽기 (약 1319 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/08/Kgg_plotly_treemap/">kaggle :Plotly_Treemap</a></h1><div class="content"><h1 id="kaggle-dictation"><a href="#kaggle-dictation" class="headerlink" title="kaggle dictation"></a>kaggle dictation</h1><p><br><br></p>
+        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-08T03:21:20.000Z" title="2021. 11. 8. 오후 12:21:20">2021-11-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-08T03:56:31.853Z" title="2021. 11. 8. 오후 12:56:31">2021-11-08</time>&nbsp;업데이트 됨</span><span class="level-item">11분안에 읽기 (약 1584 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/08/Kgg_plotly_treemap/">kaggle :Plotly_Treemap</a></h1><div class="content"><h1 id="kaggle-dictation"><a href="#kaggle-dictation" class="headerlink" title="kaggle dictation"></a>kaggle dictation</h1><p><br><br></p>
 <h3 id="plotly-graph-objects-as-go-를-이용한-Treemap"><a href="#plotly-graph-objects-as-go-를-이용한-Treemap" class="headerlink" title="plotly.graph_objects as go : 를 이용한 Treemap"></a>plotly.graph_objects as go : 를 이용한 Treemap</h3><ul>
 <li>많은 계층 구조 데이트를 표현할때 적합.</li>
 <li>Ben Shneiderman에 의해 1990년도부터 출발</li>
@@ -212,6 +212,43 @@ label이나 조건표현으로 선택하는 방법 (.loc)
 </ul>
 </li>
 </ul>
+<h3 id="fig-Information-추가"><a href="#fig-Information-추가" class="headerlink" title="fig Information 추가"></a>fig Information 추가</h3><h4 id="fig-add-annotation-1"><a href="#fig-add-annotation-1" class="headerlink" title="fig.add_annotation() _1"></a>fig.add_annotation() _1</h4><p>플롯에 메모를 남길 수 있는것. 코멘트나 copy-Right 같은걸 남기는듯</p>
+<p>-[plotly-annotation/ko.] (<a target="_blank" rel="noopener" href="https://soohee410.github.io/plotly_annotation">https://soohee410.github.io/plotly_annotation</a>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">14</span>),</span><br><span class="line">                                    x=<span class="number">0.96</span>,</span><br><span class="line">                                    y=-<span class="number">0.14</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;@miguelfzzz&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>dict = dictionary</p>
+<blockquote>
+<blockquote>
+<p>A list or tuple of dicts of string/value properties where:<br>The ‘type’ property specifies the trace type</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>여기서 dict는 fig객체 즉 <strong>plotly.graph_objects.Figure</strong> 에서 상응하는 정보(font, size등) 변수를 가져와 대응 시켜 주는 역할을 한다. </li>
+</ul>
+<p>plot 아래에 보면 “@miguelfzzz”이라는 글자가 보이는데 이것을 설정 한 것.</p>
+<ul>
+<li>showarrow=False,<ul>
+<li>화살표등을 남길 수 있는데 이 Graph에선 false</li>
+</ul>
+</li>
+<li>xref=”paper”, yref=”paper”<ul>
+<li>어느 부분 (plot or paper)에 표시 할 것인지  </li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>나머지는 말 안해도 이제는 알 수 있기 때문에 생략.</p>
+</blockquote>
+<h4 id="fig-add-annotation-2"><a href="#fig-add-annotation-2" class="headerlink" title="fig.add_annotation() _2"></a>fig.add_annotation() _2</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">12</span>),</span><br><span class="line">                                    x=<span class="number">0.01</span>,</span><br><span class="line">                                    y=-<span class="number">0.14</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;Source: 2021 Kaggle Machine Learning &amp; Data Science Survey&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+<hr>
+
+<h2 id="fig-show-내보내기"><a href="#fig-show-내보내기" class="headerlink" title="fig.show() 내보내기"></a>fig.show() 내보내기</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>fig.show()로 마무리 해 주면 된다.  <br><br>이건 java의 return과 같은 느낌인듯. <br></p>
 <p><a target="_blank" rel="noopener" href="https://plotly.com/python/treemaps/">Plotly Treemap/en.</a>  <br><br><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/">layout/en.</a>  <br></p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-07T11:21:20.000Z" title="2021. 11. 7. 오후 8:21:20">2021-11-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-08T02:10:50.497Z" title="2021. 11. 8. 오전 11:10:50">2021-11-08</time>&nbsp;업데이트 됨</span><span class="level-item">11분안에 읽기 (약 1584 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/07/kaggle_CC/">kaggle study</a></h1><div class="content"><br>
 
