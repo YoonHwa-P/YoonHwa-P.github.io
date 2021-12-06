@@ -3,7 +3,437 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/source/imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-05T08:06:31.581Z" title="2021. 11. 5. 오후 5:06:31">2021-11-05</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-10T01:16:10.948Z" title="2021. 11. 10. 오전 10:16:10">2021-11-10</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/index/">index</a></span><span class="level-item">2분안에 읽기 (약 314 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/05/blog/Index/">Index</a></h1><div class="content"><center style="font-size:200%; font-family:Hiragino Kaku Gothic Pro, sans-serif">
+        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/source/imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-08T03:21:20.000Z" title="2021. 11. 8. 오후 12:21:20">2021-11-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-09T10:18:38.967Z" title="2021. 11. 9. 오후 7:18:38">2021-11-09</time>&nbsp;업데이트 됨</span><span class="level-item">11분안에 읽기 (약 1579 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/08/kgg/Kgg_plotly_treemap/">kaggle :Plotly_Treemap (Q8)</a></h1><div class="content"><h1 id="kaggle-dictation-01"><a href="#kaggle-dictation-01" class="headerlink" title="kaggle dictation (01)"></a>kaggle dictation (01)</h1><p><br><br></p>
+<h3 id="plotly-graph-objects-as-go-를-이용한-Treemap"><a href="#plotly-graph-objects-as-go-를-이용한-Treemap" class="headerlink" title="plotly.graph_objects as go : 를 이용한 Treemap"></a>plotly.graph_objects as go : 를 이용한 Treemap</h3><ul>
+<li>많은 계층 구조 데이트를 표현할때 적합.</li>
+<li>Ben Shneiderman에 의해 1990년도부터 출발</li>
+<li>Treemap은 크기(count) 순서로 %에따라 공간을 차지하는 사각형으로 표현됨.</li>
+<li>계층에서 동일한 수준에 속하는 각 사각형 집합은 데이터 테이블의 표현식 또는 컬럼을 표현.</li>
+<li>계층에서 동일한 수준의 개별 사각형은 컬럼의 Index</li>
+</ul>
+<br>
+<hr style="size:3px;">
+
+
+<h3 id="언제-사용하면-좋을까"><a href="#언제-사용하면-좋을까" class="headerlink" title="언제 사용하면 좋을까"></a>언제 사용하면 좋을까</h3><pre><code>- 많은 범주간의 부분과 전체를 시각화 하고 싶을때
+- 범주 간의 정확한 비교 대신 큰 특징을 나타내고 싶을때
+- 데이터가 계층을 이루고 있을때
+</code></pre>
+<br>
+<hr style="size:3px;">
+
+
+<h3 id="사용한-Library"><a href="#사용한-Library" class="headerlink" title="사용한 Library"></a>사용한 Library</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>사실 이 부분에서 seaborn을 사용 했는지 잘 모르겠음.
+github에서 plotly가 동적 Livrary라 자꾸 오류가남.
+</code></pre>
+<br>
+<hr style="size:3px;">
+
+<h2 id="data-import"><a href="#data-import" class="headerlink" title="data import"></a>data import</h2><p><a target="_blank" rel="noopener" href="https://www.kaggle.com/miguelfzzz/the-typical-kaggle-data-scientist-in-2021">data 원문</a><br><a href="https://yoonhwa-p.github.io/2021/11/07/kaggle_CC/">data import 방법</a><br>data는 Kaggle의 the-typical-kaggle-data-scientist-in-2021 data를 이용하였음.</p>
+<h3 id="data-불러오기-합치기"><a href="#data-불러오기-합치기" class="headerlink" title="data 불러오기/합치기"></a>data 불러오기/합치기</h3><pre><code>data를 표현 해 주기 위해 컴퓨터가 읽을 수 있는 형태로 가공.
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;../input/kaggle-survey-2021/kaggle_survey_2021_responses.csv&#x27;</span>)</span><br><span class="line">df = df.iloc[<span class="number">1</span>:, :]</span><br></pre></td></tr></table></figure>
+
+<p>df : data frame에 file 연동.<br>df.iloc[1:, :]  : 1행부터 끝까지 건너뛰기 없이 선택</p>
+<pre><code>행번호(row number)로 선택하는 방법 (.iloc)
+label이나 조건표현으로 선택하는 방법 (.loc)
+</code></pre>
+<p>Ref. <a target="_blank" rel="noopener" href="https://azanewta.tistory.com/34">loc, iloc을 이용한 행 선택</a></p>
+<br>
+<hr>
+
+<h2 id="data-encoding-Feature-Engineering"><a href="#data-encoding-Feature-Engineering" class="headerlink" title="data encoding (Feature Engineering)"></a>data encoding (Feature Engineering)</h2><pre><code>사실 이 부분이 feature Engineering에 해당하는 부분인지 잘 모르겠다.
+이 부분은 data를 computer로 자동화하여 계산, 동적 그래프를 만들기 위한 부분.
+</code></pre>
+<p>###Feature Engineering<br>####data frame 설정</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">recommend_leng = ( df[<span class="string">&#x27;Q8&#x27;</span>]</span><br><span class="line">                 .value_counts() </span><br><span class="line">                 .to_frame() </span><br><span class="line">                 .reset_index() </span><br><span class="line">                 .rename(columns=&#123;<span class="string">&#x27;index&#x27;</span>:<span class="string">&#x27;Lenguage&#x27;</span>, <span class="string">&#x27;Q8&#x27;</span>:<span class="string">&#x27;Count&#x27;</span>&#125;)</span><br><span class="line">                 .sort_values(by=[<span class="string">&#x27;Count&#x27;</span>], ascending=<span class="literal">False</span>)</span><br><span class="line">                 )</span><br><span class="line"></span><br><span class="line">df[<span class="string">&#x27;Q8&#x27;</span>].head()</span><br><span class="line"></span><br><span class="line">recommend_leng</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/imeges/recommend_leng.png" alt="recommend_leng"></p>
+<br>
+
+<p>dataframe[Q8] : data를 가공하여 분석 할 예정</p>
+<ul>
+<li>pd.value_counts() <ul>
+<li>Q8의 data counting, 중복된  data 를 counting 하여 수를 나타냄.</li>
+</ul>
+</li>
+<li>pd.frame()<ul>
+<li>dataframe으로 표의 형태를 잡아준다.</li>
+</ul>
+</li>
+<li>pd.reset_Index()<ul>
+<li>Q8의 Index reset, 원본 data에는 영향을 주지 않으면서 새로운 Index 생성</li>
+<li><a target="_blank" rel="noopener" href="https://kongdols-room.tistory.com/123">Reset_parameter/Ko</a></li>
+</ul>
+</li>
+<li>pd.rename()<ul>
+<li>columns에 Index를 붙여 호출 하기 위해 이름을 바꿔줌</li>
+<li>index는 Lenguage로, count는 Q8로 </li>
+</ul>
+</li>
+<li>pd.sort_values()<ul>
+<li>count 값으로 정렬</li>
+<li>by=[‘Count’], ascending = false</li>
+</ul>
+<ul>
+<li>by에 option 기준, (오름차순 = F )= 내림차순으로 정렬</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<h4 id="앞으로-사용-할-색상을-미리-지정"><a href="#앞으로-사용-할-색상을-미리-지정" class="headerlink" title="앞으로 사용 할 색상을 미리 지정"></a>앞으로 사용 할 색상을 미리 지정</h4><ul>
+<li>한 눈에 보기 편함.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">colors = [<span class="string">&#x27;#033351&#x27;</span>,] * <span class="number">13</span></span><br><span class="line">colors[<span class="number">0</span>] = <span class="string">&#x27;#5abbf9&#x27;</span></span><br><span class="line">colors[<span class="number">1</span>] = <span class="string">&#x27;#066eb0&#x27;</span></span><br><span class="line">colors[<span class="number">2</span>] = <span class="string">&#x27;#044a77&#x27;</span></span><br><span class="line">colors[<span class="number">3</span>] = <span class="string">&#x27;#043e64&#x27;</span></span><br><span class="line">colors[<span class="number">4</span>] = <span class="string">&#x27;#043e64&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p> 아직 잘 모르겠는 부분은 왜 <strong>colors = [‘#NNNNNN’, ]</strong> 이 부분과  *13  이부분</p>
+<br>
+<br>
+
+<h2 id="Treemap-생성"><a href="#Treemap-생성" class="headerlink" title="Treemap 생성"></a>Treemap 생성</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fig = go.Figure(go.Treemap(</span><br><span class="line">    labels = recommend_leng[<span class="string">&#x27;Lenguage&#x27;</span>],</span><br><span class="line">    values = recommend_leng[<span class="string">&#x27;Count&#x27;</span>],</span><br><span class="line">    parents = [<span class="string">&#x27;&#x27;</span>]*recommend_leng.shape[<span class="number">0</span>],</span><br><span class="line">    textinfo = <span class="string">&quot;percent root+label+value+text&quot;</span>,</span><br><span class="line">    ))</span><br></pre></td></tr></table></figure>
+
+<h3 id="fig-생성"><a href="#fig-생성" class="headerlink" title="fig 생성"></a>fig 생성</h3><ul>
+<li>import plotly.graph_objects as <strong>go</strong><br>plotly의 graph_objects 를 이용하여 객체 생성.</li>
+</ul>
+<br>
+
+<h4 id="Treemap의-parameter"><a href="#Treemap의-parameter" class="headerlink" title="Treemap의 parameter"></a>Treemap의 parameter</h4><ul>
+<li>labels :  values 이름</li>
+<li>values :  값</li>
+<li>parents : ???</li>
+<li>textinfo = 표시형식 </li>
+</ul>
+<h4 id="fig-update-traces-hovertemplate"><a href="#fig-update-traces-hovertemplate" class="headerlink" title="fig.update_traces(hovertemplate)"></a>fig.update_traces(hovertemplate)</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fig.update_traces(hovertemplate=<span class="string">&#x27;&lt;b&gt;Lenguage&lt;/b&gt;: %&#123;label&#125;&lt;br&gt;&lt;extra&gt;&lt;/extra&gt;&#x27;</span>+</span><br><span class="line">                                <span class="string">&#x27;&lt;b&gt;Count&lt;/b&gt;: %&#123;value&#125;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><img src="/imeges/hovertemplate.png" alt="hovertemplate"></p>
+<br>
+
+<ul>
+<li>fig.update_traces()</li>
+<li>그래프 위에 캡션 다는 기능<ul>
+<li>Perform a property update operation on all traces that satisfy the specified selection criteria</li>
+<li>지정된 선택 기준을 충족하는 모든 추적에 대해 속성 업데이트 작업 수행 (?? 전혀 모르겠군 !)</li>
+</ul>
+</li>
+</ul>
+<br>
+
+<ul>
+<li>hoverinfo : 마우스 오버시 나타나는 추적정보</li>
+<li>hovertemplate : 커서를 가까이 대면 나오는 창을 렌더링하는데 사용되는 Temp<ul>
+<li>변수 : %{variable} (변수의 형식을 지정)<ul>
+<li>숫자 : %{d3-format}</li>
+<li>price : %{yL$.2f}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://plotly.com/python/hover-text-and-formatting/">hovertemplate/en</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.emptyq.net/a?id=00010-dc06aea0-f03e-437b-bfab-30fc2e4a4017">hoverTemp.para/ko</a></li>
+</ul>
+<br>
+<hr>
+
+<h3 id="fig-update-layout"><a href="#fig-update-layout" class="headerlink" title="fig.update_layout()"></a>fig.update_layout()</h3><p>fig의 layout을 설정.</p>
+<h4 id="hoverTemp까지-설정된-treemap"><a href="#hoverTemp까지-설정된-treemap" class="headerlink" title="hoverTemp까지 설정된 treemap."></a>hoverTemp까지 설정된 treemap.</h4><br>
+
+<p><img src="/imeges/Before_layout.png" alt="Before_layout"></p>
+<br>
+
+<br>
+
+<h4 id="fig-update-layout-을-사용하여-layout을-변경-해-보자"><a href="#fig-update-layout-을-사용하여-layout을-변경-해-보자" class="headerlink" title="fig.update_layout()을 사용하여 layout을 변경 해 보자."></a>fig.update_layout()을 사용하여 layout을 변경 해 보자.</h4><br>
+
+<p><img src="/imeges/After_layout.png" alt="After_layout"></p>
+<br>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fig.update_layout(showlegend=<span class="literal">False</span>, </span><br><span class="line">                  treemapcolorway = colors,</span><br><span class="line">                  margin=<span class="built_in">dict</span>(pad=<span class="number">20</span>),</span><br><span class="line">                  paper_bgcolor=<span class="string">&#x27;#F7F7F7&#x27;</span>,</span><br><span class="line">                  plot_bgcolor=<span class="string">&#x27;#F7F7F7&#x27;</span>,</span><br><span class="line">                  height=<span class="number">600</span>,</span><br><span class="line">                  yaxis=&#123;<span class="string">&#x27;showticklabels&#x27;</span>: <span class="literal">False</span>&#125;,</span><br><span class="line">                  yaxis_title=<span class="literal">None</span>,</span><br><span class="line">                  xaxis_title=<span class="literal">None</span>,</span><br><span class="line">                  title_text=<span class="string">&quot;Most Recommended &lt;b&gt;Programming Language&lt;/b&gt;&quot;</span>,</span><br><span class="line">                  title_x=<span class="number">0.5</span>,</span><br><span class="line">                  title_y=<span class="number">0.95</span>,</span><br><span class="line">                  font=<span class="built_in">dict</span>(family=<span class="string">&quot;Hiragino Kaku Gothic Pro, sans-serif&quot;</span>, size=<span class="number">17</span>, color=<span class="string">&#x27;#000000&#x27;</span>),</span><br><span class="line">                  title_font_size=<span class="number">35</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<ul>
+<li>showlegend = False <ul>
+<li>래전드를 보여줄지 : 안보여줌 </li>
+</ul>
+</li>
+<li>treemapcolorway = colors <ul>
+<li>위에서 정의 해 준 colors가 13개였는데 여기 계층도 13개임<ul>
+<li>아마도 light 부터 deep으로 색이 정해지는듯.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>margin=dict(pad=20)<br>-dic에는 여러가지가 올 수 있는데 여기서는 dict(pad)를 사용<ul>
+<li>padding을 설정, 축과 그래프 사이의 패딩을 px 단위로 설정</li>
+<li>Sets the amount of padding (in px) between the plotting area and the axis lines</li>
+<li><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/#layout-margin">layout-margin</a></li>
+</ul>
+</li>
+<li>paper_bgcolor=’#F7F7F7’<ul>
+<li>배경색 설정</li>
+</ul>
+</li>
+</ul>
+<p><img src="/imeges/paper_bgcolor.png" alt="paper_bgcolor"></p>
+<ul>
+<li>plot_bgcolor=’#F7F7F7’<ul>
+<li>설정 바꿔 보았으나 안보임 </li>
+</ul>
+</li>
+<li>height=600<ul>
+<li>plot size 설정 </li>
+</ul>
+</li>
+<li>yaxis={‘showticklabels’: False}<ul>
+<li> y축의 showticklabels 설정 : 안함</li>
+</ul>
+</li>
+<li>yaxis_title=None, xaxis_title=None<ul>
+<li>y축 제목, x축 제목 설정 : 없음 </li>
+</ul>
+</li>
+<li>title_text=”Most Recommended <b>Programming Language</b>“<ul>
+<li>제목 달기 &lt;b&gt; code는 bolde tag인듯.</li>
+</ul>
+</li>
+<li>title_x=0.5, title_y=0.95,<ul>
+<li>제목의 위치 (상단 고정)</li>
+</ul>
+</li>
+<li>font=dict(family=”Hiragino Kaku Gothic Pro, sans-serif”, size=17, color=’#000000’),<pre><code>            title_font_size=35)
+</code></pre>
+<ul>
+<li>title의 font 설정 (Default: “”Open Sans”, verdana, arial, sans-serif”)</li>
+<li><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/#layout-font">font 설정</a></li>
+<li>family, color, size 설정 가능, title_fond도 함께 설정 가능 해 보임.</li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+
+<h3 id="fig-Information-추가"><a href="#fig-Information-추가" class="headerlink" title="fig Information 추가"></a>fig Information 추가</h3><h4 id="fig-add-annotation-1"><a href="#fig-add-annotation-1" class="headerlink" title="fig.add_annotation() _1"></a>fig.add_annotation() _1</h4><p>플롯에 메모를 남길 수 있는것. 코멘트나 copy-Right 같은걸 남기는듯</p>
+<p>-[plotly-annotation/ko.] (<a target="_blank" rel="noopener" href="https://soohee410.github.io/plotly_annotation">https://soohee410.github.io/plotly_annotation</a>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">14</span>),</span><br><span class="line">                                    x=<span class="number">0.96</span>,</span><br><span class="line">                                    y=-<span class="number">0.14</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;@miguelfzzz&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>dict = dictionary</p>
+<blockquote>
+<blockquote>
+<p>A list or tuple of dicts of string/value properties where:<br>The ‘type’ property specifies the trace type</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>여기서 dict는 fig객체 즉 <strong>plotly.graph_objects.Figure</strong> 에서 상응하는 정보(font, size등) 변수를 가져와 대응 시켜 주는 역할을 한다. </li>
+</ul>
+<p>plot 아래에 보면 “@miguelfzzz”이라는 글자가 보이는데 이것을 설정 한 것.</p>
+<ul>
+<li>showarrow=False,<ul>
+<li>화살표등을 남길 수 있는데 이 Graph에선 false</li>
+</ul>
+</li>
+<li>xref=”paper”, yref=”paper”<ul>
+<li>어느 부분 (plot or paper)에 표시 할 것인지  </li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>나머지는 말 안해도 이제는 알 수 있기 때문에 생략.</p>
+</blockquote>
+<h4 id="fig-add-annotation-2"><a href="#fig-add-annotation-2" class="headerlink" title="fig.add_annotation() _2"></a>fig.add_annotation() _2</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">12</span>),</span><br><span class="line">                                    x=<span class="number">0.01</span>,</span><br><span class="line">                                    y=-<span class="number">0.14</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;Source: 2021 Kaggle Machine Learning &amp; Data Science Survey&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<br>
+<hr>
+
+<h2 id="fig-show-내보내기"><a href="#fig-show-내보내기" class="headerlink" title="fig.show() 내보내기"></a>fig.show() 내보내기</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>fig.show()로 마무리 해 주면 된다.  <br><br>이건 java의 return과 같은 느낌인듯. <br></p>
+<p><a target="_blank" rel="noopener" href="https://plotly.com/python/treemaps/">Plotly Treemap/en.</a>  <br><br><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/">layout/en.</a>  <br></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-07T11:21:20.000Z" title="2021. 11. 7. 오후 8:21:20">2021-11-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-09T12:37:55.817Z" title="2021. 11. 9. 오후 9:37:55">2021-11-09</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/index/">index</a></span><span class="level-item">7분안에 읽기 (약 1020 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/07/kgg/kaggle_CC/">kaggle study</a></h1><div class="content"><br>
+
+<p><a style="font 200%;"> <em>Sumarry</em>  </a></p>
+<p><img src="/imeges/kaggle.png" alt="kaggle_Comp"></p>
+<br>
+
+<ol>
+<li>Demographics &amp; Geographics<ul>
+<li>(Q1) Age-bar</li>
+<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_pie/">(Q2)</a> Gender-pie</li>
+<li>(Q3)countries-scatter+line</li>
+</ul>
+</li>
+<li>Education &amp; Occupation<ul>
+<li>(Q4) Age-bar_h</li>
+<li>(Q5) Role-bar_h</li>
+<li>(Q20) Industry-bar_h</li>
+</ul>
+</li>
+<li>knowledge &amp; skills<ul>
+<li><a href="https://yoonhwa-p.github.io/2021/11/08/Kgg_plotly_bar/">(Q6)</a> Experience : 52% 넘는 응답이 3년이상 코딩과 프로그래밍을 했다. -bar vertical (위)</li>
+<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_Horizontal/">(Q17)</a> Algorithms : Linear or Logistic Regression 55% 과 Decision tree or Random Forests, respectively 66% 사용. - bar  horizon (옆)</li>
+<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_Bar_H(3)/">(Q7)</a> Languages : python 84%, SQL 41% 사용 -bar horizon</li>
+<li><a href="https://yoonhwa-p.github.io/2021/11/08/Kgg_plotly_treemap/">(Q8)</a> Recommend_Leng: programming에 추천하는 언어는 81%가 python -Treemap</li>
+<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_HZB(2)/">(Q9)</a> F_EG /w Q7 가장 많이 쓰는 IDE : jupyter Notebook26.2%, VSCODE 13.92% - bar horizon</li>
+</ul>
+</li>
+<li>Platforms &amp; Media4. Platforms &amp; Media<ul>
+<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_ScatterLine/">(Q11)</a> Platform: 많이 쓰는 컴퓨터 플랫폼은 랩탑이 66% -Scatter + line</li>
+<li>(Q27_A)cloud_platform: 아마존 14%, 구글클라우드 12%, 마쏘 아줠 9%  - bar horizon</li>
+<li>(Q40) courses: DS들이 많이 쓰는 course 플랫폼 Coursera 20, Kaggle 18%-Treemap</li>
+<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_ScatterL(2)/">(Q42)</a> media : DS topic report를 위해  많이 쓰는 media는 kaggle 44%, youTube 40%, blog 31%  -scatter + line</li>
+<li>Takeaways : typical Kaggle DS in 2021 :HTML picture n line n text</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># This Python 3 environment, PKG Load</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np <span class="comment"># linear algebra</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd <span class="comment"># data processing, CSV file I/O (e.g. pd.read_csv)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Input data files : &quot;../input/&quot; </span></span><br><span class="line"><span class="comment"># Running : Shift+Enter</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">for</span> dirname, _, filenames <span class="keyword">in</span> os.walk(<span class="string">&#x27;/kaggle/input&#x27;</span>):</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="built_in">print</span>(os.path.join(dirname, filename))</span><br><span class="line"></span><br><span class="line"><span class="comment"># ~ 20GB ,/kaggle/temp/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>/kaggle/input/kaggle-survey-2021/kaggle_survey_2021_responses.csv
+/kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_methodology.pdf
+/kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_answer_choices.pdf
+</code></pre>
+<center style="font-size:200%; font-family:Hiragino Kaku Gothic Pro, sans-serif"><b> The Typical Kaggle Data Scientist in 2021</b></center>
+
+<p><br><br></p>
+<center style="font-size:200%; font-family:Hiragino Kaku Gothic Pro, sans-serif"> Remade By @YoonHwa-P</center>
+
+<center><img src='https://www.gcppodcast.com/images/post/kaggle.png'></center>
+
+<p>HTML code는 Markdown 형식으로 넣을 수 있게 해 준다.</p>
+<p>scr : <a target="_blank" rel="noopener" href="https://www.gcppodcast.com/">구글 팟케스트</a>에서 바로 연결하여 사용.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>시각화, 계산을 위해 Pandas, Numpy, seaborn을 이용 할 것이고, 동적보드를 만들기 위해 plotly를 이용 하였다. </p>
+<p>plotly 중에서 Express와 Graph_objects를 가져와서 사용 할 예정인듯.</p>
+<p><a target="_blank" rel="noopener" href="https://plotly.com/python/plotly-express/">plotly-express</a></p>
+<p>The Plotly Express API in general offers the following features:</p>
+<p>Every PX function returns a** plotly.graph_objects.Figure object**, so you can edit it using all the same methods like update_layout and add_trace.</p>
+<p>input으로 Express를 사용 한다면  Graph_objects가 동적 plotly 를 만드는 것 같다. : update 하거나 trace를 가능 하게 하는듯.</p>
+<p>실제 필사할  data에서는 어떤 data가 있는지 확인 해 보지 않았지만,<br>나는 배우는 입장이니 어떤 data가 있는지, 어떤 head가 있는지 확인 해 보도록 한다. </p>
+<p>맨 위에 가보면 Note가 생성 될때 </p>
+<pre><code>/kaggle/input/kaggle-survey-2021/kaggle_survey_2021_responses.csv
+/kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_methodology.pdf
+/kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_answer_choices.pdf
+</code></pre>
+<p>위와같은 file dir을 알려준다. 이제, pandas로 이 files를 로딩 시켜 주면된다. </p>
+<p>Ref. <a target="_blank" rel="noopener" href="https://teddylee777.github.io/kaggle/kaggle%EC%97%90%EC%84%9C-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94-notebook-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0">Kaggle활용.국문</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&quot;../input/kaggle-survey-2021/kaggle_survey_2021_responses.csv&quot;</span>)</span><br><span class="line">df = df.iloc[<span class="number">1</span>:, :] <span class="comment">#이건 왜 선택 해 놓은 것일까요?</span></span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">df.info()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 25973 entries, 1 to 25973
+Columns: 369 entries, Time from Start to Finish (seconds) to Q38_B_OTHER
+dtypes: object(369)
+memory usage: 73.1+ MB
+</code></pre>
+<p>df에 pd.read_csv로 csv file을 읽어 옵니다. </p>
+<p>역시 pd인 df객체에 iloc을 이용하여 [ 1행부터 : , : ] iloc를 선택 해 놓았다. </p>
+<ol>
+<li>행번호(row number)로 선택하는 방법 <strong>(.iloc)</strong></li>
+<li>label이나 조건표현으로 선택하는 방법 (.loc)</li>
+</ol>
+<p>Ref. <a target="_blank" rel="noopener" href="https://azanewta.tistory.com/34">loc를 이용한 행 선택</a></p>
+<br>
+<hr>
+<center style="font-size:300%; font-family:Hiragino Kaku Gothic Pro, sans-serif"> 0. Introduction</center>
+<br>
+
+<div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif"> 
+    
+<p>This notebook will explore the fascinating results obtained from the survey conducted by Kaggle in September 2021. Over 25,000 data scientists and ML engineers participated, providing information on their backgrounds and experience in their occupations. <br></p>
+<p>To increase readability, this report is divided into four sections: </div></p>
+<ol>
+<li><div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif">Demographics & Geographics</div></li>
+<li><div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif">Education & Occupation </div></li>
+<li><div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif">Knowledge & Skills</div></li>
+<li><div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif">Platforms & Media</div></li>
+</ol>
+<br>
+
+<hr>
+<p>Introduction<br>이 노트북은 25000 data scientist들과 ML Engineer들의 kaggle에서 경험 한것을 조사한 data를  매력적인 결과로 탐험 하게 될 것이다.<br>(대충)</p>
+<p>; Introduction 에서 이 notebook의 성격, data의 간간한 정보, 목차 등을 설명.</p>
+<hr>
+
+<p>모든 글은 Markdown을 이용한 css 로 작성 된 것 같다. </p>
+<br>
+
+<p>혹시,<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS">css</a><br>에 대하여 더 알아보고 싶으면, 이 문서를 참조 하자.</p>
+<hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-06T06:21:01.000Z" title="2021. 11. 6. 오후 3:21:01">2021-11-06</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-06T07:39:18.834Z" title="2021. 12. 6. 오후 4:39:18">2021-12-06</time>&nbsp;업데이트 됨</span><span class="level-item">3분안에 읽기 (약 476 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/06/blog/series(pandas)/">Pandas_Series</a></h1><div class="content"><p>#Pandas에서 series 자료구조</p>
+<p>series는 1차원 배열같은 자료 구조를 말한다.</p>
+<p>아래 code는 python pandas의 parameter 값이다. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">data=<span class="literal">None</span>, index=<span class="literal">None</span>, dtype=<span class="literal">None</span>, name=<span class="literal">None</span>, </span></span></span><br><span class="line"><span class="params"><span class="function">             copy=<span class="literal">False</span>, fastpath=<span class="literal">False</span></span>)</span></span><br></pre></td></tr></table></figure>
+
+
+<p>series의 parameter는 data, index, dtype, name, copy, fastpath로 나뉘어져 있는데<br>name의 경우는 이름 인 것 같고 기본적으로 Index와 value라는 parameter를 많이 이용 하는 듯 하다.</p>
+<ul>
+<li>Index : 배열의 이름</li>
+<li>value : 값</li>
+</ul>
+<p>python의 dictionalry와 거의 유사 한 것 같다.  <br><br><sapn style="font-size: 50%; font-color: orange;" >(다음에 찾아보자 오늘은 벅참.) </span></p>
+<p>series의 dtype에는 str, numpy.dtype, or ExtensionDtype, optional Data type 을<br>담을 수 있는데 이는 자동으로 값이 입력 되는 것같다.</p>
+<p>series 객체를 생성 할 때 value와 Index를 직접 지정 해 줄 수 있다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">sr = pd.Series([<span class="number">24000</span>, <span class="number">20000</span>, <span class="number">1000</span>, <span class="number">5000</span>], </span><br><span class="line">               index=[<span class="string">&quot;피자&quot;</span>, <span class="string">&quot;치킨&quot;</span>, <span class="string">&quot;콜라&quot;</span>, <span class="string">&quot;생맥&quot;</span>])</span><br><span class="line"><span class="built_in">print</span>(sr)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>구글 코랩에서 작업 하고 있는데,<br>아래에 보면 series 객체의 parameter에대한 팝업이 나와 공부 하기 참 편하게 해 준다.</p>
+<blockquote>
+<blockquote>
+<p>def <strong>init</strong>(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False)<br>One-dimensional ndarray with axis labels (including time series).</p>
+</blockquote>
+<blockquote>
+<p>Labels need not be unique but must be a hashable type. The object supports both integer- and label-based indexing and provides a host of methods for performing operations involving the index. Statistical methods from ndarray have been overridden to automatically exclude missing data<br>(currently represented as NaN).<br>Operations between Series (+, -, /, *, **) align values based on their associated index values– they need not be the same length. The result index will be the sorted union of the two indexes.</p>
+</blockquote>
+</blockquote>
+<p><br><br></p>
+<blockquote>
+<p>Parameters</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>data : array-like, Iterable, dict, or scalar value  <br><br>Contains data stored in Series. <br> <br><br>index : array-like or Index (1d)  <br><br>Values must be hashable and have the same length as data.  <br><br>Non-unique index values are allowed. Will default to RangeIndex (0, 1, 2, …, n)<br>if not provided. If both a dict and index sequence are used, the index will<br>override the keys found in the dict. <br><br><br>dtype : str, numpy.dtype, or ExtensionDtype, optional <br><br>Data type for the output Series.  <br><br>If not specified, this will be inferred from data.  <br><br>See the user guide &lt;basics.dtypes&gt; for more usages. <br><br><br>name : str, optional  <br><br><br>The name to give to the Series.  <br><br><br>copy : bool, default False  <br><br>Copy input data.  <br></p>
+</blockquote>
+</blockquote>
+<h4>type</h4>
+
+<ul>
+<li>list []</li>
+<li>tuple ()</li>
+<li>set {}</li>
+<li>dict {Key:value}</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://eunguru.tistory.com/220">series</a> <br><br><a target="_blank" rel="noopener" href="https://wikidocs.net/32829">pandas</a>  <br></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-06T01:11:01.000Z" title="2021. 11. 6. 오전 10:11:01">2021-11-06</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-06T14:09:55.173Z" title="2021. 11. 6. 오후 11:09:55">2021-11-06</time>&nbsp;업데이트 됨</span><span class="level-item">몇 초안에 읽기 (약 8 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/06/blog/panel(pandas)/">Pandas_panel</a></h1><div class="content"><p>#pandas에서 panel 자료구조.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-06T00:11:02.000Z" title="2021. 11. 6. 오전 9:11:02">2021-11-06</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-07T23:33:45.404Z" title="2021. 11. 8. 오전 8:33:45">2021-11-08</time>&nbsp;업데이트 됨</span><span class="level-item">1분안에 읽기 (약 210 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/06/blog/dataFrame(pandas)/">Pandas_DataFrame</a></h1><div class="content"><p>#pandas에서 dataFrame 자료구조.</p>
+<p>dataFrame은 표와 같은 스프레드 시트 형식의 자료 구조이다.</p>
+<p>2차원 배열 또는 리스트, data table 전체를 포함하는 object라고 볼수 있음.</p>
+<p>여러개의 column이 있고, 각 컬럼은 숫자, 문자열, boolean type을 담을 수 있다.</p>
+<p>dataFrame은 Rew, column에대한 Index 이렇게 2가지 변수를 담고 있는데 matrix라고 할 수 있다.</p>
+<hr>
+<br>
+
+<h2 id="pd-dataframe"><a href="#pd-dataframe" class="headerlink" title="pd.dataframe()"></a>pd.dataframe()</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">values = [[<span class="string">&#x27;rose&#x27;</span>, <span class="string">&#x27;tulip&#x27;</span>, <span class="string">&#x27;Liry&#x27;</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;green&#x27;</span>]]</span><br><span class="line">index = [<span class="string">&#x27;flower&#x27;</span>, <span class="string">&#x27;Number&#x27;</span>, <span class="string">&#x27;color&#x27;</span>]</span><br><span class="line">columns = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">df = pd.DataFrame(values, index=index, columns=columns)</span><br><span class="line"><span class="built_in">print</span>(df)</span><br></pre></td></tr></table></figure>
+
+<p>df 는  data frame의 준말.</p>
+<pre><code>       1     2     3
+flower rose  tulip Liry
+Number 4     5     6
+color  red   blue  green
+</code></pre>
+<p>Index와 column 의 dtype은 object이다. </p>
+<p>데이터프레임은 리스트(List), 시리즈(Series), 딕셔너리(dict), Numpy의 ndarrays,<br>또 다른 데이터프레임으로 생성할 수 있습니다.</p>
+<h3 id="Ref"><a href="#Ref" class="headerlink" title="Ref."></a>Ref.</h3><p><a target="_blank" rel="noopener" href="https://eunguru.tistory.com/221?category=817455">DataFrame</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-05T08:06:31.581Z" title="2021. 11. 5. 오후 5:06:31">2021-11-05</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-10T01:16:10.948Z" title="2021. 11. 10. 오전 10:16:10">2021-11-10</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/index/">index</a></span><span class="level-item">2분안에 읽기 (약 314 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/05/blog/Index/">Index</a></h1><div class="content"><center style="font-size:200%; font-family:Hiragino Kaku Gothic Pro, sans-serif">
 <b>GitHub Index</b></center>
 
 <center style="font-size:100%; font-family:Hiragino Kaku Gothic Pro, sans-serif"> 
@@ -334,228 +764,7 @@ del A [1:4] :  [&#39;U&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;k
 <p>가장 원시적이면서 기본적인 parameter가 있는 decision tree의 parameter를 외우기 보다 지금 어떤 형태로 코드가 들어 가는지에 집중하자. </p>
 <p>왜냐하면, 최신의 버전은 decision tree가 아니기 때문.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_iris</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> tree</span><br><span class="line"></span><br><span class="line">clf = tree.DecisionTreeClassifier(random_state=<span class="number">0</span>)</span><br><span class="line">iris = load_iris()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-04T03:21:20.000Z" title="2021. 11. 4. 오후 12:21:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.664Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/DecisionTree/">DecisionTree</a></span><span class="level-item">7분안에 읽기 (약 1054 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/blog/machineLearning_basic/">machine Learning_basic</a></h1><div class="content"><h1 id="machine-learning"><a href="#machine-learning" class="headerlink" title="machine learning"></a>machine learning</h1><h2 id="Decision-tree-learing"><a href="#Decision-tree-learing" class="headerlink" title="Decision tree learing"></a>Decision tree learing</h2><br>
-<hr>
-
-<ul>
-<li>Decision tree 란</li>
-</ul>
-<p>관측값과 목표값을 연결 시켜주는 예측 모델</p>
-<p>통계학과 데이터 마이닝, 기계학습에서 예측모델링으로 사용하는 방법</p>
-<p>데이터 기능에서 유추된 결정규칙을 학습하여 대상 변수값을 예측 하는 모델을 만들기 위해 사용</p>
-<p>####종류</p>
-<ul>
-<li><p>분류 트리 </p>
-<ul>
-<li>변수가 유한한 수의 값을 가지는 것, <strong>클래스 출력</strong></li>
-<li>Leaf node는 클래스 라벨을 나타내고 가지는 클래스 라벨과 관련있는 특징들의 논리 곱을 나타낸다. </li>
-</ul>
-</li>
-<li><p>회귀트리 </p>
-<ul>
-<li>목표변수가 연속하는 값(일반적으로 실수 )을 가지는 트리</li>
-<li><strong>특정 의미를 가지는 실수값</strong>을 출력</li>
-</ul>
-<p> 의사결정 분석에서 결정트리는 시각적으로 명시적인 방법으로 과정을 보여준다.     </p>
-</li>
-</ul>
-<h4 id="결정트리의-학습"><a href="#결정트리의-학습" class="headerlink" title="결정트리의 학습"></a>결정트리의 학습</h4><ul>
-<li><p>결정 트리의 학습 : 자료 집합을 적절한 분할기준 또는 분할 테스트에 따라 부분집합들로 나누는 과정 </p>
-<ul>
-<li>하향식 결정 트리 귀납법 (TDIDT_top-down induction of decision trees) <ul>
-<li>순환분할 방식으로 나눠진 자료의 부분집합에 재귀적으로 반복됨.</li>
-<li>분할로 인해 더이상 새로운 예측값이 추가 되지 않거나 부분집합의 노드가 목표변수와 같은 값을 지닐대 까지 계속됨.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>데이터 마이닝에서 결정트리 </p>
-<ul>
-<li>수학 적으로 표현됨 </li>
-</ul>
-</li>
-</ul>
-<p>예를 들어 아래와 같은 데이터 마이닝에서의 결정 트리가 있다고 가정 해 보자. </p>
-<pre><code>( f&#123;x&#125;,Y ) = (x_1, x_2, x_3, ..., x_k, Y)
-
-종속 변수 Y는 분류를 통해 학습하고자 하는 목표 변수이며, 
-벡터 x는 &#123;  x_&#123;1&#125;, x_&#123;2&#125;, x_&#123;3&#125; &#125; x_1, x_2, x_3 등의 
-입력 변수로 구성된다.
-</code></pre>
-<h2 id="장점"><a href="#장점" class="headerlink" title="장점"></a>장점</h2><pre><code>1. 이해하기 쉬우며 시각화 가능
-2. data 준비가 거의 필요하지 않음
-3. 수치형, 범주형 data를 모두 처리 가능
-4. multi-output problems를 다룰 수 있다. 
-5. a white box model을 사용 할 수 있다. (bool 가능)
-6. 통계 검정을 사용하여 모형을 검증하기 때문에 모델의 신뢰성을 설명할 수 있다.
-7. 생성된 데이터가 실제 모형에 의해 가정이 다소 위반되더라도 잘 수행된다.
-</code></pre>
-<h2 id="단점"><a href="#단점" class="headerlink" title="단점"></a>단점</h2><ol>
-<li>data 일반화가 잘 되지 못하면 복잡한 트리가 만들어짐 (과적합)<pre><code> - 가지치기, 리프노드에 필요한 샘플 최소화, 트리 최대깊이 설정 으로 해결 가능
-</code></pre>
-</li>
-<li>variation이 작은 경우 의사결정트리가 불안정 할 수 있다. <ul>
-<li>앙상블(ensemble) 내에서 의사결정 트리 사용으로 해결 가능.</li>
-<li>실용적인 의사 결정 트리 학습 알고리즘은 각 노드에서 국소적으로 최적의 의사결정이 이루어지는 그리디 알고리즘과 같은 경험적 알고리즘을 기반으로 한다. 이러한 알고리즘은 전역 최적 의사 결정 트리를 반환한다고 보장할 수 없다. </li>
-<li>이는 특징과 샘플이 교체와 함께 무작위로 샘플링되는 앙상블 학습기에서 여러 트리를 훈련시킴으로써 완화될 수 있다.</li>
-</ul>
-</li>
-<li>의사 결정 트리의 예측은 근사치이기 때문에 좋은 추정은 아닐 수 있다.</li>
-<li>의사결정 트리의 최적화의 문제는 NP-complete로 잘 알려진 문제이다.<br>잘 모르겠다.</li>
-</ol>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/NP-%EC%99%84%EC%A0%84">NP-complete</a></li>
-</ul>
-<ol start="5">
-<li>XOR, parity or multiplexer problems와 같이 배우기 쉽지 않은 컨셉들 때문에 표현하기 쉽지않다. </li>
-<li>학습자가 편향된 트리르르 만들 수 있으므로, 데이터 세트의 균형을 맞춰줘야 한다. </li>
-</ol>
-<br>
-<hr>
-<br>
-
-<h4 id="이어지는-posting"><a href="#이어지는-posting" class="headerlink" title="이어지는 posting"></a>이어지는 posting</h4><ul>
-<li><a href="https://yoonhwa-p.github.io/2021/11/04/DecisionTreeClassifier/">classification</a></li>
-<li><a href="">Regression</a></li>
-</ul>
-<hr>
-<p>Ref.</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/%EA%B2%B0%EC%A0%95_%ED%8A%B8%EB%A6%AC_%ED%95%99%EC%8A%B5%EB%B2%95">결정트리학습법/wiki</a></li>
-<li><a target="_blank" rel="noopener" href="https://injo.tistory.com/15">결정트리 국문</a></li>
-<li><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/tree.html">Decusuib Trees</a></li>
-<li><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/tree.html#tree-classification">1.10.1</a> </li>
-<li><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/tree.html#tree-regression">1.10.2</a></li>
-</ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-03T23:51:20.000Z" title="2021. 11. 4. 오전 8:51:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.659Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/init/">init</a></span><span class="level-item">몇 초안에 읽기 (약 35 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/blog/categories/">Making Category</a></h1><div class="content"><pre><code>---
-title: &quot;Making Category&quot;
-excerpt :&quot;Credit card&quot;
-classes: wide
-categories:
--init
-tags:
--python
--title
--coding
-last_modified_at: 2021-11-03
----
-</code></pre>
-<p>color 바꾸고 싶은에 안되네 </p>
-<p><a target="_blank" rel="noopener" href="https://www.color-hex.com/color/f4dcdc">https://www.color-hex.com/color/f4dcdc</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-03T23:30:20.000Z" title="2021. 11. 4. 오전 8:30:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-22T12:27:37.669Z" title="2021. 11. 22. 오후 9:27:37">2021-11-22</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/BDS/">BDS</a></span><span class="level-item">13분안에 읽기 (약 2019 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/blog/BDS/">become a BDS</a></h1><div class="content"><p>##Big data 를 이용 할 수 있는 BioData Scientist가 되고 싶다. </p>
-<br>
-<hr>
-
-
-<p>생물학은 점점 디지털화되고 있으며 이제 양적인 과학 분야의 빛을 발하고 있다. </p>
-<p>핵심 추진 요인은 생물학적 연구에서 처리량이 높은 기술 플랫폼의 확산이 증가하는 것으로,<br>체계적인 연구를 위해 수천 개의 조직과 유기체에 걸친<br>유전자, 단백질 및 기타 생물학적 부분에 대한 수백만 개의 데이터 포인트가<br>수집, 세척, 저장 및 통합될 수 있도록 한다.</p>
-<p>이처럼 데이터가 풍부한 환경에서 생물학적(그리고 임상 샘플에 배치된 경우 생물의학)<br>연구의 미래는 <strong> <em><strong>데이터의 전략적 극대화</strong></em> </strong>에 있다고 해도 과언이 아니다.</p>
-<p>오늘날의 기술 환경에서 데이터 과학 및 인공지능(AI)은<br>이미 비즈니스 및 금융과 같은 영역에서 혁신 동력으로 작용하고 있다.<br>여기서 데이터 과학자는 막후에서 작업하는 대신 데이터를 실질적인<br>통찰력으로 변환하는 역할을 담당하고 있다. </p>
-<p>예를 들어, 인공지능 기반 알고리즘 거래와 금융 기술(FinTech)의 주식 추천 시스템,<br>엔지니어링의 자동화 엔진 설계, 시스템 유지보수 및 로봇공학 등이 있다.<br>최근의 데이터 폭발과 이에 따른 비즈니스, 금융 및 컴퓨팅과 같은<br>다른 분야의 데이터 과학의 발전을 감안할 때, 우리는 특히 생물학과 관련된 영역별<br>문제를 다루는 새로운 변형인 빠르고 방대한 양의 데이터 생성과 함께 데이터 과학이<br>등장할 것으로 예상한다. 이를 <strong>“바이오 데이터 과학”</strong> 이라고 한다.</p>
-<p>###BDS(BioData Science)에는 세 가지 핵심 분야가 있다. </p>
-<ul>
-<li>생물학 영역: Biology </li>
-<li>수학 및 통계 : mathematics (statistics)</li>
-<li>컴퓨터 공학 : computer science</li>
-</ul>
-<br>
-
-<p><img src="../../imeges/BDS_componets.png" alt="BDS_componets.png"></p>
-<br>
-
-
-<p><strong>생물학 영역</strong>은 질병의 원인이나 유추된 바이오 마커의 진단 효용 이해와 같은 생물학적 기원에 대한 질문과 관련이 있다. </p>
-<p><strong>컴퓨터 과학 코어</strong>는 특히 분석할 데이터가 큰 경우 문제 해결을 위한 적절한<br>알고리즘 고안, 반복 처리 (예: 데이터의 큰 부분 집합에서<br>동일한 알고리즘 여러 번 실행) 및 데이터 저장 문제 해결과 관련이 있다.</p>
-<p><strong>수학 및 통계 핵심 영역</strong>은 데이터 요약, 정규화 및 모델링을 포함한 문제와 관련이 있다.<br>기술 및 탐색적 통계 데이터 분석이 BDS에만 국한된 것은 아니지만<br>(생물 통계의 필수 구성 요소이기도 하며, 더 낮은 정도로 생물 정보학이기도 함),<br>BDS는 빅데이터에 AI/ML을 적용하는 것에 기초한 신흥 기술을 이용한 예측에 초점을 맞추고 있다.</p>
-<hr>
-
-<p>###바이오 데이터 과학은 다른 과학 분야와 다르지 않은 탐구 과학이다.<br>BDS는 단순히 기술(technology), 기계 학습(machine learning) 인공지능(AI)이 아니다. </p>
-<p>인공지능이 여러분을 위해 그렇게 해주기를 바라는 대신, 사람의 <strong>강한 논리적 사고</strong>에 기초해야 한다.<br>BDS가 궁극적으로 연구의 과학이라는 이런 점에서, 전형적인 과학적 조사와 다르지 않다. </p>
-<p>우리는 유전자 발현 변화가 정신 상태와 의미있게 상관되는지에 대한 질문에 답하도록 돕기 위해<br>다음의 7가지 단계를 사용할 수 있다. </p>
-<br>
-
-<p>가장 큰 차이점은 BDS는 낮은 처리량 또는 저전력 물리적 실험에 대한 강조를 줄이면서<br><strong>의미 있는 데이터 조작 및 분석에 강력한 능력</strong>을 필요로 한다는 것이다.</p>
-<pre><code>데이터 과학은 다른 과학적 추구와 같은 과정으로 진행 된다.
-
-- 조사할 질문을 먼저 선택
-- 테스트 가능한 관련 가설을 확인함으로써 이 질문의 범위를 넓힘
-- 가설에 답하기 위한 데이터를 얻기 위한 적절한 실험을 설계하고 현장 적용할 
-- 결과를 결정하고 그 타당성, 즉 데이터가 연구 질문에 답하는 데 적합한지 여부를 평가
-- 마지막으로, 모델을 배치하고 연구 결과가 반복 가능한지 확인
-</code></pre>
-<br>
-<hr>
-<br>
-
-<p>###데이터 분석은 복잡한 다단계 프로세스이다.<br>**BDS(BioData Science)**는 도전적인 분야이지만, 생물정보학이나 전산생물학과 비슷하게 어렵다.</p>
-<p>생물학적 시스템을 측정하기 위한 기술적 플랫폼은 매우 정교하지만, 생물학적 시스템은 매우 복잡하다.<br>게다가 생물학적 실체를 측정하기 위해 개발된 기술적 도구는 생물학적 시스템의<br>구성요소가 변화하고 시간이 지남에 따라 자연스럽게 변화하는 동안 기술적 불확실성에 영향을 받는다.<br>바이오 빅 데이터는 이러한 문제에 대한 자연스러운 솔루션이 아니며 새로운 문제를 야기한다. </p>
-<br>
-
-<p><img src="../../imeges/BDS_Investigation.png" alt="BDS_Investigation.png"></p>
-<br>
-
-<p>BDS 데이터는 매우 많은 수의 관측에서 보존된 패턴을 식별하는 과정과 같은 데이터 과학<br>노력을 촉진할 수 있지만, 적절한 분석 파이프라인이 개발될 경우에만 그렇게 할 수 있다.<br>이 작업은 하찮지 않다. 이러한 분석 파이프라인은 데이터 수집에서 시작하여<br>더 높은 수준의 생물학적 해석과 통찰력을 향한 계산 및 통계 평가를 통해 계속 이어지는<br>다양한 접근 방식의 엔드 투 엔드 통합으로 상상할 수 있다.</p>
-<br>
-
-
-<ul>
-<li>omics 데이터의 바이오 마커 분석을 위한 단순화된 파이프라인과 관련 주요 고려 사항은 다음과 같을 수 있다.</li>
-</ul>
-<p><img src="../../imeges/BDS_omics.png" alt="BDS_omics.png"></p>
-<br>
-
-
-<p>분석 파이프라인은 매우 유연해야 하며 연구 질문의 필요에 따라 변화해야 한다.<br>완벽한 지식이 부족하기 때문에 최적화와 재현성을 어느 정도 달성하기 위해 몇 단계를 왔다 갔다<br>반복하고 다듬는 것도 일반적이다.</p>
-<p>예를 들어, 정규화 단계에서 두 개의 서로 다른 정규화 절차를<br>사용하여 매우 다르고 겹치지 않는 차등 유전자 세트를 발견했다고 가정 해 보자.<br>정규화 절차는 데이터에 대해 잘못된 가정을 하거나 잘못 구현되었을 수 있다.<br>표시된 주요 고려사항은 엄청나게 많다. 고려사항의 예와 함께 단계를 보여주는 목적은<br>각 단계마다 완벽한 시스템이나 파이프라인이 없지만, 각 의사결정 지점마다 이후 단계에 대한<br>결과를 갖는 많은 고려사항이 있음을 입증하는 것이다.</p>
-<p>우리는 또한 특정 정규화 접근법이 다운스트림 통계 절차와 잘 작동하는지와 같은<br>호환성 문제나 특정 절차가 배치 효과 보정 알고리즘 및 일부 다중 시험 보정 방법과 관련된<br>과다 탈락 및 과다 첨가로 이어질 수 있는지 여부와 같은 문제를 걱정해야 한다.</p>
-<p>일반적으로 좋은 결과를 보장하는 노선도나 표준 운영 절차는 없다는 점에서<br>BDS는 예술에 가까운 과학인 것이다. </p>
-<p>Ref.<br><a target="_blank" rel="noopener" href="https://gohwils.github.io/biodatascience/biodatascience.html">https://gohwils.github.io/biodatascience/biodatascience.html</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-03T23:21:20.000Z" title="2021. 11. 4. 오전 8:21:20">2021-11-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-07T23:33:45.408Z" title="2021. 11. 8. 오전 8:33:45">2021-11-08</time>&nbsp;업데이트 됨</span><span class="level-item">1분안에 읽기 (약 175 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/04/blog/nodjs/">Deploy gitHub blog by hexo</a></h1><div class="content"><p>##github blog를 Hexo를 이용하여 deploy 해 보자.</p>
-<p>Ref.</p>
-<p><a target="_blank" rel="noopener" href="https://dschloe.github.io/settings/hexo_blog/">https://dschloe.github.io/settings/hexo_blog/</a></p>
-<p>###Hexo를 이용하여 블로그를 만들어 보자 </p>
-<h4 id="Node-js를-download-해-준다"><a href="#Node-js를-download-해-준다" class="headerlink" title="Node js를 download 해 준다."></a>Node js를 download 해 준다.</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node js</a> 설치</li>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/">GitBash</a> 에서 node의 version을  확인</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Hexo를 설치 해 준다. <ul>
-<li>Hexo의 경우  npm을 이용하여 설치 한다. </li>
-</ul>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="git-bash를-적당한-경로에서-들어간다"><a href="#git-bash를-적당한-경로에서-들어간다" class="headerlink" title="git bash를 적당한 경로에서 들어간다."></a>git bash를 적당한 경로에서 들어간다.</h4><p>makeBlog folder를 만들어준다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ mkdir makeBlog</span><br><span class="line">$ <span class="built_in">cd</span> makeBlog</span><br><span class="line">$ hexo init myblog</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>hexo init 을 myblog에서 해 준다.<br>hexo server와 deployer를 설치 해 준다. </p>
-<p>이를 설치 하지 않으면 에러가 날 수 있다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> myblog</span><br><span class="line">$ npm install</span><br><span class="line">$ npm install hexo-server --save</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-
-
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-03T05:21:20.000Z" title="2021. 11. 3. 오후 2:21:20">2021-11-03</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.658Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item">몇 초안에 읽기 (약 14 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/03/blog/bearSoup_Review/">BearSoup_Review</a></h1><div class="content"><p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<h2 id="논문-리뷰"><a href="#논문-리뷰" class="headerlink" title="논문 리뷰"></a>논문 리뷰</h2><p>=======</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>c5589a672e850f5edca309f81ca50915cbf17ada</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/3/">이전</a></div><div class="pagination-next"><a href="/page/5/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li><li><a class="pagination-link is-current" href="/page/4/">4</a></li><li><a class="pagination-link" href="/page/5/">5</a></li><li><a class="pagination-link" href="/page/6/">6</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../img/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">51</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">51</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://yoonhwa-p.github.io"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="../img/instaGram.jpg"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/index/"><span class="level-start"><span class="level-item">index</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/python-plotly/"><span class="level-start"><span class="level-item">python - plotly</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-28T04:18:29.000Z">2021-11-28</time></p><p class="title"><a href="/2021/11/28/kgg/KaggleCompetition_ver33byYH_Finall/">Newbie as a data scientist in East Asia! (kaggle Competition)</a></p><p class="categories"><a href="/categories/python-plotly/">python - plotly</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-23T04:18:29.000Z">2021-11-23</time></p><p class="title"><a href="/2021/11/23/kgg/Kgg_EastAsia_DataScientist/">East Asia, Data Scientist (kaggle in East-Asia)</a></p><p class="categories"><a href="/categories/python-plotly/">python - plotly</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-22T03:10:27.000Z">2021-11-22</time></p><p class="title"><a href="/2021/11/22/kgg/kgg_EastAsia_varH/">Scatter with bar</a></p><p class="categories"><a href="/categories/python-plotly/">python - plotly</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-19T09:10:27.000Z">2021-11-19</time></p><p class="title"><a href="/2021/11/19/blog/columnPOP/">Column 뽑아오기</a></p><p class="categories"><a href="/categories/python-plotly/">python - plotly</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-19T03:10:27.000Z">2021-11-19</time></p><p class="title"><a href="/2021/11/19/kgg/Kgg_compt/">kgg compete data 정리</a></p><p class="categories"><a href="/categories/python-plotly/">python - plotly</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">46</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BarGraph/"><span class="tag">BarGraph</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bargraph/"><span class="tag">Bargraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Donut-Chart/"><span class="tag">Donut_Chart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HorizontalBar/"><span class="tag">HorizontalBar</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plotly/"><span class="tag">Plotly</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scatter/"><span class="tag">Scatter</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ScatterLine/"><span class="tag">ScatterLine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stacked-Bar/"><span class="tag">Stacked_Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Subplots/"><span class="tag">Subplots</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Treemap/"><span class="tag">Treemap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/draft/"><span class="tag">draft</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">27</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-Competition/"><span class="tag">kaggle_Competition</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-dictation/"><span class="tag">kaggle_dictation</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makegithub/"><span class="tag">makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plot/"><span class="tag">plot</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/source/imeges/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/3/">이전</a></div><div class="pagination-next"><a href="/page/5/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li><li><a class="pagination-link is-current" href="/page/4/">4</a></li><li><a class="pagination-link" href="/page/5/">5</a></li><li><a class="pagination-link" href="/page/6/">6</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../img/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">56</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">12</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">56</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://yoonhwa-p.github.io"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="../img/instaGram.jpg"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/data-science/"><span class="level-start"><span class="level-item">data_science</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/index/"><span class="level-start"><span class="level-item">index</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/python-plotly/"><span class="level-start"><span class="level-item">python - plotly</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-06T07:21:20.000Z">2021-12-06</time></p><p class="title"><a href="/2021/12/06/python/nameNnamespace/">name &amp; namespace</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-06T03:21:20.000Z">2021-12-06</time></p><p class="title"><a href="/2021/12/06/python/pythonLectureD1/">Python Class and function</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-29T09:41:27.000Z">2021-11-29</time></p><p class="title"><a href="/2021/11/29/R/R%20for%20Ds_03%20ggplot2/">R for DS_03 ggplot2</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/data-science/">data_science</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-29T08:21:20.000Z">2021-11-29</time></p><p class="title"><a href="/2021/11/29/R/R_R4ds_Welcom/">R for DS_01 welcome &amp; Introduction</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/data-science/">data_science</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-29T06:21:20.000Z">2021-11-29</time></p><p class="title"><a href="/2021/11/29/R/loan_classification/">loan_classification</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">12월 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BarGraph/"><span class="tag">BarGraph</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bargraph/"><span class="tag">Bargraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Donut-Chart/"><span class="tag">Donut_Chart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HorizontalBar/"><span class="tag">HorizontalBar</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plotly/"><span class="tag">Plotly</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R4ds/"><span class="tag">R4ds</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scatter/"><span class="tag">Scatter</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ScatterLine/"><span class="tag">ScatterLine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stacked-Bar/"><span class="tag">Stacked_Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Subplots/"><span class="tag">Subplots</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Treemap/"><span class="tag">Treemap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dataScience/"><span class="tag">dataScience</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/draft/"><span class="tag">draft</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot2/"><span class="tag">ggplot2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">27</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-Competition/"><span class="tag">kaggle_Competition</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-dictation/"><span class="tag">kaggle_dictation</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makegithub/"><span class="tag">makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namespace/"><span class="tag">namespace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plot/"><span class="tag">plot</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pythonFuction/"><span class="tag">pythonFuction</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/source/imeges/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
