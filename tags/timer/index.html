@@ -3,7 +3,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/source/imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">태그</a></li><li class="is-active"><a href="#" aria-current="page">timer</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-07T05:37:20.000Z" title="2021. 12. 7. 오후 2:37:20">2021-12-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-07T10:26:22.972Z" title="2021. 12. 7. 오후 7:26:22">2021-12-07</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/">machineLeaning</a></span><span class="level-item">5분안에 읽기 (약 806 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/07/python/timer_LectureD2/">Make Timer function in python</a></h1><div class="content"><h2 id="시간-측정-decorator-함수-만들기"><a href="#시간-측정-decorator-함수-만들기" class="headerlink" title="시간 측정 decorator 함수 만들기"></a>시간 측정 decorator 함수 만들기</h2><br>
+        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/source/imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">태그</a></li><li class="is-active"><a href="#" aria-current="page">timer</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-07T05:37:20.000Z" title="2021. 12. 7. 오후 2:37:20">2021-12-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-07T10:33:34.859Z" title="2021. 12. 7. 오후 7:33:34">2021-12-07</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/">machineLeaning</a></span><span class="level-item">5분안에 읽기 (약 806 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/07/python/timer_LectureD2/">Make Timer function in python</a></h1><div class="content"><h2 id="시간-측정-decorator-함수-만들기"><a href="#시간-측정-decorator-함수-만들기" class="headerlink" title="시간 측정 decorator 함수 만들기 "></a><p style="color:#E84D4D;font-size:120%;">시간 측정 decorator 함수 만들기 </p></h2><br>
 <hr>
 
 
@@ -17,22 +17,19 @@
 <div style="border: 1px solid gold">
 
 <ul>
-<li><p>가변 매개 변수 args(*)</p>
-<ul>
-<li>함수를 정의할때 앞에 *가 붙어 있으면, 정해지지 않은 수의 매개변수를 받겠다는 의미</li>
-<li>가변 매개변수는 입력 받은 인수를 튜플형식으로 packing 한다. </li>
-<li>일반적으로 *args (arguments의 약자로 관례적으로 사용) 를 사용한다. </li>
-<li>다른 매개 변수와 혼용가능</li>
+<li><p style="color:#E84D4D;font-size:120%;">가변 매개 변수 args(*) </p>
+- 함수를 정의할때 앞에 *가 붙어 있으면, 정해지지 않은 수의 매개변수를 받겠다는 의미
+- 가변 매개변수는 입력 받은 인수를 튜플형식으로 packing 한다. 
+- 일반적으로 *args (arguments의 약자로 관례적으로 사용) 를 사용한다. 
+- 다른 매개 변수와 혼용가능 
+<br></li>
+<li><p style="color:#E84D4D;font-size:120%;">키워드 매개변수 kwargs(**) </p>
+- 함수에서 정의되지 않은 매개변수를 받을 때 사용되며, 딕셔너리 형식으로 전달.
+- 일반 매개변수, 가변 매개변수와 함께 일는 경우 순서를 지켜야함 (일반>가변>키워드 순)
+- **kwargs (Keyword arguments의 약자로 관례적으로 사용 )</li>
 </ul>
-</li>
-<li><p>키워드 매개변수 kwargs(**)</p>
-<ul>
-<li>함수에서 정의되지 않은 매개변수를 받을 때 사용되며, 딕셔너리 형식으로 전달.</li>
-<li>일반 매개변수, 가변 매개변수와 함께 일는 경우 순서를 지켜야함 (일반&gt;가변&gt;키워드 순)</li>
-<li>**kwargs (Keyword arguments의 약자로 관례적으로 사용 )</div> </li>
-</ul>
-</li>
-</ul>
+</div> 
+
 <p><br><br></p>
 <h3 id="decorator-함수를-이용하여-시간-확인-함수-설정-실행"><a href="#decorator-함수를-이용하여-시간-확인-함수-설정-실행" class="headerlink" title="decorator 함수를 이용하여 시간 확인 함수 설정, 실행"></a>decorator 함수를 이용하여 시간 확인 함수 설정, 실행</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@timer</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check_time</span>(<span class="params">num</span>):</span></span><br><span class="line">    time.sleep(num)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    check_time(<span class="number">1.5</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -42,7 +39,7 @@
 <p>check_time, Total time is  1.50 sec.</p>
 </blockquote>
 </blockquote>
-<p><br><br><hr style="border: dashed 5px salmon;"><br><br><br></p>
+<p><br><br><hr style="border: dashed 5px gold;"><br><br><br></p>
 <h3 id="관련-이론들을-아래에-적어-놓았다"><a href="#관련-이론들을-아래에-적어-놓았다" class="headerlink" title="관련 이론들을 아래에 적어 놓았다."></a>관련 이론들을 아래에 적어 놓았다.</h3><ul>
 <li><code>timestamp</code> :python에서 time은 1970년 1월 1일 0시 0분 0초를 기준으로 경과한 시간을 나타냄</li>
 <li><code>time_struct</code> class<ul>
