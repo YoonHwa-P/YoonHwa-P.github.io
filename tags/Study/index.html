@@ -218,7 +218,7 @@ object(101, int ref_cnt=1) 0x200
 <li>type() : 변수의 data type을 확인 할 수 있다. </li>
 </ul>
 <p>Ref. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_WgARuzoPeU">youtube, 1hr</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-06T03:21:20.000Z" title="2021. 12. 6. 오후 12:21:20">2021-12-06</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-06T06:49:13.161Z" title="2021. 12. 6. 오후 3:49:13">2021-12-06</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a></span><span class="level-item">2분안에 읽기 (약 258 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/06/python/pythonLectureD1/">Python Class and function</a></h1><div class="content"><h2 id="day-1-Lecture"><a href="#day-1-Lecture" class="headerlink" title="day 1 Lecture"></a>day 1 Lecture</h2><p><br><br><hr></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-06T03:21:20.000Z" title="2021. 12. 6. 오후 12:21:20">2021-12-06</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-07T04:09:01.731Z" title="2021. 12. 7. 오후 1:09:01">2021-12-07</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a></span><span class="level-item">3분안에 읽기 (약 437 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/06/python/pythonLectureD1/">Python Class and function</a></h1><div class="content"><h2 id="day-1-Lecture"><a href="#day-1-Lecture" class="headerlink" title="day 1 Lecture"></a>day 1 Lecture</h2><p><br><br><hr></p>
 <h3 id="1-새로운-Project-시작"><a href="#1-새로운-Project-시작" class="headerlink" title="1. 새로운 Project 시작"></a>1. 새로운 Project 시작</h3><ul>
 <li>python project를 새로 시작 해 보자. </li>
 </ul>
@@ -240,13 +240,42 @@ object(101, int ref_cnt=1) 0x200
 
 <ul>
 <li>Ctrl + shift + F10  : Run</li>
-<li>def 로 함수 정의 이름(print_hi), 인수(name)을 설정 :<ul>
+</ul>
+<ul>
+<li><p>def 로 함수 정의 이름(print_hi), 인수(name)을 설정 :</p>
+<ul>
 <li>원하는 동작(print(f’Hi, {name})) 넣기</li>
 </ul>
 </li>
-<li>if </li>
+<li><p>함수 실행 : 왜 이렇게 해야 하는가를 공부 해 오자.</p>
+<ul>
+<li>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>  print_hi(‘PyCharm’)</li>
 </ul>
-<h3 id="3-Import"><a href="#3-Import" class="headerlink" title="3. Import."></a>3. Import.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">numpy == <span class="number">1.21</span><span class="number">.4</span></span><br><span class="line">pandas ==<span class="number">1.3</span><span class="number">.4</span></span><br><span class="line">seaborn==<span class="number">0.11</span><span class="number">.2</span></span><br><span class="line">matplotlib==<span class="number">3.5</span><span class="number">.0</span></span><br><span class="line">scipy ==<span class="number">1.7</span><span class="number">.3</span></span><br><span class="line">scikit-learn == <span class="number">1.0</span><span class="number">.1</span></span><br></pre></td></tr></table></figure></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-06T06:21:01.000Z" title="2021. 11. 6. 오후 3:21:01">2021-11-06</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-06T07:39:18.834Z" title="2021. 12. 6. 오후 4:39:18">2021-12-06</time>&nbsp;업데이트 됨</span><span class="level-item">3분안에 읽기 (약 476 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/06/blog/series(pandas)/">Pandas_Series</a></h1><div class="content"><p>#Pandas에서 series 자료구조</p>
+</li>
+<li><p>print(“hi”, print_hi(‘YH’))</p>
+</li>
+</ul>
+<blockquote>
+<p>Hi, PyCharm <br><br>Hi, YH <br><br>hi None <br></p>
+</blockquote>
+<h3 id="3-Import"><a href="#3-Import" class="headerlink" title="3. Import."></a>3. Import.</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">numpy == <span class="number">1.21</span><span class="number">.4</span></span><br><span class="line">pandas ==<span class="number">1.3</span><span class="number">.4</span></span><br><span class="line">seaborn==<span class="number">0.11</span><span class="number">.2</span></span><br><span class="line">matplotlib==<span class="number">3.5</span><span class="number">.0</span></span><br><span class="line">scipy ==<span class="number">1.7</span><span class="number">.3</span></span><br><span class="line">scikit-learn == <span class="number">1.0</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+
+
+<h4> 가상환경 설정을 하는 이유 </h4>
+
+<p>Python PKG : 20~30 만개 있다. </p>
+<ul>
+<li>   라이브러리 : 종속성이 있다.</li>
+<li>   범용성이 좋아서 data analysis, web site development, 앱, 게임 등 개발, GUI, 개발 그 외 여러가지 가능</li>
+<li>   Matplotlib (기초가 되는 라이브러리, 3.5.0)를 참조하여 seaborn, plotly, …</li>
+<li>   버전 관리 불가. </li>
+</ul>
+<ul>
+<li>data 분석을 위한 가상 환경<br>같은 Local machine 위에<br>Game 개발을 위한 가상 환경 조성 (다른 버전을 사용 할 수 있다. )</li>
+</ul>
+<p>PKG 설정: </p>
+<p><a target="_blank" rel="noopener" href="https://pypi.org/">https://pypi.org</a> 에 들어가서 PKG 버전을보고 설치 하면 된다. </p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-06T06:21:01.000Z" title="2021. 11. 6. 오후 3:21:01">2021-11-06</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-06T07:39:18.834Z" title="2021. 12. 6. 오후 4:39:18">2021-12-06</time>&nbsp;업데이트 됨</span><span class="level-item">3분안에 읽기 (약 476 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/06/blog/series(pandas)/">Pandas_Series</a></h1><div class="content"><p>#Pandas에서 series 자료구조</p>
 <p>series는 1차원 배열같은 자료 구조를 말한다.</p>
 <p>아래 code는 python pandas의 parameter 값이다. </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">data=<span class="literal">None</span>, index=<span class="literal">None</span>, dtype=<span class="literal">None</span>, name=<span class="literal">None</span>, </span></span></span><br><span class="line"><span class="params"><span class="function">             copy=<span class="literal">False</span>, fastpath=<span class="literal">False</span></span>)</span></span><br></pre></td></tr></table></figure>
