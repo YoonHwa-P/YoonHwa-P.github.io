@@ -3,7 +3,368 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-09T13:24:19.000Z" title="2021. 11. 9. 오후 10:24:19">2021-11-09</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-09T12:35:19.673Z" title="2021. 11. 9. 오후 9:35:19">2021-11-09</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python-plotly/">python - plotly</a></span><span class="level-item">5분안에 읽기 (약 681 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/09/kgg/Kgg_plotly_ScatterL(2)/">kaggle :ScatterLine (Q42)</a></h1><div class="content"><h1 id="kaggle-dictation-08"><a href="#kaggle-dictation-08" class="headerlink" title="kaggle dictation (08)"></a>kaggle dictation (08)</h1><p><br><br></p>
+        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-11T14:17:56.000Z" title="2021. 11. 11. 오후 11:17:56">2021-11-11</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-11T13:53:54.814Z" title="2021. 11. 11. 오후 10:53:54">2021-11-11</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python-plotly/">python - plotly</a></span><span class="level-item">2분안에 읽기 (약 314 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/11/kgg/Kgg_nlp_Tex/">NLP_text_classification</a></h1><div class="content"><p>##Kaggle _ API</p>
+<ol>
+<li>!pip Install Kaggle : Kaggle 설치</li>
+<li>google.colab에 kaggle.json files upload<ol>
+<li>Saving kaggle.json to kaggle.json </li>
+<li>User uploaded file “kaggle.json” with length 66 bytes</li>
+<li>kaggle.json file에는 뭐가 들어있을까 너무 궁금하다. </li>
+</ol>
+</li>
+<li>!kaggle competitions download -c nlp-getting-started<ol>
+<li>케글 대회 자료를 다운받기. (-c nlp-getting-started 이게 뭘까)</li>
+</ol>
+</li>
+<li>data path 설정하기</li>
+</ol>
+<p>##data 둘러보기</p>
+<ol>
+<li>data frame을 만들기 위해 Pandas와 numpy를  import후 각 file을 data set을 Load해 준다. </li>
+<li>data set 확인<ol>
+<li>.head()로 대략적인 data set 확인</li>
+<li>.shape로 각 data set의 크기 확인</li>
+<li>.info()로 각 data frame의 정보 확인</li>
+</ol>
+</li>
+</ol>
+<p>##EDA<br><a target="_blank" rel="noopener" href="https://eda-ai-lab.tistory.com/13">EDA</a></p>
+<p>: 수집한 data를 다양한 각도에서 관찰하고 이해하는 과정</p>
+<p>: 통계적 방법으로 자료를 직관적으로 바라보는 과정</p>
+<ul>
+<li>data의 분포 및 값을 검토함으로써 데이터가 표현하는 현상을 더 잘 이해하고, 잠재적 문제를 발견 할 수 있다. </li>
+<li>문제를 발견하여 기존의 가설을 수정하거나 새로운 가설을 세울 수 있다. </li>
+<li></li>
+</ul>
+<ol>
+<li>data visualiztion을 위해 matplotlib.pyplot과 seaborn 설치<ol>
+<li>missing_colunms = [“keyword”, “location”]</li>
+<li>각 data set에서 null인 columns를 가져온다. </li>
+</ol>
+</li>
+<li>matplotlib.pyplot으로 bar plot 그리기<br><img src="/imeges/kgg/MP_EDA.png" alt="MP_EDA"></li>
+<li></li>
+</ol>
+<p>##Feature Engineering<br>##Mideling<br>##algorithm logistic regression</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-11T13:12:20.000Z" title="2021. 11. 11. 오후 10:12:20">2021-11-11</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-28T05:46:06.966Z" title="2021. 11. 28. 오후 2:46:06">2021-11-28</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python-plotly/">python - plotly</a></span><span class="level-item">5분안에 읽기 (약 813 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/11/kgg/KggComp_/">to prepare kaggle Competition</a></h1><div class="content"><p>#Kaggle Competition 준비하기</p>
+<h3 id="Kaggle-Note-에서-작성됨"><a href="#Kaggle-Note-에서-작성됨" class="headerlink" title="Kaggle Note 에서 작성됨."></a>Kaggle Note 에서 작성됨.</h3><ol>
+<li>files and Library import</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> matplotlib.pylab <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> plotly.io <span class="keyword">as</span> pio</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">import</span> plotly.figure_factory <span class="keyword">as</span> ff</span><br><span class="line"><span class="keyword">from</span> plotly.subplots <span class="keyword">import</span> make_subplots</span><br><span class="line"><span class="keyword">from</span> plotly.offline <span class="keyword">import</span> init_notebook_mode, iplot</span><br><span class="line">init_notebook_mode(connected=<span class="literal">True</span>)</span><br><span class="line">pio.templates.default = <span class="string">&quot;none&quot;</span></span><br><span class="line"><span class="comment"># import plotly.offline as py</span></span><br><span class="line"><span class="comment"># py.offline.init_notebook_mode()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">for</span> dirname, _, filenames <span class="keyword">in</span> os.walk(<span class="string">&#x27;/kaggle/input&#x27;</span>):</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="built_in">print</span>(os.path.join(dirname, filename))</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&quot;ignore&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>result</p>
+<p><code>/kaggle/input/kaggle-survey-2018/SurveySchema.csv /kaggle/input/kaggle-survey-2018/freeFormResponses.csv /kaggle/input/kaggle-survey-2018/multipleChoiceResponses.csv /kaggle/input/kaggle-survey-2017/freeformResponses.csv /kaggle/input/kaggle-survey-2017/schema.csv /kaggle/input/kaggle-survey-2017/RespondentTypeREADME.txt /kaggle/input/kaggle-survey-2017/multipleChoiceResponses.csv /kaggle/input/kaggle-survey-2017/conversionRates.csv /kaggle/input/kaggle-survey-2020/kaggle_survey_2020_responses.csv /kaggle/input/kaggle-survey-2020/supplementary_data/kaggle_survey_2020_methodology.pdf /kaggle/input/kaggle-survey-2020/supplementary_data/kaggle_survey_2020_answer_choices.pdf /kaggle/input/kaggle-survey-2021/kaggle_survey_2021_responses.csv /kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_methodology.pdf /kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_answer_choices.pdf /kaggle/input/kaggle-survey-2019/survey_schema.csv /kaggle/input/kaggle-survey-2019/multiple_choice_responses.csv /kaggle/input/kaggle-survey-2019/other_text_responses.csv /kaggle/input/kaggle-survey-2019/questions_only.csv</code></p>
+<ol start="2">
+<li>dataframe create</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">df17= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2017/multipleChoiceResponses.csv&quot;</span>, encoding=<span class="string">&quot;ISO-8859-1&quot;</span>)</span><br><span class="line">df18= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2018/multipleChoiceResponses.csv&quot;</span>, )</span><br><span class="line">df19= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2019/multiple_choice_responses.csv&quot;</span>, )</span><br><span class="line">df20= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2020/kaggle_survey_2020_responses.csv&quot;</span>, )</span><br><span class="line">df21= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2021/kaggle_survey_2021_responses.csv&quot;</span>, )</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>data 확인하기</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">df21 = df21.iloc[<span class="number">1</span>:, :]</span><br><span class="line"><span class="comment">#df21.value_counts()</span></span><br><span class="line"><span class="comment">#df21.count</span></span><br><span class="line"></span><br><span class="line">df21.head()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/imeges/kgg/df21.head.png" alt="df21.head"></p>
+<ol start="4">
+<li>data 1개씩 표로 만들어서 불러오기</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">country = (</span><br><span class="line">    df21[<span class="string">&#x27;Q3&#x27;</span>]</span><br><span class="line">    .value_counts()</span><br><span class="line">    .to_frame()</span><br><span class="line">    .reset_index()</span><br><span class="line">    .rename(columns=&#123;<span class="string">&#x27;index&#x27;</span>:<span class="string">&#x27;country&#x27;</span>, <span class="string">&#x27;Q3&#x27;</span>:<span class="string">&#x27;Count&#x27;</span>&#125;)</span><br><span class="line">    .sort_values(by=[<span class="string">&#x27;country&#x27;</span>], ascending=<span class="literal">False</span>)</span><br><span class="line">     )  </span><br><span class="line"></span><br><span class="line">Wage = (</span><br><span class="line">    df21[<span class="string">&#x27;Q25&#x27;</span>]</span><br><span class="line">    .value_counts()</span><br><span class="line">    .to_frame()</span><br><span class="line">    .reset_index()</span><br><span class="line">    .rename(columns=&#123;<span class="string">&#x27;index&#x27;</span>:<span class="string">&#x27;Wage&#x27;</span>, <span class="string">&#x27;Q25&#x27;</span>:<span class="string">&#x27;Count&#x27;</span>&#125;)</span><br><span class="line">    .sort_values(by=[<span class="string">&#x27;Wage&#x27;</span>], ascending=<span class="literal">True</span>)</span><br><span class="line">     )  </span><br><span class="line"></span><br><span class="line">Wage</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>나라별 임금을 확인 하기 위해<br>temp에 나라이름과 임금에 대해 넣었다.<br>C_ls : country list라는 List를 만들어 나라 별로 임금을 뽑을 수 있었다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># India, Russia, China</span></span><br><span class="line">temp = df21[[<span class="string">&#x27;Q3&#x27;</span>,<span class="string">&#x27;Q25&#x27;</span>]]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(temp[<span class="string">&#x27;Q3&#x27;</span>].unique())</span><br><span class="line"></span><br><span class="line">C_Ls = temp[<span class="string">&#x27;Q3&#x27;</span>].unique() <span class="comment">#나라이름 뽑아주기</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/imeges/kgg/Unique%ED%95%A8%EC%88%98.png" alt="Unique함수"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">tempR = temp[temp[<span class="string">&#x27;Q3&#x27;</span>] == <span class="built_in">str</span>(C_Ls[<span class="number">0</span>])].value_counts()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 이 경우에는 temp가 가공 할 수 없는 templet이기 때문에 plot을 그릴 수가 없다. </span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/imeges/kgg/temp_noncalculable.png" alt="temp_noncalculable"></p>
+<p><br><br><br></p>
+<h3 id="trouble-shooting"><a href="#trouble-shooting" class="headerlink" title="trouble shooting"></a>trouble shooting</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#선생님</span></span><br><span class="line">temp= df21[[<span class="string">&#x27;Q3&#x27;</span>,<span class="string">&#x27;Q25&#x27;</span>]]</span><br><span class="line">temp = temp.groupby([<span class="string">&#x27;Q3&#x27;</span>,<span class="string">&#x27;Q25&#x27;</span>])</span><br><span class="line">        .size()</span><br><span class="line">        .reset_index()</span><br><span class="line">        .rename(columns = &#123;<span class="number">0</span>:<span class="string">&quot;Count&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line">C_Ls = temp[<span class="string">&#x27;Q3&#x27;</span>].unique()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="built_in">len</span>(df21[<span class="string">&#x27;Q3&#x27;</span>])):</span><br><span class="line">    temp2 = temp[temp[<span class="string">&#x27;Q3&#x27;</span>] == <span class="built_in">str</span>(C_Ls[i])]</span><br><span class="line">    fig = px.bar(temp2, x=<span class="string">&#x27;Q25&#x27;</span>, y=<span class="string">&#x27;Count&#x27;</span>,title=C_Ls[i])</span><br><span class="line">    fig.show()</span><br></pre></td></tr></table></figure>
+
+<p>선생님의 도움을 받아 for문 안에 나라 이름을 넣어서 </p>
+<p>모든 나라의 임금을 확인 할 수 있었다. </p>
+<p>모든 나라의 임금을 확인 했는데, 차별이 심한 나라를 찾기 힘들었다. </p>
+<p>뭐때문에 이 graph를 그리려고 했는지 잃어버렸다. </p>
+<ol>
+<li>한국에서 돈 잘 벌려면 어떤 직업, 어떤 … 을 해야 하는가 </li>
+<li>한국보다 평균임금이 더 많은 나라는?</li>
+<li>한국 보다 평균임금이 더 많은 나라는 뭐가 다를까?</li>
+<li>임금에 대한 것을 버려야 할까…</li>
+</ol>
+<p>이런 재미있는 Issue에 대해 Note를 만들어 보려고 했는데 ㅎㅎ</p>
+<p>코딩 실력이 안된당 흐흐 대회에서 잘 하려는 마음보다는 코드를 더 잘 읽고, 쓰는데 집중하자. ㅠㅠ</p>
+<p>D-17 (대회 종료까지)</p>
+<p><a href="https://yoonhwa-p.github.io/2021/11/28/kgg/KaggleCompetition_ver33byYH_Finall/">대회 종료 final version</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-10T07:35:57.000Z" title="2021. 11. 10. 오후 4:35:57">2021-11-10</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-12T09:37:56.022Z" title="2021. 11. 12. 오후 6:37:56">2021-11-12</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python-plotly/">python - plotly</a></span><span class="level-item">4분안에 읽기 (약 592 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/10/kgg/Kgg_Africa_bar-H/">kaggle in Africa_barH(1-1)</a></h1><div class="content"><h2 id="1-Figure"><a href="#1-Figure" class="headerlink" title="1. Figure"></a>1. Figure</h2><hr style="border: solid 10px salmon; width: 12%;">
+
+<h3 id="Helper-functions"><a href="#Helper-functions" class="headerlink" title="Helper functions"></a>Helper functions</h3><p>Kgg_Africa 에서는 python 문법 중에서 함수를 만드는 <strong>def</strong> 을 이용하여 plot들을 정의 해 놓았다. </p>
+<pre><code>def 함수명(매개변수):
+  &lt;수행할 문장1&gt;
+  &lt;수행할 문장2&gt;
+  ...
+</code></pre>
+<p>ref. <a target="_blank" rel="noopener" href="https://wikidocs.net/24">python_Function/Ko.</a></p>
+<h4 id="1-1-horizontal-bar-graphs"><a href="#1-1-horizontal-bar-graphs" class="headerlink" title="1.1 horizontal bar graphs"></a>1.1 horizontal bar graphs</h4><p>다음 results plot 을 뜯어보며 bar-H를 해석 해 보자.</p>
+<ol>
+<li>How does Africa compares with rest of the world?<ol>
+<li>(Region(Q3)) 응답자 수(Africa/전체, 2021): bar-H </li>
+</ol>
+</li>
+</ol>
+<hr>
+먼저, hBar는 다음과 같이 정의 되었다. 
+
+<p>그동암 bar-H에대한 많은 부분을 공부 했으므로 간단히 함수를 중심으로 뜯어 보자.</p>
+<p><a target="_blank" rel="noopener" href="https://plotly.github.io/plotly.py-docs/generated/plotly.express.histogram.html">plotly.express.histogram</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plotly_hBar</span>(<span class="params">df, q, title, height=<span class="number">400</span>,l=<span class="number">250</span>,r=<span class="number">50</span>,b=<span class="number">50</span>,t=<span class="number">100</span>,</span>):</span>   </span><br><span class="line">    fig = px.histogram(df.iloc[<span class="number">1</span>:], </span><br><span class="line">                       y=q,</span><br><span class="line">                       orientation=<span class="string">&#x27;h&#x27;</span>,</span><br><span class="line">                       width=<span class="number">700</span>,</span><br><span class="line">                       height=height,</span><br><span class="line">                       histnorm=<span class="string">&#x27;percent&#x27;</span>,</span><br><span class="line">                       color=<span class="string">&#x27;region&#x27;</span>,</span><br><span class="line">                       color_discrete_map=&#123;</span><br><span class="line">                           <span class="string">&quot;Africa&quot;</span>: <span class="string">&quot;gold&quot;</span>, <span class="string">&quot;World&quot;</span>: <span class="string">&quot;salmon&quot;</span></span><br><span class="line">                       &#125;,</span><br><span class="line">                       opacity=<span class="number">0.6</span></span><br><span class="line">                       )</span><br><span class="line"></span><br><span class="line">    fig.update_layout(title=title, </span><br><span class="line">                      font_family=<span class="string">&quot;San Serif&quot;</span>,</span><br><span class="line">                      bargap=<span class="number">0.2</span>,</span><br><span class="line">                      barmode=<span class="string">&#x27;group&#x27;</span>,</span><br><span class="line">                      titlefont=&#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">28</span>&#125;,</span><br><span class="line">                      paper_bgcolor=<span class="string">&#x27;#F5F5F5&#x27;</span>,</span><br><span class="line">                      plot_bgcolor=<span class="string">&#x27;#F5F5F5&#x27;</span>,                      </span><br><span class="line">                      legend=<span class="built_in">dict</span>(</span><br><span class="line">                      orientation=<span class="string">&quot;v&quot;</span>, </span><br><span class="line">                          y=<span class="number">1</span>, </span><br><span class="line">                          yanchor=<span class="string">&quot;top&quot;</span>, </span><br><span class="line">                          x=<span class="number">1.250</span>, </span><br><span class="line">                          xanchor=<span class="string">&quot;right&quot;</span>,)                 </span><br><span class="line">                      ).update_yaxes(categoryorder=<span class="string">&#x27;total ascending&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    fig.update_traces(marker_line_color=<span class="string">&#x27;black&#x27;</span>,</span><br><span class="line">                  marker_line_width=<span class="number">1.5</span>)</span><br><span class="line">    fig.update_layout(yaxis_title=<span class="literal">None</span>,yaxis_linewidth=<span class="number">2.5</span>,</span><br><span class="line">    autosize=<span class="literal">False</span>,</span><br><span class="line">    margin=<span class="built_in">dict</span>(</span><br><span class="line">        l=l,</span><br><span class="line">        r=r,</span><br><span class="line">        b=b,</span><br><span class="line">        t=t,</span><br><span class="line">    ),</span><br><span class="line">    )</span><br><span class="line">    fig.update_xaxes(showgrid=<span class="literal">False</span>)</span><br><span class="line">    fig.update_yaxes(showgrid=<span class="literal">False</span>)</span><br><span class="line">    fig.show()   </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+
+<ol>
+<li>def plotly_hBar(df, q, title, height=400,l=250,r=50,b=50,t=100,) <ul>
+<li>함수 plotly_hBar의 정의</li>
+<li>df, q, title등의 변수를 선언하고 값을 정해줌.</li>
+</ul>
+</li>
+<li>fig 정의<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fig = px.histogram(df.iloc[<span class="number">1</span>:], </span><br><span class="line">                       y=q,</span><br><span class="line">                       orientation=<span class="string">&#x27;h&#x27;</span>,</span><br><span class="line">                       width=<span class="number">700</span>,</span><br><span class="line">                       height=height,</span><br><span class="line">                       histnorm=<span class="string">&#x27;percent&#x27;</span>,</span><br><span class="line">                       color=<span class="string">&#x27;region&#x27;</span>,</span><br><span class="line">                       color_discrete_map=&#123;</span><br><span class="line">                           <span class="string">&quot;Africa&quot;</span>: <span class="string">&quot;gold&quot;</span>, <span class="string">&quot;World&quot;</span>: <span class="string">&quot;salmon&quot;</span></span><br><span class="line">                       &#125;,</span><br><span class="line">                       opacity=<span class="number">0.6</span></span><br><span class="line">                       )</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>plotly.express.histogram()<ul>
+<li>plotly의 express Library를 이용하여 histogram을 그려본다.<ul>
+<li>df.iloc[1:]<ul>
+<li>dataframe으로 iloc을 이용하여 컬럼을 가져옴 1행에서부터 끝까지</li>
+</ul>
+</li>
+<li>y= q,<ul>
+<li>나중에 q변수만 정해서 넣어주면 G가 그려진다.</li>
+</ul>
+</li>
+<li>orientation= ‘h’,<ul>
+<li>orientation이 h일땐, x</li>
+<li>orientation이 v일땐, y</li>
+<li>를 하라고 공식문서에 써있는데 왜 얘는 이랬는지 알 수 없음 + Histogram plot ???.</li>
+</ul>
+</li>
+<li>height = ‘height’,<ul>
+<li>plot의 높이 지정 height=400이라고 함수 정의때 이미 지정 됨.</li>
+</ul>
+</li>
+<li>color = ‘region’,<ul>
+<li>색은 region이라는 변수가 어떤것이냐에 따라 달라짐 </li>
+</ul>
+</li>
+<li>color_discrete_map={“Africa”: “gold”, “World”: “salmon”},<ul>
+<li>dictionary처럼 Indexing 해 줌.</li>
+</ul>
+</li>
+<li>opacity = 0.6<ul>
+<li>불 투명함의 정도 (0~1, flot)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a style= "font-color: rad"> color_discrete_map </a> 과<br><b style= "font-color: Orange"> color_discrete_sequence </b> 의 차이<br><a style= "font-color: rad"> dict with str keys and str values (default {}) </a>,<br><b style= "font-color: Orange"> (list of str) </b></p>
+<p><a target="_blank" rel="noopener" href="https://plotly.github.io/plotly.py-docs/generated/plotly.express">plotly.express</a></p>
+<ol start="3">
+<li>fig.update_layout()<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fig.update_layout(title=title, </span><br><span class="line">                      font_family=<span class="string">&quot;San Serif&quot;</span>,</span><br><span class="line">                      bargap=<span class="number">0.2</span>,</span><br><span class="line">                      barmode=<span class="string">&#x27;group&#x27;</span>,</span><br><span class="line">                      titlefont=&#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">28</span>&#125;,</span><br><span class="line">                      paper_bgcolor=<span class="string">&#x27;#F5F5F5&#x27;</span>,</span><br><span class="line">                      plot_bgcolor=<span class="string">&#x27;#F5F5F5&#x27;</span>,                      </span><br><span class="line">                      legend=<span class="built_in">dict</span>(</span><br><span class="line">                      orientation=<span class="string">&quot;v&quot;</span>, </span><br><span class="line">                          y=<span class="number">1</span>, </span><br><span class="line">                          yanchor=<span class="string">&quot;top&quot;</span>, </span><br><span class="line">                          x=<span class="number">1.250</span>, </span><br><span class="line">                          xanchor=<span class="string">&quot;right&quot;</span>,)                 </span><br><span class="line">                      ).update_yaxes(categoryorder=<span class="string">&#x27;total ascending&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>fig.update_layout() : </p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-10T06:10:27.000Z" title="2021. 11. 10. 오후 3:10:27">2021-11-10</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-10T06:22:34.512Z" title="2021. 11. 10. 오후 3:22:34">2021-11-10</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python-plotly/">python - plotly</a></span><span class="level-item">4분안에 읽기 (약 667 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/10/kgg/Kgg_Africa_Fig/">kaggle in Africa_Fig</a></h1><div class="content"><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><h3 id="Helper-functions"><a href="#Helper-functions" class="headerlink" title="Helper functions"></a>Helper functions</h3><hr style="border: solid 10px #FF1177; width: 10%;">
+
+<h3 id="1-1-horizontal-bar-graphs"><a href="#1-1-horizontal-bar-graphs" class="headerlink" title="1.1 horizontal bar graphs"></a>1.1 horizontal bar graphs</h3><p>Graph의  code 의 경우 해당 data와 연동해서 한꺼번에 보기로 한다. </p>
+<p>&lt; plot의 종류 &gt;</p>
+<ol>
+<li>plotly_hBar (df, q, title, height=400,l=250,r=50,b=50,t=100,)</li>
+<li>plotly_vBar(df, q, title, l=50,r=50,b=50,t=100)</li>
+<li>head_count(df, question_num, parts):<ol>
+<li><a target="_blank" rel="noopener" href="https://www.kaggle.com/ruchi798/kaggle-ml-ds-survey-analysis">head_count function copied from</a></li>
+</ol>
+</li>
+<li>df_with_percentages(df, q, n, region)</li>
+<li>plot_barH_percent(df1, df2, title, l=150, r=50, b=50, t=100)</li>
+<li>annotated_heatmap(df_w, df_a, title, width=850)</li>
+<li>categorical_scatter(df1, df2, title, l=150, r=50, b=50, t=100)</li>
+<li>annotated_heatmap_Trans(df_w, df_a, title, width=850, height=750, l=150)</li>
+<li>head_count_suf(df, question_num, part, n)</li>
+<li>df_with_percentages_suf(df, q, part, n, region)</li>
+</ol>
+<p><br><br><br>위의 코드의 경우 쓰여지지 않은 코드도 있는 것 같지만, 일단 List UP 해 놓음.</p>
+<hr>
+<br><br>
+
+<hr style="border: solid 10px #FF1177; width: 10%;">
+
+<h3 id="1-2-grouping-african-countries"><a href="#1-2-grouping-african-countries" class="headerlink" title="1.2 grouping african countries"></a>1.2 grouping african countries</h3><h4 id="1-2-1-연도-별-Africa-국가-이름-df"><a href="#1-2-1-연도-별-Africa-국가-이름-df" class="headerlink" title="1.2.1 연도 별 Africa 국가 이름 df"></a>1.2.1 연도 별 Africa 국가 이름 df</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">africa17 = [<span class="string">&#x27;Nigeria&#x27;</span>,<span class="string">&#x27;Kenya&#x27;</span>, <span class="string">&#x27;South Africa&#x27;</span>, <span class="string">&#x27;Egypt&#x27;</span>]</span><br><span class="line">africa18 = [<span class="string">&#x27;Nigeria&#x27;</span>,<span class="string">&#x27;Kenya&#x27;</span>, <span class="string">&#x27;South Africa&#x27;</span>, <span class="string">&#x27;Egypt&#x27;</span>, <span class="string">&#x27;Tunisia&#x27;</span>, <span class="string">&#x27;Morocco&#x27;</span>] </span><br><span class="line">africa19 = [<span class="string">&#x27;Nigeria&#x27;</span>,<span class="string">&#x27;Kenya&#x27;</span>, <span class="string">&#x27;South Africa&#x27;</span>, <span class="string">&#x27;Egypt&#x27;</span>, <span class="string">&#x27;Tunisia&#x27;</span>, <span class="string">&#x27;Morocco&#x27;</span>, <span class="string">&#x27;Algeria&#x27;</span>]</span><br><span class="line">africa20 = [<span class="string">&#x27;Nigeria&#x27;</span>,<span class="string">&#x27;Kenya&#x27;</span>, <span class="string">&#x27;South Africa&#x27;</span>, <span class="string">&#x27;Egypt&#x27;</span>, <span class="string">&#x27;Tunisia&#x27;</span>, <span class="string">&#x27;Morocco&#x27;</span>, <span class="string">&#x27;Ghana&#x27;</span>]</span><br><span class="line">africa21 = [<span class="string">&#x27;Nigeria&#x27;</span>,<span class="string">&#x27;Kenya&#x27;</span>, <span class="string">&#x27;South Africa&#x27;</span>, <span class="string">&#x27;Egypt&#x27;</span>, <span class="string">&#x27;Tunisia&#x27;</span>, <span class="string">&#x27;Morocco&#x27;</span>, <span class="string">&#x27;Algeria&#x27;</span>, <span class="string">&#x27;Ghana&#x27;</span>, <span class="string">&#x27;Uganda&#x27;</span>, <span class="string">&#x27;Ethiopia&#x27;</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>아마도 직접 수기로 찾은 것 같다. </li>
+</ul>
+<h4 id="1-2-2-국가-이름-확인"><a href="#1-2-2-국가-이름-확인" class="headerlink" title="1.2.2 국가 이름 확인"></a>1.2.2 국가 이름 확인</h4><ul>
+<li>pd.isin():  List에 존재하는 요소가 대상 dataFrame, series에 존재 여부를 Boolean type으로 반환.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">africa = [<span class="string">&#x27;Nigeria&#x27;</span>, <span class="string">&#x27;Egypt&#x27;</span>, <span class="string">&#x27;South Africa&#x27;</span>, <span class="string">&#x27;Algeria&#x27;</span>, <span class="string">&#x27;Tunisia&#x27;</span>, <span class="string">&#x27;Morocco&#x27;</span>, <span class="string">&#x27;Kenya&#x27;</span>, <span class="string">&#x27;Uganda&#x27;</span>, <span class="string">&#x27;Ghana&#x27;</span>, <span class="string">&#x27;Ethiopia&#x27;</span>]</span><br><span class="line"></span><br><span class="line">df21_africa = df21[df21[<span class="string">&#x27;Q3&#x27;</span>].isin(africa)]</span><br><span class="line">df21_world = df21[~df21[<span class="string">&#x27;Q3&#x27;</span>].isin(africa )]</span><br><span class="line">df21[<span class="string">&#x27;region&#x27;</span>]=[<span class="string">&quot;Africa&quot;</span> <span class="keyword">if</span> x <span class="keyword">in</span> africa <span class="keyword">else</span> <span class="string">&quot;World&quot;</span> <span class="keyword">for</span> x <span class="keyword">in</span> df21[<span class="string">&#x27;Q3&#x27;</span>]]</span><br><span class="line"></span><br><span class="line">df20_africa = df20[df20[<span class="string">&#x27;Q3&#x27;</span>].isin(africa)]</span><br><span class="line">df20_world = df20[~df20[<span class="string">&#x27;Q3&#x27;</span>].isin(africa )]</span><br><span class="line">df20[<span class="string">&#x27;region&#x27;</span>]=[<span class="string">&quot;Africa&quot;</span> <span class="keyword">if</span> x <span class="keyword">in</span> africa <span class="keyword">else</span> <span class="string">&quot;World&quot;</span> <span class="keyword">for</span> x <span class="keyword">in</span> df20[<span class="string">&#x27;Q3&#x27;</span>]]</span><br><span class="line"></span><br><span class="line">df19_africa = df19[df19[<span class="string">&#x27;Q3&#x27;</span>].isin(africa)]</span><br><span class="line">df19_world = df19[~df19[<span class="string">&#x27;Q3&#x27;</span>].isin(africa)]</span><br><span class="line">df19[<span class="string">&#x27;region&#x27;</span>]=[<span class="string">&quot;Africa&quot;</span> <span class="keyword">if</span> x <span class="keyword">in</span> africa <span class="keyword">else</span> <span class="string">&quot;World&quot;</span> <span class="keyword">for</span> x <span class="keyword">in</span> df19[<span class="string">&#x27;Q3&#x27;</span>]]</span><br><span class="line"></span><br><span class="line">df18_africa = df18[df18[<span class="string">&#x27;Q3&#x27;</span>].isin(africa)]</span><br><span class="line">df18_world = df18[~df18[<span class="string">&#x27;Q3&#x27;</span>].isin(africa)]</span><br><span class="line">df18[<span class="string">&#x27;region&#x27;</span>]=[<span class="string">&quot;Africa&quot;</span> <span class="keyword">if</span> x <span class="keyword">in</span> africa <span class="keyword">else</span> <span class="string">&quot;World&quot;</span> <span class="keyword">for</span> x <span class="keyword">in</span> df18[<span class="string">&#x27;Q3&#x27;</span>]]</span><br><span class="line"></span><br><span class="line">df17_africa = df17[df17[<span class="string">&#x27;Country&#x27;</span>].isin(africa)]</span><br><span class="line">df17_world = df17[~df17[<span class="string">&#x27;Country&#x27;</span>].isin(africa )]</span><br><span class="line">df17[<span class="string">&#x27;region&#x27;</span>]=[<span class="string">&quot;Africa&quot;</span> <span class="keyword">if</span> x <span class="keyword">in</span> africa <span class="keyword">else</span> <span class="string">&quot;World&quot;</span> <span class="keyword">for</span> x <span class="keyword">in</span> df17[<span class="string">&#x27;Country&#x27;</span>]]   </span><br></pre></td></tr></table></figure>
+
+<p>‘africa’라는 배열을 만들어 df를 새로 정의 </p>
+<ul>
+<li>17’~21’까지 같은 내용이므로 21’의 내용만으로 정리</li>
+</ul>
+<p>0&gt; df21 data 확인</p>
+<p><img src="/imeges/kgg/df21.png" alt="df21"></p>
+<p>1&gt; df21[‘Q3’]의 내용은 당신의 나라는 어디 입니까?</p>
+<p><img src="/imeges/kgg/df21_Q3.png" alt="df21_Q3"></p>
+<p>2&gt; 따라서 “ df21[‘Q3’].isin(africa) “ 코드의 의미는 Q3의 대답이 africa 이면 True 반환.</p>
+<p>3&gt; 결론적으로 Q3의 대답이 Africa[]인 모든 대답을 추출 하게 된다. </p>
+<p>4&gt; 반대로 dfworld의 경우 ~ ( not )을 사용하여 Q3이 false인 data frame을 추출 할 수 있는것.</p>
+<h4 id="1-2-3-region-column을-추가"><a href="#1-2-3-region-column을-추가" class="headerlink" title="1.2.3 region column을 추가"></a>1.2.3 region column을 추가</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df21[<span class="string">&#x27;region&#x27;</span>]=[<span class="string">&quot;Africa&quot;</span> <span class="keyword">if</span> x <span class="keyword">in</span> africa <span class="keyword">else</span> <span class="string">&quot;World&quot;</span> <span class="keyword">for</span> x <span class="keyword">in</span> df21[<span class="string">&#x27;Q3&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>df21 dataframe에 Region이라는 column 을 추가해 보자. </p>
+<p>region 컬럼에 들어갈 값은 </p>
+<ol>
+<li>List의 끝까지 반복하되, 만약 df21[‘Q3’]의 값이  africa에 해당하면 “Africa”, 그 밖의 경우는 world를 입력해라.</li>
+</ol>
+<p><img src="/imeges/kgg/df21_Q3.png" alt="df21_Q3"></p>
+<p><img src="/imeges/kgg/Africa.png" alt="Africa_Region"></p>
+<p>data science를 잘 하려면, python 문법도 잘 알아야 할 듯. </p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-10T03:12:20.000Z" title="2021. 11. 10. 오후 12:12:20">2021-11-10</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-10T06:22:34.503Z" title="2021. 11. 10. 오후 3:22:34">2021-11-10</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/index/">index</a></span><span class="level-item">7분안에 읽기 (약 1046 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/10/kgg/Kgg_Africa/">How Popular is kaggle in Africa?</a></h1><div class="content"><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><h2 id="1-1-Introduction"><a href="#1-1-Introduction" class="headerlink" title="1.1 Introduction"></a>1.1 Introduction</h2><p>800 사용자가 사용하고 있는 글로벌 온라인 커뮤니티 케글. 194개의 나라에서 사용중.</p>
+<p>2017년부터 머신러닝과 data 과학자들을 대상으로 설문을 했는데, 본 저자는 아프리카 나라들의 참여를 알아보고자 한다. </p>
+<p>Historical overview 이용 </p>
+<p><br><br></p>
+<hr style="border: solid; 20px; #ff0011; width: 15%;">
+
+<h2 id="1-2-Table-of-Contents"><a href="#1-2-Table-of-Contents" class="headerlink" title="1.2 Table of Contents"></a>1.2 <strong>Table of Contents</strong></h2><ol>
+<li><p><a href="#1">How does Africa compares with rest of the world?</a></p>
+<ol>
+<li>(Region(Q3)) 응답자 수(Africa/전체, 2021): bar-H </li>
+<li>(Region(Q3)) Africa에서 kgg사용증가 : bar</li>
+</ol>
+</li>
+<li><p><a href="#2">Which African countries are kaggle-aware?</a></p>
+<ol>
+<li>(Q3) kgg을 사용하는 Africa나라 (2021): plotly_choroplethMap</li>
+<li>(Q3) kgg 사옹 증가 나라별 in Africa : heatmap</li>
+<li>(Q3) 조사에 참여한 나라 비율 in Africa (2021): Pie-Chart(donut)</li>
+</ol>
+</li>
+<li><p><a href="#3">Demography : Age and Gender</a></p>
+<ol>
+<li>(Q1) age / (Q2) gender (Africa/전체, 2021): bar /bar-H</li>
+<li>(Q2, Q2, Q2, Q1, Genderselect) African 여성 비율 : bar</li>
+</ol>
+</li>
+<li><p><a href="#4">Education, Jobs and Experience</a></p>
+<ol>
+<li>(Q4)학력/ (Q5)직업/ (Q6)경력 (Africa/전체, 2021): bar-H </li>
+</ol>
+</li>
+<li><p><a href="#5">Programming Languages &amp; IDE’s</a></p>
+<ol>
+<li>(Q7-13)프로그래밍 언어 선호 (Africa/전체, 2021): heatmap</li>
+<li>(Q9-13)IDE (Africa/전체, 2021): bar-H </li>
+<li>(Q8)추천 프로그래밍 언어 (Africa/전체, 2021):  bar-H </li>
+</ol>
+</li>
+<li><p><a href="#6">Machine Learning: Experience, Framework and Algorithms</a></p>
+<ol>
+<li>(Q15)Muchine Learning 경력 (Africa/전체, 2021): bar-H </li>
+<li>(Q16-18)Muchine Learning 플랫폼 (Africa/전체, 2021): bar-H </li>
+<li>(Q17-12)Muchine Learning 알고리즘 (Africa/전체, 2021): bar-H </li>
+<li>(Q18-7)computer vision Methods (Africa/전체, 2021): Heatmap</li>
+<li>(Q19-6)자연언어 처리방법 (Africa/전체, 2021): Heatmap</li>
+<li>(Q14-12)visualizations Library (Africa/전체, 2021): Heatmap</li>
+</ol>
+</li>
+<li><p><a href="#7">Computing Resources</a></p>
+<ol>
+<li>(Q11)hardware platform (Africa/전체, 2021): bar-H </li>
+<li>(Q13)TPU 사용빈도 (Africa/전체, 2021): bar-H </li>
+<li>(Q12-6)특별한 하드웨어 (Africa/전체, 2021): Heatmap</li>
+<li>(Q27_A 12)온라인 플렛폼 (Africa/전체, 2021): bar-H </li>
+<li>(Q28)클라우드 플렛폼 (Africa/전체, 2021): bar-H </li>
+<li>(29_A, 5)클라우드 만들때 쓰는 기본 resource? (Africa/전체, 2021): bar-H</li>
+<li>(32_A, 12빅데이터 만들때 (Africa/전체, 2021): bar-H</li>
+<li>(Q33)가장많이 쓰는 big data 생성 프로그램 (Africa/전체, 2021): bar-H</li>
+</ol>
+</li>
+<li><p><a href="#8">Employment and role at work</a></p>
+<ol>
+<li>(Q20) 최근 고용주 (Africa/전체, 2021): bar-H</li>
+<li>(Q24)일할때 중요한 활동 (Africa/전체, 2021): Heatmap</li>
+<li>(Q25) 급여 피라미드  (Africa/전체, 2021): <strong>dual bar-H</strong></li>
+</ol>
+</li>
+<li><p><a href="#9">Learning Platform and Media</a></p>
+<ol>
+<li>(Q40) data science 배우는 플랫폼 (Africa/전체, 2021): bar-H</li>
+<li>(Q42-12) 가장 좋아하는 DS Topics 미디어 소스 (Africa/전체, 2021): Heatmap</li>
+</ol>
+</li>
+<li><p><a href="#10">Summary</a></p>
+</li>
+<li><p><a href="#11">Reference</a></p>
+<p>특정 연도를 넣지 않은 부분은 historical data</p>
+</li>
+</ol>
+<hr>
+<br>
+<hr style="border: solid; 20px; #ff0011; width: 15%;">
+
+<h2 id="2-Import"><a href="#2-Import" class="headerlink" title="2. Import"></a>2. Import</h2><h3 id="2-1-dataFrame-amp-visualization-Module"><a href="#2-1-dataFrame-amp-visualization-Module" class="headerlink" title="2.1 dataFrame &amp; visualization Module"></a>2.1 dataFrame &amp; visualization Module</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> matplotlib.pylab <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+<h4 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy "></a><a href="https://yoonhwa-p.github.io/2021/11/01/Numpy/">Numpy</a> <br></h4><pre><code>dataframe
+</code></pre>
+<h4 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas "></a><a href="https://yoonhwa-p.github.io/2021/11/02/Pandas/">Pandas</a> <br></h4><pre><code>dataframe
+</code></pre>
+<br>
+
+<h4 id="seaborn"><a href="#seaborn" class="headerlink" title="seaborn"></a>seaborn</h4><p>Seaborn은 Metplotlib를 기본으로 생상테마와 통계용 차트 기능을 추가한 시각화 패키지 <br><br>기본적인 시각화 기능은 Matplotlib, 통계는 Statsmodels에 의존한다. <br></p>
+<p>Ref. <a target="_blank" rel="noopener" href="http://seaborn.pydata.org/tutorial.html">seaborn tutorial/En</a></p>
+<br>
+
+<h4 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h4><p>matplotlib.pyplot 모듈은 명령어 스타일로 동작하는 함수의 Library.</p>
+<p>함수를 이용하여 그래프를 만들고, grid를 조정하고, Label도 꾸미는 등을 할 수 있다.</p>
+<p>Ref. <a target="_blank" rel="noopener" href="https://wikidocs.net/92071">matplotlib.pyplot</a></p>
+<p><br><br></p>
+<h3 id="2-2-plotly"><a href="#2-2-plotly" class="headerlink" title="2.2 plotly"></a>2.2 plotly</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> plotly.io <span class="keyword">as</span> pio</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">import</span> plotly.figure_factory <span class="keyword">as</span> ff</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> plotly.subplots <span class="keyword">import</span> make_subplots <span class="comment">#특정한 차트를 만들기 위해 넣어줌</span></span><br><span class="line"><span class="keyword">from</span> plotly.offline <span class="keyword">import</span> init_notebook_mode, iplot <span class="comment">#offLine에서도 돌아갈 수 있게 해줌</span></span><br><span class="line"></span><br><span class="line">init_notebook_mode(connected=<span class="literal">True</span>)</span><br><span class="line">pio.templates.default = <span class="string">&quot;none&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># import plotly.offline as py</span></span><br><span class="line"><span class="comment"># py.offline.init_notebook_mode()</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Plotly"><a href="#Plotly" class="headerlink" title="Plotly"></a>Plotly</h4><p>plotly Livrary 전체를 pio로 받아옴.<br>그 중에서 </p>
+<ul>
+<li>px : <a target="_blank" rel="noopener" href="https://plotly.com/python/plotly-express/">plotly-express</a></li>
+<li>go : <a target="_blank" rel="noopener" href="https://plotly.com/python/reference/">graph_objects</a> </li>
+<li>ff : <a target="_blank" rel="noopener" href="https://plotly.com/python/figure-factories/">figure_factory</a><ul>
+<li>px가 존재하기 이전 go로 생성하기 어려운 특정 유형의 플롯을 생성 할 수 있는 전용 함수가 있다.</li>
+</ul>
+</li>
+</ul>
+<p>를 받아 왔다. </p>
+<ul>
+<li>plotly에서 G를 그리는 방법은 2가지가 있는다.<ul>
+<li>px : 템플릿을 통해 제작</li>
+<li>go : 그래프를 하나하나 설정하며 제작</li>
+</ul>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://plotly.com/python/">plotly_python</a></p>
+<p><a target="_blank" rel="noopener" href="https://data101.oopy.io/plolty-tutorial-guide-in-korean">plolty-tutorial-guide/Ko</a></p>
+<ul>
+<li>offline plotly </li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://wooiljeong.github.io/python/python_plotly/">offline plotly</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">for</span> dirname, _, filenames <span class="keyword">in</span> os.walk(<span class="string">&#x27;/kaggle/input&#x27;</span>):</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="built_in">print</span>(os.path.join(dirname, filename))</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&quot;ignore&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>data input 하는 방법.<br>여러개의 csv file을 경로를 지정 해주어 한번에 넣어주는 code</li>
+</ul>
+<br>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">df17= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2017/multipleChoiceResponses.csv&quot;</span>, encoding=<span class="string">&quot;ISO-8859-1&quot;</span>)</span><br><span class="line">df18= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2018/multipleChoiceResponses.csv&quot;</span>, )</span><br><span class="line">df19= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2019/multiple_choice_responses.csv&quot;</span>, )</span><br><span class="line">df20= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2020/kaggle_survey_2020_responses.csv&quot;</span>, )</span><br><span class="line">df21= pd.read_csv(<span class="string">&quot;/kaggle/input/kaggle-survey-2021/kaggle_survey_2021_responses.csv&quot;</span>, )</span><br></pre></td></tr></table></figure>
+
+
+<p>연도 별로 dataFrame을 씌워서 csv file을 dfyy객체에 Loading해 준다. </p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-09T13:24:19.000Z" title="2021. 11. 9. 오후 10:24:19">2021-11-09</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-09T12:35:19.673Z" title="2021. 11. 9. 오후 9:35:19">2021-11-09</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python-plotly/">python - plotly</a></span><span class="level-item">5분안에 읽기 (약 681 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/09/kgg/Kgg_plotly_ScatterL(2)/">kaggle :ScatterLine (Q42)</a></h1><div class="content"><h1 id="kaggle-dictation-08"><a href="#kaggle-dictation-08" class="headerlink" title="kaggle dictation (08)"></a>kaggle dictation (08)</h1><p><br><br></p>
 <hr>
 
 
@@ -607,810 +968,7 @@ ii. update_layout()
 
 <br>
 <br>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-09T03:00:00.000Z" title="2021. 11. 9. 오후 12:00:00">2021-11-09</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-09T10:18:38.967Z" title="2021. 11. 9. 오후 7:18:38">2021-11-09</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python-plotly/">python - plotly</a></span><span class="level-item">6분안에 읽기 (약 918 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/09/kgg/Kgg_plotly_Horizontal/">kaggle :HorizontalBar (Q17)</a></h1><div class="content"><h1 id="kaggle-dictation-03"><a href="#kaggle-dictation-03" class="headerlink" title="kaggle dictation (03)"></a>kaggle dictation (03)</h1><p><br><br></p>
-<hr>
-
-
-<h2 id="plotly-graph-objects-as-go-를-이용한-bar-graph"><a href="#plotly-graph-objects-as-go-를-이용한-bar-graph" class="headerlink" title="plotly.graph_objects as go: 를 이용한 bar graph"></a>plotly.graph_objects as go: 를 이용한 bar graph</h2><h3 id="HorizontalBar-plot-가로-막대-차트"><a href="#HorizontalBar-plot-가로-막대-차트" class="headerlink" title="HorizontalBar plot /가로 막대 차트"></a>HorizontalBar plot /가로 막대 차트</h3><h4 id="0-data-set"><a href="#0-data-set" class="headerlink" title="0. data set"></a>0. data set</h4><p><a target="_blank" rel="noopener" href="https://www.kaggle.com/miguelfzzz/the-typical-kaggle-data-scientist-in-2021">https://www.kaggle.com/miguelfzzz/the-typical-kaggle-data-scientist-in-2021</a></p>
-<br>
-<hr>
-
-<h3 id="Subject-어떤알고리즘을-선호-하는-지-알아보는-Horizontal-bar"><a href="#Subject-어떤알고리즘을-선호-하는-지-알아보는-Horizontal-bar" class="headerlink" title="Subject : 어떤알고리즘을 선호 하는 지 알아보는 Horizontal bar"></a>Subject : 어떤알고리즘을 선호 하는 지 알아보는 Horizontal bar</h3><h4 id="1-data-읽어오기"><a href="#1-data-읽어오기" class="headerlink" title="1. data 읽어오기"></a>1. data 읽어오기</h4><p>algorithms_cols에 data frame을 먼저 만들고 시작.<br>잘 모르겠지만 아마도 Q17이 붙은 data를 선택 하기 위한 code</p>
-<p>algorithms_cols = [col for col in df if col.startswith(‘Q17’)]</p>
-<blockquote>
-<blockquote>
-<p>col 1부터 df 끝까지</p>
-</blockquote>
-</blockquote>
-<p>Q17로 시작하는지 확인하여 true일때만 데이터 가져오기</p>
-<p><a target="_blank" rel="noopener" href="https://wldnjd2.github.io/2021/11/09/kaggle-3-2-%EB%A7%89%EB%8C%80%EA%B7%B8%EB%9E%98%ED%94%84-for%EB%AC%B8/">ref.</a></p>
-<p><a target="_blank" rel="noopener" href="https://moonbooks.org/Articles/How-to-select-dataframe-columns-that-start-with--using-pandas-in-python-/">How to select dataframe columns that start with *** using pandas in python ?</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">algorithms_cols = [col <span class="keyword">for</span> col <span class="keyword">in</span> df <span class="keyword">if</span> col.startswith(<span class="string">&#x27;Q17&#x27;</span>)]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h4 id="2-data-Frame-만들어-주기"><a href="#2-data-Frame-만들어-주기" class="headerlink" title="2. data Frame 만들어 주기"></a>2. data Frame 만들어 주기</h4><p>algorithms 에 data frame을 씌워서 표를 만들고, 이름을 다음과같이 바꿔줌.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">algorithms = df[algorithms_cols]</span><br><span class="line"></span><br><span class="line">algorithms.columns = [<span class="string">&#x27;Linear or Logistic Regression&#x27;</span>, <span class="string">&#x27;Decision Trees or Random Forests&#x27;</span>,</span><br><span class="line">                     <span class="string">&#x27;Gradient Boosting Machines&#x27;</span>, <span class="string">&#x27;Bayesian Approaches&#x27;</span>, <span class="string">&#x27;Evolutionary Approaches&#x27;</span>,</span><br><span class="line">                     <span class="string">&#x27;Dense Neural Networks&#x27;</span>, <span class="string">&#x27;Convolutional Neural Networks&#x27;</span>, <span class="string">&#x27;Generative Adversarial Networks&#x27;</span>,</span><br><span class="line">                     <span class="string">&#x27;Recurrent Neural Networks&#x27;</span>, <span class="string">&#x27;Transformer Networks&#x27;</span>, <span class="string">&#x27;None&#x27;</span>, <span class="string">&#x27;Other&#x27;</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="/imeges/kgg/algorithms.png" alt="algorithms"></p>
-<br>
-
-<h5 id="3-표-설정"><a href="#3-표-설정" class="headerlink" title="3.표 설정."></a>3.표 설정.</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">algorithms = (</span><br><span class="line">    algorithms</span><br><span class="line">    .count()</span><br><span class="line">    .to_frame()</span><br><span class="line">    .reset_index()</span><br><span class="line">    .rename(columns=&#123;<span class="string">&#x27;index&#x27;</span>:<span class="string">&#x27;Algorithms&#x27;</span>, <span class="number">0</span>:<span class="string">&#x27;Count&#x27;</span>&#125;)</span><br><span class="line">    .sort_values(by=[<span class="string">&#x27;Count&#x27;</span>], ascending=<span class="literal">False</span>)</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
-
-<br>
-<br>
-
- 
-<ol>
-<li>.count()  :coulumn 수 세기 </li>
-<li>.to_frame() : frame 생성</li>
-<li>.reset_index() : 원본과 상관없는 Index 생성</li>
-<li>.rename()<ol>
-<li>columns의 이름을 지정 : ‘index’:’Algorithms’, 0:’Count’</li>
-</ol>
-</li>
-<li>.sort_values()<ol>
-<li>by=[‘Count’], ascending=False</li>
-<li>Count 기준으로 내림차순으로 정렬</li>
-</ol>
-</li>
-</ol>
-<br>
-<br>
-
-<h4 id="3-percent-추가"><a href="#3-percent-추가" class="headerlink" title="3. percent 추가"></a>3. percent 추가</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">algorithms[<span class="string">&#x27;percent&#x27;</span>] = ((algorithms[<span class="string">&#x27;Count&#x27;</span>] / <span class="built_in">len</span>(df))*<span class="number">100</span>).<span class="built_in">round</span>(<span class="number">2</span>).astype(<span class="built_in">str</span>) + <span class="string">&#x27;%&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-<br>
-
-<p>표에 ‘percent’를 추가<br>algorithms의 count에 df의 length로 나누고 *100을 하는 전형적인 % 나타내기 <br><br>값자체에 %를 입력하여 나중에 %를 추가 입력하지 않아도 됨  <br><br>소숫점 자리 2까지 반영(반올림).<br>type 자체를 String으로 하여 추가 계산은 불가능. <br></p>
-<br>
-<br>
-
-<h4 id="4-색-지정"><a href="#4-색-지정" class="headerlink" title="4. 색 지정"></a>4. 색 지정</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">colors = [<span class="string">&#x27;#033351&#x27;</span>,] * <span class="number">12</span></span><br><span class="line">colors[<span class="number">0</span>] = <span class="string">&#x27;#5abbf9&#x27;</span></span><br><span class="line">colors[<span class="number">1</span>] = <span class="string">&#x27;#5abbf9&#x27;</span></span><br><span class="line">colors[<span class="number">2</span>] = <span class="string">&#x27;#066eb0&#x27;</span></span><br><span class="line">colors[<span class="number">3</span>] = <span class="string">&#x27;#066eb0&#x27;</span></span><br><span class="line">colors[<span class="number">4</span>] = <span class="string">&#x27;#044a77&#x27;</span></span><br><span class="line">colors[<span class="number">5</span>] = <span class="string">&#x27;#044a77&#x27;</span></span><br><span class="line">colors[<span class="number">6</span>] = <span class="string">&#x27;#044a77&#x27;</span></span><br></pre></td></tr></table></figure>
-<br>
-
-<p><img src="/imeges/kgg/colors_.png" alt="colors"></p>
-<br>
-
-<p>색 깊이는 12단계, 0~6까지는 정해주고 나머지 5개는 #033351을 default로 한 것을 알 수 있다. </p>
-<br>
-
-
-<h4 id="5-bar-Graph-만들기"><a href="#5-bar-Graph-만들기" class="headerlink" title="5. bar Graph 만들기"></a>5. bar Graph 만들기</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fig = go.Figure(go.Bar(</span><br><span class="line">            x=algorithms[<span class="string">&#x27;Count&#x27;</span>],</span><br><span class="line">            y=algorithms[<span class="string">&#x27;Algorithms&#x27;</span>],</span><br><span class="line">            text=algorithms[<span class="string">&#x27;percent&#x27;</span>],</span><br><span class="line">            orientation=<span class="string">&#x27;h&#x27;</span>,</span><br><span class="line">            marker_color=colors</span><br><span class="line">                        ))</span><br></pre></td></tr></table></figure>
-
-<p>horizontal과 vertical Graph의 차이는  x, y axis를 바꾸어 주는 것과  <br><br>orientation=’h’ 을 넣어 주는 것의 차이.</p>
-<div text-align="center;">
-
-<hr>
-
-<p>&lt;orientation 없음&gt;  <br></p>
-<p><img src="/imeges/kgg/orientationH.png" alt="orientationH"></p>
-<br>
-
-<p>&lt;orientation H 있음&gt;  <br><br><img src="/imeges/kgg/orientationH_.png" alt="orientationH_"></p>
-</div>
-
-<hr>
-
-
-
-<h4 id="6-update-traces"><a href="#6-update-traces" class="headerlink" title="6. update_traces()"></a>6. update_traces()</h4><p>traces() 수정 :  Trace에 대한 설정</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fig.update_traces(texttemplate=<span class="string">&#x27;%&#123;text&#125;&#x27;</span>, </span><br><span class="line">                  textposition=<span class="string">&#x27;outside&#x27;</span>,</span><br><span class="line">                  cliponaxis = <span class="literal">False</span>,</span><br><span class="line">                  hovertemplate=<span class="string">&#x27;&lt;b&gt;Algorithm&lt;/b&gt;: %&#123;y&#125;&lt;br&gt;&lt;extra&gt;&lt;/extra&gt;&#x27;</span>+</span><br><span class="line">                                <span class="string">&#x27;&lt;b&gt;Count&lt;/b&gt;: %&#123;x&#125;&#x27;</span>,</span><br><span class="line">                  textfont_size=<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>texttemplate : text type</li>
-<li>textposition : ‘outside’ _ 설정 해 주지 않은 경우 칸에 따라 적당히 들어감.</li>
-<li>cliponaxis = False : text가 칸이 작아서 짤리는 경우를 막아주는 기능 (off)</li>
-<li>hovertemplate :<ol>
-<li>마우스 On하면 (커서를 위에 대면) 나오는 Hovert에대한 설정.</li>
-</ol>
-</li>
-<li>textfont_size : 폰트 size</li>
-</ol>
-<p><br><br></p>
-<h4 id="7-Design"><a href="#7-Design" class="headerlink" title="7. Design"></a>7. Design</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">fig.update_xaxes(showgrid=<span class="literal">False</span>)</span><br><span class="line">fig.update_yaxes(showgrid=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">fig.update_layout(showlegend=<span class="literal">False</span>, </span><br><span class="line">                  plot_bgcolor=<span class="string">&#x27;#F7F7F7&#x27;</span>, </span><br><span class="line">                  margin=<span class="built_in">dict</span>(pad=<span class="number">20</span>),</span><br><span class="line">                  paper_bgcolor=<span class="string">&#x27;#F7F7F7&#x27;</span>,</span><br><span class="line">                  xaxis=&#123;<span class="string">&#x27;showticklabels&#x27;</span>: <span class="literal">False</span>&#125;,</span><br><span class="line">                  yaxis_title=<span class="literal">None</span>,</span><br><span class="line">                  height = <span class="number">600</span>,</span><br><span class="line">                  xaxis_title=<span class="literal">None</span>,</span><br><span class="line">                  yaxis=&#123;<span class="string">&#x27;categoryorder&#x27;</span>:<span class="string">&#x27;total ascending&#x27;</span>&#125;,</span><br><span class="line">                  title_text=<span class="string">&quot;Most Commonly Used &lt;b&gt;Algorithms&lt;/b&gt;&quot;</span>,</span><br><span class="line">                  title_x=<span class="number">0.5</span>,</span><br><span class="line">                  font=<span class="built_in">dict</span>(family=<span class="string">&quot;Hiragino Kaku Gothic Pro, sans-serif&quot;</span>, size=<span class="number">15</span>, color=<span class="string">&#x27;#000000&#x27;</span>),</span><br><span class="line">                  title_font_size=<span class="number">35</span>)</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Grid Delete</li>
-</ol>
-<p><img src="/imeges/kgg/grid_Del.png" alt="grid delete"></p>
-<br>
-
-<ol start="2">
-<li>update_layout<ol>
-<li>showlegend=False,</li>
-<li>plot_bgcolor=’#F7F7F7’</li>
-<li>margin=dict(pad=20),</li>
-<li>paper_bgcolor=’#F7F7F7’,</li>
-<li>xaxis={‘showticklabels’: False},<ol>
-<li>x 축 labels을 삭제.</li>
-</ol>
-</li>
-<li>yaxis_title=None,</li>
-<li>xaxis_title=None, yaxis={‘categoryorder’:’total ascending’},<ol>
-<li>y 축 title을 categoryorder</li>
-<li> <img src="/imeges/kgg/categoryorder.png" alt="img.png"></li>
-<li><a target="_blank" rel="noopener" href="https://plotly.com/python/categorical-axes/">Automatically Sorting Categories by Name or Total Value</a></li>
-<li><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/xaxis/#layout-xaxis-categoryorder">layout-xaxis-categoryorder</a></li>
-</ol>
-</li>
-<li>title_text=”Most Commonly Used <b>Algorithms</b>“,</li>
-<li>title_x=0.5,</li>
-<li>font=dict(family=”Hiragino Kaku Gothic Pro, sans-serif”, size=15, color=’#000000’),<pre><code>       title_font_size=35)
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-<p>이미 앞서서 충분히 설명 했기 때문에 본 posting에서 설명되지 않은 부분은 </p>
-<p><a href="https://yoonhwa-p.github.io/2021/11/08/Kgg_plotly_bar/">basic bar Graph</a> 에서 확인</p>
-<h4 id="8-Annotation"><a href="#8-Annotation" class="headerlink" title="8. Annotation"></a>8. Annotation</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">14</span>),</span><br><span class="line">                                    x=<span class="number">0.98</span>,</span><br><span class="line">                                    y=-<span class="number">0.17</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;@miguelfzzz&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br><span class="line"></span><br><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">12</span>),</span><br><span class="line">                                    x=<span class="number">0</span>,</span><br><span class="line">                                    y=-<span class="number">0.17</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;Source: 2021 Kaggle Machine Learning &amp; Data Science Survey&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-
-
-
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-08T07:50:41.000Z" title="2021. 11. 8. 오후 4:50:41">2021-11-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-09T10:18:38.967Z" title="2021. 11. 9. 오후 7:18:38">2021-11-09</time>&nbsp;업데이트 됨</span><span class="level-item">13분안에 읽기 (약 1917 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/08/kgg/Kgg_plotly_bar/">kaggle :Bar Graph (Q6)</a></h1><div class="content"><h1 id="kaggle-dictation-02"><a href="#kaggle-dictation-02" class="headerlink" title="kaggle dictation (02)"></a>kaggle dictation (02)</h1><p><br><br></p>
-<hr>
-
-<h2 id="plotly-graph-objects-as-go-를-이용한-bar-graph"><a href="#plotly-graph-objects-as-go-를-이용한-bar-graph" class="headerlink" title="plotly.graph_objects as go: 를 이용한 bar graph"></a>plotly.graph_objects as go: 를 이용한 bar graph</h2><p>###bar plot /막대 차트</p>
-<p>막대그래프는 가장 많이 쓰이는 플롯들중 하나로 숫자 변수와 범주 형 변수 간의 관계를 보여 줍니다. </p>
-<p>막대 차트는 종종 히스토그램과 혼동 되기도 하는데(숫자의 분포를 보여줌) 이는 통계학의 부분 </p>
-<p>그룹당 여러 값이 있는 경우에는 박스플롯이나 바이올린 플롯을 추천 </p>
-<p>최소한 그룹당 관측치 수와 각 그룹의 신뢰구간은 표시되야함.</p>
-<br>
-<br>
-<hr>
-
-
-<h3 id="사용한-Library"><a href="#사용한-Library" class="headerlink" title="사용한 Library"></a>사용한 Library</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>사실 이 부분에서 seaborn을 사용 했는지 잘 모르겠음.
-github에서 plotly가 동적 Livrary라 자꾸 오류가남.
-</code></pre>
-<br>
-<hr style="size:3px;">
-
-<h2 id="data-import"><a href="#data-import" class="headerlink" title="data import"></a>data import</h2><p><a target="_blank" rel="noopener" href="https://www.kaggle.com/miguelfzzz/the-typical-kaggle-data-scientist-in-2021">data 원문</a><br><br><br><a href="https://yoonhwa-p.github.io/2021/11/07/kaggle_CC/">data import 방법</a> <br><br>data: Kaggle의 the-typical-kaggle-data-scientist-in-2021 </p>
-<p>이 부분은 <a href="https://yoonhwa-p.github.io/2021/11/07/kaggle_CC/">data import 방법</a> 을 참고 하거나<br><a href="https://yoonhwa-p.github.io/2021/11/08/Kgg_plotly_treemap/0">kaggle dictation (01)</a> 을 참조하세요.</p>
-<p><br><br></p>
-<h2 id="data-encoding-Feature-Engineering"><a href="#data-encoding-Feature-Engineering" class="headerlink" title="data encoding (Feature Engineering)"></a>data encoding (Feature Engineering)</h2><pre><code>사실 이 부분이 feature Engineering에 해당하는 부분인지 잘 모르겠다.
-이 부분은 data를 computer로 자동화하여 계산, 동적 그래프를 만들기 위한 부분.
-</code></pre>
-<p><br><br></p>
-<p>###Feature Engineering</p>
-<p>Experience라는 Question 6에 해당하는 값을 전처리 해 준다. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">experience = (</span><br><span class="line">    df[<span class="string">&#x27;Q6&#x27;</span>]</span><br><span class="line">    .value_counts()</span><br><span class="line">    .to_frame()</span><br><span class="line">    .reset_index()</span><br><span class="line">    .rename(columns=&#123;<span class="string">&#x27;index&#x27;</span>:<span class="string">&#x27;Experience&#x27;</span>, <span class="string">&#x27;Q6&#x27;</span>:<span class="string">&#x27;Count&#x27;</span>&#125;)</span><br><span class="line">    .replace([<span class="string">&#x27;I have never written code&#x27;</span>,<span class="string">&#x27;&lt; 1 years&#x27;</span>,</span><br><span class="line">              <span class="string">&#x27;1-3 years&#x27;</span>, <span class="string">&#x27;3-5 years&#x27;</span>, <span class="string">&#x27;5-10 years&#x27;</span>,</span><br><span class="line">              <span class="string">&#x27;10-20 years&#x27;</span>, <span class="string">&#x27;20+ years&#x27;</span>], [<span class="string">&#x27;No experience&#x27;</span>, <span class="string">&#x27;&lt;1 years&#x27;</span>,</span><br><span class="line">                                        <span class="string">&#x27;1-3 years&#x27;</span>, <span class="string">&#x27;3-5 years&#x27;</span>, <span class="string">&#x27;5-10 years&#x27;</span>,</span><br><span class="line">                                        <span class="string">&#x27;10-20 years&#x27;</span>, <span class="string">&#x27;20+ years&#x27;</span>])</span><br><span class="line">          ) </span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>.value_counts() : 데이터의 분포를 확인하는데 매우 유용한 함수</li>
-</ol>
-<ul>
-<li>column 값의 개수를 확인 하는것. 중복되는 값을 묶어줌.</li>
-</ul>
-<ol start="2">
-<li>.to_frame() : frame을 설정 (표 생성)</li>
-<li>reset_index()</li>
-</ol>
-<ul>
-<li>원본 data를 회손하지 않고 Index를 새로 만듦 </li>
-</ul>
-<ol start="4">
-<li>.rename(columns={‘index’:’Experience’, ‘Q6’:’Count’})<ul>
-<li>column에 새로운 이름을 붙여줌 index는 Experience로 Q6은 count로 지정</li>
-</ul>
-</li>
-<li>replace()<ul>
-<li>[왼쪽]에 있는 값대신 [오른쪽]에 있는 값을 넣으려고 함.</li>
-<li>이 경우 ‘I have never written code’를 ‘No experience’로 바꾸려고 한듯.</li>
-</ul>
-</li>
-</ol>
-<p>Ref. <a target="_blank" rel="noopener" href="https://hun931018.tistory.com/19">판다스 함수</a></p>
-<p><br><br></p>
-<ol>
-<li><p>df.value_counts() 함수만 사용하면 아래와 같이 나온다. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;Q6&#x27;</span>].value_counts()</span><br></pre></td></tr></table></figure>
-
-<p>1-3 years                    7874<br>&lt; 1 years                    5881<br>3-5 years                    4061<br>5-10 years                   3099<br>10-20 years                  2166<br>20+ years                    1860<br>I have never written code    1032<br>Name: Q6, dtype: int64</p>
-</li>
-</ol>
-<p><img src="/imeges/kgg/valueCount.png" alt="valueCount"></p>
-<br>
-
-<ul>
-<li>이는 문자형 data를 분석하여 display하기 위한 방법</li>
-</ul>
-<p><br><br></p>
-<hr>
-
-<h2 id="data-categoircal로-List로-만들고-함수정의-정렬"><a href="#data-categoircal로-List로-만들고-함수정의-정렬" class="headerlink" title="data categoircal로 List로 만들고, 함수정의, 정렬"></a>data categoircal로 List로 만들고, 함수정의, 정렬</h2><h3 id="1-Pandas-lib의-categories-function"><a href="#1-Pandas-lib의-categories-function" class="headerlink" title="(#1) : Pandas lib의 categories  function"></a>(#1) : Pandas lib의 categories  function</h3><p>문자열 객체의 배열을 series로 변환하여 범주형으로 변환   <br></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1</span></span><br><span class="line">experience[<span class="string">&#x27;Experience&#x27;</span>] = pd.Categorical(</span><br><span class="line">                                        experience[<span class="string">&#x27;Experience&#x27;</span>], </span><br><span class="line">                                        [<span class="string">&#x27;No experience&#x27;</span>, <span class="string">&#x27;&lt;1 years&#x27;</span>,</span><br><span class="line">                                        <span class="string">&#x27;1-3 years&#x27;</span>, <span class="string">&#x27;3-5 years&#x27;</span>, <span class="string">&#x27;5-10 years&#x27;</span>,</span><br><span class="line">                                        <span class="string">&#x27;10-20 years&#x27;</span>, <span class="string">&#x27;20+ years&#x27;</span>]</span><br><span class="line">                                         )</span><br></pre></td></tr></table></figure>
-
-
-<p><a target="_blank" rel="noopener" href="https://steadiness-193.tistory.com/233">pd.categories</a></p>
-<br>
-
-<h3 id="2-experience-‘percent’"><a href="#2-experience-‘percent’" class="headerlink" title="(#2) : experience[‘percent’]"></a>(#2) : experience[‘percent’]</h3><p>Experience에 하나의  tap을 추가 해준다.<br>SQL 의 insert 에 percent tep을 만들어 줄 때 column에대해 계산하여 값을 보여주는 것과 같은 느낌.</p>
-<p>value에 들어갈 수식 지정_ Experience의 percent 계산</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">                                         </span><br><span class="line"><span class="comment">#2</span></span><br><span class="line">experience[<span class="string">&#x27;percent&#x27;</span>] = ((experience[<span class="string">&#x27;Count&#x27;</span>] / experience[<span class="string">&#x27;Count&#x27;</span>].<span class="built_in">sum</span>())*<span class="number">100</span>).<span class="built_in">round</span>(<span class="number">2</span>).astype(<span class="built_in">str</span>) + <span class="string">&#x27;%&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="3-experience-sort-values"><a href="#3-experience-sort-values" class="headerlink" title="(#3) : experience.sort_values()"></a>(#3) : experience.sort_values()</h3><p>데이터 정렬하기 : 컬럼의 data를 기준으로 정렬<br>    - short_Index의 경우에는 Index를 기준으로 data를 정렬한다.<br>    - 이 경우에는 (‘Experience’)를 기준으로 default값인 오름차순으로 정렬</p>
-<p><img src="/imeges/kgg/experience.sort_values.png" alt="experience.sort_values()"></p>
-<p>보통 percent나 count를 기준으로 정렬 되는데 이 경우 <strong>sort_values(‘Experience’)</strong> 를 하였기때문에<br>기준인 Experience를 기준으로 오름차순으로 정렬 되었다. </p>
-<p><a target="_blank" rel="noopener" href="https://hogni.tistory.com/6">Short_value</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#3</span></span><br><span class="line">experience = experience.sort_values(<span class="string">&#x27;Experience&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="4-colors"><a href="#4-colors" class="headerlink" title="(#4) : colors"></a>(#4) : colors</h3><p>바chart의 color을 설정</p>
-<ul>
-<li>*7 은 7개의 수준이 있다는 것.</li>
-<li>colors[N] = 뭘까</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.bar.html">chart color</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#4</span></span><br><span class="line">colors = [<span class="string">&#x27;#033351&#x27;</span>,] * <span class="number">7</span></span><br><span class="line">colors[<span class="number">1</span>] = <span class="string">&#x27;#5abbf9&#x27;</span></span><br><span class="line">colors[<span class="number">2</span>] = <span class="string">&#x27;#5abbf9&#x27;</span></span><br><span class="line">colors[<span class="number">3</span>] = <span class="string">&#x27;#0779c3&#x27;</span></span><br><span class="line">colors[<span class="number">4</span>] = <span class="string">&#x27;#0779c3&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="5-fig-go-Figure-go-Bar"><a href="#5-fig-go-Figure-go-Bar" class="headerlink" title="(#5) : fig = go.Figure(go.Bar())"></a>(#5) : fig = go.Figure(go.Bar())</h3><p><a style = "font-color: red">import plotly.graph_objects as go </a>이기<br>때문에 fig는 plotly library 함수 사용</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#5</span></span><br><span class="line">fig = go.Figure(go.Bar(</span><br><span class="line">            y=experience[<span class="string">&#x27;Count&#x27;</span>],</span><br><span class="line">            x=experience[<span class="string">&#x27;Experience&#x27;</span>],</span><br><span class="line">            cliponaxis = <span class="literal">False</span>,</span><br><span class="line">            text=experience[<span class="string">&#x27;percent&#x27;</span>],</span><br><span class="line">            marker_color=colors</span><br><span class="line">                        ))</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><p>x축, y축 정해주기 <br></p>
-<p> y=experience[‘Count’], <br><br> x=experience[‘Experience’],</p>
-</li>
-</ol>
-<br>
-
-<ol start="2">
-<li><p>cliponaxis</p>
-<p> cliponaxis = False, <br><br>cliponaxis – Text node를 아래 축에 고정 할지 아닐지 결정<br>text node를 축 라인과 체크라벨 위에 보여주기위해서는 x축Layer와 y축 layer 설정을 해 주어야 한다.  </p>
-</li>
-</ol>
-<br>
-
-<ol start="3">
-<li><p>text=experience[‘percent’]</p>
-</li>
-<li><p>marker_color=colors </p>
-<ul>
-<li>지정 해 준 colors를 사용.<br></li>
-</ul>
-</li>
-</ol>
-<p><img src="/imeges/kgg/barBefore.png" alt="barBefore.png"></p>
-<h3 id="6-fig-update-traces"><a href="#6-fig-update-traces" class="headerlink" title="(#6) : fig.update_traces()"></a>(#6) : fig.update_traces()</h3><p>그래프 위에 캡션 다는 기능</p>
-<br>
-
-<div style = "margin: 1px ; background-color: #FFC9C9">
-Perform a property update operation on all traces that satisfy the specified selection criteria
-<br>
-지정된 선택 기준을 충족하는 모든 추적에 대해 속성 업데이트 작업 수행 (?? 전혀 모르겠군 !) <br>
-아래 본문과는 상관없는 data를 좀 보세요.
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">df1 = df[<span class="string">&#x27;Q1&#x27;</span>].value_counts()</span><br><span class="line">df2 = df[<span class="string">&#x27;Q1&#x27;</span>].value_counts(normalize = <span class="literal">True</span>)</span><br><span class="line">val_pnt_df = pd.DataFrame(&#123;<span class="string">&quot;count&quot;</span>:df1,<span class="string">&quot;%&quot;</span>:df2*<span class="number">100</span>&#125;)</span><br><span class="line"></span><br><span class="line">fig = go.Figure()</span><br><span class="line"><span class="comment"># [str(x) + &#x27; %&#x27; for x in np.round(val_pnt_df[&quot;%&quot;].values, 1).tolist()]</span></span><br><span class="line"><span class="comment"># Add Traces</span></span><br><span class="line">fig.add_bar(x = val_pnt_df.index, </span><br><span class="line">            y = val_pnt_df[<span class="string">&#x27;count&#x27;</span>].values, </span><br><span class="line">            text = [<span class="built_in">str</span>(x) + <span class="string">&#x27; %&#x27;</span> <span class="keyword">for</span> x <span class="keyword">in</span> np.<span class="built_in">round</span>(val_pnt_df[<span class="string">&quot;%&quot;</span>].values, <span class="number">1</span>).tolist()], </span><br><span class="line">            textposition=<span class="string">&quot;auto&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># layout</span></span><br><span class="line">fig.update_layout(title_text = <span class="string">&quot;Q1. &quot;</span> + questions[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://mingrammer.com/introduce-comprehension-of-python/">python의 comprehension</a></p>
-<br>
-
-<p>오늘은 못보고 나중에 다시 보자 !</p>
-<br>
-
-</div>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#6</span></span><br><span class="line">fig.update_traces(texttemplate=<span class="string">&#x27;%&#123;text&#125;&#x27;</span>, </span><br><span class="line">                  textposition=<span class="string">&#x27;outside&#x27;</span>,</span><br><span class="line">                  hovertemplate=<span class="string">&#x27;&lt;b&gt;Experience&lt;/b&gt;: %&#123;x&#125;&lt;br&gt;&lt;extra&gt;&lt;/extra&gt;&#x27;</span>+</span><br><span class="line">                                <span class="string">&#x27;&lt;b&gt;Count&lt;/b&gt;: %&#123;y&#125;&#x27;</span>, textfont_size=<span class="number">12</span>)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<ul>
-<li>texttemplate=’%{text}’, : text type</li>
-<li>textposition=’outside’, : inside하면 그래프 안쪽, ouside 하면 그래프 위쪽에 생성</li>
-<li>hovertemplate= 커서를 가까이 대면 나오는 창 x값과, y 값이 어떤 상태인지 알려 준다. </li>
-</ul>
-<p><img src="/imeges/Experoemce.png" alt="Experience"></p>
-<p> <a target="_blank" rel="noopener" href="https://plotly.com/python/hover-text-and-formatting/">hevertemplate</a></p>
-<p>Returns the Figure object that the method was called on  <br><br>메서드가 호출된 그림객체를 반환.  <br></p>
-<p><a target="_blank" rel="noopener" href="https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html#plotly.graph_objects.Figure.update_traces">plotly.graph_objects.Figure.update_traces</a>  <br><br><br><br><img src="/imeges/kgg/hovertemplate_up.png" alt="hovertemplate_up"></p>
-<br>
-<br>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#7</span></span><br><span class="line">fig.update_xaxes(showgrid=<span class="literal">False</span>)</span><br><span class="line">fig.update_yaxes(showgrid=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-fig-update-axes"><a href="#7-fig-update-axes" class="headerlink" title="(#7) : fig.update_?axes()"></a>(#7) : fig.update_?axes()</h3><p>만들어진 fig를 수정.<br>SQL의 update와 비슷한 기능인듯.</p>
-<p>fig.update_xaxes(showgrid=False) : x축의 grid 수정<br>fig.update_yaxes(showgrid=False) : y축의 grid 수정</p>
-<p><img src="/imeges/kgg/showgrid_False.png" alt="showgrid=False"></p>
-<br>
-축을 보이지 않는 형태로 바꾸어 예쁘게 보이게 해줌.
-
-
-
-
-
-<h3 id="8-update-layout"><a href="#8-update-layout" class="headerlink" title="(#8) : update_layout()"></a>(#8) : update_layout()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#8</span></span><br><span class="line">fig.update_layout(showlegend=<span class="literal">False</span>, </span><br><span class="line">                  plot_bgcolor=<span class="string">&#x27;#F7F7F7&#x27;</span>, </span><br><span class="line">                  margin=<span class="built_in">dict</span>(pad=<span class="number">20</span>),</span><br><span class="line">                  paper_bgcolor=<span class="string">&#x27;#F7F7F7&#x27;</span>,</span><br><span class="line">                  height=<span class="number">500</span>,</span><br><span class="line">                  yaxis=&#123;<span class="string">&#x27;showticklabels&#x27;</span>: <span class="literal">False</span>&#125;,</span><br><span class="line">                  yaxis_title=<span class="literal">None</span>,</span><br><span class="line">                  xaxis_title=<span class="literal">None</span>,</span><br><span class="line">                  title_text=<span class="string">&quot;&lt;b&gt;Experience&lt;/b&gt; Distribution&quot;</span>,</span><br><span class="line">                  title_x=<span class="number">0.5</span>,</span><br><span class="line">                  font=<span class="built_in">dict</span>(family=<span class="string">&quot;Hiragino Kaku Gothic Pro, sans-serif&quot;</span>, size=<span class="number">14</span>, color=<span class="string">&#x27;#000000&#x27;</span>),</span><br><span class="line">                  title_font_size=<span class="number">35</span>)</span><br></pre></td></tr></table></figure>
-
-<p>default로 되어있는 그래프의 Layout을 수정.</p>
-<p><img src="/imeges/kgg/UpdateLayout.png" alt="UpdateLayout"></p>
-<ul>
-<li><p>showlegend = False </p>
-<ul>
-<li>래전드를 보여줄지 : 안보여줌 </li>
-</ul>
-</li>
-<li><p>plot_bgcolor=’#F7F7F7’ </p>
-<ul>
-<li><img src="/imeges/kgg/plot_bgcolor.png" alt="plot_bgcolor"></li>
-</ul>
-</li>
-<li><p>margin=dict(pad=20)<br>-dic에는 여러가지가 올 수 있는데 여기서는 dict(pad)를 사용</p>
-<ul>
-<li>padding을 설정, 축과 그래프 사이의 패딩을 px 단위로 설정</li>
-<li>Sets the amount of padding (in px) between the plotting area and the axis lines</li>
-<li><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/#layout-margin">layout-margin</a></li>
-</ul>
-</li>
-<li><p>paper_bgcolor=’#F7F7F7’</p>
-<ul>
-<li>배경색 설정</li>
-<li> <img src="/imeges/kgg/paper_bgcolor.png" alt="paper_bgcolor"></li>
-</ul>
-</li>
-<li><p>height=500</p>
-<ul>
-<li>plot size 설정 </li>
-</ul>
-</li>
-<li><p>yaxis={‘showticklabels’: False}</p>
-<ul>
-<li> y축의 showticklabels 설정 : 안함</li>
-</ul>
-</li>
-<li><p>yaxis_title=None, xaxis_title=None</p>
-<ul>
-<li>y축 제목, x축 제목 설정 : 없음 </li>
-</ul>
-</li>
-<li><p>title_text=”Most Recommended <b>Programming Language</b>“</p>
-<ul>
-<li>제목 달기 &lt;b&gt; code는 bolde tag인듯.</li>
-</ul>
-</li>
-<li><p>title_x=0.5, title_y=0.95,</p>
-<ul>
-<li>제목의 위치 (상단 고정)</li>
-</ul>
-</li>
-<li><p>font=dict(family=”Hiragino Kaku Gothic Pro, sans-serif”, size=17, color=’#000000’),</p>
-<pre><code>            title_font_size=35)
-</code></pre>
-<ul>
-<li>title의 font 설정 (Default: “”Open Sans”, verdana, arial, sans-serif”)</li>
-<li><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/#layout-font">font 설정</a></li>
-<li>family, color, size 설정 가능, title_fond도 함께 설정 가능 해 보임.</li>
-</ul>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html#plotly.graph_objects.Figure.update_layout">plotly.graph_objects.Figure.update_layout</a></p>
-<h3 id="9-add-annotation"><a href="#9-add-annotation" class="headerlink" title="(#9) : add_annotation()"></a>(#9) : add_annotation()</h3><p>annotation의 경우 plot 안에 글을 집어 넣는 것. <br><br>설명을 추가 해 준다고 생각하면 쉽다. <br><br>어렵지도 않고, 같은 내용이므로 이전 posting을 첨부</p>
-<p><a href="https://yoonhwa-p.github.io/2021/11/08/Kgg_plotly_treemap/">annotation</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">14</span>),</span><br><span class="line">                                    x=<span class="number">0.98</span>,</span><br><span class="line">                                    y=-<span class="number">0.24</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;@miguelfzzz&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br><span class="line"></span><br><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">12</span>),</span><br><span class="line">                                    x=-<span class="number">0.03</span>,</span><br><span class="line">                                    y=-<span class="number">0.24</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;Source: 2021 Kaggle Machine Learning &amp; Data Science Survey&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-<p><img src="/imeges/kgg/img_1.png" alt="img_1.png"></p>
-<hr>
-
-
-
-<p>ref. <br><br><a target="_blank" rel="noopener" href="https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html">plotly.graph_object Parameter</a>  <br><br><a target="_blank" rel="noopener" href="https://plotly.com/python/bar-charts/">var chart in plotly/en</a>  <br></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-08T03:21:20.000Z" title="2021. 11. 8. 오후 12:21:20">2021-11-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-09T10:18:38.967Z" title="2021. 11. 9. 오후 7:18:38">2021-11-09</time>&nbsp;업데이트 됨</span><span class="level-item">11분안에 읽기 (약 1579 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/08/kgg/Kgg_plotly_treemap/">kaggle :Plotly_Treemap (Q8)</a></h1><div class="content"><h1 id="kaggle-dictation-01"><a href="#kaggle-dictation-01" class="headerlink" title="kaggle dictation (01)"></a>kaggle dictation (01)</h1><p><br><br></p>
-<h3 id="plotly-graph-objects-as-go-를-이용한-Treemap"><a href="#plotly-graph-objects-as-go-를-이용한-Treemap" class="headerlink" title="plotly.graph_objects as go : 를 이용한 Treemap"></a>plotly.graph_objects as go : 를 이용한 Treemap</h3><ul>
-<li>많은 계층 구조 데이트를 표현할때 적합.</li>
-<li>Ben Shneiderman에 의해 1990년도부터 출발</li>
-<li>Treemap은 크기(count) 순서로 %에따라 공간을 차지하는 사각형으로 표현됨.</li>
-<li>계층에서 동일한 수준에 속하는 각 사각형 집합은 데이터 테이블의 표현식 또는 컬럼을 표현.</li>
-<li>계층에서 동일한 수준의 개별 사각형은 컬럼의 Index</li>
-</ul>
-<br>
-<hr style="size:3px;">
-
-
-<h3 id="언제-사용하면-좋을까"><a href="#언제-사용하면-좋을까" class="headerlink" title="언제 사용하면 좋을까"></a>언제 사용하면 좋을까</h3><pre><code>- 많은 범주간의 부분과 전체를 시각화 하고 싶을때
-- 범주 간의 정확한 비교 대신 큰 특징을 나타내고 싶을때
-- 데이터가 계층을 이루고 있을때
-</code></pre>
-<br>
-<hr style="size:3px;">
-
-
-<h3 id="사용한-Library"><a href="#사용한-Library" class="headerlink" title="사용한 Library"></a>사용한 Library</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>사실 이 부분에서 seaborn을 사용 했는지 잘 모르겠음.
-github에서 plotly가 동적 Livrary라 자꾸 오류가남.
-</code></pre>
-<br>
-<hr style="size:3px;">
-
-<h2 id="data-import"><a href="#data-import" class="headerlink" title="data import"></a>data import</h2><p><a target="_blank" rel="noopener" href="https://www.kaggle.com/miguelfzzz/the-typical-kaggle-data-scientist-in-2021">data 원문</a><br><a href="https://yoonhwa-p.github.io/2021/11/07/kaggle_CC/">data import 방법</a><br>data는 Kaggle의 the-typical-kaggle-data-scientist-in-2021 data를 이용하였음.</p>
-<h3 id="data-불러오기-합치기"><a href="#data-불러오기-합치기" class="headerlink" title="data 불러오기/합치기"></a>data 불러오기/합치기</h3><pre><code>data를 표현 해 주기 위해 컴퓨터가 읽을 수 있는 형태로 가공.
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;../input/kaggle-survey-2021/kaggle_survey_2021_responses.csv&#x27;</span>)</span><br><span class="line">df = df.iloc[<span class="number">1</span>:, :]</span><br></pre></td></tr></table></figure>
-
-<p>df : data frame에 file 연동.<br>df.iloc[1:, :]  : 1행부터 끝까지 건너뛰기 없이 선택</p>
-<pre><code>행번호(row number)로 선택하는 방법 (.iloc)
-label이나 조건표현으로 선택하는 방법 (.loc)
-</code></pre>
-<p>Ref. <a target="_blank" rel="noopener" href="https://azanewta.tistory.com/34">loc, iloc을 이용한 행 선택</a></p>
-<br>
-<hr>
-
-<h2 id="data-encoding-Feature-Engineering"><a href="#data-encoding-Feature-Engineering" class="headerlink" title="data encoding (Feature Engineering)"></a>data encoding (Feature Engineering)</h2><pre><code>사실 이 부분이 feature Engineering에 해당하는 부분인지 잘 모르겠다.
-이 부분은 data를 computer로 자동화하여 계산, 동적 그래프를 만들기 위한 부분.
-</code></pre>
-<p>###Feature Engineering<br>####data frame 설정</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">recommend_leng = ( df[<span class="string">&#x27;Q8&#x27;</span>]</span><br><span class="line">                 .value_counts() </span><br><span class="line">                 .to_frame() </span><br><span class="line">                 .reset_index() </span><br><span class="line">                 .rename(columns=&#123;<span class="string">&#x27;index&#x27;</span>:<span class="string">&#x27;Lenguage&#x27;</span>, <span class="string">&#x27;Q8&#x27;</span>:<span class="string">&#x27;Count&#x27;</span>&#125;)</span><br><span class="line">                 .sort_values(by=[<span class="string">&#x27;Count&#x27;</span>], ascending=<span class="literal">False</span>)</span><br><span class="line">                 )</span><br><span class="line"></span><br><span class="line">df[<span class="string">&#x27;Q8&#x27;</span>].head()</span><br><span class="line"></span><br><span class="line">recommend_leng</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="/imeges/recommend_leng.png" alt="recommend_leng"></p>
-<br>
-
-<p>dataframe[Q8] : data를 가공하여 분석 할 예정</p>
-<ul>
-<li>pd.value_counts() <ul>
-<li>Q8의 data counting, 중복된  data 를 counting 하여 수를 나타냄.</li>
-</ul>
-</li>
-<li>pd.frame()<ul>
-<li>dataframe으로 표의 형태를 잡아준다.</li>
-</ul>
-</li>
-<li>pd.reset_Index()<ul>
-<li>Q8의 Index reset, 원본 data에는 영향을 주지 않으면서 새로운 Index 생성</li>
-<li><a target="_blank" rel="noopener" href="https://kongdols-room.tistory.com/123">Reset_parameter/Ko</a></li>
-</ul>
-</li>
-<li>pd.rename()<ul>
-<li>columns에 Index를 붙여 호출 하기 위해 이름을 바꿔줌</li>
-<li>index는 Lenguage로, count는 Q8로 </li>
-</ul>
-</li>
-<li>pd.sort_values()<ul>
-<li>count 값으로 정렬</li>
-<li>by=[‘Count’], ascending = false</li>
-</ul>
-<ul>
-<li>by에 option 기준, (오름차순 = F )= 내림차순으로 정렬</li>
-</ul>
-</li>
-</ul>
-<p><br><br></p>
-<h4 id="앞으로-사용-할-색상을-미리-지정"><a href="#앞으로-사용-할-색상을-미리-지정" class="headerlink" title="앞으로 사용 할 색상을 미리 지정"></a>앞으로 사용 할 색상을 미리 지정</h4><ul>
-<li>한 눈에 보기 편함.</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">colors = [<span class="string">&#x27;#033351&#x27;</span>,] * <span class="number">13</span></span><br><span class="line">colors[<span class="number">0</span>] = <span class="string">&#x27;#5abbf9&#x27;</span></span><br><span class="line">colors[<span class="number">1</span>] = <span class="string">&#x27;#066eb0&#x27;</span></span><br><span class="line">colors[<span class="number">2</span>] = <span class="string">&#x27;#044a77&#x27;</span></span><br><span class="line">colors[<span class="number">3</span>] = <span class="string">&#x27;#043e64&#x27;</span></span><br><span class="line">colors[<span class="number">4</span>] = <span class="string">&#x27;#043e64&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p> 아직 잘 모르겠는 부분은 왜 <strong>colors = [‘#NNNNNN’, ]</strong> 이 부분과  *13  이부분</p>
-<br>
-<br>
-
-<h2 id="Treemap-생성"><a href="#Treemap-생성" class="headerlink" title="Treemap 생성"></a>Treemap 생성</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fig = go.Figure(go.Treemap(</span><br><span class="line">    labels = recommend_leng[<span class="string">&#x27;Lenguage&#x27;</span>],</span><br><span class="line">    values = recommend_leng[<span class="string">&#x27;Count&#x27;</span>],</span><br><span class="line">    parents = [<span class="string">&#x27;&#x27;</span>]*recommend_leng.shape[<span class="number">0</span>],</span><br><span class="line">    textinfo = <span class="string">&quot;percent root+label+value+text&quot;</span>,</span><br><span class="line">    ))</span><br></pre></td></tr></table></figure>
-
-<h3 id="fig-생성"><a href="#fig-생성" class="headerlink" title="fig 생성"></a>fig 생성</h3><ul>
-<li>import plotly.graph_objects as <strong>go</strong><br>plotly의 graph_objects 를 이용하여 객체 생성.</li>
-</ul>
-<br>
-
-<h4 id="Treemap의-parameter"><a href="#Treemap의-parameter" class="headerlink" title="Treemap의 parameter"></a>Treemap의 parameter</h4><ul>
-<li>labels :  values 이름</li>
-<li>values :  값</li>
-<li>parents : ???</li>
-<li>textinfo = 표시형식 </li>
-</ul>
-<h4 id="fig-update-traces-hovertemplate"><a href="#fig-update-traces-hovertemplate" class="headerlink" title="fig.update_traces(hovertemplate)"></a>fig.update_traces(hovertemplate)</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fig.update_traces(hovertemplate=<span class="string">&#x27;&lt;b&gt;Lenguage&lt;/b&gt;: %&#123;label&#125;&lt;br&gt;&lt;extra&gt;&lt;/extra&gt;&#x27;</span>+</span><br><span class="line">                                <span class="string">&#x27;&lt;b&gt;Count&lt;/b&gt;: %&#123;value&#125;&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="/imeges/hovertemplate.png" alt="hovertemplate"></p>
-<br>
-
-<ul>
-<li>fig.update_traces()</li>
-<li>그래프 위에 캡션 다는 기능<ul>
-<li>Perform a property update operation on all traces that satisfy the specified selection criteria</li>
-<li>지정된 선택 기준을 충족하는 모든 추적에 대해 속성 업데이트 작업 수행 (?? 전혀 모르겠군 !)</li>
-</ul>
-</li>
-</ul>
-<br>
-
-<ul>
-<li>hoverinfo : 마우스 오버시 나타나는 추적정보</li>
-<li>hovertemplate : 커서를 가까이 대면 나오는 창을 렌더링하는데 사용되는 Temp<ul>
-<li>변수 : %{variable} (변수의 형식을 지정)<ul>
-<li>숫자 : %{d3-format}</li>
-<li>price : %{yL$.2f}</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://plotly.com/python/hover-text-and-formatting/">hovertemplate/en</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.emptyq.net/a?id=00010-dc06aea0-f03e-437b-bfab-30fc2e4a4017">hoverTemp.para/ko</a></li>
-</ul>
-<br>
-<hr>
-
-<h3 id="fig-update-layout"><a href="#fig-update-layout" class="headerlink" title="fig.update_layout()"></a>fig.update_layout()</h3><p>fig의 layout을 설정.</p>
-<h4 id="hoverTemp까지-설정된-treemap"><a href="#hoverTemp까지-설정된-treemap" class="headerlink" title="hoverTemp까지 설정된 treemap."></a>hoverTemp까지 설정된 treemap.</h4><br>
-
-<p><img src="/imeges/Before_layout.png" alt="Before_layout"></p>
-<br>
-
-<br>
-
-<h4 id="fig-update-layout-을-사용하여-layout을-변경-해-보자"><a href="#fig-update-layout-을-사용하여-layout을-변경-해-보자" class="headerlink" title="fig.update_layout()을 사용하여 layout을 변경 해 보자."></a>fig.update_layout()을 사용하여 layout을 변경 해 보자.</h4><br>
-
-<p><img src="/imeges/After_layout.png" alt="After_layout"></p>
-<br>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fig.update_layout(showlegend=<span class="literal">False</span>, </span><br><span class="line">                  treemapcolorway = colors,</span><br><span class="line">                  margin=<span class="built_in">dict</span>(pad=<span class="number">20</span>),</span><br><span class="line">                  paper_bgcolor=<span class="string">&#x27;#F7F7F7&#x27;</span>,</span><br><span class="line">                  plot_bgcolor=<span class="string">&#x27;#F7F7F7&#x27;</span>,</span><br><span class="line">                  height=<span class="number">600</span>,</span><br><span class="line">                  yaxis=&#123;<span class="string">&#x27;showticklabels&#x27;</span>: <span class="literal">False</span>&#125;,</span><br><span class="line">                  yaxis_title=<span class="literal">None</span>,</span><br><span class="line">                  xaxis_title=<span class="literal">None</span>,</span><br><span class="line">                  title_text=<span class="string">&quot;Most Recommended &lt;b&gt;Programming Language&lt;/b&gt;&quot;</span>,</span><br><span class="line">                  title_x=<span class="number">0.5</span>,</span><br><span class="line">                  title_y=<span class="number">0.95</span>,</span><br><span class="line">                  font=<span class="built_in">dict</span>(family=<span class="string">&quot;Hiragino Kaku Gothic Pro, sans-serif&quot;</span>, size=<span class="number">17</span>, color=<span class="string">&#x27;#000000&#x27;</span>),</span><br><span class="line">                  title_font_size=<span class="number">35</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-
-<ul>
-<li>showlegend = False <ul>
-<li>래전드를 보여줄지 : 안보여줌 </li>
-</ul>
-</li>
-<li>treemapcolorway = colors <ul>
-<li>위에서 정의 해 준 colors가 13개였는데 여기 계층도 13개임<ul>
-<li>아마도 light 부터 deep으로 색이 정해지는듯.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>margin=dict(pad=20)<br>-dic에는 여러가지가 올 수 있는데 여기서는 dict(pad)를 사용<ul>
-<li>padding을 설정, 축과 그래프 사이의 패딩을 px 단위로 설정</li>
-<li>Sets the amount of padding (in px) between the plotting area and the axis lines</li>
-<li><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/#layout-margin">layout-margin</a></li>
-</ul>
-</li>
-<li>paper_bgcolor=’#F7F7F7’<ul>
-<li>배경색 설정</li>
-</ul>
-</li>
-</ul>
-<p><img src="/imeges/paper_bgcolor.png" alt="paper_bgcolor"></p>
-<ul>
-<li>plot_bgcolor=’#F7F7F7’<ul>
-<li>설정 바꿔 보았으나 안보임 </li>
-</ul>
-</li>
-<li>height=600<ul>
-<li>plot size 설정 </li>
-</ul>
-</li>
-<li>yaxis={‘showticklabels’: False}<ul>
-<li> y축의 showticklabels 설정 : 안함</li>
-</ul>
-</li>
-<li>yaxis_title=None, xaxis_title=None<ul>
-<li>y축 제목, x축 제목 설정 : 없음 </li>
-</ul>
-</li>
-<li>title_text=”Most Recommended <b>Programming Language</b>“<ul>
-<li>제목 달기 &lt;b&gt; code는 bolde tag인듯.</li>
-</ul>
-</li>
-<li>title_x=0.5, title_y=0.95,<ul>
-<li>제목의 위치 (상단 고정)</li>
-</ul>
-</li>
-<li>font=dict(family=”Hiragino Kaku Gothic Pro, sans-serif”, size=17, color=’#000000’),<pre><code>            title_font_size=35)
-</code></pre>
-<ul>
-<li>title의 font 설정 (Default: “”Open Sans”, verdana, arial, sans-serif”)</li>
-<li><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/#layout-font">font 설정</a></li>
-<li>family, color, size 설정 가능, title_fond도 함께 설정 가능 해 보임.</li>
-</ul>
-</li>
-</ul>
-<br>
-<br>
-
-<h3 id="fig-Information-추가"><a href="#fig-Information-추가" class="headerlink" title="fig Information 추가"></a>fig Information 추가</h3><h4 id="fig-add-annotation-1"><a href="#fig-add-annotation-1" class="headerlink" title="fig.add_annotation() _1"></a>fig.add_annotation() _1</h4><p>플롯에 메모를 남길 수 있는것. 코멘트나 copy-Right 같은걸 남기는듯</p>
-<p>-[plotly-annotation/ko.] (<a target="_blank" rel="noopener" href="https://soohee410.github.io/plotly_annotation">https://soohee410.github.io/plotly_annotation</a>)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">14</span>),</span><br><span class="line">                                    x=<span class="number">0.96</span>,</span><br><span class="line">                                    y=-<span class="number">0.14</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;@miguelfzzz&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br></pre></td></tr></table></figure>
-
-<p>dict = dictionary</p>
-<blockquote>
-<blockquote>
-<p>A list or tuple of dicts of string/value properties where:<br>The ‘type’ property specifies the trace type</p>
-</blockquote>
-</blockquote>
-<ul>
-<li>여기서 dict는 fig객체 즉 <strong>plotly.graph_objects.Figure</strong> 에서 상응하는 정보(font, size등) 변수를 가져와 대응 시켜 주는 역할을 한다. </li>
-</ul>
-<p>plot 아래에 보면 “@miguelfzzz”이라는 글자가 보이는데 이것을 설정 한 것.</p>
-<ul>
-<li>showarrow=False,<ul>
-<li>화살표등을 남길 수 있는데 이 Graph에선 false</li>
-</ul>
-</li>
-<li>xref=”paper”, yref=”paper”<ul>
-<li>어느 부분 (plot or paper)에 표시 할 것인지  </li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>나머지는 말 안해도 이제는 알 수 있기 때문에 생략.</p>
-</blockquote>
-<h4 id="fig-add-annotation-2"><a href="#fig-add-annotation-2" class="headerlink" title="fig.add_annotation() _2"></a>fig.add_annotation() _2</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fig.add_annotation(<span class="built_in">dict</span>(font=<span class="built_in">dict</span>(size=<span class="number">12</span>),</span><br><span class="line">                                    x=<span class="number">0.01</span>,</span><br><span class="line">                                    y=-<span class="number">0.14</span>,</span><br><span class="line">                                    showarrow=<span class="literal">False</span>,</span><br><span class="line">                                    text=<span class="string">&quot;Source: 2021 Kaggle Machine Learning &amp; Data Science Survey&quot;</span>,</span><br><span class="line">                                    xanchor=<span class="string">&#x27;left&#x27;</span>,</span><br><span class="line">                                    xref=<span class="string">&quot;paper&quot;</span>,</span><br><span class="line">                                    yref=<span class="string">&quot;paper&quot;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<br>
-<hr>
-
-<h2 id="fig-show-내보내기"><a href="#fig-show-내보내기" class="headerlink" title="fig.show() 내보내기"></a>fig.show() 내보내기</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
-
-<p>fig.show()로 마무리 해 주면 된다.  <br><br>이건 java의 return과 같은 느낌인듯. <br></p>
-<p><a target="_blank" rel="noopener" href="https://plotly.com/python/treemaps/">Plotly Treemap/en.</a>  <br><br><a target="_blank" rel="noopener" href="https://plotly.com/python/reference/layout/">layout/en.</a>  <br></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-07T11:21:20.000Z" title="2021. 11. 7. 오후 8:21:20">2021-11-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-09T12:37:55.817Z" title="2021. 11. 9. 오후 9:37:55">2021-11-09</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/index/">index</a></span><span class="level-item">7분안에 읽기 (약 1020 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/07/kgg/kaggle_CC/">kaggle study</a></h1><div class="content"><br>
-
-<p><a style="font 200%;"> <em>Sumarry</em>  </a></p>
-<p><img src="/imeges/kaggle.png" alt="kaggle_Comp"></p>
-<br>
-
-<ol>
-<li>Demographics &amp; Geographics<ul>
-<li>(Q1) Age-bar</li>
-<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_pie/">(Q2)</a> Gender-pie</li>
-<li>(Q3)countries-scatter+line</li>
-</ul>
-</li>
-<li>Education &amp; Occupation<ul>
-<li>(Q4) Age-bar_h</li>
-<li>(Q5) Role-bar_h</li>
-<li>(Q20) Industry-bar_h</li>
-</ul>
-</li>
-<li>knowledge &amp; skills<ul>
-<li><a href="https://yoonhwa-p.github.io/2021/11/08/Kgg_plotly_bar/">(Q6)</a> Experience : 52% 넘는 응답이 3년이상 코딩과 프로그래밍을 했다. -bar vertical (위)</li>
-<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_Horizontal/">(Q17)</a> Algorithms : Linear or Logistic Regression 55% 과 Decision tree or Random Forests, respectively 66% 사용. - bar  horizon (옆)</li>
-<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_Bar_H(3)/">(Q7)</a> Languages : python 84%, SQL 41% 사용 -bar horizon</li>
-<li><a href="https://yoonhwa-p.github.io/2021/11/08/Kgg_plotly_treemap/">(Q8)</a> Recommend_Leng: programming에 추천하는 언어는 81%가 python -Treemap</li>
-<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_HZB(2)/">(Q9)</a> F_EG /w Q7 가장 많이 쓰는 IDE : jupyter Notebook26.2%, VSCODE 13.92% - bar horizon</li>
-</ul>
-</li>
-<li>Platforms &amp; Media4. Platforms &amp; Media<ul>
-<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_ScatterLine/">(Q11)</a> Platform: 많이 쓰는 컴퓨터 플랫폼은 랩탑이 66% -Scatter + line</li>
-<li>(Q27_A)cloud_platform: 아마존 14%, 구글클라우드 12%, 마쏘 아줠 9%  - bar horizon</li>
-<li>(Q40) courses: DS들이 많이 쓰는 course 플랫폼 Coursera 20, Kaggle 18%-Treemap</li>
-<li><a href="https://yoonhwa-p.github.io/2021/11/09/Kgg_plotly_ScatterL(2)/">(Q42)</a> media : DS topic report를 위해  많이 쓰는 media는 kaggle 44%, youTube 40%, blog 31%  -scatter + line</li>
-<li>Takeaways : typical Kaggle DS in 2021 :HTML picture n line n text</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># This Python 3 environment, PKG Load</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np <span class="comment"># linear algebra</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd <span class="comment"># data processing, CSV file I/O (e.g. pd.read_csv)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Input data files : &quot;../input/&quot; </span></span><br><span class="line"><span class="comment"># Running : Shift+Enter</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">for</span> dirname, _, filenames <span class="keyword">in</span> os.walk(<span class="string">&#x27;/kaggle/input&#x27;</span>):</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="built_in">print</span>(os.path.join(dirname, filename))</span><br><span class="line"></span><br><span class="line"><span class="comment"># ~ 20GB ,/kaggle/temp/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre><code>/kaggle/input/kaggle-survey-2021/kaggle_survey_2021_responses.csv
-/kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_methodology.pdf
-/kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_answer_choices.pdf
-</code></pre>
-<center style="font-size:200%; font-family:Hiragino Kaku Gothic Pro, sans-serif"><b> The Typical Kaggle Data Scientist in 2021</b></center>
-
-<p><br><br></p>
-<center style="font-size:200%; font-family:Hiragino Kaku Gothic Pro, sans-serif"> Remade By @YoonHwa-P</center>
-
-<center><img src='https://www.gcppodcast.com/images/post/kaggle.png'></center>
-
-<p>HTML code는 Markdown 형식으로 넣을 수 있게 해 준다.</p>
-<p>scr : <a target="_blank" rel="noopener" href="https://www.gcppodcast.com/">구글 팟케스트</a>에서 바로 연결하여 사용.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objects <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>시각화, 계산을 위해 Pandas, Numpy, seaborn을 이용 할 것이고, 동적보드를 만들기 위해 plotly를 이용 하였다. </p>
-<p>plotly 중에서 Express와 Graph_objects를 가져와서 사용 할 예정인듯.</p>
-<p><a target="_blank" rel="noopener" href="https://plotly.com/python/plotly-express/">plotly-express</a></p>
-<p>The Plotly Express API in general offers the following features:</p>
-<p>Every PX function returns a** plotly.graph_objects.Figure object**, so you can edit it using all the same methods like update_layout and add_trace.</p>
-<p>input으로 Express를 사용 한다면  Graph_objects가 동적 plotly 를 만드는 것 같다. : update 하거나 trace를 가능 하게 하는듯.</p>
-<p>실제 필사할  data에서는 어떤 data가 있는지 확인 해 보지 않았지만,<br>나는 배우는 입장이니 어떤 data가 있는지, 어떤 head가 있는지 확인 해 보도록 한다. </p>
-<p>맨 위에 가보면 Note가 생성 될때 </p>
-<pre><code>/kaggle/input/kaggle-survey-2021/kaggle_survey_2021_responses.csv
-/kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_methodology.pdf
-/kaggle/input/kaggle-survey-2021/supplementary_data/kaggle_survey_2021_answer_choices.pdf
-</code></pre>
-<p>위와같은 file dir을 알려준다. 이제, pandas로 이 files를 로딩 시켜 주면된다. </p>
-<p>Ref. <a target="_blank" rel="noopener" href="https://teddylee777.github.io/kaggle/kaggle%EC%97%90%EC%84%9C-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8A%94-notebook-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0">Kaggle활용.국문</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&quot;../input/kaggle-survey-2021/kaggle_survey_2021_responses.csv&quot;</span>)</span><br><span class="line">df = df.iloc[<span class="number">1</span>:, :] <span class="comment">#이건 왜 선택 해 놓은 것일까요?</span></span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line">df.info()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 25973 entries, 1 to 25973
-Columns: 369 entries, Time from Start to Finish (seconds) to Q38_B_OTHER
-dtypes: object(369)
-memory usage: 73.1+ MB
-</code></pre>
-<p>df에 pd.read_csv로 csv file을 읽어 옵니다. </p>
-<p>역시 pd인 df객체에 iloc을 이용하여 [ 1행부터 : , : ] iloc를 선택 해 놓았다. </p>
-<ol>
-<li>행번호(row number)로 선택하는 방법 <strong>(.iloc)</strong></li>
-<li>label이나 조건표현으로 선택하는 방법 (.loc)</li>
-</ol>
-<p>Ref. <a target="_blank" rel="noopener" href="https://azanewta.tistory.com/34">loc를 이용한 행 선택</a></p>
-<br>
-<hr>
-<center style="font-size:300%; font-family:Hiragino Kaku Gothic Pro, sans-serif"> 0. Introduction</center>
-<br>
-
-<div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif"> 
-    
-<p>This notebook will explore the fascinating results obtained from the survey conducted by Kaggle in September 2021. Over 25,000 data scientists and ML engineers participated, providing information on their backgrounds and experience in their occupations. <br></p>
-<p>To increase readability, this report is divided into four sections: </div></p>
-<ol>
-<li><div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif">Demographics & Geographics</div></li>
-<li><div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif">Education & Occupation </div></li>
-<li><div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif">Knowledge & Skills</div></li>
-<li><div style="font-size:130%; font-family:Hiragino Kaku Gothic Pro, sans-serif">Platforms & Media</div></li>
-</ol>
-<br>
-
-<hr>
-<p>Introduction<br>이 노트북은 25000 data scientist들과 ML Engineer들의 kaggle에서 경험 한것을 조사한 data를  매력적인 결과로 탐험 하게 될 것이다.<br>(대충)</p>
-<p>; Introduction 에서 이 notebook의 성격, data의 간간한 정보, 목차 등을 설명.</p>
-<hr>
-
-<p>모든 글은 Markdown을 이용한 css 로 작성 된 것 같다. </p>
-<br>
-
-<p>혹시,<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS">css</a><br>에 대하여 더 알아보고 싶으면, 이 문서를 참조 하자.</p>
-<hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-06T06:21:01.000Z" title="2021. 11. 6. 오후 3:21:01">2021-11-06</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-06T07:39:18.834Z" title="2021. 12. 6. 오후 4:39:18">2021-12-06</time>&nbsp;업데이트 됨</span><span class="level-item">3분안에 읽기 (약 476 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/06/blog/series(pandas)/">Pandas_Series</a></h1><div class="content"><p>#Pandas에서 series 자료구조</p>
-<p>series는 1차원 배열같은 자료 구조를 말한다.</p>
-<p>아래 code는 python pandas의 parameter 값이다. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">data=<span class="literal">None</span>, index=<span class="literal">None</span>, dtype=<span class="literal">None</span>, name=<span class="literal">None</span>, </span></span></span><br><span class="line"><span class="params"><span class="function">             copy=<span class="literal">False</span>, fastpath=<span class="literal">False</span></span>)</span></span><br></pre></td></tr></table></figure>
-
-
-<p>series의 parameter는 data, index, dtype, name, copy, fastpath로 나뉘어져 있는데<br>name의 경우는 이름 인 것 같고 기본적으로 Index와 value라는 parameter를 많이 이용 하는 듯 하다.</p>
-<ul>
-<li>Index : 배열의 이름</li>
-<li>value : 값</li>
-</ul>
-<p>python의 dictionalry와 거의 유사 한 것 같다.  <br><br><sapn style="font-size: 50%; font-color: orange;" >(다음에 찾아보자 오늘은 벅참.) </span></p>
-<p>series의 dtype에는 str, numpy.dtype, or ExtensionDtype, optional Data type 을<br>담을 수 있는데 이는 자동으로 값이 입력 되는 것같다.</p>
-<p>series 객체를 생성 할 때 value와 Index를 직접 지정 해 줄 수 있다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">sr = pd.Series([<span class="number">24000</span>, <span class="number">20000</span>, <span class="number">1000</span>, <span class="number">5000</span>], </span><br><span class="line">               index=[<span class="string">&quot;피자&quot;</span>, <span class="string">&quot;치킨&quot;</span>, <span class="string">&quot;콜라&quot;</span>, <span class="string">&quot;생맥&quot;</span>])</span><br><span class="line"><span class="built_in">print</span>(sr)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>구글 코랩에서 작업 하고 있는데,<br>아래에 보면 series 객체의 parameter에대한 팝업이 나와 공부 하기 참 편하게 해 준다.</p>
-<blockquote>
-<blockquote>
-<p>def <strong>init</strong>(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False)<br>One-dimensional ndarray with axis labels (including time series).</p>
-</blockquote>
-<blockquote>
-<p>Labels need not be unique but must be a hashable type. The object supports both integer- and label-based indexing and provides a host of methods for performing operations involving the index. Statistical methods from ndarray have been overridden to automatically exclude missing data<br>(currently represented as NaN).<br>Operations between Series (+, -, /, *, **) align values based on their associated index values– they need not be the same length. The result index will be the sorted union of the two indexes.</p>
-</blockquote>
-</blockquote>
-<p><br><br></p>
-<blockquote>
-<p>Parameters</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>data : array-like, Iterable, dict, or scalar value  <br><br>Contains data stored in Series. <br> <br><br>index : array-like or Index (1d)  <br><br>Values must be hashable and have the same length as data.  <br><br>Non-unique index values are allowed. Will default to RangeIndex (0, 1, 2, …, n)<br>if not provided. If both a dict and index sequence are used, the index will<br>override the keys found in the dict. <br><br><br>dtype : str, numpy.dtype, or ExtensionDtype, optional <br><br>Data type for the output Series.  <br><br>If not specified, this will be inferred from data.  <br><br>See the user guide &lt;basics.dtypes&gt; for more usages. <br><br><br>name : str, optional  <br><br><br>The name to give to the Series.  <br><br><br>copy : bool, default False  <br><br>Copy input data.  <br></p>
-</blockquote>
-</blockquote>
-<h4>type</h4>
-
-<ul>
-<li>list []</li>
-<li>tuple ()</li>
-<li>set {}</li>
-<li>dict {Key:value}</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://eunguru.tistory.com/220">series</a> <br><br><a target="_blank" rel="noopener" href="https://wikidocs.net/32829">pandas</a>  <br></p>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/3/">이전</a></div><div class="pagination-next"><a href="/page/5/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li><li><a class="pagination-link is-current" href="/page/4/">4</a></li><li><a class="pagination-link" href="/page/5/">5</a></li><li><a class="pagination-link" href="/page/6/">6</a></li><li><a class="pagination-link" href="/page/7/">7</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../imeges/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">63</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">16</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">72</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/YoonHwa-P"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/data-science/"><span class="level-start"><span class="level-item">data_science</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/index/"><span class="level-start"><span class="level-item">index</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/naver/"><span class="level-start"><span class="level-item">naver</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">8</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/"><span class="level-start"><span class="level-item">machineLeaning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/theory/"><span class="level-start"><span class="level-item">theory</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python-plotly/"><span class="level-start"><span class="level-item">python - plotly</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-09T08:51:53.000Z">2021-12-09</time></p><p class="title"><a href="/2021/12/09/python/house-price-pred-practice01/">House_price prediction Practice 01</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-08T01:37:16.000Z">2021-12-08</time></p><p class="title"><a href="/2021/12/08/python/Rgression_py/">Regression in python(01)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/theory/">theory</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-07T05:37:20.000Z">2021-12-07</time></p><p class="title"><a href="/2021/12/07/python/timer_LectureD2/">Make Timer function in python</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-07T02:42:17.000Z">2021-12-07</time></p><p class="title"><a href="/2021/12/07/python/pythonL_functionRun/">Python 함수 실행하기</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-06T09:31:04.000Z">2021-12-06</time></p><p class="title"><a href="/2021/12/06/Markdown/CreateTable/">MarkDown Table, hr, `code`</a></p><p class="categories"><a href="/categories/Markdown/">Markdown</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">12월 2021</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BarGraph/"><span class="tag">BarGraph</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bargraph/"><span class="tag">Bargraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Donut-Chart/"><span class="tag">Donut_Chart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HorizontalBar/"><span class="tag">HorizontalBar</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mow/"><span class="tag">Mow</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plotly/"><span class="tag">Plotly</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R4ds/"><span class="tag">R4ds</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Rss/"><span class="tag">Rss</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scatter/"><span class="tag">Scatter</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ScatterLine/"><span class="tag">ScatterLine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stacked-Bar/"><span class="tag">Stacked_Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Subplots/"><span class="tag">Subplots</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Test-page/"><span class="tag">Test page,</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Treemap/"><span class="tag">Treemap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dataScience/"><span class="tag">dataScience</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/draft/"><span class="tag">draft</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot2/"><span class="tag">ggplot2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/green/"><span class="tag">green</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/howtoGithub/"><span class="tag">howtoGithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">28</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-Competition/"><span class="tag">kaggle_Competition</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-dictation/"><span class="tag">kaggle_dictation</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLeaning/"><span class="tag">machineLeaning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makegithub/"><span class="tag">makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiplace/"><span class="tag">multiplace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namespace/"><span class="tag">namespace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pipe/"><span class="tag">pipe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plot/"><span class="tag">plot</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/prediction/"><span class="tag">prediction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pythonFuction/"><span class="tag">pythonFuction</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/regression/"><span class="tag">regression</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table/"><span class="tag">table</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table-arrange/"><span class="tag">table arrange</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EA%B9%83%ED%97%88%EB%B8%8C/"><span class="tag">깃허브</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/3/">이전</a></div><div class="pagination-next"><a href="/page/5/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li><li><a class="pagination-link is-current" href="/page/4/">4</a></li><li><a class="pagination-link" href="/page/5/">5</a></li><li><a class="pagination-link" href="/page/6/">6</a></li><li><a class="pagination-link" href="/page/7/">7</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../imeges/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">68</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">19</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">78</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/YoonHwa-P"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/data-science/"><span class="level-start"><span class="level-item">data_science</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/index/"><span class="level-start"><span class="level-item">index</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/naver/"><span class="level-start"><span class="level-item">naver</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/pharmacerical-company/"><span class="level-start"><span class="level-item">pharmacerical_company</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">12</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/"><span class="level-start"><span class="level-item">machineLeaning</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/pycaret/"><span class="level-start"><span class="level-item">pycaret</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/machineLeaning/sklearn/"><span class="level-start"><span class="level-item">sklearn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python/theory/"><span class="level-start"><span class="level-item">theory</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python-plotly/"><span class="level-start"><span class="level-item">python - plotly</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-13T03:01:53.000Z">2021-12-13</time></p><p class="title"><a href="/2021/12/13/python/python_basic211213/">python_basic_if</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-11T01:31:48.000Z">2021-12-11</time></p><p class="title"><a href="/2021/12/11/job/XenoMix/">Xenomix</a></p><p class="categories"><a href="/categories/pharmacerical-company/">pharmacerical_company</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-10T08:30:48.000Z">2021-12-10</time></p><p class="title"><a href="/2021/12/10/python/DecisionTreeMachineLearning/">DecisionTreeMachineLearning(03)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-10T07:00:48.000Z">2021-12-10</time></p><p class="title"><a href="/2021/12/10/python/AoutoML_Pycaret(01)/">Auto Machine Learning by pycaret(01)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a> / <a href="/categories/python/machineLeaning/pycaret/">pycaret</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-10T03:27:48.000Z">2021-12-10</time></p><p class="title"><a href="/2021/12/10/python/sklearn_mL_04_ModuleSelection/">sklearn_mL_04_ModuleSelection(2.4)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a> / <a href="/categories/python/machineLeaning/sklearn/">sklearn</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">12월 2021</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BarGraph/"><span class="tag">BarGraph</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bargraph/"><span class="tag">Bargraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Decision-Tree/"><span class="tag">Decision Tree</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Donut-Chart/"><span class="tag">Donut_Chart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HorizontalBar/"><span class="tag">HorizontalBar</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mow/"><span class="tag">Mow</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plotly/"><span class="tag">Plotly</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R4ds/"><span class="tag">R4ds</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Rss/"><span class="tag">Rss</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scatter/"><span class="tag">Scatter</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ScatterLine/"><span class="tag">ScatterLine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stacked-Bar/"><span class="tag">Stacked_Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Subplots/"><span class="tag">Subplots</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Test-page/"><span class="tag">Test page,</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Treemap/"><span class="tag">Treemap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/auto-Machine-Learning/"><span class="tag">auto Machine Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dataScience/"><span class="tag">dataScience</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/draft/"><span class="tag">draft</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot2/"><span class="tag">ggplot2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/green/"><span class="tag">green</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/howtoGithub/"><span class="tag">howtoGithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">29</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-Competition/"><span class="tag">kaggle_Competition</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-dictation/"><span class="tag">kaggle_dictation</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLeaning/"><span class="tag">machineLeaning</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makegithub/"><span class="tag">makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/market/"><span class="tag">market</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/model-selection/"><span class="tag">model selection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiplace/"><span class="tag">multiplace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namespace/"><span class="tag">namespace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pipe/"><span class="tag">pipe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plot/"><span class="tag">plot</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/prediction/"><span class="tag">prediction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pycaret/"><span class="tag">pycaret</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pythonFuction/"><span class="tag">pythonFuction</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/regression/"><span class="tag">regression</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sklearn/"><span class="tag">sklearn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table/"><span class="tag">table</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table-arrange/"><span class="tag">table arrange</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EA%B9%83%ED%97%88%EB%B8%8C/"><span class="tag">깃허브</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
