@@ -3,7 +3,58 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-14T05:21:20.000Z" title="2021. 12. 14. 오후 2:21:20">2021-12-14</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-14T06:13:38.185Z" title="2021. 12. 14. 오후 3:13:38">2021-12-14</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/R/">R</a><span> / </span><a class="link-muted" href="/categories/R/data-science/">data_science</a></span><span class="level-item">28분안에 읽기 (약 4127 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/14/R/textmining(01)/">Text Mining in R</a></h1><div class="content"><h2 id="R을-이용한-TextMining"><a href="#R을-이용한-TextMining" class="headerlink" title="R을 이용한 TextMining"></a>R을 이용한 TextMining</h2><ul>
+        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-15T00:11:16.000Z" title="2021. 12. 15. 오전 9:11:16">2021-12-15</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-14T07:00:08.155Z" title="2021. 12. 14. 오후 4:00:08">2021-12-14</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/R/">R</a><span> / </span><a class="link-muted" href="/categories/R/data-science/">data_science</a></span><span class="level-item">1분안에 읽기 (약 162 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/15/R/textmining(03)/">Text Mining in R</a></h1><div class="content"><h2 id="Text-Mining-in-R-03"><a href="#Text-Mining-in-R-03" class="headerlink" title="Text Mining in R (03)"></a>Text Mining in R (03)</h2><p>앞선 내용 :<br><br><a href="https://yoonhwa-p.github.io/2021/12/14/R/textmining(01)/">Text Mining in R (01)</a><br><br><a href="https://yoonhwa-p.github.io/2021/12/14/R/textmining(02)/">Text Mining in R (02)</a><br><br>다음 내용 :<br><br><a href="">Text Mining in R (04)</a></p>
+<h3 id="MeCab-설치"><a href="#MeCab-설치" class="headerlink" title="MeCab 설치"></a>MeCab 설치</h3><p>Mecab-ko 형태소 분석기 사용 위해서는 Rcppmecab 패키지를 설치해야 함.</p>
+<p>RcppMeCab 패키지 설치 앞서서 설치할 파일이 있음.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/junhewk/RcppMeCab/blob/master/README_kr.md">URL:</a></p>
+<p>해당 깃허브에서 설치해야 할 파일을 다운로드 받은 후, </p>
+<p>“C:\mecab” 경로에 설치한다.</p>
+<ul>
+<li><p>이 과정에서<br><img src="/../../imeges/R_images/Rcppmecab.png" alt="Rcppmecab"></p>
+</li>
+<li><p>위의 file내의 폴더 형태와, file 명, 경로 가 같지 않으면 에러가 난다. </p>
+</li>
+</ul>
+<hr>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-14T09:21:20.000Z" title="2021. 12. 14. 오후 6:21:20">2021-12-14</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-14T06:55:49.078Z" title="2021. 12. 14. 오후 3:55:49">2021-12-14</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/R/">R</a><span> / </span><a class="link-muted" href="/categories/R/data-science/">data_science</a></span><span class="level-item">1분안에 읽기 (약 198 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/14/R/textmining(02)/">Text Mining in R(02)</a></h1><div class="content"><h2 id="Text-Mining-in-R-02"><a href="#Text-Mining-in-R-02" class="headerlink" title="Text Mining in R (02)"></a>Text Mining in R (02)</h2><p>앞선 내용 :<br><a href="https://yoonhwa-p.github.io/2021/12/14/R/textmining(01)/">Text Mining in R (01)</a></p>
+<p>다음 내용 :<br><a href="">Text Mining in R (03)</a></p>
+<p><br><br></p>
+<hr>
+<br>
+
+<h3 id="§-MeCab-설치"><a href="#§-MeCab-설치" class="headerlink" title="§ MeCab 설치"></a>§ MeCab 설치</h3><p>Mecab-ko 형태소 분석기 사용 위해서는 Rcppmecab 패키지가 있어야함.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/junhewk/RcppMeCab/blob/master/README_kr.md">URL:</a></p>
+<p>해당 깃허브에서 설치해야 할 파일을 다운로드 받은 후, </p>
+<p><img src="/../../imeges/R_images/RcppMeCab_zipfiles.png" alt="RcppMeCab_zipfiles"><br><br><br></p>
+<div style="border: 1px solid gold">
+<br>
+
+<ul>
+<li>압축 해제 시에 <code>C drive</code> 에서 <code>mecab</code> folder 생성 </li>
+<li>오른쪽 버튼 클릭 후  <code>여기에압출풀기</code>를 선택하면 쉽다. </li>
+</ul>
+<br>
+</div>
+
+
+<ul>
+<li><p>이 과정에서<br><img src="/../../imeges/R_images/Rcppmecab.png" alt="Rcppmecab"></p>
+</li>
+<li><p>위의 file내의 폴더 형태와, file 명, 경로 가 같지 않으면 다음과 같은 에러가 난다. </p>
+</li>
+</ul>
+<blockquote>
+<p>Exception:<br>list()</p>
+</blockquote>
+<ul>
+<li><p>경로, file명 등을 확인 하기 바란다. </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/junhewk/RcppMeCab/issues/12">오류 해결 참조</a></p>
+</li>
+<li></li>
+</ul>
+<hr>
+<h3 id="§"><a href="#§" class="headerlink" title="§"></a>§</h3></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-14T05:21:20.000Z" title="2021. 12. 14. 오후 2:21:20">2021-12-14</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-14T07:00:08.147Z" title="2021. 12. 14. 오후 4:00:08">2021-12-14</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/R/">R</a><span> / </span><a class="link-muted" href="/categories/R/data-science/">data_science</a></span><span class="level-item">38분안에 읽기 (약 5681 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/14/R/textmining(01)/">Text Mining in R(01)</a></h1><div class="content"><h2 id="R을-이용한-TextMining"><a href="#R을-이용한-TextMining" class="headerlink" title="R을 이용한 TextMining"></a>R을 이용한 TextMining</h2><ul>
 <li>NLP : 자연어</li>
 <li>NLP slide 110p, python코드 책 3권 참조</li>
 <li><a target="_blank" rel="noopener" href="https://wikidocs.net/book/2155">딥 러닝을 이용한 자연어 처리 입문/Ko</a><ul>
@@ -13,6 +64,7 @@
 </li>
 </ul>
 </li>
+<li>다음 내용 :<br><a href="https://yoonhwa-p.github.io/2021/12/14/R/textmining(02)/">Text Mining in R (02)</a></li>
 </ul>
 <p><br><br><br><hr></p>
 <p>** R Install에 관한 내용은<br><a href="https://yoonhwa-p.github.io/2021/11/29/R/R_R4ds_Welcom/">여기</a> 있다.</p>
@@ -42,6 +94,7 @@
 <p>write(‘PATH=”${RTOOLS40_HOME}\usr\bin;${PATH}”‘, <br><br>      file = “~/.Renviron”, append = TRUE) <br><br>Sys.which(“make”) <br><br>………………………………………make <br><br>“C:\rtools40\usr\bin\make.exe”  <br></p>
 </blockquote>
 <h4 id="jsonlite-install"><a href="#jsonlite-install" class="headerlink" title="jsonlite install"></a>jsonlite install</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">&quot;jsonlite&quot;</span>, type = <span class="string">&quot;source&quot;</span>)</span><br></pre></td></tr></table></figure>
+<div style="border: 1px solid gold">
 
 <blockquote>
 <p>install.packages(“jsonlite”, type = “source”)<br>‘C:/Users/brill/Documents/R/win-library/4.1’의 위치에 패키지(들)을 설치합니다.<br>(왜냐하면 ‘lib’가 지정되지 않았기 때문입니다)<br>trying URL ‘<a target="_blank" rel="noopener" href="https://cran.rstudio.com/src/contrib/jsonlite_1.7.2.tar.gz&#39;">https://cran.rstudio.com/src/contrib/jsonlite_1.7.2.tar.gz&#39;</a><br>Content type ‘application/x-gzip’ length 421716 bytes (411 KB)<br>downloaded 411 KB</p>
@@ -99,8 +152,15 @@
 </li>
 <li>DONE (jsonlite)</li>
 </ul>
+</div>
+
+<p><br><br></p>
 <hr>
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="built_in">c</span>(<span class="string">&quot;stringr&quot;</span>, <span class="string">&quot;hash&quot;</span>, <span class="string">&quot;tau&quot;</span>, <span class="string">&quot;Sejong&quot;</span>, <span class="string">&quot;RSQLite&quot;</span>, <span class="string">&quot;devtools&quot;</span>),</span><br><span class="line">                 type = <span class="string">&quot;binary&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="R-packages-설치"><a href="#R-packages-설치" class="headerlink" title="R packages 설치"></a>R packages 설치</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="built_in">c</span>(<span class="string">&quot;stringr&quot;</span>, <span class="string">&quot;hash&quot;</span>, <span class="string">&quot;tau&quot;</span>, <span class="string">&quot;Sejong&quot;</span>, <span class="string">&quot;RSQLite&quot;</span>, <span class="string">&quot;devtools&quot;</span>),</span><br><span class="line">                 type = <span class="string">&quot;binary&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<br>
+<div style="border: 1px solid gold">
+<br>
 
 <blockquote>
 <p>The downloaded source packages are in<br>    ‘C:\Users\brill\AppData\Local\Temp\RtmpmuDZXg\downloaded_packages’<br>install.packages(c(“stringr”, “hash”, “tau”, “Sejong”, “RSQLite”, “devtools”),</p>
@@ -151,7 +211,14 @@
 <p>trying URL ‘<a target="_blank" rel="noopener" href="https://cran.rstudio.com/bin/windows/contrib/4.1/RSQLite_2.2.9.zip&#39;">https://cran.rstudio.com/bin/windows/contrib/4.1/RSQLite_2.2.9.zip&#39;</a><br>Content type ‘application/zip’ length 2511267 bytes (2.4 MB)<br>downloaded 2.4 MB</p>
 <p>trying URL ‘<a target="_blank" rel="noopener" href="https://cran.rstudio.com/bin/windows/contrib/4.1/devtools_2.4.3.zip&#39;">https://cran.rstudio.com/bin/windows/contrib/4.1/devtools_2.4.3.zip&#39;</a><br>Content type ‘application/zip’ length 423398 bytes (413 KB)<br>downloaded 413 KB</p>
 <p>package ‘fastmap’ successfully unpacked and MD5 sums checked<br>package ‘highr’ successfully unpacked and MD5 sums checked<br>package ‘xfun’ successfully unpacked and MD5 sums checked<br>package ‘diffobj’ successfully unpacked and MD5 sums checked<br>package ‘rematch2’ successfully unpacked and MD5 sums checked<br>package ‘bit’ successfully unpacked and MD5 sums checked<br>package ‘cachem’ successfully unpacked and MD5 sums checked<br>package ‘processx’ successfully unpacked and MD5 sums checked<br>package ‘prettyunits’ successfully unpacked and MD5 sums checked<br>package ‘digest’ successfully unpacked and MD5 sums checked<br>package ‘xopen’ successfully unpacked and MD5 sums checked<br>package ‘brew’ successfully unpacked and MD5 sums checked<br>package ‘commonmark’ successfully unpacked and MD5 sums checked<br>package ‘knitr’ successfully unpacked and MD5 sums checked<br>package ‘cpp11’ successfully unpacked and MD5 sums checked<br>package ‘brio’ successfully unpacked and MD5 sums checked<br>package ‘evaluate’ successfully unpacked and MD5 sums checked<br>package ‘praise’ successfully unpacked and MD5 sums checked<br>package ‘ps’ successfully unpacked and MD5 sums checked<br>package ‘waldo’ successfully unpacked and MD5 sums checked<br>package ‘bit64’ successfully unpacked and MD5 sums checked<br>package ‘blob’ successfully unpacked and MD5 sums checked<br>package ‘DBI’ successfully unpacked and MD5 sums checked<br>package ‘memoise’ successfully unpacked and MD5 sums checked<br>package ‘Rcpp’ successfully unpacked and MD5 sums checked<br>package ‘plogr’ successfully unpacked and MD5 sums checked<br>package ‘callr’ successfully unpacked and MD5 sums checked<br>package ‘pkgbuild’ successfully unpacked and MD5 sums checked<br>package ‘pkgload’ successfully unpacked and MD5 sums checked<br>package ‘rcmdcheck’ successfully unpacked and MD5 sums checked<br>package ‘roxygen2’ successfully unpacked and MD5 sums checked<br>package ‘rversions’ successfully unpacked and MD5 sums checked<br>package ‘sessioninfo’ successfully unpacked and MD5 sums checked<br>package ‘testthat’ successfully unpacked and MD5 sums checked<br>package ‘stringr’ successfully unpacked and MD5 sums checked<br>package ‘hash’ successfully unpacked and MD5 sums checked<br>package ‘tau’ successfully unpacked and MD5 sums checked<br>package ‘Sejong’ successfully unpacked and MD5 sums checked<br>package ‘RSQLite’ successfully unpacked and MD5 sums checked<br>package ‘devtools’ successfully unpacked and MD5 sums checked</p>
-<h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install.packages(&quot;remotes&quot;)</span></span><br><span class="line">remotes::install_github(<span class="string">&quot;haven-jeon/KoNLP&quot;</span>,</span><br><span class="line">                        upgrade = <span class="string">&quot;never&quot;</span>,</span><br><span class="line">                        force = <span class="literal">TRUE</span>,</span><br><span class="line">                        INSTALL_opts = <span class="built_in">c</span>(<span class="string">&quot;--no-multiarch&quot;</span>))</span><br></pre></td></tr></table></figure>
+<p><br><br></p>
+</div>
+<br><br>
+
+<h4 id="명사-분리기-KoNLP-설치를-위한-remotes-packages-설치-in-R"><a href="#명사-분리기-KoNLP-설치를-위한-remotes-packages-설치-in-R" class="headerlink" title="명사 분리기(KoNLP) 설치를 위한 remotes packages 설치 (in R)"></a>명사 분리기(KoNLP) 설치를 위한 remotes packages 설치 (in R)</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install.packages(&quot;remotes&quot;)</span></span><br><span class="line">remotes::install_github(<span class="string">&quot;haven-jeon/KoNLP&quot;</span>,</span><br><span class="line">                        upgrade = <span class="string">&quot;never&quot;</span>,</span><br><span class="line">                        force = <span class="literal">TRUE</span>,</span><br><span class="line">                        INSTALL_opts = <span class="built_in">c</span>(<span class="string">&quot;--no-multiarch&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<div style="border: 1px solid gold">
+<br><br>
 
 <blockquote>
 <blockquote>
@@ -223,8 +290,14 @@ Downloading GitHub repo haven-jeon/KoNLP@HEAD<br>√  checking for file ‘C:\Us
 <ul>
 <li>DONE (KoNLP)</li>
 </ul>
-<h3 id="-2"><a href="#-2" class="headerlink" title=""></a></h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">library(KoNLP)</span><br><span class="line">useNIADic()</span><br></pre></td></tr></table></figure>
+</div>
+<br><br>
 
+<hr>
+<h3 id="명사-분리기-KoNLP-설치"><a href="#명사-분리기-KoNLP-설치" class="headerlink" title="명사 분리기 KoNLP 설치"></a>명사 분리기 KoNLP 설치</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">library(KoNLP)</span><br><span class="line">useNIADic()</span><br></pre></td></tr></table></figure>
+
+<div style="border: 1px solid gold">
+<br><br>
 
 <blockquote>
 <p>library(KoNLP)<br>useNIADic()<br>Backup was just finished!<br>Downloading package from url: <a target="_blank" rel="noopener" href="https://github.com/haven-jeon/NIADic/releases/download/0.0.1/NIADic_0.0.1.tar.gz">https://github.com/haven-jeon/NIADic/releases/download/0.0.1/NIADic_0.0.1.tar.gz</a><br>Installing 16 packages: colorspace, viridisLite, RColorBrewer, munsell, labeling, farver, base64enc, htmltools, scales, isoband, gtable, jquerylib, tinytex, ggplot2, data.table, rmarkdown<br>‘C:/Users/brill/Documents/R/win-library/4.1’의 위치에 패키지(들)을 설치합니다.<br>(왜냐하면 ‘lib’가 지정되지 않았기 때문입니다)<br>trying URL ‘<a target="_blank" rel="noopener" href="https://cran.rstudio.com/bin/windows/contrib/4.1/colorspace_2.0-2.zip&#39;">https://cran.rstudio.com/bin/windows/contrib/4.1/colorspace_2.0-2.zip&#39;</a><br>Content type ‘application/zip’ length 2645307 bytes (2.5 MB)<br>downloaded 2.5 MB</p>
@@ -298,9 +371,22 @@ Downloading GitHub repo haven-jeon/KoNLP@HEAD<br>√  checking for file ‘C:\Us
 </li>
 <li>DONE (NIADic)<br>1213109 words dictionary was built.<blockquote>
 </blockquote>
-</li>
+</div></li>
 </ul>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-14T05:21:20.000Z" title="2021. 12. 14. 오후 2:21:20">2021-12-14</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-14T06:16:37.209Z" title="2021. 12. 14. 오후 3:16:37">2021-12-14</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/R/">R</a><span> / </span><a class="link-muted" href="/categories/R/data-science/">data_science</a></span><span class="level-item">몇 초안에 읽기 (약 0 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/14/R/textmining(02)/">Text Mining in R</a></h1><div class="content"></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-14T03:01:53.000Z" title="2021. 12. 14. 오후 12:01:53">2021-12-14</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-14T05:06:28.773Z" title="2021. 12. 14. 오후 2:06:28">2021-12-14</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a></span><span class="level-item">3분안에 읽기 (약 483 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/14/python/Exeption_python/">python_basic_Exeption</a></h1><div class="content"><h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /c/Users/brill/Desktop/PyThon_Function/venv/Scripts/python</span></span><br><span class="line"><span class="comment"># -*- coding : UTF-8</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error01</span>():</span></span><br><span class="line">    a=<span class="number">10</span></span><br><span class="line">    a/<span class="number">0</span></span><br><span class="line">    <span class="comment">#ZeroDivisionError: division by zero</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error02</span>():</span></span><br><span class="line">    a= [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">    a[<span class="number">10</span>]</span><br><span class="line">    <span class="comment">#IndexError: list index out of range</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error03</span>():</span></span><br><span class="line">    a = <span class="number">1000</span></span><br><span class="line">    a + <span class="string">&quot;Hello&quot;</span></span><br><span class="line">    <span class="comment">#TypeError: unsupported operand type(s) for +: &#x27;int&#x27; and &#x27;str&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error04</span>():</span></span><br><span class="line">    a=<span class="number">10</span></span><br><span class="line">    a+b</span><br><span class="line">    <span class="comment">#NameError: name &#x27;b&#x27; is not defined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    error01()</span><br><span class="line">    error02()</span><br><span class="line">    error03()</span><br><span class="line">    error04()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;program is done&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><br><br></p>
+<hr>
+<h3 id="형태소-분리기-설치-후-확인"><a href="#형태소-분리기-설치-후-확인" class="headerlink" title="형태소 분리기 설치 후 확인"></a>형태소 분리기 설치 후 확인</h3><p><a target="_blank" rel="noopener" href="https://news.v.daum.net/v/20211214145504242">New</a></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">text = <span class="string">&quot;뿌리산업’의 기반이 되는 공정기술의 범위가 관련법 제정 10년 만에 확대 개편된다. 뿌리기업 우대 지원과 청년층 등 신규인력 유입 지원을 강화하기 위한 법적 토대도 마련된다.</span></span><br><span class="line"><span class="string">산업통상자원부는 이 같은 내용을 담은 ‘뿌리산업 진흥과 첨단화에 관한 법률(뿌리산업법) 시행령’ 개정안이 14일 국무회의에서 의결돼 오는 16일부터 시행된다고 밝혔다.</span></span><br><span class="line"><span class="string">먼저 뿌리산업법 기반 공정기술(뿌리기술)의 범위가 기존 6개(주조, 금형, 소성가공, 용접, 표면처리, 열처리)에서 14개로 늘어난다.</span></span><br><span class="line"><span class="string">구체적으로 소재 다원화 공정기술에 사출·프레스, 정밀가공, 적층제조, 산업용 필름 및 지류 등 4개 기술이 포함된다. 산업부는 이를 통해 세라믹, 플라스틱, 탄성소재, 탄소, 펄프 등 다양한 소재 기반 제조 공정을 확산할 계획이다. 또 지능화 공정기술로 로봇, 센서, 산업 지능형 소프트웨어, 엔지니어링 설계 등 4개 기술이 추가된다.</span></span><br><span class="line"><span class="string">뿌리기술 범위가 확대되면서 뿌리산업의 범위도 기존 6대 산업, 76개 업종에서 14대 산업, 111개 업종으로 늘어난다.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">이번 개정을 통해 뿌리기업 확인 절차, 확인서 유효기간(3년), 사후관리 등에 관한 규정도 신설됐다. 뿌리기업은 뿌리기술을 활용해 사업을 영위하는 업종 또는 뿌리기술에 활용되는 장비 제조 분야를 말한다.</span></span><br><span class="line"><span class="string">뿌리기업 확인 제도는 외국인 근로자 고용 우대 혜택 등이 주어지는 뿌리산업 관련 우대 지원 대상을 명확히 정하기 위한 것으로 국가뿌리산업진흥센터에서 확인서를 발급해오고 있다. 2012년부터 1만1766건이 발급됐으며 현재 5843건이 유효한 것으로 집계됐다.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">‘일하기 좋은 뿌리기업’ 선정을 위한 기준과 절차, 지원 내용 등에 관한 규정도 새로 만들어졌다. ‘일하기 좋은 뿌리기업’은 뿌리산업에 청년층 등 신규 인력 유입을 촉진하기 위해 근로·복지 환경, 성장 역량 등이 우수한 기업을 산업부가 선정해 홍보 등을 지원하는 제도다.</span></span><br><span class="line"><span class="string">산업부는 이번 개정 사항이 원활히 시행될 수 있도록 업종별 협·단체, 뿌리기업, 지자체 등을 대상으로 적극 홍보할 방침이다. 아울러 매년 발간하는 뿌리산업 백서를 통해 새롭게 추가되는 8대 차세대 공정기술에 대한 내용, 기술 동향 등을 상세하게 제공하기로 했다．</span></span><br><span class="line"><span class="string">산업부 관계자는 “이번 개정은 2011년 뿌리산업법 제정 후 10년 만에 뿌리기술을 소재다원화와 지능화 중심으로 확장한 것으로, 뿌리산업의 기술 융복합화와 첨단화를 촉진하고 신규 인력 유입 지원을 강화하기 위한 법적 토대를 마련하였다는 데에 의의가 있다”고 말했다.&quot;</span></span><br><span class="line"></span><br><span class="line">extractNoun(text)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div style="border: 1px solid gold">
+<br><br>
+
+<blockquote>
+<p>extractNoun(text)<br>  [1] “뿌리산업’”         “기반”               “공정기술”<br>  [4] “범위”               “관련”               “법”<br>  [7] “제정”               “10”                 “년”<br> [10] “만”                 “확대”               “개편”<br> [13] “뿌리”               “기업”               “우대”<br> [16] “지원”               “청년층”             “등”<br> [19] “신규인력”           “유입”               “지원”<br> [22] “강화”               “하기”               “토대”<br> [25] “마련”               “산업”               “통상”<br> [28] “자원”               “부”                 “내용”<br> [31] “담”                 “‘뿌리산업”         “진흥”<br> [34] “첨단화”             “법률(뿌리산업법)”   “시행령’”<br> [37] “개정안”             “14”                 “국무회의”<br> [40] “의결”               “16”                 “일”<br> [43] “시행”               “뿌리”               “산업”<br> [46] “법”                 “기반”               “공정기술(뿌리기술)”<br> [49] “범위”               “기존”               “6개(주조”<br> [52] “금형”               “소성”               “가공”<br> [55] “용접”               “표면처리”           “열처리”<br> [58] “14”                 “개”                 “구체”<br> [61] “적”                 “소재”               “다원화”<br> [64] “공정기술”           “사출·프레스”       “정밀가공”<br> [67] “적층”               “제조”               “산업용”<br> [70] “필름”               “지류”               “등”<br> [73] “4”                  “개”                 “기술”<br> [76] “포함”               “산업”               “부”<br> [79] “이”                 “세라믹”             “플라스틱”<br> [82] “탄성소”             “재”                 “탄소”<br> [85] “펄프”               “등”                 “다양”<br> [88] “한”                 “소재”               “기반”<br> [91] “제조”               “공정”               “확산”<br> [94] “할”                 “계획”               “지능화”<br> [97] “공정기술”           “로봇”               “센서”<br>[100] “산업”               “지능형”             “소프트웨어”<br>[103] “엔지니어링”         “설계”               “등”<br>[106] “4”                  “개”                 “기술”<br>[109] “추가”               “뿌리”               “기술”<br>[112] “범위”               “확대”               “되”<br>[115] “뿌리”               “산업”               “범위”<br>[118] “기존”               “6”                  “대”<br>[121] “산업”               “76”                 “개”<br>[124] “업종”               “14”                 “대”<br>[127] “산업”               “111”                “개”<br>[130] “업종”               “이번”               “개정”<br>[133] “뿌리”               “기업”               “확인”<br>[136] “절차”               “확인”               “유효”<br>[139] “기”                 “3”                  “년”<br>[142] “사후관리”           “등”                 “규정도”<br>[145] “신설”               “뿌리”               “기업”<br>[148] “뿌리”               “기술”               “활용”<br>[151] “해”                 “사업”               “영위”<br>[154] “하”                 “업종”               “뿌리”<br>[157] “기술”               “활용”               “되”<br>[160] “장비”               “제조”               “분야”<br>[163] “말”                 “뿌리”               “기업”<br>[166] “확인”               “제”                 “외국”<br>[169] “근로자”             “고용”               “우대”<br>[172] “혜택”               “등”                 “뿌리”<br>[175] “산업”               “관련”               “우대”<br>[178] “지원”               “대상”               “것”<br>[181] “국가”               “뿌리”               “산업진흥”<br>[184] “센터”               “확인서”             “발급”<br>[187] “해오”               “2012”               “년”<br>[190] “1”                  “만”                 “1766”<br>[193] “건”                 “발급”               “5843”<br>[196] “건”                 “유효”               “한”<br>[199] “것”                 “집계”               “‘일하기”<br>[202] “뿌리기업’”         “선정”               “기준”<br>[205] “절차”               “지원”               “내용”<br>[208] “등”                 “규정도”             “‘일하기”<br>[211] “뿌리기업’은”       “뿌리”               “산업”<br>[214] “청년층”             “등”                 “신규”<br>[217] “인력”               “유입”               “촉진”<br>[220] “하기”               “근로·복지”         “환경”<br>[223] “성장”               “역량”               “등”<br>[226] “우수”               “한”                 “기업”<br>[229] “산업”               “부”                 “선정”<br>[232] “해”                 “홍보”               “등”<br>[235] “지원”               “하”                 “제도”<br>[238] “산업”               “부”                 “이번”<br>[241] “개정”               “사항”               “시행”<br>[244] “수”                 “업종”               “별”<br>[247] “협·단체”           “뿌리”               “기업”<br>[250] “지자체”             “등”                 “대상”<br>[253] “적극”               “홍보”               “할”<br>[256] “방침”               “발간”               “하”<br>[259] “뿌리”               “산업”               “백서”<br>[262] “추가”               “되”                 “8”<br>[265] “대”                 “차세대”             “공정기술”<br>[268] “내용”               “기술”               “동향”<br>[271] “등”                 “상세”               “하게”<br>[274] “제공”               “하기”               “산업”<br>[277] “부”                 “관계자”             ““이번”<br>[280] “개정”               “2011”               “년”<br>[283] “뿌리”               “산업”               “법”<br>[286] “제정”               “후”                 “10”<br>[289] “년”                 “만”                 “뿌리”<br>[292] “기술”               “소재”               “다원화”<br>[295] “지능화”             “중심”               “확장”<br>[298] “한”                 “것”                 “뿌리”<br>[301] “산업”               “기술”               “융복합”<br>[304] “화”                 “첨단화”             “촉진”<br>[307] “신규”               “인력”               “유입”<br>[310] “지원”               “강화”               “하기”<br>[313] “토대”               “마련”               “데”<br>[316] “의의”               “있다”고”           “말” </p>
+</blockquote>
+ </div>
+<p style="color:#E84D4D;font-size:150%;">
+- 명사 분리기 설치 끝 
+</p></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-14T03:01:53.000Z" title="2021. 12. 14. 오후 12:01:53">2021-12-14</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-14T05:06:28.773Z" title="2021. 12. 14. 오후 2:06:28">2021-12-14</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a></span><span class="level-item">3분안에 읽기 (약 483 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/14/python/Exeption_python/">python_basic_Exeption</a></h1><div class="content"><h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /c/Users/brill/Desktop/PyThon_Function/venv/Scripts/python</span></span><br><span class="line"><span class="comment"># -*- coding : UTF-8</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error01</span>():</span></span><br><span class="line">    a=<span class="number">10</span></span><br><span class="line">    a/<span class="number">0</span></span><br><span class="line">    <span class="comment">#ZeroDivisionError: division by zero</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error02</span>():</span></span><br><span class="line">    a= [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">    a[<span class="number">10</span>]</span><br><span class="line">    <span class="comment">#IndexError: list index out of range</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error03</span>():</span></span><br><span class="line">    a = <span class="number">1000</span></span><br><span class="line">    a + <span class="string">&quot;Hello&quot;</span></span><br><span class="line">    <span class="comment">#TypeError: unsupported operand type(s) for +: &#x27;int&#x27; and &#x27;str&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error04</span>():</span></span><br><span class="line">    a=<span class="number">10</span></span><br><span class="line">    a+b</span><br><span class="line">    <span class="comment">#NameError: name &#x27;b&#x27; is not defined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    error01()</span><br><span class="line">    error02()</span><br><span class="line">    error03()</span><br><span class="line">    error04()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;program is done&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>크롤링 코드를 작성 했을때 <blockquote>
@@ -1375,558 +1461,7 @@ Exception                                 Traceback (most recent call last)  <br
 
 
 <p><img src="../../imeges/python/submission_House.png" alt="submission_House"></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-08T01:37:16.000Z" title="2021. 12. 8. 오전 10:37:16">2021-12-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-13T06:48:15.827Z" title="2021. 12. 13. 오후 3:48:15">2021-12-13</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a><span> / </span><a class="link-muted" href="/categories/python/theory/">theory</a></span><span class="level-item">35분안에 읽기 (약 5286 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/08/python/Rgression_py/">Regression in python(01)</a></h1><div class="content"><h2 id="Chepter-5-파이썬-머신러닝-완벽-가이드"><a href="#Chepter-5-파이썬-머신러닝-완벽-가이드" class="headerlink" title="Chepter 5 _파이썬 머신러닝 완벽 가이드"></a>Chepter 5 _파이썬 머신러닝 완벽 가이드</h2><p>   ref. &amp; copyright(c) <a target="_blank" rel="noopener" href="https://kr.mathworks.com/content/dam/mathworks/ebook/gated/kr-machine-learning-ebook-all-chapters.pdf">Book</a></p>
-<br>
-<hr>
-
-<h3 id="회귀"><a href="#회귀" class="headerlink" title="회귀"></a>회귀</h3><ul>
-<li>Regression: 여러개의 독립변수와 한개의 종속변수 간의 상관관계를 모델링 하는 기법 </li>
-</ul>
-<ul>
-<li><p>Regression conefficients : 독립변수의 값에 영향을 미치는 회기 계수로 선형 회기 식의 기울기에 해당 </p>
-</li>
-<li><p>러닝머신의 관점 </p>
-<ul>
-<li>독립변수 : 피처</li>
-<li>종속변수 : 결정값  </li>
-</ul>
-</li>
-</ul>
-<p style="color:#E84D4D;font-size:110%;">
-= > 주어진 피처와 결정값 데이터 기반에서 학습을 통해 최적의 **회귀계수** 를 찾아 내는 것이 목표 </p>
-
-<br>
-<hr>
-
-<p>✌지도학습 2가지 유형 </p>
-<ol>
-<li>CLASSIFICATION    + <code>category</code>, <code>이산</code> 값 일때 </li>
-<li>REGRESSION     + <code>숫자</code>, <code>연속</code> 값 일때</li>
-</ol>
-<p>⚡ 회귀의 4가지 유형</p>
-<ol>
-<li>독립변수 개수     - 단일 회귀    - 다중 회귀  </li>
-<li>회귀 계수의 결합    - 선형 회귀 : 실제 값과 예측 값의 차이 (오류의 제곱값)를 최소화 하는 직선형 회귀선을 최적화 하는 방식<ul>
-<li>Regularization(규제방법) : 일반적 선형 회귀의 과적합 문제를 해결 하기 위해 회귀 계수를 조정 하는것 (패널티 값 적용)    - 비선형 회귀</li>
-</ul>
-</li>
-</ol>
-<div style="border: 1px solid gold">
-
-<ul>
-<li><strong>일반선형회귀</strong> : 예측값과 실제값의  RSS를 최소화 할 수 있도록 회귀계수 최적화 (Regularization X)</li>
-<li><strong>Ridge(릿지)</strong> : 선형 회귀 + L2 Regularization<ul>
-<li>L2 : 상대적으로 큰 회귀 계수 값의 예측 영향도를 감소 시키기 위해 회귀 계수값을 더 작게 만듦.</li>
-</ul>
-</li>
-<li><strong>Lasso(라쏘)</strong> :</li>
-<li><strong>ElasticNet(엘라스틱넷)</strong> :</li>
-<li><strong>Rogistic Regression(로지스틱 회귀)</strong> :</li>
-</ul>
-</div>
-
-
-<p>Ref. <a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/supervised_learning.html#supervised-learning">scikit-learn</a></p>
-<p><img src="/../../imeges/python/Rgression_img_1.png" alt="책에 나온 회귀들"></p>
-<p><img src="/../../imeges/python/Rgression_img_2.png" alt="딥러닝을 하고 싶다면 볼 것."></p>
-<br>
-<hr>
-
-<h2 id="y-4x-6-error-시뮬레이션-데이터-값-생성"><a href="#y-4x-6-error-시뮬레이션-데이터-값-생성" class="headerlink" title="y = 4x + 6 + error 시뮬레이션 데이터 값 생성"></a>y = 4x + 6 + error 시뮬레이션 데이터 값 생성</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">123</span>) <span class="comment"># 실험 재현성</span></span><br><span class="line"></span><br><span class="line">X = <span class="number">2</span> * np.random.rand(<span class="number">100</span>, <span class="number">1</span>) <span class="comment"># 100개의 랜덤값 만들기</span></span><br><span class="line">y = <span class="number">4</span> * X + <span class="number">6</span> + np.random.rand(<span class="number">100</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">plt.scatter(X, y)</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../imeges/python/output_7_1.png" alt="산점도 그래프 "></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X.shape, y.shape</span><br></pre></td></tr></table></figure>
-
-<pre><code>((100, 1), (100, 1))
-</code></pre>
-<h3 id="경사하강법으로-최적의-기울기-찾기"><a href="#경사하강법으로-최적의-기울기-찾기" class="headerlink" title="경사하강법으로 최적의 기울기 찾기"></a>경사하강법으로 최적의 기울기 찾기</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># w1과, w0를 업데이트할 w1_update, w0_update 값 반환</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_weight_updates</span>(<span class="params">w1, w0, X, y, learning_rate=<span class="number">0.01</span></span>):</span></span><br><span class="line">  N = <span class="built_in">len</span>(y)</span><br><span class="line"></span><br><span class="line">  <span class="comment"># w1_update, w0_update 초기화</span></span><br><span class="line">  w1_update = np.zeros_like(w1)</span><br><span class="line">  w0_update = np.zeros_like(w0)</span><br><span class="line"></span><br><span class="line">  <span class="comment"># 예측 배열 계산하고, 예측값과 실젯 값의 차이 계산</span></span><br><span class="line">  y_pred = np.dot(X, w1.T) + w0</span><br><span class="line">  diff = y - y_pred <span class="comment"># 실제갓, 예측값 == 오차</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># w0_update를 dot 행렬 연산으로 구하기 위해 모두 1 값을 가진 행렬 생성</span></span><br><span class="line">  w0_factors = np.ones((N, <span class="number">1</span>))</span><br><span class="line">  </span><br><span class="line">  <span class="comment"># w1과 w0을 업데이트할 w1_update, w0_update 계산 </span></span><br><span class="line">  w1_update = -(<span class="number">2</span>/N) * learning_rate * (np.dot(X.T, diff))</span><br><span class="line">  w0_update = -(<span class="number">2</span>/N) * learning_rate * (np.dot(w0_factors.T, diff))</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> w1_update, w0_update</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">w0 = np.zeros((<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">w1 = np.zeros((<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">y_pred = np.dot(X, w1.T) + w0</span><br><span class="line">diff = y-y_pred</span><br><span class="line"><span class="built_in">print</span>(diff.shape)</span><br><span class="line"></span><br><span class="line">w0_factors = np.ones((<span class="number">100</span>, <span class="number">1</span>))</span><br><span class="line">w1_update = -(<span class="number">2</span>/<span class="number">100</span>) * <span class="number">0.01</span> * (np.dot(X.T, diff))</span><br><span class="line">w0_update = -(<span class="number">2</span>/<span class="number">100</span>) * <span class="number">0.01</span> * (np.dot(w0_factors.T, diff))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(w1_update.shape, w0_update.shape)</span><br><span class="line"><span class="built_in">print</span>(w1, w0)</span><br></pre></td></tr></table></figure>
-
-<pre><code>(100, 1)
-(1, 1) (1, 1)
-[[0.]] [[0.]]
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 입력 인자 반복문 코드 </span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gradient_descent_steps</span>(<span class="params">X, y, iters = <span class="number">100000</span></span>):</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># w0와 w1을 모두 0으로 초기화</span></span><br><span class="line">  w0 = np.zeros((<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line">  w1 = np.zeros((<span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">  <span class="comment"># iters 만큼 반복 수행 # get_weight_updates</span></span><br><span class="line">  <span class="keyword">for</span> ind <span class="keyword">in</span> <span class="built_in">range</span>(iters):</span><br><span class="line">    w1_update, w0_update = get_weight_updates(w1, w0, X, y, learning_rate=<span class="number">0.01</span>)</span><br><span class="line">    w1 = w1 - w1_update</span><br><span class="line">    w0 = w0 - w0_update</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> w1, w0</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>예측 오차 비용 계산하는 함수 생성 및 경사 하강법 수행</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_cost</span>(<span class="params">y, y_pred</span>):</span></span><br><span class="line">  N = <span class="built_in">len</span>(y)</span><br><span class="line"></span><br><span class="line">  cost = np.<span class="built_in">sum</span>(np.square(y - y_pred)) / N </span><br><span class="line">  <span class="keyword">return</span> cost </span><br><span class="line"></span><br><span class="line">w1, w0 = gradient_descent_steps(X, y, iters = <span class="number">100000</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;w1:&#123;0:.4f&#125;, w0:&#123;1:.4f&#125;&quot;</span>.<span class="built_in">format</span>(w1[<span class="number">0</span>, <span class="number">0</span>], w0[<span class="number">0</span>, <span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line">y_pred = w1[<span class="number">0</span>,<span class="number">0</span>] * X + w0</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Total Cost:&#123;0:.4f&#125;&quot;</span>.<span class="built_in">format</span>(get_cost(y, y_pred)))</span><br></pre></td></tr></table></figure>
-
-<pre><code>w1:3.9462, w0:6.5590
-Total Cost:0.0803
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(X, y)</span><br><span class="line">plt.plot(X, y_pred, color = <span class="string">&quot;r&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<p><img src="/../../imeges/python/output_15_1.png" alt="산점도 그래프_Line"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">bostonDF = pd.read_csv(<span class="string">&quot;https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv&quot;</span>)</span><br><span class="line">bostonDF.head()</span><br></pre></td></tr></table></figure>
-
-<h2 id="EDA"><a href="#EDA" class="headerlink" title="EDA"></a>EDA</h2><ul>
-<li>종속변수가 기준, y값, medv</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots(figsize = (<span class="number">16</span>, <span class="number">8</span>), ncols = <span class="number">4</span>, nrows = <span class="number">2</span>)</span><br><span class="line">lm_features = [<span class="string">&quot;rm&quot;</span>, <span class="string">&quot;zn&quot;</span>, <span class="string">&quot;indus&quot;</span>, <span class="string">&quot;nox&quot;</span>, <span class="string">&quot;age&quot;</span>, <span class="string">&quot;ptratio&quot;</span>, <span class="string">&quot;lstat&quot;</span>, <span class="string">&quot;rad&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i, feature <span class="keyword">in</span> <span class="built_in">enumerate</span>(lm_features):</span><br><span class="line">  row = <span class="built_in">int</span>(i/<span class="number">4</span>)</span><br><span class="line">  col = i%<span class="number">4</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;row is &#123;&#125;, col is &#123;&#125;&quot;</span>.<span class="built_in">format</span>(row, col))</span><br><span class="line">  sns.regplot(x = feature, y = <span class="string">&quot;medv&quot;</span>, data = bostonDF, ax = ax[row][col])</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../imeges/python/output_27_2.png" alt="Multi Graphes"></p>
-<ul>
-<li>두 연속형 변수를 활용한 산점도나 회귀식 가능.</li>
-<li>박스플롯 (x: 명목형, y: medv) </li>
-</ul>
-<div style="border: 1px solid gold">
-<br>
-
-<p>rm          3.4<br>chas        3.0<br>rad         0.4<br>zn          0.1<br>b           0.0<br>tax        -0.0<br>age         0.0<br>indus       0.0<br>crim       -0.1<br>lstat      -0.6<br>ptratio    -0.9<br>dis        -1.7<br>nox       -19.8  </p>
-<br>
-
-</div>
-
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression <span class="comment"># model</span></span><br><span class="line"></span><br><span class="line">y_target = bostonDF[<span class="string">&quot;medv&quot;</span>] <span class="comment"># 종속변수, Y</span></span><br><span class="line">X_data = bostonDF.drop([<span class="string">&#x27;medv&#x27;</span>, <span class="string">&#x27;rad&#x27;</span>, <span class="string">&#x27;zn&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;tax&#x27;</span>, <span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;indus&#x27;</span>, <span class="string">&#x27;crim&#x27;</span>, <span class="string">&#x27;lstat&#x27;</span>], axis = <span class="number">1</span>, inplace = <span class="literal">False</span>) <span class="comment"># 독립변수</span></span><br><span class="line"></span><br><span class="line">y_target.shape, X_data.shape</span><br></pre></td></tr></table></figure>
-
-<script src="/static/components/requirejs/require.js"></script>
-<script>
-  requirejs.config({
-    paths: {
-      base: '/static/base',
-      plotly: 'https://cdn.plot.ly/plotly-latest.min.js?noext',
-    },
-  });
-</script>
-
-<pre><code>((506,), (506, 5))
-</code></pre>
-<h2 id="데이터셋-분리"><a href="#데이터셋-분리" class="headerlink" title="데이터셋 분리"></a>데이터셋 분리</h2><ul>
-<li>예측, 시뮬레이션, 가상의 데이터를 가지고 예측 &amp; 시뮬레이션</li>
-<li>예측한 결괏값 vs 실젯값 비교</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 임의 샘플링</span></span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X_data, y_target, test_size = <span class="number">0.3</span>, random_state=<span class="number">156</span>)</span><br><span class="line">X_train.shape, X_test.shape, y_train.shape, y_test.shape</span><br></pre></td></tr></table></figure>
-
-
-
-<script src="/static/components/requirejs/require.js"></script>
-<script>
-  requirejs.config({
-    paths: {
-      base: '/static/base',
-      plotly: 'https://cdn.plot.ly/plotly-latest.min.js?noext',
-    },
-  });
-</script>
-
-
-
-
-
-
-<pre><code>((354, 5), (152, 5), (354,), (152,))
-</code></pre>
-<h2 id="ML-모형-만들기"><a href="#ML-모형-만들기" class="headerlink" title="ML 모형 만들기"></a>ML 모형 만들기</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lr = LinearRegression()</span><br><span class="line">lr.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y_preds = lr.predict(X_test)</span><br><span class="line">y_preds</span><br></pre></td></tr></table></figure>
-
-
-
-<script src="/static/components/requirejs/require.js"></script>
-<script>
-  requirejs.config({
-    paths: {
-      base: '/static/base',
-      plotly: 'https://cdn.plot.ly/plotly-latest.min.js?noext',
-    },
-  });
-</script>
-
-
-
-
-
-
-<pre><code>array([26.78074859, 16.40377991, 34.38443472, 19.13328473, 32.89690238,
-       19.25298249, 28.32071818, 22.76654888,  9.87108567, 14.66339227,
-       21.55844556, 17.27788854, 28.55574467, 38.50512646, 23.60848806,
-       24.03347202, 23.82317119, 15.9119451 , 28.65132167, 20.98388455,
-       20.29188703, 18.37003455, 18.58675839, 14.89143225, 35.24799305,
-        7.70600921, 19.39133905, 15.97963635, 16.90296718, 15.484303  ,
-       29.67753869, 17.58268684, 16.91992352, 22.47407959, 16.57706526,
-       18.5381101 , 13.34337954, 24.11893098, 15.48185399, 24.3234222 ,
-       36.24776797, 19.60882283, 20.95016211,  6.85667164, 20.32077896,
-       23.05614583, 24.65371876, 35.25609168, 22.32959594, 25.96437918,
-       27.29101785, 43.32992941, 41.76994078, 19.34288261, 24.8690423 ,
-       25.99270875, 20.76285715, 33.13792328, 25.00439224, 16.82906893,
-       22.80895172, 23.72489982, 24.53360315, 11.82722067, 17.55728132,
-       37.43371362, 33.37256916, 25.65966256, 20.90725715, 21.09529467,
-       15.22097444, 30.6234335 , 37.42143489, 26.22092177, 16.71532104,
-       32.62735407, 23.41004013, 23.86575538, 18.75430877, 15.9914079 ,
-       30.87778491, 16.04423898, 19.01496945, 20.04269634, 28.30832805,
-       15.1948795 , 30.47430322, 33.93480059, 23.87721263, 29.7167635 ,
-       29.85142798, 19.10737457, 28.49523963, 27.69846662, 25.49534489,
-       24.59255802, 12.34870184, 26.65951587, 31.26197918, 17.86101862,
-       27.3059424 , 18.18058484, 15.67184217, 13.17304165, 17.91281425,
-       23.48894551, 24.53921273, 28.14530028, 16.05340908, 24.22120622,
-       21.94517346, 26.62930956, 11.39298015, 18.53099857, 22.75407122,
-       33.6679728 , 23.35342973, 20.85267956, 19.69347759, 28.12264641,
-       28.56541499, 17.91759633, 27.83520695, 33.8011824 , 21.75436813,
-       26.6360736 , 14.70682076, 19.99114889, 21.81029849, 31.72247354,
-       21.33041025, 23.52438417, 35.55842163, 20.54294729, 38.34696416,
-       19.25750865, 17.07595035, 18.31764392, 17.66658651, 23.12171447,
-       19.58446231, 19.90774119, 14.84809066, 19.50652744, 38.83812958,
-       15.26095952, 28.56874885, 17.62298514, 22.46794555, 23.28435884,
-       18.8439135 , 31.16286012])
-</code></pre>
-<h2 id="모형-평가"><a href="#모형-평가" class="headerlink" title="모형 평가"></a>모형 평가</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_squared_error, r2_score</span><br><span class="line">mse = mean_squared_error(y_test, y_preds)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;MSE: &#123;0:.3f&#125;&quot;</span>.<span class="built_in">format</span>(mse))</span><br></pre></td></tr></table></figure>
-
-
-
-<script src="/static/components/requirejs/require.js"></script>
-<script>
-  requirejs.config({
-    paths: {
-      base: '/static/base',
-      plotly: 'https://cdn.plot.ly/plotly-latest.min.js?noext',
-    },
-  });
-</script>
-
-
-
-<pre><code>MSE: 21.369
-</code></pre>
-<p>y = 상수값 + rm 기울기 x rm의 값 + </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;절편 값:&quot;</span>, lr.intercept_) <span class="comment"># 절편 값</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;회귀 계수값&quot;</span>, np.<span class="built_in">round</span>(lr.coef_, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">coeff_df = pd.Series(data=np.<span class="built_in">round</span>(lr.coef_, <span class="number">1</span>), index = X_data.columns)</span><br><span class="line">coeff_df.sort_values(ascending=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<script src="/static/components/requirejs/require.js"></script>
-<script>
-  requirejs.config({
-    paths: {
-      base: '/static/base',
-      plotly: 'https://cdn.plot.ly/plotly-latest.min.js?noext',
-    },
-  });
-</script>
-
-
-
-<pre><code>절편 값: 26.830373506191982
-회귀 계수값 [  4.3 -33.1   6.5  -1.1  -1.2]
-
-
-
-
-
-rm          6.5
-chas        4.3
-dis        -1.1
-ptratio    -1.2
-nox       -33.1
-dtype: float64
-</code></pre>
-<hr>
-<h3 id="아직-배우지-않았지만-유용한-기능"><a href="#아직-배우지-않았지만-유용한-기능" class="headerlink" title="아직 배우지 않았지만, 유용한 기능"></a>아직 배우지 않았지만, 유용한 기능</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!pip install pycaret</span><br></pre></td></tr></table></figure>
-
-<pre><code>Collecting pycaret
-  Downloading pycaret-2.3.5-py3-none-any.whl (288 kB)
-[K     |████████████████████████████████| 288 kB 32.5 MB/s 
-[?25hRequirement already satisfied: joblib in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.1.0)
-Requirement already satisfied: textblob in /usr/local/lib/python3.7/dist-packages (from pycaret) (0.15.3)
-Collecting pandas-profiling&gt;=2.8.0
-  Downloading pandas_profiling-3.1.0-py2.py3-none-any.whl (261 kB)
-[K     |████████████████████████████████| 261 kB 53.7 MB/s 
-[?25hCollecting pyLDAvis
-  Downloading pyLDAvis-3.3.1.tar.gz (1.7 MB)
-[K     |████████████████████████████████| 1.7 MB 42.3 MB/s 
-[?25h  Installing build dependencies ... [?25l[?25hdone
-  Getting requirements to build wheel ... [?25l[?25hdone
-  Installing backend dependencies ... [?25l[?25hdone
-    Preparing wheel metadata ... [?25l[?25hdone
-Requirement already satisfied: spacy&lt;2.4.0 in /usr/local/lib/python3.7/dist-packages (from pycaret) (2.2.4)
-Collecting scikit-learn==0.23.2
-  Downloading scikit_learn-0.23.2-cp37-cp37m-manylinux1_x86_64.whl (6.8 MB)
-[K     |████████████████████████████████| 6.8 MB 58.0 MB/s 
-[?25hRequirement already satisfied: ipywidgets in /usr/local/lib/python3.7/dist-packages (from pycaret) (7.6.5)
-Requirement already satisfied: cufflinks&gt;=0.17.0 in /usr/local/lib/python3.7/dist-packages (from pycaret) (0.17.3)
-Collecting scikit-plot
-  Downloading scikit_plot-0.3.7-py3-none-any.whl (33 kB)
-Requirement already satisfied: yellowbrick&gt;=1.0.1 in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.3.post1)
-Requirement already satisfied: nltk in /usr/local/lib/python3.7/dist-packages (from pycaret) (3.2.5)
-Collecting umap-learn
-  Downloading umap-learn-0.5.2.tar.gz (86 kB)
-[K     |████████████████████████████████| 86 kB 6.0 MB/s 
-[?25hCollecting Boruta
-  Downloading Boruta-0.3-py3-none-any.whl (56 kB)
-[K     |████████████████████████████████| 56 kB 4.7 MB/s 
-[?25hRequirement already satisfied: wordcloud in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.5.0)
-Requirement already satisfied: seaborn in /usr/local/lib/python3.7/dist-packages (from pycaret) (0.11.2)
-Requirement already satisfied: IPython in /usr/local/lib/python3.7/dist-packages (from pycaret) (5.5.0)
-Requirement already satisfied: gensim&lt;4.0.0 in /usr/local/lib/python3.7/dist-packages (from pycaret) (3.6.0)
-Collecting lightgbm&gt;=2.3.1
-  Downloading lightgbm-3.3.1-py3-none-manylinux1_x86_64.whl (2.0 MB)
-[K     |████████████████████████████████| 2.0 MB 47.4 MB/s 
-[?25hRequirement already satisfied: pandas in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.1.5)
-Collecting mlxtend&gt;=0.17.0
-  Downloading mlxtend-0.19.0-py2.py3-none-any.whl (1.3 MB)
-[K     |████████████████████████████████| 1.3 MB 60.5 MB/s 
-[?25hRequirement already satisfied: matplotlib in /usr/local/lib/python3.7/dist-packages (from pycaret) (3.2.2)
-Requirement already satisfied: numpy==1.19.5 in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.19.5)
-Collecting pyod
-  Downloading pyod-0.9.5.tar.gz (113 kB)
-[K     |████████████████████████████████| 113 kB 58.7 MB/s 
-[?25hRequirement already satisfied: plotly&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from pycaret) (4.4.1)
-Collecting mlflow
-  Downloading mlflow-1.22.0-py3-none-any.whl (15.5 MB)
-[K     |████████████████████████████████| 15.5 MB 50.3 MB/s 
-[?25hRequirement already satisfied: scipy&lt;=1.5.4 in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.4.1)
-Collecting imbalanced-learn==0.7.0
-  Downloading imbalanced_learn-0.7.0-py3-none-any.whl (167 kB)
-[K     |████████████████████████████████| 167 kB 62.1 MB/s 
-[?25hCollecting kmodes&gt;=0.10.1
-  Downloading kmodes-0.11.1-py2.py3-none-any.whl (19 kB)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from scikit-learn==0.23.2-&gt;pycaret) (3.0.0)
-Requirement already satisfied: colorlover&gt;=0.2.1 in /usr/local/lib/python3.7/dist-packages (from cufflinks&gt;=0.17.0-&gt;pycaret) (0.3.0)
-Requirement already satisfied: setuptools&gt;=34.4.1 in /usr/local/lib/python3.7/dist-packages (from cufflinks&gt;=0.17.0-&gt;pycaret) (57.4.0)
-Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.7/dist-packages (from cufflinks&gt;=0.17.0-&gt;pycaret) (1.15.0)
-Requirement already satisfied: smart-open&gt;=1.2.1 in /usr/local/lib/python3.7/dist-packages (from gensim&lt;4.0.0-&gt;pycaret) (5.2.1)
-Requirement already satisfied: traitlets&gt;=4.2 in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (5.1.1)
-Requirement already satisfied: simplegeneric&gt;0.8 in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (0.8.1)
-Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (2.6.1)
-Requirement already satisfied: prompt-toolkit&lt;2.0.0,&gt;=1.0.4 in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (1.0.18)
-Requirement already satisfied: decorator in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (4.4.2)
-Requirement already satisfied: pexpect in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (4.8.0)
-Requirement already satisfied: pickleshare in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (0.7.5)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (1.0.2)
-Requirement already satisfied: widgetsnbextension~=3.5.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (3.5.2)
-Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (4.10.1)
-Requirement already satisfied: nbformat&gt;=4.2.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (5.1.3)
-Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (0.2.0)
-Requirement already satisfied: tornado&gt;=4.0 in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;pycaret) (5.1.1)
-Requirement already satisfied: jupyter-client in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;pycaret) (5.3.5)
-Requirement already satisfied: wheel in /usr/local/lib/python3.7/dist-packages (from lightgbm&gt;=2.3.1-&gt;pycaret) (0.37.0)
-Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;pycaret) (2.8.2)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;pycaret) (0.11.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;pycaret) (1.3.2)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;pycaret) (3.0.6)
-Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /usr/local/lib/python3.7/dist-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets-&gt;pycaret) (2.6.0)
-Requirement already satisfied: jupyter-core in /usr/local/lib/python3.7/dist-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets-&gt;pycaret) (4.9.1)
-Requirement already satisfied: pytz&gt;=2017.2 in /usr/local/lib/python3.7/dist-packages (from pandas-&gt;pycaret) (2018.9)
-Requirement already satisfied: tqdm&gt;=4.48.2 in /usr/local/lib/python3.7/dist-packages (from pandas-profiling&gt;=2.8.0-&gt;pycaret) (4.62.3)
-Collecting tangled-up-in-unicode==0.1.0
-  Downloading tangled_up_in_unicode-0.1.0-py3-none-any.whl (3.1 MB)
-[K     |████████████████████████████████| 3.1 MB 47.3 MB/s 
-[?25hRequirement already satisfied: markupsafe~=2.0.1 in /usr/local/lib/python3.7/dist-packages (from pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.0.1)
-Collecting pydantic&gt;=1.8.1
-  Downloading pydantic-1.8.2-cp37-cp37m-manylinux2014_x86_64.whl (10.1 MB)
-[K     |████████████████████████████████| 10.1 MB 37.6 MB/s 
-[?25hCollecting htmlmin&gt;=0.1.12
-  Downloading htmlmin-0.1.12.tar.gz (19 kB)
-Collecting multimethod&gt;=1.4
-  Downloading multimethod-1.6-py3-none-any.whl (9.4 kB)
-Collecting PyYAML&gt;=5.0.0
-  Downloading PyYAML-6.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (596 kB)
-[K     |████████████████████████████████| 596 kB 40.0 MB/s 
-[?25hCollecting phik&gt;=0.11.1
-  Downloading phik-0.12.0-cp37-cp37m-manylinux2010_x86_64.whl (675 kB)
-[K     |████████████████████████████████| 675 kB 62.8 MB/s 
-[?25hRequirement already satisfied: jinja2&gt;=2.11.1 in /usr/local/lib/python3.7/dist-packages (from pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.11.3)
-Collecting visions[type_image_path]==0.7.4
-  Downloading visions-0.7.4-py3-none-any.whl (102 kB)
-[K     |████████████████████████████████| 102 kB 12.8 MB/s 
-[?25hCollecting joblib
-  Downloading joblib-1.0.1-py3-none-any.whl (303 kB)
-[K     |████████████████████████████████| 303 kB 71.5 MB/s 
-[?25hCollecting requests&gt;=2.24.0
-  Downloading requests-2.26.0-py2.py3-none-any.whl (62 kB)
-[K     |████████████████████████████████| 62 kB 995 kB/s 
-[?25hRequirement already satisfied: missingno&gt;=0.4.2 in /usr/local/lib/python3.7/dist-packages (from pandas-profiling&gt;=2.8.0-&gt;pycaret) (0.5.0)
-Requirement already satisfied: attrs&gt;=19.3.0 in /usr/local/lib/python3.7/dist-packages (from visions[type_image_path]==0.7.4-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (21.2.0)
-Requirement already satisfied: networkx&gt;=2.4 in /usr/local/lib/python3.7/dist-packages (from visions[type_image_path]==0.7.4-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.6.3)
-Collecting imagehash
-  Downloading ImageHash-4.2.1.tar.gz (812 kB)
-[K     |████████████████████████████████| 812 kB 49.7 MB/s 
-[?25hRequirement already satisfied: Pillow in /usr/local/lib/python3.7/dist-packages (from visions[type_image_path]==0.7.4-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (7.1.2)
-Collecting scipy&lt;=1.5.4
-  Downloading scipy-1.5.4-cp37-cp37m-manylinux1_x86_64.whl (25.9 MB)
-[K     |████████████████████████████████| 25.9 MB 1.6 MB/s 
-[?25hRequirement already satisfied: retrying&gt;=1.3.3 in /usr/local/lib/python3.7/dist-packages (from plotly&gt;=4.4.1-&gt;pycaret) (1.3.3)
-Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/dist-packages (from prompt-toolkit&lt;2.0.0,&gt;=1.0.4-&gt;IPython-&gt;pycaret) (0.2.5)
-Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /usr/local/lib/python3.7/dist-packages (from pydantic&gt;=1.8.1-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (3.10.0.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.24.0-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.10)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.24.0-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (2021.10.8)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.24.0-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.0.8)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.24.0-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (1.24.3)
-Requirement already satisfied: blis&lt;0.5.0,&gt;=0.4.0 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (0.4.1)
-Requirement already satisfied: murmurhash&lt;1.1.0,&gt;=0.28.0 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (1.0.6)
-Requirement already satisfied: preshed&lt;3.1.0,&gt;=3.0.2 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (3.0.6)
-Requirement already satisfied: plac&lt;1.2.0,&gt;=0.9.6 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (1.1.3)
-Requirement already satisfied: thinc==7.4.0 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (7.4.0)
-Requirement already satisfied: cymem&lt;2.1.0,&gt;=2.0.2 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (2.0.6)
-Requirement already satisfied: wasabi&lt;1.1.0,&gt;=0.4.0 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (0.8.2)
-Requirement already satisfied: catalogue&lt;1.1.0,&gt;=0.0.7 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (1.0.0)
-Requirement already satisfied: srsly&lt;1.1.0,&gt;=1.0.2 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (1.0.5)
-Requirement already satisfied: importlib-metadata&gt;=0.20 in /usr/local/lib/python3.7/dist-packages (from catalogue&lt;1.1.0,&gt;=0.0.7-&gt;spacy&lt;2.4.0-&gt;pycaret) (4.8.2)
-Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=0.20-&gt;catalogue&lt;1.1.0,&gt;=0.0.7-&gt;spacy&lt;2.4.0-&gt;pycaret) (3.6.0)
-Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (5.3.1)
-Requirement already satisfied: nbconvert in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (5.6.1)
-Requirement already satisfied: terminado&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.12.1)
-Requirement already satisfied: Send2Trash in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (1.8.0)
-Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.7/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;pycaret) (22.3.0)
-Requirement already satisfied: ptyprocess in /usr/local/lib/python3.7/dist-packages (from terminado&gt;=0.8.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.7.0)
-Requirement already satisfied: PyWavelets in /usr/local/lib/python3.7/dist-packages (from imagehash-&gt;visions[type_image_path]==0.7.4-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (1.2.0)
-Collecting docker&gt;=4.0.0
-  Downloading docker-5.0.3-py2.py3-none-any.whl (146 kB)
-[K     |████████████████████████████████| 146 kB 70.7 MB/s 
-[?25hRequirement already satisfied: entrypoints in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (0.3)
-Requirement already satisfied: protobuf&gt;=3.7.0 in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (3.17.3)
-Requirement already satisfied: cloudpickle in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (1.3.0)
-Collecting databricks-cli&gt;=0.8.7
-  Downloading databricks-cli-0.16.2.tar.gz (58 kB)
-[K     |████████████████████████████████| 58 kB 5.9 MB/s 
-[?25hRequirement already satisfied: click&gt;=7.0 in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (7.1.2)
-Collecting querystring-parser
-  Downloading querystring_parser-1.2.4-py2.py3-none-any.whl (7.9 kB)
-Collecting alembic&lt;=1.4.1
-  Downloading alembic-1.4.1.tar.gz (1.1 MB)
-[K     |████████████████████████████████| 1.1 MB 59.1 MB/s 
-[?25hCollecting prometheus-flask-exporter
-  Downloading prometheus_flask_exporter-0.18.6-py3-none-any.whl (17 kB)
-Requirement already satisfied: sqlalchemy in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (1.4.27)
-Requirement already satisfied: Flask in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (1.1.4)
-Collecting gitpython&gt;=2.1.0
-  Downloading GitPython-3.1.24-py3-none-any.whl (180 kB)
-[K     |████████████████████████████████| 180 kB 58.3 MB/s 
-[?25hCollecting gunicorn
-  Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
-[K     |████████████████████████████████| 79 kB 8.7 MB/s 
-[?25hRequirement already satisfied: packaging in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (21.3)
-Requirement already satisfied: sqlparse&gt;=0.3.1 in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (0.4.2)
-Collecting Mako
-  Downloading Mako-1.1.6-py2.py3-none-any.whl (75 kB)
-[K     |████████████████████████████████| 75 kB 4.4 MB/s 
-[?25hCollecting python-editor&gt;=0.3
-  Downloading python_editor-1.0.4-py3-none-any.whl (4.9 kB)
-Requirement already satisfied: tabulate&gt;=0.7.7 in /usr/local/lib/python3.7/dist-packages (from databricks-cli&gt;=0.8.7-&gt;mlflow-&gt;pycaret) (0.8.9)
-Collecting websocket-client&gt;=0.32.0
-  Downloading websocket_client-1.2.3-py3-none-any.whl (53 kB)
-[K     |████████████████████████████████| 53 kB 2.1 MB/s 
-[?25hCollecting gitdb&lt;5,&gt;=4.0.1
-  Downloading gitdb-4.0.9-py3-none-any.whl (63 kB)
-[K     |████████████████████████████████| 63 kB 1.9 MB/s 
-[?25hCollecting smmap&lt;6,&gt;=3.0.1
-  Downloading smmap-5.0.0-py3-none-any.whl (24 kB)
-Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/dist-packages (from sqlalchemy-&gt;mlflow-&gt;pycaret) (1.1.2)
-Requirement already satisfied: Werkzeug&lt;2.0,&gt;=0.15 in /usr/local/lib/python3.7/dist-packages (from Flask-&gt;mlflow-&gt;pycaret) (1.0.1)
-Requirement already satisfied: itsdangerous&lt;2.0,&gt;=0.24 in /usr/local/lib/python3.7/dist-packages (from Flask-&gt;mlflow-&gt;pycaret) (1.1.0)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.8.4)
-Requirement already satisfied: bleach in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (4.1.0)
-Requirement already satisfied: testpath in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.5.0)
-Requirement already satisfied: defusedxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.7.1)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (1.5.0)
-Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.5.1)
-Requirement already satisfied: prometheus-client in /usr/local/lib/python3.7/dist-packages (from prometheus-flask-exporter-&gt;mlflow-&gt;pycaret) (0.12.0)
-Requirement already satisfied: future in /usr/local/lib/python3.7/dist-packages (from pyLDAvis-&gt;pycaret) (0.16.0)
-Collecting pyLDAvis
-  Downloading pyLDAvis-3.3.0.tar.gz (1.7 MB)
-[K     |████████████████████████████████| 1.7 MB 37.5 MB/s 
-[?25h  Installing build dependencies ... [?25l[?25hdone
-  Getting requirements to build wheel ... [?25l[?25hdone
-  Installing backend dependencies ... [?25l[?25hdone
-    Preparing wheel metadata ... [?25l[?25hdone
-  Downloading pyLDAvis-3.2.2.tar.gz (1.7 MB)
-[K     |████████████████████████████████| 1.7 MB 45.7 MB/s 
-[?25hRequirement already satisfied: numexpr in /usr/local/lib/python3.7/dist-packages (from pyLDAvis-&gt;pycaret) (2.7.3)
-Collecting funcy
-  Downloading funcy-1.16-py2.py3-none-any.whl (32 kB)
-Requirement already satisfied: numba&gt;=0.35 in /usr/local/lib/python3.7/dist-packages (from pyod-&gt;pycaret) (0.51.2)
-Requirement already satisfied: statsmodels in /usr/local/lib/python3.7/dist-packages (from pyod-&gt;pycaret) (0.10.2)
-Requirement already satisfied: llvmlite&lt;0.35,&gt;=0.34.0.dev0 in /usr/local/lib/python3.7/dist-packages (from numba&gt;=0.35-&gt;pyod-&gt;pycaret) (0.34.0)
-Requirement already satisfied: patsy&gt;=0.4.0 in /usr/local/lib/python3.7/dist-packages (from statsmodels-&gt;pyod-&gt;pycaret) (0.5.2)
-Collecting pynndescent&gt;=0.5
-  Downloading pynndescent-0.5.5.tar.gz (1.1 MB)
-[K     |████████████████████████████████| 1.1 MB 49.9 MB/s 
-[?25hBuilding wheels for collected packages: htmlmin, imagehash, alembic, databricks-cli, pyLDAvis, pyod, umap-learn, pynndescent
-  Building wheel for htmlmin (setup.py) ... [?25l[?25hdone
-  Created wheel for htmlmin: filename=htmlmin-0.1.12-py3-none-any.whl size=27098 sha256=d7dfcc5cb8473dd5eae3fcf51c538f92f876faa04e78c8b36d9c790b9fac7e10
-  Stored in directory: /root/.cache/pip/wheels/70/e1/52/5b14d250ba868768823940c3229e9950d201a26d0bd3ee8655
-  Building wheel for imagehash (setup.py) ... [?25l[?25hdone
-  Created wheel for imagehash: filename=ImageHash-4.2.1-py2.py3-none-any.whl size=295207 sha256=8b1e1a54f9880fb8de0530e8e168811d3264000c0375d179b04677d7db738f6f
-  Stored in directory: /root/.cache/pip/wheels/4c/d5/59/5e3e297533ddb09407769762985d134135064c6831e29a914e
-  Building wheel for alembic (setup.py) ... [?25l[?25hdone
-  Created wheel for alembic: filename=alembic-1.4.1-py2.py3-none-any.whl size=158172 sha256=3a382d7a8aa3f735be58614dc83527e0801ccb0bc893eb96cc388ee8f0a5dd91
-  Stored in directory: /root/.cache/pip/wheels/be/5d/0a/9e13f53f4f5dfb67cd8d245bb7cdffe12f135846f491a283e3
-  Building wheel for databricks-cli (setup.py) ... [?25l[?25hdone
-  Created wheel for databricks-cli: filename=databricks_cli-0.16.2-py3-none-any.whl size=106811 sha256=ada21177391b9688188e6f778b0ec6b6001615c2b2f13bef53090805b2f183bf
-  Stored in directory: /root/.cache/pip/wheels/f4/5c/ed/e1ce20a53095f63b27b4964abbad03e59cf3472822addf7d29
-  Building wheel for pyLDAvis (setup.py) ... [?25l[?25hdone
-  Created wheel for pyLDAvis: filename=pyLDAvis-3.2.2-py2.py3-none-any.whl size=135618 sha256=29ef50e1603fe00d18a256b833c7feddebc16ef3ac82f37f109f991b0f95b4b0
-  Stored in directory: /root/.cache/pip/wheels/f8/b1/9b/560ac1931796b7303f7b517b949d2d31a4fbc512aad3b9f284
-  Building wheel for pyod (setup.py) ... [?25l[?25hdone
-  Created wheel for pyod: filename=pyod-0.9.5-py3-none-any.whl size=132699 sha256=851491ca675bc8eb4d9ecfb52396f362de25c1443531f442a9528c0b9b3f7b21
-  Stored in directory: /root/.cache/pip/wheels/3d/bb/b7/62b60fb451b33b0df1ab8006697fba7a6a49709a629055cf77
-  Building wheel for umap-learn (setup.py) ... [?25l[?25hdone
-  Created wheel for umap-learn: filename=umap_learn-0.5.2-py3-none-any.whl size=82709 sha256=f4bae757148b4cf4930e495a816ecb3f6fcc3a16d1014c85ce052bb2acccb378
-  Stored in directory: /root/.cache/pip/wheels/84/1b/c6/aaf68a748122632967cef4dffef68224eb16798b6793257d82
-  Building wheel for pynndescent (setup.py) ... [?25l[?25hdone
-  Created wheel for pynndescent: filename=pynndescent-0.5.5-py3-none-any.whl size=52603 sha256=e19d78d031a739792e30a3bf2d93865296b6eb66226835f66a8287b1330882f1
-  Stored in directory: /root/.cache/pip/wheels/af/e9/33/04db1436df0757c42fda8ea6796d7a8586e23c85fac355f476
-Successfully built htmlmin imagehash alembic databricks-cli pyLDAvis pyod umap-learn pynndescent
-Installing collected packages: tangled-up-in-unicode, smmap, scipy, multimethod, joblib, websocket-client, visions, scikit-learn, requests, python-editor, Mako, imagehash, gitdb, querystring-parser, PyYAML, pynndescent, pydantic, prometheus-flask-exporter, phik, htmlmin, gunicorn, gitpython, funcy, docker, databricks-cli, alembic, umap-learn, scikit-plot, pyod, pyLDAvis, pandas-profiling, mlxtend, mlflow, lightgbm, kmodes, imbalanced-learn, Boruta, pycaret
-  Attempting uninstall: scipy
-    Found existing installation: scipy 1.4.1
-    Uninstalling scipy-1.4.1:
-      Successfully uninstalled scipy-1.4.1
-  Attempting uninstall: joblib
-    Found existing installation: joblib 1.1.0
-    Uninstalling joblib-1.1.0:
-      Successfully uninstalled joblib-1.1.0
-  Attempting uninstall: scikit-learn
-    Found existing installation: scikit-learn 1.0.1
-    Uninstalling scikit-learn-1.0.1:
-      Successfully uninstalled scikit-learn-1.0.1
-  Attempting uninstall: requests
-    Found existing installation: requests 2.23.0
-    Uninstalling requests-2.23.0:
-      Successfully uninstalled requests-2.23.0
-  Attempting uninstall: PyYAML
-    Found existing installation: PyYAML 3.13
-    Uninstalling PyYAML-3.13:
-      Successfully uninstalled PyYAML-3.13
-  Attempting uninstall: pandas-profiling
-    Found existing installation: pandas-profiling 1.4.1
-    Uninstalling pandas-profiling-1.4.1:
-      Successfully uninstalled pandas-profiling-1.4.1
-  Attempting uninstall: mlxtend
-    Found existing installation: mlxtend 0.14.0
-    Uninstalling mlxtend-0.14.0:
-      Successfully uninstalled mlxtend-0.14.0
-  Attempting uninstall: lightgbm
-    Found existing installation: lightgbm 2.2.3
-    Uninstalling lightgbm-2.2.3:
-      Successfully uninstalled lightgbm-2.2.3
-  Attempting uninstall: imbalanced-learn
-    Found existing installation: imbalanced-learn 0.8.1
-    Uninstalling imbalanced-learn-0.8.1:
-      Successfully uninstalled imbalanced-learn-0.8.1
-[31mERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-google-colab 1.0.0 requires requests~=2.23.0, but you have requests 2.26.0 which is incompatible.
-datascience 0.10.6 requires folium==0.2.1, but you have folium 0.8.3 which is incompatible.
-albumentations 0.1.12 requires imgaug&lt;0.2.7,&gt;=0.2.5, but you have imgaug 0.2.9 which is incompatible.[0m
-Successfully installed Boruta-0.3 Mako-1.1.6 PyYAML-6.0 alembic-1.4.1 databricks-cli-0.16.2 docker-5.0.3 funcy-1.16 gitdb-4.0.9 gitpython-3.1.24 gunicorn-20.1.0 htmlmin-0.1.12 imagehash-4.2.1 imbalanced-learn-0.7.0 joblib-1.0.1 kmodes-0.11.1 lightgbm-3.3.1 mlflow-1.22.0 mlxtend-0.19.0 multimethod-1.6 pandas-profiling-3.1.0 phik-0.12.0 prometheus-flask-exporter-0.18.6 pyLDAvis-3.2.2 pycaret-2.3.5 pydantic-1.8.2 pynndescent-0.5.5 pyod-0.9.5 python-editor-1.0.4 querystring-parser-1.2.4 requests-2.26.0 scikit-learn-0.23.2 scikit-plot-0.3.7 scipy-1.5.4 smmap-5.0.0 tangled-up-in-unicode-0.1.0 umap-learn-0.5.2 visions-0.7.4 websocket-client-1.2.3
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pycaret.utils <span class="keyword">import</span> enable_colab</span><br><span class="line">enable_colab()</span><br></pre></td></tr></table></figure>
-
-<pre><code>Colab mode enabled.
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pycaret.datasets <span class="keyword">import</span> get_data</span><br><span class="line">dataset = get_data(<span class="string">&#x27;diamond&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data = dataset.sample(frac=<span class="number">0.9</span>, random_state=<span class="number">786</span>)</span><br><span class="line">data_unseen = dataset.drop(data.index)</span><br><span class="line"></span><br><span class="line">data.reset_index(drop=<span class="literal">True</span>, inplace=<span class="literal">True</span>)</span><br><span class="line">data_unseen.reset_index(drop=<span class="literal">True</span>, inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Data for Modeling: &#x27;</span> + <span class="built_in">str</span>(data.shape))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Unseen Data For Predictions: &#x27;</span> + <span class="built_in">str</span>(data_unseen.shape))</span><br></pre></td></tr></table></figure>
-
-<pre><code>Data for Modeling: (5400, 8)
-Unseen Data For Predictions: (600, 8)
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pycaret.regression <span class="keyword">import</span> *</span><br><span class="line">exp_reg101 = setup(data = data, target = <span class="string">&#x27;Price&#x27;</span>, session_id=<span class="number">123</span>)</span><br></pre></td></tr></table></figure>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/page/0/">이전</a></div><div class="pagination-next"><a href="/page/2/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/8/">8</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../imeges/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">71</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">19</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">78</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/YoonHwa-P"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/data-science/"><span class="level-start"><span class="level-item">data_science</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/index/"><span class="level-start"><span class="level-item">index</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/naver/"><span class="level-start"><span class="level-item">naver</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/pharmacerical-company/"><span class="level-start"><span class="level-item">pharmacerical_company</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">13</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/"><span class="level-start"><span class="level-item">machineLeaning</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/pycaret/"><span class="level-start"><span class="level-item">pycaret</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/machineLeaning/sklearn/"><span class="level-start"><span class="level-item">sklearn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python/theory/"><span class="level-start"><span class="level-item">theory</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python-plotly/"><span class="level-start"><span class="level-item">python - plotly</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-14T05:21:20.000Z">2021-12-14</time></p><p class="title"><a href="/2021/12/14/R/textmining(01)/">Text Mining in R</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/data-science/">data_science</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-14T05:21:20.000Z">2021-12-14</time></p><p class="title"><a href="/2021/12/14/R/textmining(02)/">Text Mining in R</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/data-science/">data_science</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-14T03:01:53.000Z">2021-12-14</time></p><p class="title"><a href="/2021/12/14/python/Exeption_python/">python_basic_Exeption</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-13T03:01:53.000Z">2021-12-13</time></p><p class="title"><a href="/2021/12/13/python/python_basic211213/">python_basic_Bank</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-11T01:31:48.000Z">2021-12-11</time></p><p class="title"><a href="/2021/12/11/job/XenoMix/">Xenomix</a></p><p class="categories"><a href="/categories/pharmacerical-company/">pharmacerical_company</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">12월 2021</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BarGraph/"><span class="tag">BarGraph</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bargraph/"><span class="tag">Bargraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Decision-Tree/"><span class="tag">Decision Tree</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Donut-Chart/"><span class="tag">Donut_Chart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HorizontalBar/"><span class="tag">HorizontalBar</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mow/"><span class="tag">Mow</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plotly/"><span class="tag">Plotly</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R4ds/"><span class="tag">R4ds</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Rss/"><span class="tag">Rss</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scatter/"><span class="tag">Scatter</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ScatterLine/"><span class="tag">ScatterLine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stacked-Bar/"><span class="tag">Stacked_Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Subplots/"><span class="tag">Subplots</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Test-page/"><span class="tag">Test page,</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Treemap/"><span class="tag">Treemap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/auto-Machine-Learning/"><span class="tag">auto Machine Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dataScience/"><span class="tag">dataScience</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/draft/"><span class="tag">draft</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot2/"><span class="tag">ggplot2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/green/"><span class="tag">green</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/howtoGithub/"><span class="tag">howtoGithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-Competition/"><span class="tag">kaggle_Competition</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-dictation/"><span class="tag">kaggle_dictation</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLeaning/"><span class="tag">machineLeaning</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makegithub/"><span class="tag">makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/market/"><span class="tag">market</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/model-selection/"><span class="tag">model selection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiplace/"><span class="tag">multiplace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namespace/"><span class="tag">namespace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pipe/"><span class="tag">pipe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plot/"><span class="tag">plot</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/prediction/"><span class="tag">prediction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pycaret/"><span class="tag">pycaret</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pythonFuction/"><span class="tag">pythonFuction</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/regression/"><span class="tag">regression</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sklearn/"><span class="tag">sklearn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table/"><span class="tag">table</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table-arrange/"><span class="tag">table arrange</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EA%B9%83%ED%97%88%EB%B8%8C/"><span class="tag">깃허브</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/page/0/">이전</a></div><div class="pagination-next"><a href="/page/2/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/">1</a></li><li><a class="pagination-link" href="/page/2/">2</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/8/">8</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../imeges/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">72</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">19</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">78</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/YoonHwa-P"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/data-science/"><span class="level-start"><span class="level-item">data_science</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/index/"><span class="level-start"><span class="level-item">index</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/naver/"><span class="level-start"><span class="level-item">naver</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/pharmacerical-company/"><span class="level-start"><span class="level-item">pharmacerical_company</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">13</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/"><span class="level-start"><span class="level-item">machineLeaning</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/pycaret/"><span class="level-start"><span class="level-item">pycaret</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/machineLeaning/sklearn/"><span class="level-start"><span class="level-item">sklearn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python/theory/"><span class="level-start"><span class="level-item">theory</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python-plotly/"><span class="level-start"><span class="level-item">python - plotly</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-15T00:11:16.000Z">2021-12-15</time></p><p class="title"><a href="/2021/12/15/R/textmining(03)/">Text Mining in R</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/data-science/">data_science</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-14T09:21:20.000Z">2021-12-14</time></p><p class="title"><a href="/2021/12/14/R/textmining(02)/">Text Mining in R(02)</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/data-science/">data_science</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-14T05:21:20.000Z">2021-12-14</time></p><p class="title"><a href="/2021/12/14/R/textmining(01)/">Text Mining in R(01)</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/data-science/">data_science</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-14T03:01:53.000Z">2021-12-14</time></p><p class="title"><a href="/2021/12/14/python/Exeption_python/">python_basic_Exeption</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-13T03:01:53.000Z">2021-12-13</time></p><p class="title"><a href="/2021/12/13/python/python_basic211213/">python_basic_Bank</a></p><p class="categories"><a href="/categories/python/">python</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">12월 2021</span></span><span class="level-end"><span class="level-item tag">18</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BarGraph/"><span class="tag">BarGraph</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bargraph/"><span class="tag">Bargraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Decision-Tree/"><span class="tag">Decision Tree</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Donut-Chart/"><span class="tag">Donut_Chart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HorizontalBar/"><span class="tag">HorizontalBar</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mow/"><span class="tag">Mow</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plotly/"><span class="tag">Plotly</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R4ds/"><span class="tag">R4ds</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Rss/"><span class="tag">Rss</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scatter/"><span class="tag">Scatter</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ScatterLine/"><span class="tag">ScatterLine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stacked-Bar/"><span class="tag">Stacked_Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Subplots/"><span class="tag">Subplots</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Test-page/"><span class="tag">Test page,</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Treemap/"><span class="tag">Treemap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/auto-Machine-Learning/"><span class="tag">auto Machine Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dataScience/"><span class="tag">dataScience</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/draft/"><span class="tag">draft</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot2/"><span class="tag">ggplot2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/green/"><span class="tag">green</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/howtoGithub/"><span class="tag">howtoGithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-Competition/"><span class="tag">kaggle_Competition</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-dictation/"><span class="tag">kaggle_dictation</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLeaning/"><span class="tag">machineLeaning</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makegithub/"><span class="tag">makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/market/"><span class="tag">market</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/model-selection/"><span class="tag">model selection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiplace/"><span class="tag">multiplace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namespace/"><span class="tag">namespace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pipe/"><span class="tag">pipe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plot/"><span class="tag">plot</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/prediction/"><span class="tag">prediction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pycaret/"><span class="tag">pycaret</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pythonFuction/"><span class="tag">pythonFuction</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/regression/"><span class="tag">regression</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sklearn/"><span class="tag">sklearn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table/"><span class="tag">table</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table-arrange/"><span class="tag">table arrange</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EA%B9%83%ED%97%88%EB%B8%8C/"><span class="tag">깃허브</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
