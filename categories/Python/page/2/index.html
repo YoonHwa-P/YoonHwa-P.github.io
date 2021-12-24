@@ -3,7 +3,761 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">카테고리</a></li><li class="is-active"><a href="#" aria-current="page">python</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-10T03:27:48.000Z" title="2021. 12. 10. 오후 12:27:48">2021-12-10</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-13T06:48:15.828Z" title="2021. 12. 13. 오후 3:48:15">2021-12-13</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/">machineLeaning</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/sklearn/">sklearn</a></span><span class="level-item">몇 초안에 읽기 (약 91 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/10/python/sklearn_mL_04_ModuleSelection/">sklearn_mL_04_ModuleSelection(2.4)</a></h1><div class="content"><h2 id="Chepter-2-사이킷런으로-시작하는-머신러닝-04"><a href="#Chepter-2-사이킷런으로-시작하는-머신러닝-04" class="headerlink" title="Chepter 2 _사이킷런으로 시작하는 머신러닝(04)"></a>Chepter 2 _사이킷런으로 시작하는 머신러닝(04)</h2><p>파이썬 머신러닝 완벽 가이드<br>   ref. &amp; copyright(c) <a target="_blank" rel="noopener" href="https://kr.mathworks.com/content/dam/mathworks/ebook/gated/kr-machine-learning-ebook-all-chapters.pdf">Book</a></p>
+        gtag('config', 'G-71105E54VD');</script><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">카테고리</a></li><li class="is-active"><a href="#" aria-current="page">python</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-10T08:30:48.000Z" title="2021. 12. 10. 오후 5:30:48">2021-12-10</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-13T06:48:15.825Z" title="2021. 12. 13. 오후 3:48:15">2021-12-13</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/">machineLeaning</a></span><span class="level-item">8분안에 읽기 (약 1235 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/10/python/DecisionTreeMachineLearning/">DecisionTreeMachineLearning(03)</a></h1><div class="content"><h2 id="machine-Learning-Model-Algoridms"><a href="#machine-Learning-Model-Algoridms" class="headerlink" title="machine Learning Model Algoridms"></a>machine Learning Model Algoridms</h2><ul>
+<li>비 선형 모델  : KNN, </li>
+<li>선형 모델 : </li>
+</ul>
+<p><br><br></p>
+<hr>
+<p>Decision Tree MachineLearning</p>
+<p><img src="/../../imeges/python/ML_DecisionTree01.png" alt="ML_DecisionTree01"></p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><ul>
+<li>과적합 : 모델의 정확도만 높이기 위해 분류 조건(depth)만 강조하여 실제 상황에서 유연하게 대처하는 능력이 떨어지게 되는 문제가 발생하게 되는것.</li>
+<li>가지치기(pruning)을 통해 유연성을 유지. <ul>
+<li>Max_depth를 대략적으로 잡아서 (3, 5, 10…) RMS 값 비교</li>
+<li>Random search</li>
+<li>하이퍼파라미터 (grid Search)</li>
+</ul>
+</li>
+</ul>
+<p><br><br></p>
+<ul>
+<li><p>분류기준 (수식은 아래서 책에서 확인)</p>
+<ol>
+<li>정보이득 : <ul>
+<li>자식노드의 불순도가 낮을 수록 정보의 이득이 커진다.(효율성 Up)</li>
+<li>정보 이득이 높은 속성을 기준으로 알아서 나누어 준다. </li>
+</ul>
+<ol>
+<li>엔트로피의 정의 :<ul>
+<li>엔트로피는 높을 수록 좋다.  </li>
+</ul>
+</li>
+<li>지니불순도 :<ul>
+<li>순도는 높을 수록 좋다. </li>
+</ul>
+</li>
+<li>분류오차 :<ul>
+<li>어떤 시나리오가 더 좋은가에 대한 계산</li>
+<li>1이 되면 균등, 완벽하게 나누어 졌다고 </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>ㅇㅇ</p>
+</li>
+</ul>
+<p><img src="/../../imeges/python/PythonMacnineLeanting_equ.png" alt="PythonMacnineLeanting_equ"></p>
+<p>공식은 이쪽에 가면 있다. </p>
+<hr>
+<p>계산은 컴퓨터가 다 해준다. </p>
+<p>우리는 보고 좋은 분류 기준을 선택 하며 됩니다. </p>
+<h4 id="분류기준-1-분류-오차"><a href="#분류기준-1-분류-오차" class="headerlink" title="분류기준 1. 분류 오차"></a>분류기준 1. 분류 오차</h4><p><img src="/../../imeges/python/PythonMacnineLeanting_E01.png" alt="PythonMacnineLeanting_E01"></p>
+<h4 id="분류기준-2-지니-불순도"><a href="#분류기준-2-지니-불순도" class="headerlink" title="분류기준 2. 지니 불순도"></a>분류기준 2. 지니 불순도</h4><p><img src="/../../imeges/python/PythonMacnineLeanting_E02.png" alt="PythonMacnineLeanting_E02"></p>
+<h4 id="분류기준-2-엔트로피"><a href="#분류기준-2-엔트로피" class="headerlink" title="분류기준 2. 엔트로피"></a>분류기준 2. 엔트로피</h4><p><img src="/../../imeges/python/PythonMacnineLeanting_E03.png" alt="PythonMacnineLeanting_E03"></p>
+<hr>
+<ul>
+<li>정보이득을 최대로 하는 옵션을 찾는다. </li>
+</ul>
+<p><br><br><br></p>
+<hr>
+<h3 id="실습"><a href="#실습" class="headerlink" title="실습"></a>실습</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets </span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"></span><br><span class="line">iris = datasets.load_iris()</span><br><span class="line">X = iris.data[:, [<span class="number">2</span>, <span class="number">3</span>]]</span><br><span class="line">y = iris.target </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;클래스 레이블:&quot;</span>, np.unique(y))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>클래스 레이블: [0 1 2]</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(</span><br><span class="line">    X, y, test_size = <span class="number">0.3</span>, random_state = <span class="number">1</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;y 레이블 갯수:&quot;</span>, np.bincount(y))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>y 레이블 갯수: [50 50 50]</p>
+</blockquote>
+<p><br><br></p>
+<h4 id="시각화"><a href="#시각화" class="headerlink" title="시각화"></a>시각화</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_decision_regions</span>(<span class="params">X, y, classifier, test_idx=<span class="literal">None</span>, resolution=<span class="number">0.02</span></span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 마커와 컬러맵을 설정합니다.</span></span><br><span class="line">    markers = (<span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;^&#x27;</span>, <span class="string">&#x27;v&#x27;</span>)</span><br><span class="line">    colors = (<span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;lightgreen&#x27;</span>, <span class="string">&#x27;gray&#x27;</span>, <span class="string">&#x27;cyan&#x27;</span>)</span><br><span class="line">    cmap = ListedColormap(colors[:<span class="built_in">len</span>(np.unique(y))])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 결정 경계를 그립니다.</span></span><br><span class="line">    x1_min, x1_max = X[:, <span class="number">0</span>].<span class="built_in">min</span>() - <span class="number">1</span>, X[:, <span class="number">0</span>].<span class="built_in">max</span>() + <span class="number">1</span></span><br><span class="line">    x2_min, x2_max = X[:, <span class="number">1</span>].<span class="built_in">min</span>() - <span class="number">1</span>, X[:, <span class="number">1</span>].<span class="built_in">max</span>() + <span class="number">1</span></span><br><span class="line">    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution),</span><br><span class="line">                           np.arange(x2_min, x2_max, resolution))</span><br><span class="line">    Z = classifier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)</span><br><span class="line">    Z = Z.reshape(xx1.shape)</span><br><span class="line">    plt.contourf(xx1, xx2, Z, alpha=<span class="number">0.3</span>, cmap=cmap)</span><br><span class="line">    plt.xlim(xx1.<span class="built_in">min</span>(), xx1.<span class="built_in">max</span>())</span><br><span class="line">    plt.ylim(xx2.<span class="built_in">min</span>(), xx2.<span class="built_in">max</span>())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> idx, cl <span class="keyword">in</span> <span class="built_in">enumerate</span>(np.unique(y)):</span><br><span class="line">        plt.scatter(x=X[y == cl, <span class="number">0</span>], </span><br><span class="line">                    y=X[y == cl, <span class="number">1</span>],</span><br><span class="line">                    alpha=<span class="number">0.8</span>, </span><br><span class="line">                    c=colors[idx],</span><br><span class="line">                    marker=markers[idx], </span><br><span class="line">                    label=cl, </span><br><span class="line">                    edgecolor=<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 테스트 샘플을 부각하여 그립니다.</span></span><br><span class="line">    <span class="keyword">if</span> test_idx:</span><br><span class="line">        X_test, y_test = X[test_idx, :], y[test_idx]</span><br><span class="line"></span><br><span class="line">        plt.scatter(X_test[:, <span class="number">0</span>],</span><br><span class="line">                    X_test[:, <span class="number">1</span>],</span><br><span class="line">                    c=<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">                    edgecolor=<span class="string">&#x27;black&#x27;</span>,</span><br><span class="line">                    alpha=<span class="number">1.0</span>,</span><br><span class="line">                    linewidth=<span class="number">1</span>,</span><br><span class="line">                    marker=<span class="string">&#x27;o&#x27;</span>,</span><br><span class="line">                    s=<span class="number">100</span>, </span><br><span class="line">                    label=<span class="string">&#x27;test set&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 지니 불순도 함수</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gini</span>(<span class="params">p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> p * (<span class="number">1</span> - p) + (<span class="number">1</span> - p) * (<span class="number">1</span> - (<span class="number">1</span> - p))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 엔트로피 함수 </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">entropy</span>(<span class="params">p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> - p * np.log2(p) - (<span class="number">1</span> - p) * np.log2((<span class="number">1</span> - p))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 분류 오차</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error</span>(<span class="params">p</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> - np.<span class="built_in">max</span>([p, <span class="number">1</span> - p])</span><br><span class="line"></span><br><span class="line">x = np.arange(<span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.01</span>)</span><br><span class="line"></span><br><span class="line">ent = [entropy(p) <span class="keyword">if</span> p != <span class="number">0</span> <span class="keyword">else</span> <span class="literal">None</span> <span class="keyword">for</span> p <span class="keyword">in</span> x]</span><br><span class="line">sc_ent = [e * <span class="number">0.5</span> <span class="keyword">if</span> e <span class="keyword">else</span> <span class="literal">None</span> <span class="keyword">for</span> e <span class="keyword">in</span> ent]</span><br><span class="line">err = [error(i) <span class="keyword">for</span> i <span class="keyword">in</span> x]</span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax = plt.subplot(<span class="number">111</span>)</span><br><span class="line"><span class="keyword">for</span> i, lab, ls, c, <span class="keyword">in</span> <span class="built_in">zip</span>([ent, sc_ent, gini(x), err], </span><br><span class="line">                          [<span class="string">&#x27;Entropy&#x27;</span>, <span class="string">&#x27;Entropy (scaled)&#x27;</span>, </span><br><span class="line">                           <span class="string">&#x27;Gini Impurity&#x27;</span>, <span class="string">&#x27;Misclassification Error&#x27;</span>],</span><br><span class="line">                          [<span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;-.&#x27;</span>],</span><br><span class="line">                          [<span class="string">&#x27;black&#x27;</span>, <span class="string">&#x27;lightgray&#x27;</span>, <span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;cyan&#x27;</span>]):</span><br><span class="line">    line = ax.plot(x, i, label=lab, linestyle=ls, lw=<span class="number">2</span>, color=c)</span><br><span class="line"></span><br><span class="line">ax.legend(loc=<span class="string">&#x27;upper center&#x27;</span>, bbox_to_anchor=(<span class="number">0.5</span>, <span class="number">1.15</span>),</span><br><span class="line">          ncol=<span class="number">5</span>, fancybox=<span class="literal">True</span>, shadow=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">ax.axhline(y=<span class="number">0.5</span>, linewidth=<span class="number">1</span>, color=<span class="string">&#x27;k&#x27;</span>, linestyle=<span class="string">&#x27;--&#x27;</span>)</span><br><span class="line">ax.axhline(y=<span class="number">1.0</span>, linewidth=<span class="number">1</span>, color=<span class="string">&#x27;k&#x27;</span>, linestyle=<span class="string">&#x27;--&#x27;</span>)</span><br><span class="line">plt.ylim([<span class="number">0</span>, <span class="number">1.1</span>])</span><br><span class="line">plt.xlabel(<span class="string">&#x27;p(i=1)&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Impurity Index&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../imeges/python/Impurity_Index.png" alt="Impurity_Index"></p>
+<hr>
+<ul>
+<li>정보 이득을 최대로 하는 옵션을 찾아서 </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line"></span><br><span class="line">tree_gini = DecisionTreeClassifier(criterion=<span class="string">&quot;gini&quot;</span>, max_depth=<span class="number">3</span>)</span><br><span class="line">tree_gini.fit(X_train, y_train)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>DecisionTreeClassifier(max_depth=3)</p>
+</blockquote>
+<ul>
+<li>depth를 3으로 해 주었기 때문에 과적합 X</li>
+<li></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">X_combined = np.vstack((X_train, X_test))</span><br><span class="line">y_combined = np.hstack((y_train, y_test))</span><br><span class="line"></span><br><span class="line">plot_decision_regions(X_combined, y_combined, classifier=tree_gini, test_idx = <span class="built_in">range</span>(<span class="number">105</span>, <span class="number">150</span>))</span><br><span class="line">plt.xlabel(<span class="string">&quot;petal length&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;petal width&quot;</span>)</span><br><span class="line">plt.legend(loc = <span class="string">&quot;upper left&quot;</span>)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../imeges/python/tree_gini_layout.png" alt="tree_gini_layout"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pydotplus <span class="keyword">import</span> graph_from_dot_data</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> export_graphviz</span><br><span class="line"></span><br><span class="line">dot_data = export_graphviz(tree_gini,</span><br><span class="line">                           filled=<span class="literal">True</span>, </span><br><span class="line">                           rounded=<span class="literal">True</span>,</span><br><span class="line">                           class_names=[<span class="string">&#x27;Setosa&#x27;</span>, </span><br><span class="line">                                        <span class="string">&#x27;Versicolor&#x27;</span>,</span><br><span class="line">                                        <span class="string">&#x27;Virginica&#x27;</span>],</span><br><span class="line">                           feature_names=[<span class="string">&#x27;petal length&#x27;</span>, </span><br><span class="line">                                          <span class="string">&#x27;petal width&#x27;</span>],</span><br><span class="line">                           out_file=<span class="literal">None</span>) </span><br><span class="line">graph = graph_from_dot_data(dot_data) </span><br><span class="line">graph.write_png(<span class="string">&#x27;gini_tree.png&#x27;</span>) </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>True</p>
+</blockquote>
+<p><img src="/../../imeges/python/gini_tree_.png" alt="gini_tree"></p>
+<p><br><br></p>
+<hr>
+<ul>
+<li>gini 로 1개 Entripy 로 1개 짜서 해야함 </li>
+</ul>
+<ul>
+<li><code>gini</code>: default </li>
+<li><code>Entropy</code> : 도 해보고 비교</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">tree_entropy = DecisionTreeClassifier(criterion=<span class="string">&quot;entropy&quot;</span>, max_depth=<span class="number">3</span>)</span><br><span class="line">tree_entropy.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">X_combined = np.vstack((X_train, X_test))</span><br><span class="line">y_combined = np.hstack((y_train, y_test))</span><br><span class="line"></span><br><span class="line">plot_decision_regions(X_combined, y_combined, classifier=tree_entropy, test_idx = <span class="built_in">range</span>(<span class="number">105</span>, <span class="number">150</span>))</span><br><span class="line">plt.xlabel(<span class="string">&quot;petal length&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;petal width&quot;</span>)</span><br><span class="line">plt.legend(loc = <span class="string">&quot;upper left&quot;</span>)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p><img src="../../imeges/python/tree_Entropy_layout.png" alt="tree_Entropy_layout"></p>
+<ul>
+<li>모형을 도식화로 </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pydotplus <span class="keyword">import</span> graph_from_dot_data</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> export_graphviz</span><br><span class="line"></span><br><span class="line">dot_data = export_graphviz(tree_entropy,</span><br><span class="line">                           filled=<span class="literal">True</span>, </span><br><span class="line">                           rounded=<span class="literal">True</span>,</span><br><span class="line">                           class_names=[<span class="string">&#x27;Setosa&#x27;</span>, </span><br><span class="line">                                        <span class="string">&#x27;Versicolor&#x27;</span>,</span><br><span class="line">                                        <span class="string">&#x27;Virginica&#x27;</span>],</span><br><span class="line">                           feature_names=[<span class="string">&#x27;petal length&#x27;</span>, </span><br><span class="line">                                          <span class="string">&#x27;petal width&#x27;</span>],</span><br><span class="line">                           out_file=<span class="literal">None</span>) </span><br><span class="line">graph = graph_from_dot_data(dot_data) </span><br><span class="line">graph.write_png(<span class="string">&#x27;Entropy_tree.png&#x27;</span>) </span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/../../imeges/python/Entropy_tree.png" alt="Entropy_tree"></p>
+<p>entropy가 0이 되면 더이상 나눌 필요가 없다. </p>
+<ul>
+<li>sklearn에서는 분류오차는 없다. </li>
+</ul>
+<ul>
+<li>지니 와 엔트로피 두개를 보고 더 나은 것을 선택 </li>
+</ul>
+<p><img src="/../../imeges/python/Entropy_gini.png" alt="Entropy_gini"></p>
+<p><a target="_blank" rel="noopener" href="https://asummerz.tistory.com/16">머신러닝 배우기</a></p>
+<p>&lt;아직 안배운 부분&gt;</p>
+<ul>
+<li>스태킹 알고리즘 (앙상블)</li>
+<li></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-10T07:00:48.000Z" title="2021. 12. 10. 오후 4:00:48">2021-12-10</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-20T02:15:23.754Z" title="2021. 12. 20. 오전 11:15:23">2021-12-20</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/">machineLeaning</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/pycaret/">pycaret</a></span><span class="level-item">33분안에 읽기 (약 4905 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/10/python/AoutoML_Pycaret(01)/">Auto Machine Learning by pycaret(01)</a></h1><div class="content"><h2 id="AutoMachineLearning-by-pycaret"><a href="#AutoMachineLearning-by-pycaret" class="headerlink" title="AutoMachineLearning by pycaret"></a>AutoMachineLearning by pycaret</h2><p><a target="_blank" rel="noopener" href="https://pycaret.org/">pycaret</a></p>
+<p><img src="/../../imeges/python/gitHub_pycaret.png" alt="gitHub_pycaret"></p>
+<br>
+<hr>
+
+<h3 id="pycaret으로-autoML-하기"><a href="#pycaret으로-autoML-하기" class="headerlink" title="pycaret으로 autoML 하기"></a>pycaret으로 autoML 하기</h3><ul>
+<li>low-code machine learning library</li>
+<li>PyCaret 2.0  ver.<ul>
+<li>분석가가 가야 하는 최종 도착지</li>
+<li>머신러닝 + operation (운영) : 배포 -&gt; <ul>
+<li>MLflow, Airflow, Kubeflow…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://towardsdatascience.com/github-is-the-best-automl-you-will-ever-need-5331f671f105">gitHub and pycaret</a></p>
+<p><br><br></p>
+<hr>
+<h3 id="pycaret-install"><a href="#pycaret-install" class="headerlink" title="pycaret install"></a>pycaret install</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!pip install pycaret</span><br><span class="line"></span><br><span class="line"><span class="comment"># !pip install pycaret==2.0</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Collecting pycaret<br>  Downloading pycaret-2.3.5-py3-none-any.whl (288 kB)<br>     |████████████████████████████████| 288 kB 5.4 MB/s<br>Collecting lightgbm&gt;=2.3.1<br>  Downloading lightgbm-3.3.1-py3-none-manylinux1_x86_64.whl (2.0 MB)<br>     |████████████████████████████████| 2.0 MB 54.5 MB/s<br>Collecting pyod<br>  Downloading pyod-0.9.5.tar.gz (113 kB)<br>     |████████████████████████████████| 113 kB 67.4 MB/s<br>Requirement already satisfied: textblob in /usr/local/lib/python3.7/dist-packages (from pycaret) (0.15.3)<br>Requirement already satisfied: yellowbrick&gt;=1.0.1 in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.3.post1)<br>Collecting Boruta<br>  Downloading Boruta-0.3-py3-none-any.whl (56 kB)<br>     |████████████████████████████████| 56 kB 4.6 MB/s<br>Collecting pyLDAvis<br>  Downloading pyLDAvis-3.3.1.tar.gz (1.7 MB)<br>     |████████████████████████████████| 1.7 MB 63.6 MB/s<br>  Installing build dependencies … done<br>  Getting requirements to build wheel … done<br>  Installing backend dependencies … done<br>    Preparing wheel metadata … done<br>Requirement already satisfied: seaborn in /usr/local/lib/python3.7/dist-packages (from pycaret) (0.11.2)<br>Requirement already satisfied: nltk in /usr/local/lib/python3.7/dist-packages (from pycaret) (3.2.5)<br>Collecting imbalanced-learn==0.7.0<br>  Downloading imbalanced_learn-0.7.0-py3-none-any.whl (167 kB)<br>     |████████████████████████████████| 167 kB 65.5 MB/s<br>Requirement already satisfied: numpy==1.19.5 in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.19.5)<br>Collecting kmodes&gt;=0.10.1<br>  Downloading kmodes-0.11.1-py2.py3-none-any.whl (19 kB)<br>Requirement already satisfied: spacy&lt;2.4.0 in /usr/local/lib/python3.7/dist-packages (from pycaret) (2.2.4)<br>Collecting umap-learn<br>  Downloading umap-learn-0.5.2.tar.gz (86 kB)<br>     |████████████████████████████████| 86 kB 4.8 MB/s<br>Requirement already satisfied: IPython in /usr/local/lib/python3.7/dist-packages (from pycaret) (5.5.0)<br>Requirement already satisfied: matplotlib in /usr/local/lib/python3.7/dist-packages (from pycaret) (3.2.2)<br>Requirement already satisfied: wordcloud in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.5.0)<br>Requirement already satisfied: cufflinks&gt;=0.17.0 in /usr/local/lib/python3.7/dist-packages (from pycaret) (0.17.3)<br>Collecting mlflow<br>  Downloading mlflow-1.22.0-py3-none-any.whl (15.5 MB)<br>     |████████████████████████████████| 15.5 MB 68.5 MB/s<br>Collecting mlxtend&gt;=0.17.0<br>  Downloading mlxtend-0.19.0-py2.py3-none-any.whl (1.3 MB)<br>     |████████████████████████████████| 1.3 MB 66.9 MB/s<br>Requirement already satisfied: pandas in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.1.5)<br>Collecting scikit-plot<br>  Downloading scikit_plot-0.3.7-py3-none-any.whl (33 kB)<br>Requirement already satisfied: joblib in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.1.0)<br>Requirement already satisfied: plotly&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from pycaret) (4.4.1)<br>Collecting scikit-learn==0.23.2<br>  Downloading scikit_learn-0.23.2-cp37-cp37m-manylinux1_x86_64.whl (6.8 MB)<br>     |████████████████████████████████| 6.8 MB 37.1 MB/s<br>Requirement already satisfied: gensim&lt;4.0.0 in /usr/local/lib/python3.7/dist-packages (from pycaret) (3.6.0)<br>Collecting pandas-profiling&gt;=2.8.0<br>  Downloading pandas_profiling-3.1.0-py2.py3-none-any.whl (261 kB)<br>     |████████████████████████████████| 261 kB 60.5 MB/s<br>Requirement already satisfied: ipywidgets in /usr/local/lib/python3.7/dist-packages (from pycaret) (7.6.5)<br>Requirement already satisfied: scipy&lt;=1.5.4 in /usr/local/lib/python3.7/dist-packages (from pycaret) (1.4.1)<br>Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from scikit-learn==0.23.2-&gt;pycaret) (3.0.0)<br>Requirement already satisfied: setuptools&gt;=34.4.1 in /usr/local/lib/python3.7/dist-packages (from cufflinks&gt;=0.17.0-&gt;pycaret) (57.4.0)<br>Requirement already satisfied: colorlover&gt;=0.2.1 in /usr/local/lib/python3.7/dist-packages (from cufflinks&gt;=0.17.0-&gt;pycaret) (0.3.0)<br>Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.7/dist-packages (from cufflinks&gt;=0.17.0-&gt;pycaret) (1.15.0)<br>Requirement already satisfied: smart-open&gt;=1.2.1 in /usr/local/lib/python3.7/dist-packages (from gensim&lt;4.0.0-&gt;pycaret) (5.2.1)<br>Requirement already satisfied: pickleshare in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (0.7.5)<br>Requirement already satisfied: pexpect in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (4.8.0)<br>Requirement already satisfied: traitlets&gt;=4.2 in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (5.1.1)<br>Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (2.6.1)<br>Requirement already satisfied: simplegeneric&gt;0.8 in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (0.8.1)<br>Requirement already satisfied: prompt-toolkit&lt;2.0.0,&gt;=1.0.4 in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (1.0.18)<br>Requirement already satisfied: decorator in /usr/local/lib/python3.7/dist-packages (from IPython-&gt;pycaret) (4.4.2)<br>Requirement already satisfied: nbformat&gt;=4.2.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (5.1.3)<br>Requirement already satisfied: widgetsnbextension<del>=3.5.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (3.5.2)<br>Requirement already satisfied: ipython-genutils</del>=0.2.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (0.2.0)<br>Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (4.10.1)<br>Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets-&gt;pycaret) (1.0.2)<br>Requirement already satisfied: jupyter-client in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;pycaret) (5.3.5)<br>Requirement already satisfied: tornado&gt;=4.0 in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;pycaret) (5.1.1)<br>Requirement already satisfied: wheel in /usr/local/lib/python3.7/dist-packages (from lightgbm&gt;=2.3.1-&gt;pycaret) (0.37.0)<br>Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;pycaret) (3.0.6)<br>Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;pycaret) (2.8.2)<br>Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;pycaret) (1.3.2)<br>Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;pycaret) (0.11.0)<br>Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /usr/local/lib/python3.7/dist-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets-&gt;pycaret) (2.6.0)<br>Requirement already satisfied: jupyter-core in /usr/local/lib/python3.7/dist-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets-&gt;pycaret) (4.9.1)<br>Requirement already satisfied: pytz&gt;=2017.2 in /usr/local/lib/python3.7/dist-packages (from pandas-&gt;pycaret) (2018.9)<br>Collecting visions[type_image_path]==0.7.4<br>  Downloading visions-0.7.4-py3-none-any.whl (102 kB)<br>     |████████████████████████████████| 102 kB 12.4 MB/s<br>Collecting pydantic&gt;=1.8.1<br>  Downloading pydantic-1.8.2-cp37-cp37m-manylinux2014_x86_64.whl (10.1 MB)<br>     |████████████████████████████████| 10.1 MB 24.8 MB/s<br>Collecting tangled-up-in-unicode==0.1.0<br>  Downloading tangled_up_in_unicode-0.1.0-py3-none-any.whl (3.1 MB)<br>     |████████████████████████████████| 3.1 MB 22.1 MB/s<br>Collecting joblib<br>  Downloading joblib-1.0.1-py3-none-any.whl (303 kB)<br>     |████████████████████████████████| 303 kB 60.4 MB/s<br>Collecting requests&gt;=2.24.0<br>  Downloading requests-2.26.0-py2.py3-none-any.whl (62 kB)<br>     |████████████████████████████████| 62 kB 805 kB/s<br>Requirement already satisfied: tqdm&gt;=4.48.2 in /usr/local/lib/python3.7/dist-packages (from pandas-profiling&gt;=2.8.0-&gt;pycaret) (4.62.3)<br>Collecting PyYAML&gt;=5.0.0<br>  Downloading PyYAML-6.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (596 kB)<br>     |████████████████████████████████| 596 kB 42.5 MB/s<br>Requirement already satisfied: missingno&gt;=0.4.2 in /usr/local/lib/python3.7/dist-packages (from pandas-profiling&gt;=2.8.0-&gt;pycaret) (0.5.0)<br>Requirement already satisfied: markupsafe<del>=2.0.1 in /usr/local/lib/python3.7/dist-packages (from pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.0.1)<br>Collecting htmlmin&gt;=0.1.12<br>  Downloading htmlmin-0.1.12.tar.gz (19 kB)<br>Collecting multimethod&gt;=1.4<br>  Downloading multimethod-1.6-py3-none-any.whl (9.4 kB)<br>Collecting phik&gt;=0.11.1<br>  Downloading phik-0.12.0-cp37-cp37m-manylinux2010_x86_64.whl (675 kB)<br>     |████████████████████████████████| 675 kB 41.5 MB/s<br>Requirement already satisfied: jinja2&gt;=2.11.1 in /usr/local/lib/python3.7/dist-packages (from pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.11.3)<br>Requirement already satisfied: networkx&gt;=2.4 in /usr/local/lib/python3.7/dist-packages (from visions[type_image_path]==0.7.4-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.6.3)<br>Requirement already satisfied: attrs&gt;=19.3.0 in /usr/local/lib/python3.7/dist-packages (from visions[type_image_path]==0.7.4-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (21.2.0)<br>Requirement already satisfied: Pillow in /usr/local/lib/python3.7/dist-packages (from visions[type_image_path]==0.7.4-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (7.1.2)<br>Collecting imagehash<br>  Downloading ImageHash-4.2.1.tar.gz (812 kB)<br>     |████████████████████████████████| 812 kB 37.7 MB/s<br>Collecting scipy&lt;=1.5.4<br>  Downloading scipy-1.5.4-cp37-cp37m-manylinux1_x86_64.whl (25.9 MB)<br>     |████████████████████████████████| 25.9 MB 74.1 MB/s<br>Requirement already satisfied: retrying&gt;=1.3.3 in /usr/local/lib/python3.7/dist-packages (from plotly&gt;=4.4.1-&gt;pycaret) (1.3.3)<br>Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/dist-packages (from prompt-toolkit&lt;2.0.0,&gt;=1.0.4-&gt;IPython-&gt;pycaret) (0.2.5)<br>Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /usr/local/lib/python3.7/dist-packages (from pydantic&gt;=1.8.1-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (3.10.0.2)<br>Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.24.0-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (1.24.3)<br>Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.24.0-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (2021.10.8)<br>Requirement already satisfied: charset-normalizer</del>=2.0.0 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.24.0-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.0.8)<br>Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.24.0-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (2.10)<br>Requirement already satisfied: preshed&lt;3.1.0,&gt;=3.0.2 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (3.0.6)<br>Requirement already satisfied: srsly&lt;1.1.0,&gt;=1.0.2 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (1.0.5)<br>Requirement already satisfied: wasabi&lt;1.1.0,&gt;=0.4.0 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (0.8.2)<br>Requirement already satisfied: thinc==7.4.0 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (7.4.0)<br>Requirement already satisfied: murmurhash&lt;1.1.0,&gt;=0.28.0 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (1.0.6)<br>Requirement already satisfied: plac&lt;1.2.0,&gt;=0.9.6 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (1.1.3)<br>Requirement already satisfied: catalogue&lt;1.1.0,&gt;=0.0.7 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (1.0.0)<br>Requirement already satisfied: cymem&lt;2.1.0,&gt;=2.0.2 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (2.0.6)<br>Requirement already satisfied: blis&lt;0.5.0,&gt;=0.4.0 in /usr/local/lib/python3.7/dist-packages (from spacy&lt;2.4.0-&gt;pycaret) (0.4.1)<br>Requirement already satisfied: importlib-metadata&gt;=0.20 in /usr/local/lib/python3.7/dist-packages (from catalogue&lt;1.1.0,&gt;=0.0.7-&gt;spacy&lt;2.4.0-&gt;pycaret) (4.8.2)<br>Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=0.20-&gt;catalogue&lt;1.1.0,&gt;=0.0.7-&gt;spacy&lt;2.4.0-&gt;pycaret) (3.6.0)<br>Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from widgetsnbextension<del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (5.3.1)<br>Requirement already satisfied: terminado&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension</del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.12.1)<br>Requirement already satisfied: nbconvert in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension<del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (5.6.1)<br>Requirement already satisfied: Send2Trash in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension</del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (1.8.0)<br>Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.7/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;pycaret) (22.3.0)<br>Requirement already satisfied: ptyprocess in /usr/local/lib/python3.7/dist-packages (from terminado&gt;=0.8.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension<del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.7.0)<br>Requirement already satisfied: PyWavelets in /usr/local/lib/python3.7/dist-packages (from imagehash-&gt;visions[type_image_path]==0.7.4-&gt;pandas-profiling&gt;=2.8.0-&gt;pycaret) (1.2.0)<br>Collecting querystring-parser<br>  Downloading querystring_parser-1.2.4-py2.py3-none-any.whl (7.9 kB)<br>Requirement already satisfied: entrypoints in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (0.3)<br>Collecting alembic&lt;=1.4.1<br>  Downloading alembic-1.4.1.tar.gz (1.1 MB)<br>     |████████████████████████████████| 1.1 MB 66.5 MB/s<br>Collecting gitpython&gt;=2.1.0<br>  Downloading GitPython-3.1.24-py3-none-any.whl (180 kB)<br>     |████████████████████████████████| 180 kB 40.6 MB/s<br>Requirement already satisfied: protobuf&gt;=3.7.0 in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (3.17.3)<br>Requirement already satisfied: sqlalchemy in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (1.4.27)<br>Requirement already satisfied: Flask in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (1.1.4)<br>Requirement already satisfied: cloudpickle in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (1.3.0)<br>Collecting databricks-cli&gt;=0.8.7<br>  Downloading databricks-cli-0.16.2.tar.gz (58 kB)<br>     |████████████████████████████████| 58 kB 5.6 MB/s<br>Collecting prometheus-flask-exporter<br>  Downloading prometheus_flask_exporter-0.18.6-py3-none-any.whl (17 kB)<br>Requirement already satisfied: packaging in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (21.3)<br>Requirement already satisfied: click&gt;=7.0 in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (7.1.2)<br>Requirement already satisfied: sqlparse&gt;=0.3.1 in /usr/local/lib/python3.7/dist-packages (from mlflow-&gt;pycaret) (0.4.2)<br>Collecting gunicorn<br>  Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)<br>     |████████████████████████████████| 79 kB 7.6 MB/s<br>Collecting docker&gt;=4.0.0<br>  Downloading docker-5.0.3-py2.py3-none-any.whl (146 kB)<br>     |████████████████████████████████| 146 kB 58.9 MB/s<br>Collecting Mako<br>  Downloading Mako-1.1.6-py2.py3-none-any.whl (75 kB)<br>     |████████████████████████████████| 75 kB 4.2 MB/s<br>Collecting python-editor&gt;=0.3<br>  Downloading python_editor-1.0.4-py3-none-any.whl (4.9 kB)<br>Requirement already satisfied: tabulate&gt;=0.7.7 in /usr/local/lib/python3.7/dist-packages (from databricks-cli&gt;=0.8.7-&gt;mlflow-&gt;pycaret) (0.8.9)<br>Collecting websocket-client&gt;=0.32.0<br>  Downloading websocket_client-1.2.3-py3-none-any.whl (53 kB)<br>     |████████████████████████████████| 53 kB 1.2 MB/s<br>Collecting gitdb&lt;5,&gt;=4.0.1<br>  Downloading gitdb-4.0.9-py3-none-any.whl (63 kB)<br>     |████████████████████████████████| 63 kB 1.6 MB/s<br>Collecting smmap&lt;6,&gt;=3.0.1<br>  Downloading smmap-5.0.0-py3-none-any.whl (24 kB)<br>Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/dist-packages (from sqlalchemy-&gt;mlflow-&gt;pycaret) (1.1.2)<br>Requirement already satisfied: itsdangerous&lt;2.0,&gt;=0.24 in /usr/local/lib/python3.7/dist-packages (from Flask-&gt;mlflow-&gt;pycaret) (1.1.0)<br>Requirement already satisfied: Werkzeug&lt;2.0,&gt;=0.15 in /usr/local/lib/python3.7/dist-packages (from Flask-&gt;mlflow-&gt;pycaret) (1.0.1)<br>Requirement already satisfied: bleach in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension</del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (4.1.0)<br>Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension<del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (1.5.0)<br>Requirement already satisfied: testpath in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension</del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.5.0)<br>Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension<del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.8.4)<br>Requirement already satisfied: defusedxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension</del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.7.1)<br>Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension<del>=3.5.0-&gt;ipywidgets-&gt;pycaret) (0.5.1)<br>Requirement already satisfied: prometheus-client in /usr/local/lib/python3.7/dist-packages (from prometheus-flask-exporter-&gt;mlflow-&gt;pycaret) (0.12.0)<br>Collecting pyLDAvis<br>  Downloading pyLDAvis-3.3.0.tar.gz (1.7 MB)<br>     |████████████████████████████████| 1.7 MB 44.1 MB/s<br>  Installing build dependencies … done<br>  Getting requirements to build wheel … done<br>  Installing backend dependencies … done<br>    Preparing wheel metadata … done<br>  Downloading pyLDAvis-3.2.2.tar.gz (1.7 MB)<br>     |████████████████████████████████| 1.7 MB 30.5 MB/s<br>Requirement already satisfied: numexpr in /usr/local/lib/python3.7/dist-packages (from pyLDAvis-&gt;pycaret) (2.7.3)<br>Requirement already satisfied: future in /usr/local/lib/python3.7/dist-packages (from pyLDAvis-&gt;pycaret) (0.16.0)<br>Collecting funcy<br>  Downloading funcy-1.16-py2.py3-none-any.whl (32 kB)<br>Requirement already satisfied: numba&gt;=0.35 in /usr/local/lib/python3.7/dist-packages (from pyod-&gt;pycaret) (0.51.2)<br>Requirement already satisfied: statsmodels in /usr/local/lib/python3.7/dist-packages (from pyod-&gt;pycaret) (0.10.2)<br>Requirement already satisfied: llvmlite&lt;0.35,&gt;=0.34.0.dev0 in /usr/local/lib/python3.7/dist-packages (from numba&gt;=0.35-&gt;pyod-&gt;pycaret) (0.34.0)<br>Requirement already satisfied: patsy&gt;=0.4.0 in /usr/local/lib/python3.7/dist-packages (from statsmodels-&gt;pyod-&gt;pycaret) (0.5.2)<br>Collecting pynndescent&gt;=0.5<br>  Downloading pynndescent-0.5.5.tar.gz (1.1 MB)<br>     |████████████████████████████████| 1.1 MB 55.1 MB/s<br>Building wheels for collected packages: htmlmin, imagehash, alembic, databricks-cli, pyLDAvis, pyod, umap-learn, pynndescent<br>  Building wheel for htmlmin (setup.py) … done<br>  Created wheel for htmlmin: filename=htmlmin-0.1.12-py3-none-any.whl size=27098 sha256=6dff1694390dae41ea8bd3ca00f5564142023ea037fa606be0a8ffba9c16d1da<br>  Stored in directory: /root/.cache/pip/wheels/70/e1/52/5b14d250ba868768823940c3229e9950d201a26d0bd3ee8655<br>  Building wheel for imagehash (setup.py) … done<br>  Created wheel for imagehash: filename=ImageHash-4.2.1-py2.py3-none-any.whl size=295207 sha256=9e38b104e77871b6f6a6a9267c3debd3ac85d39441acb3cda64d4dc07a11dd27<br>  Stored in directory: /root/.cache/pip/wheels/4c/d5/59/5e3e297533ddb09407769762985d134135064c6831e29a914e<br>  Building wheel for alembic (setup.py) … done<br>  Created wheel for alembic: filename=alembic-1.4.1-py2.py3-none-any.whl size=158172 sha256=652d8b88b2468cf1d1c9f1c3242dda689e0f670bc6e5b88dc4dbf087fecbaccc<br>  Stored in directory: /root/.cache/pip/wheels/be/5d/0a/9e13f53f4f5dfb67cd8d245bb7cdffe12f135846f491a283e3<br>  Building wheel for databricks-cli (setup.py) … done<br>  Created wheel for databricks-cli: filename=databricks_cli-0.16.2-py3-none-any.whl size=106811 sha256=9dbaaca3ece5f6a1522d676d8b1ec35c065a0bd0c564bd862ae3012984b70c9a<br>  Stored in directory: /root/.cache/pip/wheels/f4/5c/ed/e1ce20a53095f63b27b4964abbad03e59cf3472822addf7d29<br>  Building wheel for pyLDAvis (setup.py) … done<br>  Created wheel for pyLDAvis: filename=pyLDAvis-3.2.2-py2.py3-none-any.whl size=135618 sha256=471d50a9a2e725465ffc7d32b21edb15c9b84dc0573891185a43e97f567aa0a7<br>  Stored in directory: /root/.cache/pip/wheels/f8/b1/9b/560ac1931796b7303f7b517b949d2d31a4fbc512aad3b9f284<br>  Building wheel for pyod (setup.py) … done<br>  Created wheel for pyod: filename=pyod-0.9.5-py3-none-any.whl size=132699 sha256=d116f5b46155bf0fa31aa88cc21da0e3be461b448e9c9b2d599c763a5ef0a6a1<br>  Stored in directory: /root/.cache/pip/wheels/3d/bb/b7/62b60fb451b33b0df1ab8006697fba7a6a49709a629055cf77<br>  Building wheel for umap-learn (setup.py) … done<br>  Created wheel for umap-learn: filename=umap_learn-0.5.2-py3-none-any.whl size=82709 sha256=7c48e34d2c19d333a623ed12491d3c7d07bafd52f2d35e474df56908f5cc7525<br>  Stored in directory: /root/.cache/pip/wheels/84/1b/c6/aaf68a748122632967cef4dffef68224eb16798b6793257d82<br>  Building wheel for pynndescent (setup.py) … done<br>  Created wheel for pynndescent: filename=pynndescent-0.5.5-py3-none-any.whl size=52603 sha256=7abff97eebc36deea7220f1b5e9907020826a07404003a9c7d794fef4d396e87<br>  Stored in directory: /root/.cache/pip/wheels/af/e9/33/04db1436df0757c42fda8ea6796d7a8586e23c85fac355f476<br>Successfully built htmlmin imagehash alembic databricks-cli pyLDAvis pyod umap-learn pynndescent<br>Installing collected packages: tangled-up-in-unicode, smmap, scipy, multimethod, joblib, websocket-client, visions, scikit-learn, requests, python-editor, Mako, imagehash, gitdb, querystring-parser, PyYAML, pynndescent, pydantic, prometheus-flask-exporter, phik, htmlmin, gunicorn, gitpython, funcy, docker, databricks-cli, alembic, umap-learn, scikit-plot, pyod, pyLDAvis, pandas-profiling, mlxtend, mlflow, lightgbm, kmodes, imbalanced-learn, Boruta, pycaret<br>  Attempting uninstall: scipy<br>    Found existing installation: scipy 1.4.1<br>    Uninstalling scipy-1.4.1:<br>      Successfully uninstalled scipy-1.4.1<br>  Attempting uninstall: joblib<br>    Found existing installation: joblib 1.1.0<br>    Uninstalling joblib-1.1.0:<br>      Successfully uninstalled joblib-1.1.0<br>  Attempting uninstall: scikit-learn<br>    Found existing installation: scikit-learn 1.0.1<br>    Uninstalling scikit-learn-1.0.1:<br>      Successfully uninstalled scikit-learn-1.0.1<br>  Attempting uninstall: requests<br>    Found existing installation: requests 2.23.0<br>    Uninstalling requests-2.23.0:<br>      Successfully uninstalled requests-2.23.0<br>  Attempting uninstall: PyYAML<br>    Found existing installation: PyYAML 3.13<br>    Uninstalling PyYAML-3.13:<br>      Successfully uninstalled PyYAML-3.13<br>  Attempting uninstall: pandas-profiling<br>    Found existing installation: pandas-profiling 1.4.1<br>    Uninstalling pandas-profiling-1.4.1:<br>      Successfully uninstalled pandas-profiling-1.4.1<br>  Attempting uninstall: mlxtend<br>    Found existing installation: mlxtend 0.14.0<br>    Uninstalling mlxtend-0.14.0:<br>      Successfully uninstalled mlxtend-0.14.0<br>  Attempting uninstall: lightgbm<br>    Found existing installation: lightgbm 2.2.3<br>    Uninstalling lightgbm-2.2.3:<br>      Successfully uninstalled lightgbm-2.2.3<br>  Attempting uninstall: imbalanced-learn<br>    Found existing installation: imbalanced-learn 0.8.1<br>    Uninstalling imbalanced-learn-0.8.1:<br>      Successfully uninstalled imbalanced-learn-0.8.1<br>ERROR: pip’s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.<br>google-colab 1.0.0 requires requests</del>=2.23.0, but you have requests 2.26.0 which is incompatible.<br>datascience 0.10.6 requires folium==0.2.1, but you have folium 0.8.3 which is incompatible.<br>albumentations 0.1.12 requires imgaug&lt;0.2.7,&gt;=0.2.5, but you have imgaug 0.2.9 which is incompatible.<br>Successfully installed Boruta-0.3 Mako-1.1.6 PyYAML-6.0 alembic-1.4.1 databricks-cli-0.16.2 docker-5.0.3 funcy-1.16 gitdb-4.0.9 gitpython-3.1.24 gunicorn-20.1.0 htmlmin-0.1.12 imagehash-4.2.1 imbalanced-learn-0.7.0 joblib-1.0.1 kmodes-0.11.1 lightgbm-3.3.1 mlflow-1.22.0 mlxtend-0.19.0 multimethod-1.6 pandas-profiling-3.1.0 phik-0.12.0 prometheus-flask-exporter-0.18.6 pyLDAvis-3.2.2 pycaret-2.3.5 pydantic-1.8.2 pynndescent-0.5.5 pyod-0.9.5 python-editor-1.0.4 querystring-parser-1.2.4 requests-2.26.0 scikit-learn-0.23.2 scikit-plot-0.3.7 scipy-1.5.4 smmap-5.0.0 tangled-up-in-unicode-0.1.0 umap-learn-0.5.2 visions-0.7.4 websocket-client-1.2.3</p>
+</blockquote>
+<p>pycaret을 그냥 설치 할 수도 있고,<br>version을 정해서 설치 할 수도 있다. </p>
+<ul>
+<li>먼저 개괄적으로 확인만 하고, github 에서 autoML을 pycaret 2.0 ver로 진행 해야 한다. </li>
+</ul>
+<p><br><br></p>
+<hr>
+<p>google colab에 설치 한 경우 </p>
+<p style="color:#E84D4D;font-size:110%;"> 
+Install 후 <strong>런타임>런타임다시시작(CTRL+M)</strong> 을 
+꼭 한번 해 준 후
+</p>
+
+<p>아래 설명에 따라 가는 것이 좋음.</p>
+<p> ** 만약 오류가 난다면, 런타임 초기화 후 import, 런타임다시시작 후 진행 하는 것을 추천 </p>
+<ul>
+<li>왜 그런지 모름 <del>_</del> 그냥 이렇게 하면 된다는 것만 알려주겠음</li>
+</ul>
+<p><br><br></p>
+<hr>
+<h3 id="Data-Load"><a href="#Data-Load" class="headerlink" title="Data Load"></a>Data Load</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pycaret.datasets <span class="keyword">import</span> get_data</span><br><span class="line">data = get_data(<span class="string">&quot;diamond&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../imeges/python/pycaret_diamond_data.png" alt="pycaret_diamond_data"></p>
+<p><br><br></p>
+<hr>
+<h3 id="pycaret-regression"><a href="#pycaret-regression" class="headerlink" title="pycaret.regression"></a>pycaret.regression</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pycaret.regression <span class="keyword">import</span> *</span><br><span class="line">reg_set = setup(data, target = <span class="string">&#x27;Price&#x27;</span>, transform_target = <span class="literal">True</span>, </span><br><span class="line">                log_experiment = <span class="literal">True</span>, experiment_name = <span class="string">&#x27;diamond&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>pycaret.regression : 종류</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">\</th>
+<th align="center">Description</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">session_id</td>
+<td align="center">2882</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Target</td>
+<td align="center">Price</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Original Data</td>
+<td align="center">(6000, 8)</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">Missing Values</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">Numeric Features</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">Categorical Features</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Ordinal Features</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">High Cardinality Features</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">High Cardinality Method</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">Transformed Train Set</td>
+<td align="center">(4199, 28)</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">Transformed Test Set</td>
+<td align="center">(1801, 28)</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">Shuffle Train-Test</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center">Stratify Train-Test</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">Fold Generator</td>
+<td align="center">KFold</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center">Fold Number</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center">CPU Jobs</td>
+<td align="center">-1</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="center">Use GPU</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td align="center">Log Experiment</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td align="center">Experiment Name</td>
+<td align="center">diamond</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td align="center">USI</td>
+<td align="center">116c</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="center">Imputation Type</td>
+<td align="center">simple</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="center">Iterative Imputation Iteration</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">Numeric Imputer</td>
+<td align="center">mean</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td align="center">Iterative Imputation Numeric Model</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td align="center">Categorical Imputer</td>
+<td align="center">constant</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td align="center">Iterative Imputation Categorical Model</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td align="center">Unknown Categoricals Handling</td>
+<td align="center">least_frequent</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td align="center">Normalize</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td align="center">Normalize Method</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td align="center">Transformation</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td align="center">Transformation Method</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td align="center">PCA</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td align="center">PCA Method</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td align="center">PCA Components</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">34</td>
+<td align="center">Ignore Low Variance</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">35</td>
+<td align="center">Combine Rare Levels</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td align="center">Rare Level Threshold</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td align="center">Numeric Binning</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">38</td>
+<td align="center">Remove Outliers</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">39</td>
+<td align="center">Outliers Threshold</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">40</td>
+<td align="center">Remove Multicollinearity</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td align="center">Multicollinearity Threshold</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">Remove Perfect Collinearity</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td align="center">Clustering</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td align="center">Clustering Iteration</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">45</td>
+<td align="center">Polynomial Features</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">46</td>
+<td align="center">Polynomial Degree</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">47</td>
+<td align="center">Trignometry Features</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">48</td>
+<td align="center">Polynomial Threshold</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">49</td>
+<td align="center">Group Features</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td align="center">Feature Selection</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">51</td>
+<td align="center">Feature Selection Method</td>
+<td align="center">classic</td>
+</tr>
+<tr>
+<td align="center">52</td>
+<td align="center">Features Selection Threshold</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td align="center">Feature Interaction</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">54</td>
+<td align="center">Feature Ratio</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">55</td>
+<td align="center">Interaction Threshold</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td align="center">56</td>
+<td align="center">Transform Target</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">57</td>
+<td align="center">Transform Target Method</td>
+<td align="center">box-cox</td>
+</tr>
+</tbody></table>
+<div style="border: 1px solid gold">
+
+<ul>
+<li>더 많이 알고 싶으면 저거 다 공부 해 ^0^</li>
+</ul>
+</div>
+
+<p><br><br></p>
+<hr>
+<h3 id="모델-만들기"><a href="#모델-만들기" class="headerlink" title="모델 만들기"></a>모델 만들기</h3><ul>
+<li>최적의 모델을 만들기 위해 한줄의 코드면 된다 ㅠㅠ </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">best  = compare_models()</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Model</th>
+<th align="center">MAE</th>
+<th align="center">MSE</th>
+<th align="center">RMSE</th>
+<th align="center">R2</th>
+<th align="center">RMSLE</th>
+<th align="center">MAPE</th>
+<th align="center">TT (Sec)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">lightgbm</td>
+<td align="center">Light Gradient Boosting Machine</td>
+<td align="center">637.8811</td>
+<td align="center">1.928277e+06</td>
+<td align="center">1367.4159</td>
+<td align="center">0.9813</td>
+<td align="center">0.0677</td>
+<td align="center">0.0491</td>
+<td align="center">0.120</td>
+</tr>
+<tr>
+<td align="center">et</td>
+<td align="center">Extra Trees Regressor</td>
+<td align="center">748.9529</td>
+<td align="center">2.253684e+06</td>
+<td align="center">1478.3926</td>
+<td align="center">0.9782</td>
+<td align="center">0.0802</td>
+<td align="center">0.0594</td>
+<td align="center">1.199</td>
+</tr>
+<tr>
+<td align="center">rf</td>
+<td align="center">Random Forest Regressor</td>
+<td align="center">742.9041</td>
+<td align="center">2.417200e+06</td>
+<td align="center">1528.6437</td>
+<td align="center">0.9765</td>
+<td align="center">0.0785</td>
+<td align="center">0.0579</td>
+<td align="center">1.090</td>
+</tr>
+<tr>
+<td align="center">gbr</td>
+<td align="center">Gradient Boosting Regressor</td>
+<td align="center">764.6458</td>
+<td align="center">2.449865e+06</td>
+<td align="center">1544.3382</td>
+<td align="center">0.9762</td>
+<td align="center">0.0783</td>
+<td align="center">0.0583</td>
+<td align="center">0.288</td>
+</tr>
+<tr>
+<td align="center">dt</td>
+<td align="center">Decision Tree Regressor</td>
+<td align="center">946.3401</td>
+<td align="center">3.350058e+06</td>
+<td align="center">1811.0705</td>
+<td align="center">0.9672</td>
+<td align="center">0.1034</td>
+<td align="center">0.0756</td>
+<td align="center">0.040</td>
+</tr>
+<tr>
+<td align="center">ada</td>
+<td align="center">AdaBoost Regressor</td>
+<td align="center">1997.1826</td>
+<td align="center">1.710448e+07</td>
+<td align="center">4091.7565</td>
+<td align="center">0.8350</td>
+<td align="center">0.1895</td>
+<td align="center">0.1511</td>
+<td align="center">0.251</td>
+</tr>
+<tr>
+<td align="center">knn</td>
+<td align="center">K Neighbors Regressor</td>
+<td align="center">3072.0318</td>
+<td align="center">3.642699e+07</td>
+<td align="center">6017.2046</td>
+<td align="center">0.6421</td>
+<td align="center">0.3636</td>
+<td align="center">0.2323</td>
+<td align="center">0.086</td>
+</tr>
+<tr>
+<td align="center">omp</td>
+<td align="center">Orthogonal Matching Pursuit</td>
+<td align="center">3317.3424</td>
+<td align="center">8.643676e+07</td>
+<td align="center">9045.7885</td>
+<td align="center">0.1344</td>
+<td align="center">0.2823</td>
+<td align="center">0.2209</td>
+<td align="center">0.026</td>
+</tr>
+<tr>
+<td align="center">llar</td>
+<td align="center">Lasso Least Angle Regression</td>
+<td align="center">6540.9142</td>
+<td align="center">1.144871e+08</td>
+<td align="center">10682.7674</td>
+<td align="center">-0.1241</td>
+<td align="center">0.7130</td>
+<td align="center">0.5636</td>
+<td align="center">0.281</td>
+</tr>
+<tr>
+<td align="center">lasso</td>
+<td align="center">Lasso Regression</td>
+<td align="center">6540.9147</td>
+<td align="center">1.144871e+08</td>
+<td align="center">10682.7665</td>
+<td align="center">-0.1241</td>
+<td align="center">0.7130</td>
+<td align="center">0.5636</td>
+<td align="center">0.025</td>
+</tr>
+<tr>
+<td align="center">en</td>
+<td align="center">Elastic Net</td>
+<td align="center">6540.9147</td>
+<td align="center">1.144871e+08</td>
+<td align="center">10682.7665</td>
+<td align="center">-0.1241</td>
+<td align="center">0.7130</td>
+<td align="center">0.5636</td>
+<td align="center">0.025</td>
+</tr>
+<tr>
+<td align="center">dummy</td>
+<td align="center">Dummy Regressor</td>
+<td align="center">6540.9142</td>
+<td align="center">1.144871e+08</td>
+<td align="center">10682.7674</td>
+<td align="center">-0.1241</td>
+<td align="center">0.7130</td>
+<td align="center">0.5636</td>
+<td align="center">0.021</td>
+</tr>
+<tr>
+<td align="center">ridge</td>
+<td align="center">Ridge Regression</td>
+<td align="center">3376.7759</td>
+<td align="center">4.409370e+08</td>
+<td align="center">17429.1601</td>
+<td align="center">-3.0382</td>
+<td align="center">0.2235</td>
+<td align="center">0.1734</td>
+<td align="center">0.026</td>
+</tr>
+<tr>
+<td align="center">br</td>
+<td align="center">Bayesian Ridge</td>
+<td align="center">3464.5342</td>
+<td align="center">6.180348e+08</td>
+<td align="center">19047.2745</td>
+<td align="center">-4.5803</td>
+<td align="center">0.2244</td>
+<td align="center">0.1745</td>
+<td align="center">0.028</td>
+</tr>
+<tr>
+<td align="center">huber</td>
+<td align="center">Huber Regressor</td>
+<td align="center">3490.0167</td>
+<td align="center">7.900161e+08</td>
+<td align="center">19860.5244</td>
+<td align="center">-6.0721</td>
+<td align="center">0.2254</td>
+<td align="center">0.1729</td>
+<td align="center">0.118</td>
+</tr>
+<tr>
+<td align="center">lr</td>
+<td align="center">Linear Regression</td>
+<td align="center">3566.8112</td>
+<td align="center">8.908481e+08</td>
+<td align="center">21034.8582</td>
+<td align="center">-6.9766</td>
+<td align="center">0.2253</td>
+<td align="center">0.1755</td>
+<td align="center">0.309</td>
+</tr>
+<tr>
+<td align="center">par</td>
+<td align="center">Passive Aggressive Regressor</td>
+<td align="center">8585.4060</td>
+<td align="center">5.154119e+10</td>
+<td align="center">94736.3961</td>
+<td align="center">-439.8984</td>
+<td align="center">0.2947</td>
+<td align="center">0.2745</td>
+<td align="center">0.031</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<hr>
+<h3 id="모형-평가"><a href="#모형-평가" class="headerlink" title="모형 평가"></a>모형 평가</h3><ul>
+<li>최적의 모델 확인 후 평가 역시 코드 한줄 ㅠㅠ 감동</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot_model(best)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../imeges/python/plot_model.png" alt="plot_model"></p>
+<p><br><br></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot_model(best, plot = <span class="string">&quot;feature&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../imeges/python/pycarat_plot_model_feature.png" alt="pycarat_plot_model_feature"></p>
+<p><br><br></p>
+<hr>
+<h3 id="모형-저장-모형-배포"><a href="#모형-저장-모형-배포" class="headerlink" title="모형 저장, 모형 배포"></a>모형 저장, 모형 배포</h3><ul>
+<li>MLOps 개념, RestAPI, Flask</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">finalize_best = finalize_model(best)</span><br><span class="line"></span><br><span class="line"><span class="comment">#save model</span></span><br><span class="line">save_model(finalize_best, <span class="string">&quot;diamond_pipeline&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>Transformation Pipeline and Model Successfully Saved<br>(Pipeline(memory=None,<br>          steps=[(‘dtypes’,<br>                  DataTypes_Auto_infer(categorical_features=[],<br>                                       display_types=True, features_todrop=[],<br>                                       id_columns=[], ml_usecase=’regression’,<br>                                       numerical_features=[], target=’Price’,<br>                                       time_features=[])),<br>                 (‘imputer’,<br>                  Simple_Imputer(categorical_strategy=’not_available’,<br>                                 fill_value_categorical=None,<br>                                 fill_value_numerical=None,<br>                                 numeric_strategy=’…<br>                                                                          learning_rate=0.1,<br>                                                                          max_depth=-1,<br>                                                                          min_child_samples=20,<br>                                                                          min_child_weight=0.001,<br>                                                                          min_split_gain=0.0,<br>                                                                          n_estimators=100,<br>                                                                          n_jobs=-1,<br>                                                                          num_leaves=31,<br>                                                                          objective=None,<br>                                                                          random_state=2882,<br>                                                                          reg_alpha=0.0,<br>                                                                          reg_lambda=0.0,<br>                                                                          silent=’warn’,<br>                                                                          subsample=1.0,<br>                                                                          subsample_for_bin=200000,<br>                                                                          subsample_freq=0),<br>                                                  silent=’warn’, subsample=1.0,<br>                                                  subsample_for_bin=200000,<br>                                                  subsample_freq=0)]],<br>          verbose=False), ‘diamond_pipeline.pkl’)</p>
+</blockquote>
+<p><br><br></p>
+<hr>
+<h3 id="MLOps"><a href="#MLOps" class="headerlink" title="MLOps"></a>MLOps</h3><ul>
+<li>devOPs (개발과 운영 팀이 별도로 있었음.)</li>
+<li>자동화 되면서 같이 됨.<br>MLOps dash board</li>
+</ul>
+<br>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">!pip install mlflow --quiet</span><br><span class="line">!pip install pyngrok --quiet</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> mlflow</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> mlflow.start_run(run_name=<span class="string">&quot;MLflow on Colab&quot;</span>):</span><br><span class="line">  mlflow.log_metric(<span class="string">&quot;m1&quot;</span>, <span class="number">2.0</span>)</span><br><span class="line">  mlflow.log_param(<span class="string">&quot;p1&quot;</span>, <span class="string">&quot;mlflow-colab&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># run tracking UI in the background</span></span><br><span class="line">get_ipython().system_raw(<span class="string">&quot;mlflow ui --port 5000 &amp;&quot;</span>) <span class="comment"># run tracking UI in the background</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># create remote tunnel using ngrok.com to allow local port access</span></span><br><span class="line"><span class="comment"># borrowed from https://colab.research.google.com/github/alfozan/MLflow-GBRT-demo/blob/master/MLflow-GBRT-demo.ipynb#scrollTo=4h3bKHMYUIG6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pyngrok <span class="keyword">import</span> ngrok</span><br><span class="line"></span><br><span class="line"><span class="comment"># Terminate open tunnels if exist</span></span><br><span class="line">ngrok.kill()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Setting the authtoken (optional)</span></span><br><span class="line"><span class="comment"># Get your authtoken from https://dashboard.ngrok.com/auth</span></span><br><span class="line">NGROK_AUTH_TOKEN = <span class="string">&quot;&quot;</span></span><br><span class="line">ngrok.set_auth_token(NGROK_AUTH_TOKEN)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Open an HTTPs tunnel on port 5000 for http://localhost:5000</span></span><br><span class="line">ngrok_tunnel = ngrok.connect(addr=<span class="string">&quot;5000&quot;</span>, proto=<span class="string">&quot;http&quot;</span>, bind_tls=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;MLflow Tracking UI:&quot;</span>, ngrok_tunnel.public_url)</span><br></pre></td></tr></table></figure>
+<div style="border: 1px solid gold;background-color: lightyellow; margin: 1.5px">  
+  |████████████████████████████████| 745 kB 5.4 MB/s    <br>
+  Building wheel for pyngrok (setup.py) ... done   <br>
+---------------------------------------  <br>
+Exception                                 Traceback (most recent call last)  <br>
+<ipython-input-8-054256cc92ef> in <module>()  <br>
+      4 import mlflow  <br>
+      5   <br>
+----> 6 with mlflow.start_run(run_name="MLflow on Colab"):  <br>
+      7   mlflow.log_metric("m1", 2.0)   <br>
+      8   mlflow.log_param("p1", "mlflow-colab")  <br> 
+
+<br>
+
+<p>/usr/local/lib/python3.7/dist-packages/mlflow/tracking/fluent.py in start_run(run_id, experiment_id, run_name, nested, tags)<br><br>    229                 + “current run with mlflow.end_run(). To start a nested “<br><br>    230                 + “run, call start_run with nested=True”<br><br> –&gt; 231             ).format(_active_run_stack[0].info.run_id)<br><br>    232         )<br><br>    233     client = MlflowClient()<br><br><br><br> Exception: Run with UUID 3cbca838cdd44eac8620700ac1929a64 is already active. <br><br>To start a new run, first end the current run with mlflow.end_run(). <br><br>To start a nested run, call start_run with nested=True <br></p>
+<p><br></div></p>
+<p style="color:#E84D4D;font-size:110%;"> 
+배포 하는 것이 마지막 단계인데,  
+구글 코랩에서 안먹는 다는 것이 함정이라고 한다.   
+ 
+</p>
+
+<p>언젠간 내가 스스로 할 수 있는 날이 오지 않을까 한다.  </p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-10T03:27:48.000Z" title="2021. 12. 10. 오후 12:27:48">2021-12-10</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-12-13T06:48:15.828Z" title="2021. 12. 13. 오후 3:48:15">2021-12-13</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/">machineLeaning</a><span> / </span><a class="link-muted" href="/categories/python/machineLeaning/sklearn/">sklearn</a></span><span class="level-item">몇 초안에 읽기 (약 91 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/12/10/python/sklearn_mL_04_ModuleSelection/">sklearn_mL_04_ModuleSelection(2.4)</a></h1><div class="content"><h2 id="Chepter-2-사이킷런으로-시작하는-머신러닝-04"><a href="#Chepter-2-사이킷런으로-시작하는-머신러닝-04" class="headerlink" title="Chepter 2 _사이킷런으로 시작하는 머신러닝(04)"></a>Chepter 2 _사이킷런으로 시작하는 머신러닝(04)</h2><p>파이썬 머신러닝 완벽 가이드<br>   ref. &amp; copyright(c) <a target="_blank" rel="noopener" href="https://kr.mathworks.com/content/dam/mathworks/ebook/gated/kr-machine-learning-ebook-all-chapters.pdf">Book</a></p>
 <br>
 <hr>
 
@@ -1301,180 +2055,7 @@ object(101, int ref_cnt=1) 0x200
 <h1 id="If-조건문"><a href="#If-조건문" class="headerlink" title="If 조건문"></a>If 조건문</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h1 id="for-반복문"><a href="#for-반복문" class="headerlink" title="for 반복문"></a>for 반복문</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-11-05T00:11:28.000Z" title="2021. 11. 5. 오전 9:11:28">2021-11-05</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-11-05T04:51:45.654Z" title="2021. 11. 5. 오후 1:51:45">2021-11-05</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/python/">python</a></span><span class="level-item">9분안에 읽기 (약 1359 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/05/blog/Python_List/">python_List</a></h1><div class="content"><h2 id="google-Colaboratory-를-이용한-실습"><a href="#google-Colaboratory-를-이용한-실습" class="headerlink" title="google Colaboratory 를 이용한 실습"></a>google Colaboratory 를 이용한 실습</h2><p><a href="https://colab.research.google.com/github/YoonHwa-P/MyBlog/blob/main/21_11_01_Python_List.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<h1 id="Intro-print와-주석처리"><a href="#Intro-print와-주석처리" class="headerlink" title="Intro_ print와 주석처리"></a>Intro_ print와 주석처리</h1><ul>
-<li>print Out</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, World !!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<pre><code>Hello, World !!
-</code></pre>
-<p>이제 우리는 모든 것을 나타 낼 수 있습니다. </p>
-<ul>
-<li>주석처리</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 한 줄로 주석 처리 하는 방법 </span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">여러줄은 이렇게 </span></span><br><span class="line"><span class="string">print(&quot;Hello, World??&quot;)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, World!!&quot;</span>) <span class="comment">#주석 처리한 부분은 안나오지</span></span><br></pre></td></tr></table></figure>
-
-<pre><code>Hello, World!!
-</code></pre>
-<h1 id="변수의-종류"><a href="#변수의-종류" class="headerlink" title="변수의 종류"></a>변수의 종류</h1><ul>
-<li>int : 정수</li>
-<li>float : 실수</li>
-<li>bool : 참/거짓</li>
-<li>none : null</li>
-<li>String : 문자</li>
-</ul>
-<hr>
-<p>이전에 배웠던 JAVA와는 다르게 변수형을 지정 해 주지 않아도 된다</p>
-<p>Type 함수는 그 변수의 type이 어떤 것인지 알려준다. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">N_int = <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(N_int))</span><br><span class="line"><span class="comment">#Type 함수 : type 을 print 해 준다 </span></span><br><span class="line"></span><br><span class="line">N1_float = <span class="number">2.0</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(N1_float))</span><br><span class="line"></span><br><span class="line">bool_N = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(bool_N))</span><br><span class="line"></span><br><span class="line">X= <span class="literal">None</span></span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(X))</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;class &#39;int&#39;&gt;
-&lt;class &#39;float&#39;&gt;
-&lt;class &#39;bool&#39;&gt;
-&lt;class &#39;NoneType&#39;&gt;
-</code></pre>
-<hr>
-<h1 id="연산"><a href="#연산" class="headerlink" title="연산"></a>연산</h1><ul>
-<li>사칙연산</li>
-</ul>
-<p>Number type</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">c = <span class="number">3.14</span></span><br><span class="line">d = <span class="number">1.414</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;정수_int_의 사칙연산 &quot;</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;a + b = &#x27;</span> , a+b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a - b = &#x27;</span>, a-b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a * b = &#x27;</span>, a*b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a / b = &#x27;</span>, a/b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a // b = &#x27;</span>, a//b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a % b = &#x27;</span>, a%b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a ** b = &#x27;</span>, a**b)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;실수_float_의 사칙연산 &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c + d =&#x27;</span>, c+d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c - d =&#x27;</span>, c-d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c * d =&#x27;</span>, c*d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c / d =&#x27;</span>, c/d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c // d =&#x27;</span>, c//d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c % d =&#x27;</span>, c%d)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c ** d =&#x27;</span>, c**d)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre><code>정수_int_의 사칙연산 
-a + b =  3
-a - b =  -1
-a * b =  2
-a / b =  0.5
-a // b =  0
-a % b =  1
-a ** b =  1
-실수_float_의 사칙연산 
-c + d = 4.554
-c - d = 1.7260000000000002
-c * d = 4.43996
-c / d = 2.2206506364922207
-c // d = 2.0
-c % d = 0.3120000000000003
-c ** d = 5.042646477882085
-</code></pre>
-<ul>
-<li>String 연산</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">&quot;hi&quot;</span></span><br><span class="line">str2 = <span class="string">&quot;bye&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;str1 + str2 = &#x27;</span>, str1 + str2 )</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;str 1 * 3 + str * 2 = &#x27;</span>, str1 * <span class="number">3</span> + str2 * <span class="number">2</span>  )</span><br></pre></td></tr></table></figure>
-
-<pre><code>str1 + str2 =  hibye
-str 1 * 3 + str * 2 =  hihihibyebye
-</code></pre>
-<h1 id="indexing"><a href="#indexing" class="headerlink" title="indexing"></a>indexing</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">greeting = <span class="string">&quot;Hi!Hellow? AnNyung!&quot;</span></span><br><span class="line"><span class="built_in">print</span>(greeting)</span><br><span class="line"><span class="comment">#greeting, 이하니처럼 인사를 해 봅시다. </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(greeting[<span class="number">6</span>:])</span><br><span class="line"><span class="built_in">print</span>(greeting [:<span class="number">6</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">G = <span class="string">&quot;12345 6789@&quot;</span></span><br><span class="line"><span class="built_in">print</span> (G[<span class="number">2</span>:])</span><br><span class="line"><span class="built_in">print</span> (G[:<span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span> (G[<span class="number">1</span>:<span class="number">9</span>])</span><br><span class="line"><span class="built_in">print</span> (G[<span class="number">0</span>:<span class="number">7</span>:<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot; </span></span><br><span class="line"><span class="string">[a : b : c]</span></span><br><span class="line"><span class="string">  a :  시작 index</span></span><br><span class="line"><span class="string">  b : 끝 Index</span></span><br><span class="line"><span class="string">  c : 띄워서</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span> </span><br></pre></td></tr></table></figure>
-
-<pre><code>Hi!Hellow? AnNyung!
-low? AnNyung!
-Hi!Hel
-345 6789@
-123
-2345 678
-146
-
-
-
-
-
-&#39; \n[a : b : c]\n  a :  시작 index\n  b : 끝 Index\n  c : 띄워서\n&#39;
-</code></pre>
-<hr>
-<h1 id="List"><a href="#List" class="headerlink" title="List"></a>List</h1><ul>
-<li><p>List 함수 종류</p>
-<ul>
-<li>.append() : 추가</li>
-<li>.extend() : 연장</li>
-<li>.remove() : 제거</li>
-<li>.del() : 제거</li>
-<li>.pop()  :Index설정</li>
-<li>.clear() : 전체 삭제</li>
-</ul>
-<p>Internet에 더 많은 함수를 찾을 수 있는 documents 가 있을 것이다.<br>^^</p>
-<p><a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/datastructures.html">List Function</a></p>
-</li>
-</ul>
-<p>List란, java로 치면 배열</p>
-<p>List create 부터 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;List 를 생성 해 봅시다.&quot;</span>)</span><br><span class="line">A = [] <span class="comment">#변수선언으로 빈 리스트 만들기</span></span><br><span class="line">a= <span class="built_in">list</span>() <span class="comment">#List 함수로 만들기 </span></span><br><span class="line"></span><br><span class="line">a = [<span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;Have&#x27;</span>, [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;DreAm&#x27;</span>]]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;a함수에 직접적 Index로 넣어주기&quot;</span>)</span><br><span class="line"><span class="built_in">print</span> (a)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;a[0]= &#x27;YOU&#x27;의 결과 &quot;</span>)</span><br><span class="line">a[<span class="number">0</span>]= <span class="string">&#x27;YOU&#x27;</span></span><br><span class="line"><span class="built_in">print</span> (a)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#List에 값 추가 해 주기</span></span><br><span class="line"><span class="built_in">print</span>(A)</span><br><span class="line">A.append(<span class="string">&#x27;U&#x27;</span>)</span><br><span class="line">A.append(<span class="string">&#x27;song&#x27;</span>)</span><br><span class="line">A.append([<span class="string">&#x27;to&#x27;</span>, <span class="string">&#x27;sing&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;A[0:] : A의 모든 원소 추출&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(A[<span class="number">0</span>:])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot; &quot;</span>)</span><br><span class="line"><span class="comment">#Extend </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a : a에 Extend를 이용하여 원소 추가하기&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line">a.extend(<span class="string">&#x27;U&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line">a.extend([<span class="string">&#x27;song&#x27;</span>, <span class="string">&#x27;to&#x27;</span>, <span class="string">&#x27;sing&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Extend 와 같은 느낌으로 &quot;+=&quot; 연산자를 써 줄수 있다. </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a : a에 연산자를 이용하여  원소 추가하기&quot;</span>)  </span><br><span class="line">a += [<span class="string">&#x27;Like U&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Insert는 중간에 인덱스 값을 넣어 주어서 List에 값을 추가 해 줄 수 있다. </span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a : a에 insert를 이용하여 원하는 Index번호에 원소 추가하기&quot;</span>)</span><br><span class="line">a.insert(<span class="number">1</span>,<span class="string">&#x27;do not&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="keyword">del</span> a[<span class="number">1</span>:<span class="number">1</span>]</span><br><span class="line"><span class="comment">#다음 코드를 위해 a의 Index 1에 넣어준 원소를 제거 했음 </span></span><br></pre></td></tr></table></figure>
-
-<pre><code>List 를 생성 해 봅시다.
-a함수에 직접적 Index로 넣어주기
-[&#39;I&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;]]
-a[0]= &#39;YOU&#39;의 결과 
-[&#39;YOU&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;]]
-[]
-A[0:] : A의 모든 원소 추출
-[&#39;U&#39;, &#39;song&#39;, [&#39;to&#39;, &#39;sing&#39;]]
- 
-a : a에 Extend를 이용하여 원소 추가하기
-[&#39;YOU&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;]]
-[&#39;YOU&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;], &#39;U&#39;]
-[&#39;YOU&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;], &#39;U&#39;, &#39;song&#39;, &#39;to&#39;, &#39;sing&#39;]
-a : a에 연산자를 이용하여  원소 추가하기
-[&#39;YOU&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;], &#39;U&#39;, &#39;song&#39;, &#39;to&#39;, &#39;sing&#39;, &#39;Like U&#39;]
-[&#39;YOU&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;], &#39;U&#39;, &#39;song&#39;, &#39;to&#39;, &#39;sing&#39;, &#39;Like U&#39;]
-a : a에 insert를 이용하여 원하는 Index번호에 원소 추가하기
-[&#39;YOU&#39;, &#39;do not&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;], &#39;U&#39;, &#39;song&#39;, &#39;to&#39;, &#39;sing&#39;, &#39;Like U&#39;]
-</code></pre>
-<p>리스트 연산 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C = a+A</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;a+A의 연산결과 : &quot;</span>, C)</span><br></pre></td></tr></table></figure>
-
-<pre><code>[&#39;U&#39;, &#39;do not&#39;, &#39;song&#39;, &#39;to&#39;, &#39;sing&#39;, &#39;U&#39;, &#39;song&#39;, [&#39;to&#39;, &#39;sing&#39;]]
-</code></pre>
-<p>리스트에 값 삭제 해 주기 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">b=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> ]</span><br><span class="line">B=[<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">1</span>, <span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;리스트 값 삭제하기 &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"><span class="built_in">print</span>(B)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;b의 1번째 삭제&quot;</span>)</span><br><span class="line"><span class="comment">#1개씩 삭제 해 주기 </span></span><br><span class="line"><span class="keyword">del</span> b[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;B의 1~2 번째 삭제 : [1:2]&quot;</span>)</span><br><span class="line"><span class="comment">#범위로 삭제 해 주기 </span></span><br><span class="line"><span class="keyword">del</span> B[<span class="number">1</span>:<span class="number">2</span>]</span><br><span class="line"><span class="built_in">print</span>(B)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#중복 값을 삭제 해 주는 function</span></span><br><span class="line">K=[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">0</span>, <span class="number">12</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;K : &quot;</span>, K)</span><br><span class="line"></span><br><span class="line">K.remove(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;K.remove(0) : &quot;</span>, K)</span><br><span class="line"></span><br><span class="line">K.insert(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;K.insert(0,1) : &quot;</span>, K)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#pop은 Index를 정해서 특정 문자에 정해 줄 수 있다.  </span></span><br><span class="line">S = b.pop()</span><br><span class="line">SS= B.pop(<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;b.pop() : &quot;</span>)</span><br><span class="line"><span class="built_in">print</span> (S, <span class="string">&quot; : ()안에 아무것도 쓰지 않으면 맨 마지막 &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;B.pop(1) : &quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(SS, <span class="string">&quot; : ()안에 숫자를 쓰면 (1) 1번Index 뽑아내기&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#pop과 같은 느낌으로 특정 문자를 뽑아 내기 </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Index 숫자로 pop과 같은 기능을 실행 할 수 있다. &quot;</span>)</span><br><span class="line"><span class="built_in">print</span> (a[<span class="number">0</span>:])</span><br><span class="line"><span class="built_in">print</span> (a[<span class="number">2</span>][<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span> (a[<span class="number">2</span>][<span class="number">1</span>][<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#List 전체 삭제</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<pre><code>리스트 값 삭제하기 
-[1, 2, 3, 4, 5, 6]
-[7, 8, 9, 10, 11, 12, 13, 1, 4]
-b의 1번째 삭제
-[1, 3, 4, 5, 6]
-B의 1~2 번째 삭제 : [1:2]
-[7, 9, 10, 11, 12, 13, 1, 4]
-K :  [0, 1, 2, 3, 4, 5, 8, 6, 7, 9, 10, 0, 12]
-K.remove(0) :  [1, 2, 3, 4, 5, 8, 6, 7, 9, 10, 0, 12]
-K.insert(0,1) :  [1, 1, 2, 3, 4, 5, 8, 6, 7, 9, 10, 0, 12]
-b.pop() : 
-6  : ()안에 아무것도 쓰지 않으면 맨 마지막 
-B.pop(1) : 
-9  : ()안에 숫자를 쓰면 (1) 1번Index 뽑아내기
-Index 숫자로 pop과 같은 기능을 실행 할 수 있다. 
-[&#39;hi&#39;, &#39;do not&#39;, &#39;Have&#39;, [&#39;a&#39;, &#39;DreAm&#39;], &#39;U&#39;, &#39;song&#39;, &#39;to&#39;, &#39;sing&#39;, &#39;d&#39;, &#39;i&#39;, &#39;d&#39;, &#39; &#39;, &#39;n&#39;, &#39;o&#39;, &#39;t&#39;]
-a
-
-
-
----------------------------------------------------------------------------
-
-IndexError                                Traceback (most recent call last)
-
-&lt;ipython-input-112-d37801788a81&gt; in &lt;module&gt;()
-     40 print (a[0:])
-     41 print (a[2][1])
----&gt; 42 print (a[2][1][3])
-     43 
-     44 #List 전체 삭제
-
-
-IndexError: string index out of range
-</code></pre>
-<p>List 값을 덮어 쓰는 기능 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;A[] = &quot;</span>, A) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;A[1:2]= [&#x27;i&#x27;, &#x27;do&#x27;, &#x27;NOT&#x27;, &#x27;know&#x27;]의 결과 &quot;</span>)</span><br><span class="line">A[<span class="number">1</span>:<span class="number">2</span>]= [<span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;do&#x27;</span>, <span class="string">&#x27;NOT&#x27;</span>, <span class="string">&#x27;know&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span> (A) </span><br><span class="line"><span class="comment"># A[]에 1번 Index에 범위보다 큰 수가 엎어 씌어 진 것을 볼 수 있다. </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> A [<span class="number">1</span>:<span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;del A [1:4] : &quot;</span>, A)</span><br></pre></td></tr></table></figure>
-
-<pre><code>A[] =  [&#39;U&#39;, &#39;i&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, [&#39;to&#39;, &#39;sing&#39;]]
-A[1:2]= [&#39;i&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;]의 결과 
-[&#39;U&#39;, &#39;i&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, [&#39;to&#39;, &#39;sing&#39;]]
-del A [1:4] :  [&#39;U&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, &#39;do&#39;, &#39;NOT&#39;, &#39;know&#39;, [&#39;to&#39;, &#39;sing&#39;]]
-</code></pre>
-<hr style="border-color: #18a217" >
-
-<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref."></a>Ref.</h1><p><a target="_blank" rel="noopener" href="https://dojang.io/course/view.php?id=7">https://dojang.io/course/view.php?id=7</a></p>
-<p>보고 공부 할 수 있어요 </p>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/python/">이전</a></div><div class="pagination-next is-invisible is-hidden-mobile"><a href="/categories/python/page/3/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/python/">1</a></li><li><a class="pagination-link is-current" href="/categories/python/page/2/">2</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../imeges/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">81</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">19</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">82</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/YoonHwa-P"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/data-science/"><span class="level-start"><span class="level-item">data_science</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/index/"><span class="level-start"><span class="level-item">index</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/naver/"><span class="level-start"><span class="level-item">naver</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/pharmacerical-company/"><span class="level-start"><span class="level-item">pharmacerical_company</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">19</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/"><span class="level-start"><span class="level-item">machineLeaning</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/pycaret/"><span class="level-start"><span class="level-item">pycaret</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/machineLeaning/sklearn/"><span class="level-start"><span class="level-item">sklearn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python/theory/"><span class="level-start"><span class="level-item">theory</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python-plotly/"><span class="level-start"><span class="level-item">python - plotly</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-22T03:15:10.000Z">2021-12-22</time></p><p class="title"><a href="/2021/12/22/python/DTS_PipeLine/">DTS: PipeLine 만들고 활용하기</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-22T01:54:49.000Z">2021-12-22</time></p><p class="title"><a href="/2021/12/22/python/DTS_Outlier_Detection2/">DTS: Outlier detection02</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-21T23:11:53.000Z">2021-12-22</time></p><p class="title"><a href="/2021/12/22/python/DTS_MissingValue2/">DTS: Missing Value detection(02)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-21T11:21:48.000Z">2021-12-21</time></p><p class="title"><a href="/2021/12/21/python/DTS_MissingValue/">DTS: Missing Value detection(01)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-21T06:54:49.000Z">2021-12-21</time></p><p class="title"><a href="/2021/12/21/python/DTS_Outlier_detection/">DTS: Outlier detection01</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">12월 2021</span></span><span class="level-end"><span class="level-item tag">27</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BarGraph/"><span class="tag">BarGraph</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bargraph/"><span class="tag">Bargraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Decision-Tree/"><span class="tag">Decision Tree</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Donut-Chart/"><span class="tag">Donut_Chart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/EDA/"><span class="tag">EDA</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HorizontalBar/"><span class="tag">HorizontalBar</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mow/"><span class="tag">Mow</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plotly/"><span class="tag">Plotly</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R4ds/"><span class="tag">R4ds</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Rss/"><span class="tag">Rss</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scatter/"><span class="tag">Scatter</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ScatterLine/"><span class="tag">ScatterLine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stacked-Bar/"><span class="tag">Stacked_Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Subplots/"><span class="tag">Subplots</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Test-page/"><span class="tag">Test page,</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TextMining/"><span class="tag">TextMining</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Token/"><span class="tag">Token</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Treemap/"><span class="tag">Treemap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/auto-Machine-Learning/"><span class="tag">auto Machine Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dataScience/"><span class="tag">dataScience</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/draft/"><span class="tag">draft</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot2/"><span class="tag">ggplot2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/green/"><span class="tag">green</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/howtoGithub/"><span class="tag">howtoGithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">32</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-Competition/"><span class="tag">kaggle_Competition</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-dictation/"><span class="tag">kaggle_dictation</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLeaning/"><span class="tag">machineLeaning</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makegithub/"><span class="tag">makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/market/"><span class="tag">market</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/model-selection/"><span class="tag">model selection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiplace/"><span class="tag">multiplace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namespace/"><span class="tag">namespace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pipe/"><span class="tag">pipe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plot/"><span class="tag">plot</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/prediction/"><span class="tag">prediction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pycaret/"><span class="tag">pycaret</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">24</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pythonFuction/"><span class="tag">pythonFuction</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/regression/"><span class="tag">regression</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sklearn/"><span class="tag">sklearn</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/soil/"><span class="tag">soil</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table/"><span class="tag">table</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table-arrange/"><span class="tag">table arrange</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EA%B9%83%ED%97%88%EB%B8%8C/"><span class="tag">깃허브</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/python/">이전</a></div><div class="pagination-next"><a href="/categories/python/page/3/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/python/">1</a></li><li><a class="pagination-link is-current" href="/categories/python/page/2/">2</a></li><li><a class="pagination-link" href="/categories/python/page/3/">3</a></li></ul></nav></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/../imeges/main.jpg" alt="YoonHwa Park"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YoonHwa Park</p><p class="is-size-6 is-block">I am Living in the Mars</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Mars</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">83</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">19</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">83</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://yoonhwa-p.github.io/" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/YoonHwa-P"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Instagram" href="https://www.instagram.com/1_haza"><i class="fab fa-instagram"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/BDS/"><span class="level-start"><span class="level-item">BDS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DecisionTree/"><span class="level-start"><span class="level-item">DecisionTree</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/"><span class="level-start"><span class="level-item">Matplotlib</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Matplotlib/Seaborn/"><span class="level-start"><span class="level-item">Seaborn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/data-science/"><span class="level-start"><span class="level-item">data_science</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/index/"><span class="level-start"><span class="level-item">index</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/init/"><span class="level-start"><span class="level-item">init</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/kaggle/"><span class="level-start"><span class="level-item">kaggle</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/naver/"><span class="level-start"><span class="level-item">naver</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/pharmacerical-company/"><span class="level-start"><span class="level-item">pharmacerical_company</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">21</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/"><span class="level-start"><span class="level-item">machineLeaning</span></span><span class="level-end"><span class="level-item tag">12</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/machineLeaning/pycaret/"><span class="level-start"><span class="level-item">pycaret</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/machineLeaning/sklearn/"><span class="level-start"><span class="level-item">sklearn</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python/theory/"><span class="level-start"><span class="level-item">theory</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/python-plotly/"><span class="level-start"><span class="level-item">python - plotly</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-24T08:04:52.000Z">2021-12-24</time></p><p class="title"><a href="/2021/12/24/python/ML_ValidationCurveG(01)/">DTS: ML_Validation CurveG(01)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-24T01:44:36.000Z">2021-12-24</time></p><p class="title"><a href="/2021/12/24/python/ML_LearningCurveG(01)/">DTS: ML_Learning CurveG(01)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-22T03:15:10.000Z">2021-12-22</time></p><p class="title"><a href="/2021/12/22/python/DTS_PipeLine/">DTS: PipeLine 만들고 활용하기</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-22T01:54:49.000Z">2021-12-22</time></p><p class="title"><a href="/2021/12/22/python/DTS_Outlier_Detection2/">DTS: Outlier detection02</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-12-21T23:11:53.000Z">2021-12-22</time></p><p class="title"><a href="/2021/12/22/python/DTS_MissingValue2/">DTS: Missing Value detection(02)</a></p><p class="categories"><a href="/categories/python/">python</a> / <a href="/categories/python/machineLeaning/">machineLeaning</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">12월 2021</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/11/"><span class="level-start"><span class="level-item">11월 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/BarGraph/"><span class="tag">BarGraph</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bargraph/"><span class="tag">Bargraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioDataScientist/"><span class="tag">BioDataScientist</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioData-Science/"><span class="tag">BioData_Science</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classifier/"><span class="tag">Classifier</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DTS/"><span class="tag">DTS</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataFrame/"><span class="tag">DataFrame</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DataScience/"><span class="tag">DataScience</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Decision-Tree/"><span class="tag">Decision Tree</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Donut-Chart/"><span class="tag">Donut_Chart</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/EDA/"><span class="tag">EDA</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HorizontalBar/"><span class="tag">HorizontalBar</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/List/"><span class="tag">List</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mow/"><span class="tag">Mow</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Numpy/"><span class="tag">Numpy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pandas/"><span class="tag">Pandas</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plotly/"><span class="tag">Plotly</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R4ds/"><span class="tag">R4ds</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Rss/"><span class="tag">Rss</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scatter/"><span class="tag">Scatter</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ScatterLine/"><span class="tag">ScatterLine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Series/"><span class="tag">Series</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stacked-Bar/"><span class="tag">Stacked_Bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Study/"><span class="tag">Study</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Subplots/"><span class="tag">Subplots</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Test-page/"><span class="tag">Test page,</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TextMining/"><span class="tag">TextMining</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Token/"><span class="tag">Token</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Treemap/"><span class="tag">Treemap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tuple/"><span class="tag">Tuple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/auto-Machine-Learning/"><span class="tag">auto Machine Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bioinformatics/"><span class="tag">bioinformatics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/coding/"><span class="tag">coding</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dataScience/"><span class="tag">dataScience</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/decisionTree/"><span class="tag">decisionTree</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/draft/"><span class="tag">draft</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot2/"><span class="tag">ggplot2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-colaboratory-github-upload/"><span class="tag">google, colaboratory, github, upload</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googleColab/"><span class="tag">googleColab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/green/"><span class="tag">green</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/howtoGithub/"><span class="tag">howtoGithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle/"><span class="tag">kaggle</span><span class="tag">32</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggleNote/"><span class="tag">kaggleNote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-Competition/"><span class="tag">kaggle_Competition</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kaggle-dictation/"><span class="tag">kaggle_dictation</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLeaning/"><span class="tag">machineLeaning</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machineLearning/"><span class="tag">machineLearning</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/make/"><span class="tag">make</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog/"><span class="tag">makeBlog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makeBlog-makegithub/"><span class="tag">makeBlog, makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/makegithub/"><span class="tag">makegithub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/market/"><span class="tag">market</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method/"><span class="tag">method</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/model-selection/"><span class="tag">model selection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiplace/"><span class="tag">multiplace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namespace/"><span class="tag">namespace</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/panel/"><span class="tag">panel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/paperReview/"><span class="tag">paperReview</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pipe/"><span class="tag">pipe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plot/"><span class="tag">plot</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/prediction/"><span class="tag">prediction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predictionModel/"><span class="tag">predictionModel</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pycaret/"><span class="tag">pycaret</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">26</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pythonFuction/"><span class="tag">pythonFuction</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python-basic/"><span class="tag">python_basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/regression/"><span class="tag">regression</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sklearn/"><span class="tag">sklearn</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/soil/"><span class="tag">soil</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/studyPython/"><span class="tag">studyPython</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/summary/"><span class="tag">summary</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table/"><span class="tag">table</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/table-arrange/"><span class="tag">table arrange</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/title/"><span class="tag">title</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EA%B9%83%ED%97%88%EB%B8%8C/"><span class="tag">깃허브</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/../imeges/main.jpg" alt="Life in the Mars" height="28"></a><p class="is-size-7"><span>&copy; 2021 YoonHwa</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
